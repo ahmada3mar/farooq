@@ -1,5 +1,5 @@
 <template>
-    <h1>Home, heloo {{username.name}} , yuor age are  {{username.age}}</h1>
+    <h1 class="batata" >Home, heloo {{username.name}} , yuor age are  {{username.age}}</h1>
 </template>
 
 
