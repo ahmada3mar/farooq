@@ -22,7 +22,7 @@ Route::get('/', function () {
 
     return Inertia::render('Home' , compact('username'));
 });
-Route::get('/Contact', function () {
+Route::get('/contact', function () {
     return Inertia::render('Contact');
 });
 Route::get('/404', function () {

@@ -1,5 +1,10 @@
 <template>
-<Layout>
+
+<Head>
+	<title>404</title>
+	<meta name="description" content="404" head-key="description">
+	<meta name="keywords" content="404">
+</Head>
 
 <!-- Titlebar
 ================================================== -->
@@ -61,20 +66,6 @@
 <!-- Spacer / End-->
 
 
-</Layout>
+
 </template>
 
-
-<script>
-import Layout from "../../Shared/Layout";
-export default {
-    components: {
-        Layout
-    },
-
-    props:{
-        username:Object
-    }
-
-}
-</script>

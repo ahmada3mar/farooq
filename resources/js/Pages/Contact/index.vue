@@ -1,5 +1,4 @@
 <template>
-<Layout>
 <!-- Titlebar
 ================================================== -->
 <div id="titlebar" class="gradient">
@@ -125,20 +124,6 @@
 </div>
 <!-- Container / End -->
 
-</Layout>
 </template>
 
 
-<script>
-import Layout from "../../Shared/Layout";
-export default {
-    components: {
-        Layout
-    },
-
-    props:{
-        username:Object
-    }
-
-}
-</script>
