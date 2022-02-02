@@ -22,3 +22,12 @@ Route::get('/', function () {
 
     return Inertia::render('Home' , compact('username'));
 });
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+});
+Route::get('/404', function () {
+    return Inertia::render('404');
+});
+Route::get('/403', function () {
+    return Inertia::render('403');
+});
