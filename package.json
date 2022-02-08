@@ -7,7 +7,17 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production"
+        "production": "mix --production",
+        "build-lang": "cd nova-components/Lang && npm run dev",
+        "build-lang-prod": "cd nova-components/Lang && npm run prod",
+        "build-viewcache": "cd nova-components/Viewcache && npm run dev",
+        "build-viewcache-prod": "cd nova-components/Viewcache && npm run prod",
+        "build-custom-lang": "cd nova-components/CustomLang && npm run dev",
+        "build-custom-lang-prod": "cd nova-components/CustomLang && npm run prod",
+        "build-customlang": "cd nova-components/Customlang && npm run dev",
+        "build-customlang-prod": "cd nova-components/Customlang && npm run prod",
+        "build-multi": "cd nova-components/Multi && npm run dev",
+        "build-multi-prod": "cd nova-components/Multi && npm run prod"
     },
     "devDependencies": {
         "@vue/compiler-sfc": "^3.2.29",
@@ -24,6 +34,7 @@
         "@inertiajs/inertia": "^0.11.0",
         "@inertiajs/inertia-vue3": "^0.6.0",
         "@inertiajs/progress": "^0.2.7",
+        "cross-env": "^7.0.3",
         "vue": "^3.2.29"
     }
 }
