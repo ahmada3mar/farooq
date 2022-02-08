@@ -1,24 +1,24 @@
 <template>
-    
+
 <!-- Intro Banner
 ================================================== -->
 <!-- add class "disable-gradient" to enable consistent background overlay -->
 <div class="intro-banner" data-background-image="images/home-background.jpg">
 	<div class="container">
-		
+
 		<!-- Intro Headline -->
 		<div class="row">
 			<div class="col-md-12">
 				<div class="banner-headline">
 					<h3>
-						<strong>Hire experts or be hired for any job, any time.</strong>
+						<strong>{{tt}}</strong>
 						<br>
 						<span>Thousands of small businesses use <strong class="color">Hireo</strong> to turn their ideas into reality.</span>
 					</h3>
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- Search Bar -->
 		<div class="row">
 			<div class="col-md-12">
@@ -139,7 +139,7 @@
 						<div class="category-box-icon">
 							<i class="icon-line-awesome-pie-chart"></i>
 						</div>
-						<div class="category-box-counter">549</div>						
+						<div class="category-box-counter">549</div>
 						<div class="category-box-content">
 							<h3>Sales & Marketing</h3>
 							<p>Brand Manager, Marketing Coordinator & More</p>
@@ -196,16 +196,16 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-12">
-				
+
 				<!-- Section Headline -->
 				<div class="section-headline margin-top-0 margin-bottom-35">
 					<h3>Featured Jobs</h3>
 					<a href="jobs-list-layout-full-page-map.html" class="headline-link">Browse All Jobs</a>
 				</div>
-				
+
 				<!-- Jobs Container -->
 				<div class="listings-container compact-list-layout margin-top-35">
-					
+
 					<!-- Job Listing -->
 					<a href="single-job-page.html" class="job-listing with-apply-button">
 
@@ -235,7 +235,7 @@
 							<!-- Apply Button -->
 							<span class="list-apply-button ripple-effect">Apply Now</span>
 						</div>
-					</a>	
+					</a>
 
 
 					<!-- Job Listing -->
@@ -298,7 +298,7 @@
 							<span class="list-apply-button ripple-effect">Apply Now</span>
 						</div>
 					</a>
-					
+
 
 					<!-- Job Listing -->
 					<a href="single-job-page.html" class="job-listing with-apply-button">
@@ -393,7 +393,7 @@
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-xl-3 col-md-6">
 				<!-- Photo Box -->
 				<a href="jobs-list-layout-full-page-map.html" class="photo-box" data-background-image="images/featured-city-02.jpg">
@@ -403,7 +403,7 @@
 					</div>
 				</a>
 			</div>
-			
+
 			<div class="col-xl-3 col-md-6">
 				<!-- Photo Box -->
 				<a href="jobs-grid-layout-full-page.html" class="photo-box" data-background-image="images/featured-city-03.jpg">
@@ -452,10 +452,10 @@
 						<!-- Overview -->
 						<div class="freelancer-overview">
 							<div class="freelancer-overview-inner">
-								
+
 								<!-- Bookmark Icon -->
 								<span class="bookmark-icon"></span>
-								
+
 								<!-- Avatar -->
 								<div class="freelancer-avatar">
 									<div class="verified-badge"></div>
@@ -474,7 +474,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- Details -->
 						<div class="freelancer-details">
 							<div class="freelancer-details-list">
@@ -495,10 +495,10 @@
 						<!-- Overview -->
 						<div class="freelancer-overview">
 							<div class="freelancer-overview-inner">
-								
+
 								<!-- Bookmark Icon -->
 								<span class="bookmark-icon"></span>
-								
+
 								<!-- Avatar -->
 								<div class="freelancer-avatar">
 									<div class="verified-badge"></div>
@@ -517,7 +517,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- Details -->
 						<div class="freelancer-details">
 							<div class="freelancer-details-list">
@@ -540,7 +540,7 @@
 							<div class="freelancer-overview-inner">
 								<!-- Bookmark Icon -->
 								<span class="bookmark-icon"></span>
-								
+
 								<!-- Avatar -->
 								<div class="freelancer-avatar">
 									<a href="single-freelancer-profile.html"><img src="assets/images/user-avatar-placeholder.png" alt=""></a>
@@ -558,7 +558,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- Details -->
 						<div class="freelancer-details">
 							<div class="freelancer-details-list">
@@ -581,7 +581,7 @@
 								<div class="freelancer-overview-inner">
 								<!-- Bookmark Icon -->
 								<span class="bookmark-icon"></span>
-								
+
 								<!-- Avatar -->
 								<div class="freelancer-avatar">
 									<div class="verified-badge"></div>
@@ -600,7 +600,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- Details -->
 						<div class="freelancer-details">
 							<div class="freelancer-details-list">
@@ -614,7 +614,7 @@
 						</div>
 					</div>
 					<!-- Freelancer / End -->
-					
+
 					<!--Freelancer -->
 					<div class="freelancer">
 
@@ -623,7 +623,7 @@
 								<div class="freelancer-overview-inner">
 								<!-- Bookmark Icon -->
 								<span class="bookmark-icon"></span>
-								
+
 								<!-- Avatar -->
 								<div class="freelancer-avatar">
 									<a href="single-freelancer-profile.html"><img src="assets/images/user-avatar-placeholder.png" alt=""></a>
@@ -641,7 +641,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- Details -->
 						<div class="freelancer-details">
 							<div class="freelancer-details-list">
@@ -655,7 +655,7 @@
 						</div>
 					</div>
 					<!-- Freelancer / End -->
-								
+
 					<!--Freelancer -->
 					<div class="freelancer">
 
@@ -664,7 +664,7 @@
 								<div class="freelancer-overview-inner">
 								<!-- Bookmark Icon -->
 								<span class="bookmark-icon"></span>
-								
+
 								<!-- Avatar -->
 								<div class="freelancer-avatar">
 									<a href="single-freelancer-profile.html"><img src="assets/images/user-avatar-placeholder.png" alt=""></a>
@@ -682,7 +682,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- Details -->
 						<div class="freelancer-details">
 							<div class="freelancer-details-list">
@@ -803,7 +803,7 @@
 <script>
 export default {
     props:{
-        username:Object
+        tt:String
     }
 
 }

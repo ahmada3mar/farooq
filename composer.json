@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
@@ -10,8 +13,14 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "inertiajs/inertia-laravel": "^0.5.4",
         "laravel/framework": "^8.75",
+        "laravel/nova": "*",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "mcamara/laravel-localization": "^1.7",
+        "mustafakhaleddev/nova-rtl-support": "^0.1.0",
+        "spatie/laravel-permission": "4.0",
+        "vyuldashev/nova-permission": "^3.0",
+        "digitalcloud/multilingual-nova" : "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -58,6 +67,16 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./nova"
+        },
+        {
+            "type": "path",
+            "url": "./lang"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+// use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +16,22 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    $username = [
-        'name' => 'ahmad' ,
-        'age' => 26
-    ];
+Route::group([
+    'prefix' => '',
+], function () {
 
-    return Inertia::render('Home' , compact('username'));
-});
-Route::get('/contact', function () {
-    return Inertia::render('Contact');
-});
-Route::get('/404', function () {
-    return Inertia::render('404');
-});
-Route::get('/403', function () {
-    return Inertia::render('403');
+    Route::get('/', function () {
+        $tt = trans('auth.failed');
+
+        return Inertia::render('Home', compact('tt'));
+    });
+    Route::get('/contact', function () {
+        return Inertia::render('Contact');
+    });
+    Route::get('/404', function () {
+        return Inertia::render('404');
+    });
+    Route::get('/403', function () {
+        return Inertia::render('403');
+    });
 });
