@@ -102,12 +102,12 @@ return [
 
     'middleware' => [
         'web',
+        InitializeLanguage::class,
         Authenticate::class,
         DispatchServingNovaEvent::class,
         BootTools::class,
         Authorize::class,
         \Vyuldashev\NovaPermission\ForgetCachedPermissions::class,
-        InitializeLanguage::class,
         DispatchServingNovaEvent::class,
 
 

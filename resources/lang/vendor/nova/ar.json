@@ -419,5 +419,7 @@
   "Update attached :resource: :title": "تحديث المرفق :resource: :title",
   ":resource Details: :title": ":resource تفاصيل: :title" ,
   "users" : "المستخدمين",
-  "language": "اللغة"
+  "language": "اللغة" ,
+  "Select Language" : "اختر اللغة",
+  "Change Language" : "تغيير اللغة"
 }

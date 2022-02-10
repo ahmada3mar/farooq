@@ -22,10 +22,7 @@ class FieldServiceProvider extends ServiceProvider
 
         $lang = request('lang', request()->header('lang'));
 
-        if ($lang){
-            app()->setLocale($lang);
-            session()->put('lang', $lang);
-        }
+        if ($lang) app()->setLocale($lang);
 
         Nova::serving(function (ServingNova $event) {
             Nova::provideToScript(['locals' => $this->getSupportLocales(), 'currentLocal' => App::getLocale()]);
