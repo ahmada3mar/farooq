@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Policies\PermissionPolicy;
 use App\Policies\RolePolicy;
+use Digitalcloud\MultilingualNova\Http\Middleware\InitializeLanguage;
 use Digitalcloud\MultilingualNova\NovaLanguageTool;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Cards\Help;
@@ -85,8 +86,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             \Vyuldashev\NovaPermission\NovaPermissionTool::make()
             ->rolePolicy(RolePolicy::class)
             ->permissionPolicy(PermissionPolicy::class),
-            //  new NovaLanguageTool(),
-             new NovaLanguageTool()
+            new NovaLanguageTool()
 
         ];
     }

@@ -1,11 +1,11 @@
 {
     "plugins": [
-        "transform-runtime",
+        "@babel/plugin-transform-runtime",
         "transform-vue-jsx",
-        "syntax-jsx",
-        "transform-object-rest-spread"
+        "@babel/plugin-syntax-jsx",
+        "@babel/plugin-syntax-object-rest-spread"
     ],
-    "presets": [["env"]],
+    "presets": [["@babel/preset-env"]],
     "env": {
         "test": {
             "presets": [["env", { "targets": { "node": "current" } }]]

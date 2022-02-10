@@ -12,8 +12,8 @@ return [
      * If you choose array selection, you should add all supported translation on it as "code" => "label"
      */
     'locales' => [
-        'en' => 'EN',
-        'ar' => 'ar'
+        'en' => 'English',
+        'ar' => 'العربية'
     ],
 
     /*

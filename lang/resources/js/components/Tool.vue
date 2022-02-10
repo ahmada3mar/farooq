@@ -1,9 +1,9 @@
 <template>
     <div>
-        <heading class="mb-6">Nova Language Tool</heading>
+        <heading class="mb-6">{{__('Select Language')}}</heading>
 
         <card class="flex  p-3">
-            <div class="flex border-b border-40 w-full" >
+            <form action="./current-local" method="POST" class="flex border-b border-40 w-full" >
                 <div class="w-1/4 py-6 px-8">
                     <label class="inline-block text-80 pt-2 leading-tight" for="language">{{__('Select Language')}}</label>
                 </div>
@@ -20,7 +20,7 @@
                         <span class="">{{__('Change Language')}}</span>
                     </button>
                 </div>
-            </div>
+            </form>
         </card>
     </div>
 </template>
@@ -48,7 +48,7 @@ export default {
                 .then(({ data }) => {
                     console.log(data);
                     // TODO display a successful message
-                    window.location = Nova.config.base + "/nova-language-tool?lang=" + this.currentLocal;
+                    location.reload();
                 })
                 .catch(error => {
                     //TODO display an error message

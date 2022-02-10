@@ -425,5 +425,7 @@
   "The HasOne relationship has already been filled.": "The HasOne relationship has already been filled.",
   "An error occured while uploading the file.": "An error occured while uploading the file.",
   "users" : "Users",
-  "language": "language"
+  "language": "language",
+  "Select Language" : "Select Language" ,
+  "Change Language" : "Change Language"
 }

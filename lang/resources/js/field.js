@@ -1,3 +1,9 @@
+import IndexField from "./components/IndexField"
+import DetailField from "./components/DetailField"
+import FormField from "./components/FormField"
+import LanguageSelector from "./components/LanguageSelector"
+import Tool from "./components/Tool"
+
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
@@ -9,17 +15,17 @@ function getParameterByName(name, url) {
 }
 
 Nova.booting((Vue, router) => {
-    Vue.component('index-multilingual-nova', require('./components/IndexField'));
-    Vue.component('detail-multilingual-nova', require('./components/DetailField'));
-    Vue.component('form-multilingual-nova', require('./components/FormField'));
+    Vue.component('index-multilingual-nova', IndexField);
+    Vue.component('detail-multilingual-nova',DetailField);
+    Vue.component('form-multilingual-nova', FormField);
 
-    Vue.component('language-selector', require('./components/LanguageSelector'));
+    Vue.component('language-selector', LanguageSelector);
 
     router.addRoutes([
         {
             name: 'nova-language-tool',
             path: '/nova-language-tool',
-            component: require('./components/Tool'),
+            component: Tool,
         },
     ])
 

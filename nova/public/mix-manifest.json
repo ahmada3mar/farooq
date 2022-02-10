@@ -1,6 +1,11 @@
 {
-    "/app.js": "/app.js?id=002c49299d24455547bf",
-    "/app.css": "/app.css?id=7c344678b2988fa49987",
-    "/vendor.js": "/vendor.js?id=158eb2009eabe0a47c04",
-    "/manifest.js": "/manifest.js?id=2d315777967b6001bcf1"
+    "/app.js": "/app.js?id=98980afb2a3e2bf7dfc9",
+    "/manifest.js": "/manifest.js?id=11c3cc2dc38027fff987",
+    "/app.css": "/app.css?id=8f192e912026036ba338",
+    "/vendor.js": "/vendor.js?id=c920d4928a2cfcbb7a6d",
+    "/nova-app/public/vendor/nova/app.css": "/nova-app/public/vendor/nova/app.css?id=7c344678b2988fa49987",
+    "/nova-app/public/vendor/nova/app.js": "/nova-app/public/vendor/nova/app.js?id=002c49299d24455547bf",
+    "/nova-app/public/vendor/nova/manifest.js": "/nova-app/public/vendor/nova/manifest.js?id=2d315777967b6001bcf1",
+    "/nova-app/public/vendor/nova/mix-manifest.json": "/nova-app/public/vendor/nova/mix-manifest.json?id=a9022e3d3eb1eab06ef8",
+    "/nova-app/public/vendor/nova/vendor.js": "/nova-app/public/vendor/nova/vendor.js?id=158eb2009eabe0a47c04"
 }
