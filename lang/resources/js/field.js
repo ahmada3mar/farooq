@@ -29,8 +29,8 @@ Nova.booting((Vue, router) => {
         },
     ])
 
-    let lang = getParameterByName('lang');
-    if (lang) {
-        Nova.request().defaults.headers['lang'] = lang;
+    let locale = getParameterByName('locale');
+    if (locale) {
+        Nova.request().defaults.headers['locale'] = locale;
     }
 })

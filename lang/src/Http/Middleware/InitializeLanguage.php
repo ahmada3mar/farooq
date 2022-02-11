@@ -2,7 +2,6 @@
 
 namespace Digitalcloud\MultilingualNova\Http\Middleware;
 
-use DigitalCloud\MultilingualNova\NovaLanguageTool;
 use Laravel\Nova\Nova;
 
 class InitializeLanguage
@@ -16,10 +15,10 @@ class InitializeLanguage
      */
     public function handle($request, $next)
     {
-        if (session()->has('lang')){
-            $lang = session()->get('lang') ;
-            app()->setLocale($lang);
-            if($lang == 'ar'){
+        if (session()->has('locale')){
+            $locale = session()->get('locale') ;
+            app()->setLocale($locale);
+            if($locale == 'ar'){
                 Nova::style('nova-volve-rtl', __DIR__ . '/../../../css/theme.css');
             }
         }

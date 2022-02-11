@@ -19,8 +19,8 @@ class LanguageController extends Controller {
     }
 
     public function setLocal(Request $request) {
-        session()->put('lang', $request->lang);
-        return $request->lang ;
+        session()->put('locale', $request->locale);
+        return $request->locale ;
     }
 
 }

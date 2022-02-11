@@ -25,7 +25,7 @@ export default {
     },
     methods: {
         changeLocal() {
-            window.location = this.replaceUrlParam(window.location.href, 'lang', this.currentLocal);
+            window.location = this.replaceUrlParam(window.location.href, 'locale', this.currentLocal);
         },
 
         async initializeComponent() {

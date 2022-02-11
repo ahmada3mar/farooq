@@ -43,7 +43,7 @@ export default {
     methods: {
         changeLocal() {
             const fd = new FormData();
-            fd.append('lang', this.currentLocal);
+            fd.append('locale', this.currentLocal);
             axios.post('/nova-vendor/multilingual-nova/current-local', fd )
                 .then(({ data }) => {
                     console.log(data);

@@ -46,12 +46,12 @@ export default {
     methods: {
 
         changeLocal() {
-            window.location = this.replaceUrlParam(window.location.href, 'lang', this.currentLocal);
+            window.location = this.replaceUrlParam(window.location.href, 'locale', this.currentLocal);
         },
 
         localClicked(local) {
             this.currentLocal = local
-            window.location = this.replaceUrlParam(window.location.href, 'lang', this.currentLocal);
+            window.location = this.replaceUrlParam(window.location.href, 'locale', this.currentLocal);
         },
         /*
          * Set the initial, internal value for the field.
