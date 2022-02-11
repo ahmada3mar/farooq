@@ -20,9 +20,9 @@ class FieldServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'nova-language-tool');
 
-        $lang = request('lang', request()->header('lang'));
+        $locale = request('locale', request()->header('locale'));
 
-        if ($lang) app()->setLocale($lang);
+        if ($locale) app()->setLocale($locale);
 
         Nova::serving(function (ServingNova $event) {
             Nova::provideToScript(['locals' => $this->getSupportLocales(), 'currentLocal' => App::getLocale()]);

@@ -40,7 +40,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     redirect: function redirect(locale) {
-      window.location = this.field.value.id + "?lang=" + locale;
+      window.location = this.field.value.id + "?locale=" + locale;
     }
   },
   mounted: function mounted() {
@@ -114,11 +114,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     changeLocal: function changeLocal() {
-      window.location = this.replaceUrlParam(window.location.href, 'lang', this.currentLocal);
+      window.location = this.replaceUrlParam(window.location.href, 'locale', this.currentLocal);
     },
     localClicked: function localClicked(local) {
       this.currentLocal = local;
-      window.location = this.replaceUrlParam(window.location.href, 'lang', this.currentLocal);
+      window.location = this.replaceUrlParam(window.location.href, 'locale', this.currentLocal);
     },
 
     /*
@@ -201,7 +201,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     redirect: function redirect(locale) {
-      window.location = this.replaceUrlParam(window.location.href, 'lang', this.locale); // console.log(locale);
+      window.location = this.replaceUrlParam(window.location.href, 'locale', this.locale); // console.log(locale);
       // window.location = Nova.config.base
       //     + "/resources/"
       //     + this.resourceName + "/"
@@ -281,7 +281,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   methods: {
     changeLocal: function changeLocal() {
-      window.location = this.replaceUrlParam(window.location.href, 'lang', this.currentLocal);
+      window.location = this.replaceUrlParam(window.location.href, 'locale', this.currentLocal);
     },
     initializeComponent: function initializeComponent() {
       var _this = this;
@@ -446,7 +446,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   methods: {
     changeLocal: function changeLocal() {
       var fd = new FormData();
-      fd.append('lang', this.currentLocal);
+      fd.append('locale', this.currentLocal);
       axios.post('/nova-vendor/multilingual-nova/current-local', fd).then(function (_ref) {
         var data = _ref.data;
         console.log(data); // TODO display a successful message
@@ -535,10 +535,10 @@ Nova.booting(function (Vue, router) {
     path: '/nova-language-tool',
     component: _components_Tool__WEBPACK_IMPORTED_MODULE_4__["default"]
   }]);
-  var lang = getParameterByName('lang');
+  var locale = getParameterByName('locale');
 
-  if (lang) {
-    Nova.request().defaults.headers['lang'] = lang;
+  if (locale) {
+    Nova.request().defaults.headers['locale'] = locale;
   }
 });
 

@@ -17,7 +17,7 @@
         methods: {
             redirect(locale) {
                 window.location = this.field.value.id
-                    + "?lang=" + locale;
+                    + "?locale=" + locale;
             }
         },
         mounted() {

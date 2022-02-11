@@ -1,4 +1,5 @@
 import { createApp, h } from 'vue'
+import  {translations}  from './translation'
 import { createInertiaApp , Head } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
 
@@ -17,10 +18,12 @@ createInertiaApp({
     createApp({ render: () => h(App, props) })
       .use(plugin)
       .component("Head", Head)
+      .mixin(translations)
       .mount(el);
   },
   title: title => 'Farooq' + (title ? ` | ${title}` : ''),
 })
+
 
 InertiaProgress.init({
   // The delay after which the progress bar will
@@ -36,3 +39,5 @@ InertiaProgress.init({
   // Whether the NProgress spinner will be shown.
   showSpinner: false,
 })
+
+
