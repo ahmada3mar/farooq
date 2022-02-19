@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="col-md-12">
 
-				<h2>Contact</h2>
+				<h2>{{ __('contact') }}</h2>
 
 				<!-- Breadcrumbs -->
 				<nav id="breadcrumbs" class="dark">
@@ -45,7 +45,7 @@
 									<li><a href="https://www.linkedin.com/company/cesterdad/" title="linkedin" data-tippy-placement="top"><i class="icon-brand-linkedin"></i></a></li>
 									<li><a href="//www.twitter.com/Cesterdad" title="Twitter" data-tippy-placement="top"><i class="icon-brand-twitter"></i></a></li>
 									<li><a href="//www.instagram.com/qorrahinitiative/" title="Instagram" data-tippy-placement="top"><i class="icon-brand-instagram"></i></a></li>
-								
+
 								</ul>
 							</div>
 						</li>
@@ -80,9 +80,9 @@
 							<div class="input-with-icon-left">
 
 								@if (Auth::check())
-									
+
 								<input class="with-border" name="name" type="text" id="name" placeholder="Your Name" value="{{Auth::user()->name}}" required="required" />
-								@else 
+								@else
 								<input class="with-border" name="name" type="text" id="name" placeholder="Your Name" required="required" />
 								@endif
 
@@ -95,9 +95,9 @@
 								@if (Auth::user())
 
 								<input class="with-border" name="email" type="email" id="email" placeholder="Email Address" value="{{Auth::user()->email}}" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" required="required" />
-								@else 
+								@else
 								<input class="with-border" name="email" type="email" id="email" placeholder="Email Address" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" required="required" />
-									
+
 								@endif
 								<i class="icon-material-outline-email"></i>
 							</div>
@@ -125,5 +125,13 @@
 <!-- Container / End -->
 
 </template>
+
+<script>
+export default {
+    props:{
+        name:String
+    }
+}
+</script>
 
 
