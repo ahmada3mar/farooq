@@ -3,22 +3,27 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Password;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Vyuldashev\NovaPermission\RoleSelect;
+use \Epartment\NovaDependencyContainer\NovaDependencyContainer ;
+use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Lenses\Lens;
 
-
-class User extends Resource
+class Question extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\User::class;
+    public static $model = \App\Models\Question::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -27,10 +32,9 @@ class User extends Resource
      */
     public static $title = 'name';
 
-    public static function group(): string
-    {
-        return __('nova-permission-tool::navigation.sidebar-label');
-    }
+    public static $displayInNavigation = false;
+
+
 
     /**
      * Get the displayable label of the resource.
@@ -39,7 +43,7 @@ class User extends Resource
      */
     public static function label()
     {
-        return __('users');
+        return __('Question');
     }
 
     /**
@@ -49,7 +53,7 @@ class User extends Resource
      */
     public static function singularLabel()
     {
-        return __('users');
+        return __('Question');
     }
 
     /**
@@ -58,7 +62,7 @@ class User extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email',
+        'name'
     ];
 
     /**
@@ -73,25 +77,22 @@ class User extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()->hideFromIndex(),
 
-            Gravatar::make()->maxWidth(50),
+            BelongsTo::make( __('lecture') , 'lecture')->nullable(),
+            Text::make( __('course') , 'getCourse')
+            ->hideWhenUpdating()
+            ->hideFromIndex()
+            ->hideWhenCreating()
+            ->asHtml()
+            ->displayUsing(function($a){
+                return "<a class='no-underline font-bold dim text-primary' href='/admin/resources/courses/$a->admin'>$a->name</a>" ;
+            }),
 
-            Text::make('Name')
+            Text::make(__('name'), 'name')
                 ->sortable()
                 ->rules('required', 'max:255'),
-
-            Text::make('Email')
-                ->sortable()
-                ->rules('required', 'email', 'max:254')
-                ->creationRules('unique:users,email')
-                ->updateRules('unique:users,email,{{resourceId}}'),
-
-            Password::make('Password')
-                ->onlyOnForms()
-                ->creationRules('required', 'string', 'min:8')
-                ->updateRules('nullable', 'string', 'min:8'),
-            RoleSelect::make('Role', 'roles'),
+            HasMany::make(__('answer'), 'answer')
 
 
         ];

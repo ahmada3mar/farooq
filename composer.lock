@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01820ae3103060f24c1cba9665cc5554",
+    "content-hash": "2d3f5aab346718a3756f2ec2ce86f349",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -319,11 +319,11 @@
         },
         {
             "name": "digitalcloud/multilingual-nova",
-            "version": "dev-ahmad",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./lang",
-                "reference": "fa929eae1fa468d2866e842b38d3e4d2733c1e41"
+                "reference": "63a2b8a2cb49d24dde336d9fc4f17b08c0ec8615"
             },
             "require": {
                 "php": ">=7.1.0",
@@ -994,6 +994,51 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
+        },
+        {
+            "name": "epartment/nova-dependency-container",
+            "version": "1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epartment/nova-dependency-container.git",
+                "reference": "da1490d015754d2aa7fd0815ad91d54b279472d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epartment/nova-dependency-container/zipball/da1490d015754d2aa7fd0815ad91d54b279472d7",
+                "reference": "da1490d015754d2aa7fd0815ad91d54b279472d7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Epartment\\NovaDependencyContainer\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Epartment\\NovaDependencyContainer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field container allowing to depend on other fields values",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/epartment/nova-dependency-container/issues",
+                "source": "https://github.com/epartment/nova-dependency-container/tree/1.3.3"
+            },
+            "time": "2021-05-13T16:30:53+00:00"
         },
         {
             "name": "fruitcake/laravel-cors",
@@ -1709,7 +1754,7 @@
             "dist": {
                 "type": "path",
                 "url": "./nova",
-                "reference": "e36abe2db502d615830f3d248f84a10c45ab04bf"
+                "reference": "70de3b8c974d2a74c4a901b0c7afd664ec9282db"
             },
             "require": {
                 "brick/money": "^0.5.0",

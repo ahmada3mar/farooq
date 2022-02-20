@@ -14,6 +14,7 @@ return [
     */
 
     'contact' => 'Contact',
+    'sel_instructor'=>'Select Instructor ...'
 
 
 ];
