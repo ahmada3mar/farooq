@@ -14,6 +14,6 @@ return [
     */
 
     'contact' => 'تواصل معنا',
-
+    'sel_instructor' => 'اختر المعلم ...'
 
 ];

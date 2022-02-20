@@ -421,5 +421,14 @@
   "users" : "المستخدمين",
   "language": "اللغة" ,
   "Select Language" : "اختر اللغة",
-  "Change Language" : "تغيير اللغة"
+  "Change Language" : "تغيير اللغة",
+  "name" : "الأسم",
+  "courses" : "المساقات",
+  "course" : "المساق",
+  "description" : "الوصف",
+  "iamge" : "الصورة",
+  "cover" : "صورة الغلاف",
+  "class" : "الصف",
+  "price" : "السعر",
+  "instructor" : "المدرس"
 }
