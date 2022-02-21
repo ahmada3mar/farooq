@@ -12,13 +12,13 @@ class Lecture extends Model
 
 
 
-    public function course() : BelongsTo{
+    public function course() {
 
         return $this->belongsTo(Course::class);
      }
 
     public function question(){
 
-    return $this->hasMany(Question::class);
+        return $this->hasMany(Question::class);
     }
 }

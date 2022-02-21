@@ -4,16 +4,13 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
-use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Http\Requests\NovaRequest;
-use Vyuldashev\NovaPermission\RoleSelect;
 use \Epartment\NovaDependencyContainer\NovaDependencyContainer ;
 use Laravel\Nova\Fields\HasMany;
+use Yassi\NestedForm\NestedForm;
 
 class Lecture extends Resource
 {
@@ -30,6 +27,7 @@ class Lecture extends Resource
      * @var string
      */
     public static $title = 'name';
+    // public static $viaRelationship = 'question';
 
     public static $group = 'courses';
 
@@ -77,7 +75,7 @@ class Lecture extends Resource
         return [
             ID::make()->hideFromIndex(),
 
-            BelongsTo::make( __('course') , 'course')->nullable(),
+            BelongsTo::make( __('course') , 'course'),
 
             Text::make(__('name'), 'name')
                 ->sortable()
@@ -105,11 +103,20 @@ class Lecture extends Resource
                 ->rules('required'),
             ])->dependsOn('type' , 0),
 
-                HasMany::make( __('question'), 'question')
-                ->hideFromDetail(function(){
-                   return !$this->type;
-                })
-                ->rules('required'),
+            HasMany::make( 'question', 'question' , Question::class),
+
+
+           NestedForm::make('Question' , 'question' , Question::class)
+            ->displayIf(function ($nestedForm, $request) {
+                return [
+                     [ 'attribute' => 'type', 'is' => '1' ]
+                ];
+            })
+
+
+
+
+
 
 
         ];

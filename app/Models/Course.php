@@ -16,9 +16,9 @@ class Course extends Model
     }
 
 
-    public function qoustion(){
+    public function lectures(){
 
-        return $this->hasMany(Qoustion::class);
-     }
+        return $this->hasMany(Lecture::class);
+    }
 
 }

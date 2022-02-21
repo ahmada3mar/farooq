@@ -23,7 +23,7 @@ class Answer extends Resource
      *
      * @var string
      */
-    public static $model = \App\Models\Question::class;
+    public static $model = \App\Models\Answer::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -32,7 +32,7 @@ class Answer extends Resource
      */
     public static $title = 'name';
 
-    public static $displayInNavigation = false;
+    // public static $displayInNavigation = false;
 
 
 
@@ -79,7 +79,7 @@ class Answer extends Resource
         return [
             ID::make()->hideFromIndex(),
 
-            BelongsTo::make( __('question') , 'question')->nullable(),
+            BelongsTo::make( __('question') , 'question' , Question::class),
 
             Text::make(__('name'), 'name')
                 ->sortable()
