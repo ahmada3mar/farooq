@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01820ae3103060f24c1cba9665cc5554",
+    "content-hash": "b5b01337c93b9b3f0535f0d8afaadb2d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -994,6 +994,51 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
+        },
+        {
+            "name": "epartment/nova-dependency-container",
+            "version": "1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/epartment/nova-dependency-container.git",
+                "reference": "da1490d015754d2aa7fd0815ad91d54b279472d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/epartment/nova-dependency-container/zipball/da1490d015754d2aa7fd0815ad91d54b279472d7",
+                "reference": "da1490d015754d2aa7fd0815ad91d54b279472d7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Epartment\\NovaDependencyContainer\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Epartment\\NovaDependencyContainer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field container allowing to depend on other fields values",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/epartment/nova-dependency-container/issues",
+                "source": "https://github.com/epartment/nova-dependency-container/tree/1.3.3"
+            },
+            "time": "2021-05-13T16:30:53+00:00"
         },
         {
             "name": "fruitcake/laravel-cors",
@@ -6934,6 +6979,57 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.10.0"
             },
             "time": "2021-03-09T10:59:23+00:00"
+        },
+        {
+            "name": "yassi/nova-nested-form",
+            "version": "v3.0.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yassipad/laravel-nova-nested-form.git",
+                "reference": "852b65e01481e79cb28351515f097fc5c7ff6ab6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yassipad/laravel-nova-nested-form/zipball/852b65e01481e79cb28351515f097fc5c7ff6ab6",
+                "reference": "852b65e01481e79cb28351515f097fc5c7ff6ab6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "laravel/nova": "^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Yassi\\NestedForm\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yassi\\NestedForm\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova package that allows you to create/update/delete nested related fields from a parent form.",
+            "keywords": [
+                "form",
+                "laravel",
+                "nested",
+                "nova",
+                "relationship"
+            ],
+            "support": {
+                "issues": "https://github.com/yassipad/laravel-nova-nested-form/issues",
+                "source": "https://github.com/yassipad/laravel-nova-nested-form/tree/v3.0.12"
+            },
+            "time": "2021-05-26T14:40:19+00:00"
         }
     ],
     "packages-dev": [

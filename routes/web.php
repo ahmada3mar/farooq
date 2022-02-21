@@ -20,6 +20,10 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/test' , function(){
+    dd(User::Role('admin')->pluck('id' , 'name'));
+});
 Route::resource('users', UserController::class);
 
 Route::group([
