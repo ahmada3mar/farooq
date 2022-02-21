@@ -107,17 +107,13 @@ class Lecture extends Resource
 
 
            NestedForm::make('Question' , 'question' , Question::class)
+           ->hideWhenUpdating()
+           ->max(1)
             ->displayIf(function ($nestedForm, $request) {
                 return [
                      [ 'attribute' => 'type', 'is' => '1' ]
                 ];
             })
-
-
-
-
-
-
 
         ];
     }
