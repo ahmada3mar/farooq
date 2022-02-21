@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Models\Lecture;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -22,8 +23,9 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 */
 
 Route::get('/test' , function(){
-    dd(User::Role('admin')->pluck('id' , 'name'));
+    return Inertia::render('Test',['video' => Lecture::first()->url()]);
 });
+
 Route::resource('users', UserController::class);
 
 Route::group([

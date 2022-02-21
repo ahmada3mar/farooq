@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{asset("assets/css/style.css")}}" type="text/css">
     <link rel="stylesheet" href="{{asset("assets/css/colors/blue.css")}}" type="text/css">
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
-    
+
     <!-- Scripts -->
     <script src="{{asset("assets/js/jquery-3.3.1.min.js")}}"></script>
     <script src="{{asset("assets/js/jquery-migrate-3.0.0.min.js")}}"></script>
@@ -28,6 +28,8 @@
     <script src="{{asset("assets/js/custom.js")}}" defer ></script>
 
     <script src="{{ mix('/js/app.js') }}" defer></script>
+    <script src="{{ mix('/js/manifest.js') }}" defer></script>
+    <script src="{{ mix('/js/vendor.js') }}" defer></script>
     @inertiaHead
   </head>
   <body>

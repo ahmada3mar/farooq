@@ -21,7 +21,7 @@ class CreateLecturesTable extends Migration
             $table->integer('order');
             $table->enum('type' , [0 , 1]);
             $table->unsignedBigInteger('course_id');
-            $table->foreign('course_id')->references('id')->on('courses');
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->timestamps();
         });
     }

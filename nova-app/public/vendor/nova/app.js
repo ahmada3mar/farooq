@@ -26505,6 +26505,15 @@ if (window.config.themingClasses) {
 
 
 
+/**
+ * Finally, we'll create this Vue Router instance and register all of the
+ * Nova routes. Once that is complete, we will create the Vue instance
+ * and hand this router to the Vue instance. Then Nova is all ready!
+ */
+
+_Nova__WEBPACK_IMPORTED_MODULE_0__["default"].$on('url-change', function (value) {
+  return console.log(value);
+});
 (function () {
   this.CreateNova = function (config) {
     return new _Nova__WEBPACK_IMPORTED_MODULE_0__["default"](config);

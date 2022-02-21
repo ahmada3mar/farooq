@@ -12,13 +12,20 @@ class Lecture extends Model
 
 
 
-    public function course() : BelongsTo{
+    public function course() {
 
         return $this->belongsTo(Course::class);
      }
 
     public function question(){
 
-    return $this->hasMany(Question::class);
+        return $this->hasMany(Question::class);
+    }
+
+    public function url(){
+        $parts = parse_url($this->url);
+        parse_str($parts['query'], $query);
+
+        return  $query['v'];
     }
 }

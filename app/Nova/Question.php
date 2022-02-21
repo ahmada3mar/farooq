@@ -6,15 +6,9 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Number;
-use Laravel\Nova\Fields\Password;
-use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Http\Requests\NovaRequest;
-use Vyuldashev\NovaPermission\RoleSelect;
-use \Epartment\NovaDependencyContainer\NovaDependencyContainer ;
 use Laravel\Nova\Fields\HasMany;
-use Laravel\Nova\Lenses\Lens;
+use Yassi\NestedForm\NestedForm;
 
 class Question extends Resource
 {
@@ -79,20 +73,24 @@ class Question extends Resource
         return [
             ID::make()->hideFromIndex(),
 
-            BelongsTo::make( __('lecture') , 'lecture')->nullable(),
-            Text::make( __('course') , 'getCourse')
-            ->hideWhenUpdating()
-            ->hideFromIndex()
-            ->hideWhenCreating()
-            ->asHtml()
-            ->displayUsing(function($a){
-                return "<a class='no-underline font-bold dim text-primary' href='/admin/resources/courses/$a->admin'>$a->name</a>" ;
-            }),
+            BelongsTo::make( __('lecture') , 'lecture' , Lecture::class),
+            // Text::make( __('course') , 'getCourse')
+            // ->hideWhenUpdating()
+            // ->hideFromIndex()
+            // ->hideWhenCreating()
+            // ->asHtml()
+            // ->displayUsing(function($a){
+            //     return "<a class='no-underline font-bold dim text-primary' href='/admin/resources/courses/$a->admin'>$a->name</a>" ;
+            // }),
 
-            Text::make(__('name'), 'name')
+
+            Text::make('name')
                 ->sortable()
                 ->rules('required', 'max:255'),
-            HasMany::make(__('answer'), 'answer')
+            HasMany::make(__('answer'), 'answers' , Answer::class),
+
+            NestedForm::make('answer' , 'answers' , Answer::class)
+
 
 
         ];
