@@ -22,7 +22,7 @@ class CreateCoursesTable extends Migration
             $table->integer('class');
             $table->double('price');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->timestamps();
         });
     }
