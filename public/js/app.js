@@ -33,7 +33,7 @@ var _hoisted_5 = {
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   id: "logo"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "index.html"
+  href: "/"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   src: "/assets/images/logo.png",
   alt: ""
@@ -48,7 +48,7 @@ var _hoisted_8 = {
   "class": "responsive"
 };
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li><a href=\"#\">Find Work</a><ul class=\"dropdown-nav\"><li><a href=\"#\">Browse Jobs</a><ul class=\"dropdown-nav\"><li><a href=\"jobs-list-layout-full-page-map.html\">Full Page List + Map</a></li><li><a href=\"jobs-grid-layout-full-page-map.html\">Full Page Grid + Map</a></li><li><a href=\"jobs-grid-layout-full-page.html\">Full Page Grid</a></li><li><a href=\"jobs-list-layout-1.html\">List Layout 1</a></li><li><a href=\"jobs-list-layout-2.html\">List Layout 2</a></li><li><a href=\"jobs-grid-layout.html\">Grid Layout</a></li></ul></li><li><a href=\"#\">Browse Tasks</a><ul class=\"dropdown-nav\"><li><a href=\"tasks-list-layout-1.html\">List Layout 1</a></li><li><a href=\"tasks-list-layout-2.html\">List Layout 2</a></li><li><a href=\"tasks-grid-layout.html\">Grid Layout</a></li><li><a href=\"tasks-grid-layout-full-page.html\">Full Page Grid</a></li></ul></li><li><a href=\"browse-companies.html\">Browse Companies</a></li><li><a href=\"single-job-page.html\">Job Page</a></li><li><a href=\"single-task-page.html\">Task Page</a></li><li><a href=\"single-company-profile.html\">Company Profile</a></li></ul></li><li><a href=\"#\">For Employers</a><ul class=\"dropdown-nav\"><li><a href=\"#\">Find a Freelancer</a><ul class=\"dropdown-nav\"><li><a href=\"freelancers-grid-layout-full-page.html\">Full Page Grid</a></li><li><a href=\"freelancers-grid-layout.html\">Grid Layout</a></li><li><a href=\"freelancers-list-layout-1.html\">List Layout 1</a></li><li><a href=\"freelancers-list-layout-2.html\">List Layout 2</a></li></ul></li><li><a href=\"single-freelancer-profile.html\">Freelancer Profile</a></li><li><a href=\"dashboard-post-a-job.html\">Post a Job</a></li><li><a href=\"dashboard-post-a-task.html\">Post a Task</a></li></ul></li><li><a href=\"#\">Dashboard</a><ul class=\"dropdown-nav\"><li><a href=\"dashboard.html\">Dashboard</a></li><li><a href=\"dashboard-messages.html\">Messages</a></li><li><a href=\"dashboard-bookmarks.html\">Bookmarks</a></li><li><a href=\"dashboard-reviews.html\">Reviews</a></li><li><a href=\"dashboard-manage-jobs.html\">Jobs</a><ul class=\"dropdown-nav\"><li><a href=\"dashboard-manage-jobs.html\">Manage Jobs</a></li><li><a href=\"dashboard-manage-candidates.html\">Manage Candidates</a></li><li><a href=\"dashboard-post-a-job.html\">Post a Job</a></li></ul></li><li><a href=\"dashboard-manage-tasks.html\">Tasks</a><ul class=\"dropdown-nav\"><li><a href=\"dashboard-manage-tasks.html\">Manage Tasks</a></li><li><a href=\"dashboard-manage-bidders.html\">Manage Bidders</a></li><li><a href=\"dashboard-my-active-bids.html\">My Active Bids</a></li><li><a href=\"dashboard-post-a-task.html\">Post a Task</a></li></ul></li><li><a href=\"dashboard-settings.html\">Settings</a></li></ul></li><li><a href=\"#\">Pages</a><ul class=\"dropdown-nav\"><li><a href=\"/\">Home</a></li><li><a href=\"/contact\">Contact us</a></li><li><a href=\"/404\">404</a></li><li><a href=\"/403\">403</a></li></ul></li>", 4);
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li><a href=\"#\">Find Work</a><ul class=\"dropdown-nav\"><li><a href=\"#\">Browse Jobs</a><ul class=\"dropdown-nav\"><li><a href=\"jobs-list-layout-full-page-map.html\">Full Page List + Map</a></li><li><a href=\"jobs-grid-layout-full-page-map.html\">Full Page Grid + Map</a></li><li><a href=\"jobs-grid-layout-full-page.html\">Full Page Grid</a></li><li><a href=\"jobs-list-layout-1.html\">List Layout 1</a></li><li><a href=\"jobs-list-layout-2.html\">List Layout 2</a></li><li><a href=\"jobs-grid-layout.html\">Grid Layout</a></li></ul></li><li><a href=\"#\">Browse Tasks</a><ul class=\"dropdown-nav\"><li><a href=\"tasks-list-layout-1.html\">List Layout 1</a></li><li><a href=\"tasks-list-layout-2.html\">List Layout 2</a></li><li><a href=\"tasks-grid-layout.html\">Grid Layout</a></li><li><a href=\"tasks-grid-layout-full-page.html\">Full Page Grid</a></li></ul></li><li><a href=\"browse-companies.html\">Browse Companies</a></li><li><a href=\"single-job-page.html\">Job Page</a></li><li><a href=\"single-task-page.html\">Task Page</a></li><li><a href=\"single-company-profile.html\">Company Profile</a></li></ul></li><li><a href=\"#\">For Employers</a><ul class=\"dropdown-nav\"><li><a href=\"#\">Find a Freelancer</a><ul class=\"dropdown-nav\"><li><a href=\"freelancers-grid-layout-full-page.html\">Full Page Grid</a></li><li><a href=\"freelancers-grid-layout.html\">Grid Layout</a></li><li><a href=\"freelancers-list-layout-1.html\">List Layout 1</a></li><li><a href=\"freelancers-list-layout-2.html\">List Layout 2</a></li></ul></li><li><a href=\"single-freelancer-profile.html\">Freelancer Profile</a></li><li><a href=\"dashboard-post-a-job.html\">Post a Job</a></li><li><a href=\"dashboard-post-a-task.html\">Post a Task</a></li></ul></li><li><a href=\"#\">Dashboard</a><ul class=\"dropdown-nav\"><li><a href=\"dashboard.html\">Dashboard</a></li><li><a href=\"dashboard-messages.html\">Messages</a></li><li><a href=\"dashboard-bookmarks.html\">Bookmarks</a></li><li><a href=\"dashboard-reviews.html\">Reviews</a></li><li><a href=\"dashboard-manage-jobs.html\">Jobs</a><ul class=\"dropdown-nav\"><li><a href=\"dashboard-manage-jobs.html\">Manage Jobs</a></li><li><a href=\"dashboard-manage-candidates.html\">Manage Candidates</a></li><li><a href=\"dashboard-post-a-job.html\">Post a Job</a></li></ul></li><li><a href=\"dashboard-manage-tasks.html\">Tasks</a><ul class=\"dropdown-nav\"><li><a href=\"dashboard-manage-tasks.html\">Manage Tasks</a></li><li><a href=\"dashboard-manage-bidders.html\">Manage Bidders</a></li><li><a href=\"dashboard-my-active-bids.html\">My Active Bids</a></li><li><a href=\"dashboard-post-a-task.html\">Post a Task</a></li></ul></li><li><a href=\"dashboard-settings.html\">Settings</a></li></ul></li><li><a href=\"#\">Pages</a><ul class=\"dropdown-nav\"><li><a href=\"/\">Home</a></li><li><a href=\"/contact\">Contact us</a></li><li><a href=\"/404\">404</a></li><li><a href=\"/403\">403</a></li><li><a href=\"/test\">test</a></li></ul></li>", 4);
 
 var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "clearfix"
@@ -122,10 +122,12 @@ var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "footer-row"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "footer-row-inner footer-logo"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "/"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "/assets/images/logo2.png",
+  src: "/assets/images/logo.png",
   alt: ""
-})])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Right Side "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+})])])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Right Side "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "footer-rows-right"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Social Icons "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "footer-row"
@@ -252,7 +254,7 @@ var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 function render(_ctx, _cache) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Wrapper "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Header Container\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Header "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Left Side Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Logo "), _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Main Navigation "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Wrapper "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Header Container\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Header "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Left Side Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Logo "), _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Main Navigation "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "/",
     "class": "current"
   }, {
@@ -268,7 +270,7 @@ function render(_ctx, _cache) {
   /* TEXT */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.__('signin')), 1
   /* TEXT */
-  )])])])])), _hoisted_23]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Right Side Content / End ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Header / End ")]), _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Header Container / End "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer\n================================================== "), _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer / End ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Wrapper / End ")], 2112
+  )])])])])), _hoisted_23]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Right Side Content / End ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Header / End ")]), _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Header Container / End "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer\r\n================================================== "), _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer / End ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Wrapper / End ")], 2112
   /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
   );
 }
@@ -403,6 +405,19 @@ var translations = {
     }
   }
 };
+
+/***/ }),
+
+/***/ "./resources/sass/app.scss":
+/*!*********************************!*\
+  !*** ./resources/sass/app.scss ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -582,7 +597,7 @@ module.exports = webpackAsyncContext;
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["css/app","/js/vendor"], () => (__webpack_exec__("./resources/js/app.js"), __webpack_exec__("./resources/css/app.css")));
+/******/ __webpack_require__.O(0, ["css/app","/js/vendor"], () => (__webpack_exec__("./resources/js/app.js"), __webpack_exec__("./resources/sass/app.scss"), __webpack_exec__("./resources/css/app.css")));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);

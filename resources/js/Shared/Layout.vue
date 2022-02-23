@@ -11,7 +11,7 @@
           <div class="left-side">
             <!-- Logo -->
             <div id="logo">
-              <a href="index.html"
+              <a href="/"
                 ><img src="/assets/images/logo.png" alt=""
               /></a>
             </div>
@@ -176,6 +176,7 @@
                     <li><a href="/contact">Contact us</a></li>
                     <li><a href="/404">404</a></li>
                     <li><a href="/403">403</a></li>
+                    <li><a href="/test">test</a></li>
                   </ul>
                 </li>
               </ul>
@@ -499,7 +500,9 @@
                 <div class="footer-rows-left">
                   <div class="footer-row">
                     <div class="footer-row-inner footer-logo">
-                      <img src="/assets/images/logo2.png" alt="" />
+                        <a href="/"
+                          ><img src="/assets/images/logo.png" alt=""/>
+                        </a>
                     </div>
                   </div>
                 </div>
