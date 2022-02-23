@@ -531,6 +531,22 @@ var map = {
 	"./Home/index.vue": [
 		"./resources/js/Pages/Home/index.vue",
 		"resources_js_Pages_Home_index_vue"
+	],
+	"./Test": [
+		"./resources/js/Pages/Test/index.vue",
+		"resources_js_Pages_Test_index_vue"
+	],
+	"./Test/": [
+		"./resources/js/Pages/Test/index.vue",
+		"resources_js_Pages_Test_index_vue"
+	],
+	"./Test/index": [
+		"./resources/js/Pages/Test/index.vue",
+		"resources_js_Pages_Test_index_vue"
+	],
+	"./Test/index.vue": [
+		"./resources/js/Pages/Test/index.vue",
+		"resources_js_Pages_Test_index_vue"
 	]
 };
 function webpackAsyncContext(req) {

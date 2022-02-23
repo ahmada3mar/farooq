@@ -322,7 +322,7 @@
             fullPageScrollbar();
         });
 
-        // Sliding Sidebar 
+        // Sliding Sidebar
         $('.enable-filters-button').on('click', function () {
             $('.full-page-sidebar').toggleClass("enabled-sidebar");
             $(this).toggleClass("active");
@@ -590,7 +590,7 @@
 
 
         /*--------------------------------------------------*/
-        /*  Tippy JS 
+        /*  Tippy JS
         /*--------------------------------------------------*/
         /* global tippy */
         tippy('[data-tippy-placement]', {
@@ -606,7 +606,7 @@
             animateFill: true,
             theme: 'dark',
 
-            // How far the tooltip is from its reference element in pixels 
+            // How far the tooltip is from its reference element in pixels
             distance: 10,
 
         });
@@ -620,7 +620,7 @@
             var $accordion = $('.js-accordion');
             var $accordion_header = $accordion.find('.js-accordion-header');
 
-            // default settings 
+            // default settings
             var settings = {
                 // animation speed
                 speed: 400,
