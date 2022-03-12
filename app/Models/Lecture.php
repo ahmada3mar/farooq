@@ -16,6 +16,10 @@ class Lecture extends Model
 
         return $this->belongsTo(Course::class);
      }
+    public function unit() {
+
+        return $this->belongsTo(unit::class);
+     }
 
     public function question(){
 

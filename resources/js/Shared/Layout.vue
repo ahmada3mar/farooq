@@ -177,6 +177,7 @@
                     <li><a href="/404">404</a></li>
                     <li><a href="/403">403</a></li>
                     <li><a href="/test">test</a></li>
+                    <li><a href="/course">course</a></li>
                   </ul>
                 </li>
               </ul>

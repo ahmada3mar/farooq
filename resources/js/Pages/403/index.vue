@@ -1,7 +1,7 @@
 <template>
 
 <Head>
-	<title>404</title>
+	<title>403</title>
 	<meta name="description" content="404" head-key="description">
 	<meta name="keywords" content="404">
 </Head>

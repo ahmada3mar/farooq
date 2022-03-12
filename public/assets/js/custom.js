@@ -13,7 +13,7 @@
                 if (wi <= '1099') {
 
                     $(".mmenu-init").remove();
-                    $(".navigation").clone().addClass("mmenu-init").insertBefore(".navigation").removeAttr('id').removeClass('style-1 style-2')
+                    $("#navigation").clone().addClass("mmenu-init").insertBefore("#navigation").removeAttr('id').removeClass('style-1 style-2')
                         .find('ul, div').removeClass('style-1 style-2 mega-menu mega-menu-content mega-menu-section').removeAttr('id');
                     $(".mmenu-init").find("ul").addClass("mm-listview");
                     $(".mmenu-init").find(".mobile-styles .mm-listview").unwrap();
@@ -322,7 +322,7 @@
             fullPageScrollbar();
         });
 
-        // Sliding Sidebar
+        // Sliding Sidebar 
         $('.enable-filters-button').on('click', function () {
             $('.full-page-sidebar').toggleClass("enabled-sidebar");
             $(this).toggleClass("active");
@@ -590,7 +590,7 @@
 
 
         /*--------------------------------------------------*/
-        /*  Tippy JS
+        /*  Tippy JS 
         /*--------------------------------------------------*/
         /* global tippy */
         tippy('[data-tippy-placement]', {
@@ -606,12 +606,10 @@
             animateFill: true,
             theme: 'dark',
 
-            // How far the tooltip is from its reference element in pixels
+            // How far the tooltip is from its reference element in pixels 
             distance: 10,
 
         });
-
-
         /*----------------------------------------------------*/
         /*	Accordion @Lewis Briffa
         /*----------------------------------------------------*/
@@ -620,7 +618,7 @@
             var $accordion = $('.js-accordion');
             var $accordion_header = $accordion.find('.js-accordion-header');
 
-            // default settings
+            // default settings 
             var settings = {
                 // animation speed
                 speed: 400,
@@ -633,6 +631,7 @@
                 // pass configurable object literal
                 init: function ($settings) {
                     $accordion_header.on('click', function () {
+                        console.log('clicked');
                         accordion.toggle($(this));
                     });
 
@@ -908,7 +907,99 @@
             });
 
         });
+        $(".keywords-container2").each(function () {
 
+            var keywordInput = $(this).find(".keyword-input2");
+            var keywordsList = $(this).find(".keywords-list2");
+            var hiddenP = $(this).find("#skills2");
+            var hiddenValue = ($(this).find("#skills2").text()).split(',');
+
+            // adding keyword
+            function addKeyword() {
+                var $newKeyword = $("<span class='keyword'><span class='keyword-remove'></span><span class='keyword-text'>" + keywordInput.val() + "</span></span>");
+                keywordsList.append($newKeyword).trigger('resizeContainer');
+                hiddenValue = [...hiddenValue, keywordInput.val()];
+                let mystr = hiddenValue.map((skill) => `${skill}`);
+
+                hiddenP.text(mystr);
+                keywordInput.val("");
+            }
+
+            // add via enter key
+            keywordInput.on('keyup', function (e) {
+                if ((e.keyCode == 13) && (keywordInput.val() !== "")) {
+                    addKeyword();
+                }
+            });
+
+            // add via button
+            $('.keyword-input-button2').on('click', function () {
+                if ((keywordInput.val() !== "")) {
+                    addKeyword();
+                }
+            });
+
+            // removing keyword
+            $(document).on("click", ".keyword-remove", function () {
+                $(this).parent().addClass('keyword-removed');
+                hiddenValue.map((item) => {
+                    if (item === `${$(".keyword-removed").text()}`) {
+                        const index = hiddenValue.indexOf(item);
+                        if (index > -1) {
+                            hiddenValue.splice(index, 1);
+                        }
+                    }
+                });
+                let mystr = hiddenValue.map((skill) => `${skill}`);
+                hiddenP.text(mystr);
+
+
+                function removeFromMarkup() {
+                    $(".keyword-removed").remove();
+                }
+                setTimeout(removeFromMarkup, 500);
+                keywordsList.css({
+                    'height': 'auto'
+                }).height();
+            });
+
+
+            // animating container height
+            keywordsList.on('resizeContainer', function () {
+                var heightnow = $(this).height();
+                var heightfull = $(this).css({
+                    'max-height': 'auto',
+                    'height': 'auto'
+                }).height();
+
+                $(this).css({
+                    'height': heightnow
+                }).animate({
+                    'height': heightfull
+                }, 200);
+            });
+
+            $(window).on('resize', function () {
+                keywordsList.css({
+                    'height': 'auto'
+                }).height();
+            });
+
+            // Auto Height for keywords that are pre-added
+            $(window).on('load', function () {
+                var keywordCount = $('.keywords-list').children("span").length;
+
+                // Enables scrollbar if more than 3 items
+                if (keywordCount > 0) {
+                    keywordsList.css({
+                        'height': 'auto'
+                    }).height();
+
+                }
+            });
+
+        });
+        
 
         /*--------------------------------------------------*/
         /*  Bootstrap Range Slider
@@ -1022,7 +1113,20 @@
         /*----------------------------------------------------*/
         /*  Inline CSS replacement for backgrounds
         /*----------------------------------------------------*/
+        function inlineBG() {
 
+            // Common Inline CSS
+            $(".single-page-header, .intro-banner").each(function () {
+                var attrImageBG = $(this).attr('data-background-image');
+
+                if (attrImageBG !== undefined) {
+                    $(this).append('<div class="background-image-container"></div>');
+                    $('.background-image-container').css('background-image', 'url(' + attrImageBG + ')');
+                }
+            });
+
+        }
+        inlineBG();
 
         // Fix for intro banner with label
         $(".intro-search-field").each(function () {

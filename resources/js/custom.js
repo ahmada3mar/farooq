@@ -1,6 +1,6 @@
+import "./jquery-3.3.1.min.js" 
+
 /* ----------------- Start Document ----------------- */
-(function ($) {
-    "use strict";
 
     $(document).ready(function () {
 
@@ -1365,5 +1365,3 @@
 
         // ------------------ End Document ------------------ //
     });
-
-})(this.jQuery);

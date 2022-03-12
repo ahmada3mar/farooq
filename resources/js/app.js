@@ -1,8 +1,8 @@
 import { createApp, h } from 'vue'
 import  {translations}  from './translation'
+import "./custom.js"
 import { createInertiaApp , Head, Link } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
-
 
 import Layout from './Shared/Layout.vue'
 

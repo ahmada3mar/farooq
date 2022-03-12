@@ -44,6 +44,10 @@ Route::group([
     Route::get('/404', function () {
         return Inertia::render('404');
     });
+    Route::get('/course', function () {
+        $nums = [1,2,3,4];
+        return Inertia::render('course',['video' => Lecture::first()->url(),'nums' => $nums]);
+    });
     Route::get('/403', function () {
         return Inertia::render('403');
     });

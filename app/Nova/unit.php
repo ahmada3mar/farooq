@@ -3,24 +3,22 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Number;
-use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
-use \Epartment\NovaDependencyContainer\NovaDependencyContainer ;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\HasMany;
-use Laravel\Nova\Fields\Trix;
-use Yassi\NestedForm\NestedForm;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Lecture extends Resource
+class unit extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Lecture::class;
+    public static $model = \App\Models\unit::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -28,10 +26,8 @@ class Lecture extends Resource
      * @var string
      */
     public static $title = 'name';
-    // public static $viaRelationship = 'question';
 
     public static $group = 'courses';
-
 
     /**
      * Get the displayable label of the resource.
@@ -40,7 +36,7 @@ class Lecture extends Resource
      */
     public static function label()
     {
-        return __('lectures');
+        return __('units');
     }
 
     /**
@@ -50,7 +46,7 @@ class Lecture extends Resource
      */
     public static function singularLabel()
     {
-        return __('lectures');
+        return __('unit');
     }
 
     /**
@@ -59,7 +55,7 @@ class Lecture extends Resource
      * @var array
      */
     public static $search = [
-        'name'
+        'name', 'description',
     ];
 
     /**
@@ -69,55 +65,33 @@ class Lecture extends Resource
      * @return array
      */
 
-
-
     public function fields(Request $request)
     {
         return [
             ID::make()->hideFromIndex(),
 
-            BelongsTo::make( __('course') , 'course'),
-            BelongsTo::make( __('unit') , 'unit'),
 
             Text::make(__('name'), 'name')
                 ->sortable()
                 ->rules('required', 'max:255'),
 
+            Text::make( __('description'), 'description')
+                ->sortable()
+                ->rules('max:254'),
+
+
+
             Number::make( __('order') , 'order')
                 ->creationRules('required', 'numeric', 'min:1')
                 ->updateRules('nullable', 'numeric', 'min:1'),
 
-            Select::make( __('type'), 'type')
-                ->options([
-                    '0' => __('video'),
-                    '1' => __('question'),
-                ])
-                ->displayUsingLabels()
-                ->creationRules('required', 'numeric')
-                ->updateRules('nullable', 'numeric'),
+            HasMany::make( __('lectures') , 'lectures' , Lecture::class)->nullable(),
 
-            NovaDependencyContainer::make([
-                Text::make( __('url'), 'url')
-                ->rules('required'),
-            ])->dependsOn('type' , 0),
-
-            HasMany::make( 'question', 'question' , Question::class),
-
-
-           NestedForm::make('Question' , 'question' , Question::class)
-           ->hideWhenUpdating()
-           ->max(1)
-            ->displayIf(function ($nestedForm, $request) {
-                return [
-                     [ 'attribute' => 'type', 'is' => '1' ]
-                ];
-            }),
-
-            Trix::make( __('description'), 'description')
-                ->rules('required',  'max:254'),
+            BelongsTo::make( __('course') , 'course'),
 
         ];
     }
+
 
     /**
      * Get the cards available for the request.
