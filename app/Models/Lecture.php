@@ -26,10 +26,13 @@ class Lecture extends Model
         return $this->hasMany(Question::class);
     }
 
-    public function url(){
-        $parts = parse_url($this->url);
-        parse_str($parts['query'], $query);
+    public function getUrlAttribute($value){
+        $parts = parse_url($value);
+        if($value){
+            parse_str($parts['query'], $query);
+            $value = $query['v'];
+        }
 
-        return  $query['v'];
+        return  $value;
     }
 }

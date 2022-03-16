@@ -23,7 +23,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 */
 
 Route::get('/test' , function(){
-    return Inertia::render('Test',['video' => Lecture::first()->url()]);
+    return Inertia::render('Test',['video' => Lecture::first()->url]);
 });
 
 Route::resource('users', UserController::class);
