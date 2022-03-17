@@ -32,7 +32,7 @@ class Answer extends Resource
      */
     public static $title = 'name';
 
-    // public static $displayInNavigation = false;
+    public static $displayInNavigation = false;
 
 
 

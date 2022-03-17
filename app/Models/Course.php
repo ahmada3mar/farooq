@@ -20,5 +20,9 @@ class Course extends Model
 
         return $this->hasMany(Lecture::class);
     }
+    public function units(){
+
+        return $this->hasMany(unit::class);
+    }
 
 }

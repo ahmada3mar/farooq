@@ -10,6 +10,7 @@ use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use \Epartment\NovaDependencyContainer\NovaDependencyContainer ;
 use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Fields\Trix;
 use Yassi\NestedForm\NestedForm;
 
 class Lecture extends Resource
@@ -76,14 +77,11 @@ class Lecture extends Resource
             ID::make()->hideFromIndex(),
 
             BelongsTo::make( __('course') , 'course'),
+            BelongsTo::make( __('unit') , 'unit'),
 
             Text::make(__('name'), 'name')
                 ->sortable()
                 ->rules('required', 'max:255'),
-
-            Text::make( __('description'), 'description')
-                ->sortable()
-                ->rules('required',  'max:254'),
 
             Number::make( __('order') , 'order')
                 ->creationRules('required', 'numeric', 'min:1')
@@ -107,17 +105,16 @@ class Lecture extends Resource
 
 
            NestedForm::make('Question' , 'question' , Question::class)
+           ->hideWhenUpdating()
+           ->max(1)
             ->displayIf(function ($nestedForm, $request) {
                 return [
                      [ 'attribute' => 'type', 'is' => '1' ]
                 ];
-            })
+            }),
 
-
-
-
-
-
+            Trix::make( __('description'), 'description')
+                ->rules('required',  'max:254'),
 
         ];
     }

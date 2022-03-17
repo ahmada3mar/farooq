@@ -17,7 +17,7 @@ class CreateQuestionsTable extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('lecture_id');
-            $table->foreign('lecture_id')->references('id')->on('lecture');
+            $table->foreign('lecture_id')->references('id')->on('lectures')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->timestamps();
         });
     }

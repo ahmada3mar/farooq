@@ -1,14 +1,14 @@
 import { createApp, h } from 'vue'
 import  {translations}  from './translation'
-import { createInertiaApp , Head } from '@inertiajs/inertia-vue3'
+import "./custom.js"
+import { createInertiaApp , Head, Link } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
-
 
 import Layout from './Shared/Layout.vue'
 
 createInertiaApp({
   resolve: async name => {
-    let page = (await require(`./Pages/${name}`)).default;
+    let page = (await import(`./Pages/${name}`)).default;
 
     page.layout ??= Layout;
 
@@ -18,6 +18,7 @@ createInertiaApp({
     createApp({ render: () => h(App, props) })
       .use(plugin)
       .component("Head", Head)
+      .component("Link", Link)
       .mixin(translations)
       .mount(el);
   },

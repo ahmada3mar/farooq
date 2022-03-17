@@ -16,9 +16,23 @@ class Lecture extends Model
 
         return $this->belongsTo(Course::class);
      }
+    public function unit() {
+
+        return $this->belongsTo(unit::class);
+     }
 
     public function question(){
 
         return $this->hasMany(Question::class);
+    }
+
+    public function getUrlAttribute($value){
+        $parts = parse_url($value);
+        if($value){
+            parse_str($parts['query'], $query);
+            $value = $query['v'];
+        }
+
+        return  $value;
     }
 }

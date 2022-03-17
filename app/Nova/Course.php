@@ -103,6 +103,7 @@ class Course extends Resource
                 ->creationRules('required', 'numeric')
                 ->updateRules('nullable', 'numeric'),
 
+            HasMany::make( __('units') , 'units' , unit::class)->nullable(),
             HasMany::make( __('lectures') , 'lectures' , Lecture::class)->nullable(),
 
             BelongsTo::make( __('instructor'), 'user', User::class)->withMeta(['placeholder'=>trans('contant.sel_instructor')])
