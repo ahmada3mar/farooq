@@ -1,13 +1,14 @@
 import { createApp, h } from 'vue'
-import { createInertiaApp , Head } from '@inertiajs/inertia-vue3'
+import  {translations}  from './translation'
+import "./custom.js"
+import { createInertiaApp , Head, Link } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
-
 
 import Layout from './Shared/Layout.vue'
 
 createInertiaApp({
   resolve: async name => {
-    let page = (await require(`./Pages/${name}`)).default;
+    let page = (await import(`./Pages/${name}`)).default;
 
     page.layout ??= Layout;
 
@@ -17,10 +18,13 @@ createInertiaApp({
     createApp({ render: () => h(App, props) })
       .use(plugin)
       .component("Head", Head)
+      .component("Link", Link)
+      .mixin(translations)
       .mount(el);
   },
   title: title => 'Farooq' + (title ? ` | ${title}` : ''),
 })
+
 
 InertiaProgress.init({
   // The delay after which the progress bar will
@@ -36,3 +40,5 @@ InertiaProgress.init({
   // Whether the NProgress spinner will be shown.
   showSpinner: false,
 })
+
+

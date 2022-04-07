@@ -7,23 +7,38 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production"
+        "production": "mix --production",
+        "build-lang": "cd nova-components/Lang && npm run dev",
+        "build-lang-prod": "cd nova-components/Lang && npm run prod",
+        "build-viewcache": "cd nova-components/Viewcache && npm run dev",
+        "build-viewcache-prod": "cd nova-components/Viewcache && npm run prod",
+        "build-custom-lang": "cd nova-components/CustomLang && npm run dev",
+        "build-custom-lang-prod": "cd nova-components/CustomLang && npm run prod",
+        "build-customlang": "cd nova-components/Customlang && npm run dev",
+        "build-customlang-prod": "cd nova-components/Customlang && npm run prod",
+        "build-multi": "cd nova-components/Multi && npm run dev",
+        "build-multi-prod": "cd nova-components/Multi && npm run prod"
     },
     "devDependencies": {
         "@vue/compiler-sfc": "^3.2.29",
         "axios": "^0.21",
-        "laravel-mix": "^6.0.6",
+        "laravel-mix": "^6.0.41",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.49.0",
         "sass-loader": "^12.1.0",
-        "vue-loader": "^16.2.0"
+        "vue-loader": "^16.2.0",
+        "webpack-cli": "^4.9.2"
     },
     "dependencies": {
         "@inertiajs/inertia": "^0.11.0",
         "@inertiajs/inertia-vue3": "^0.6.0",
         "@inertiajs/progress": "^0.2.7",
-        "vue": "^3.2.29"
+        "cross-env": "^7.0.3",
+        "font-awesome": "^4.7.0",
+        "tailwindcss": "^3.0.19",
+        "vue": "^3.2.29",
+        "webpack": "^5.68.0"
     }
 }
