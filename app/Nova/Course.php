@@ -14,6 +14,8 @@ use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Vyuldashev\NovaPermission\RoleSelect;
+use Yassi\NestedForm\NestedForm;
+
 
 
 class Course extends Resource
@@ -94,7 +96,6 @@ class Course extends Resource
                 ->rules('required',  'max:254'),
 
 
-
             Number::make( __('class') , 'class')
                 ->creationRules('required', 'numeric', 'min:1', 'max:12')
                 ->updateRules('nullable', 'numeric', 'min:1', 'max:12'),
@@ -103,11 +104,11 @@ class Course extends Resource
                 ->creationRules('required', 'numeric')
                 ->updateRules('nullable', 'numeric'),
 
+                NestedForm::make('Unit' , 'units' , Unit::class),
             HasMany::make( __('units') , 'units' , unit::class)->nullable(),
             HasMany::make( __('lectures') , 'lectures' , Lecture::class)->nullable(),
 
             BelongsTo::make( __('instructor'), 'user', User::class)->withMeta(['placeholder'=>trans('contant.sel_instructor')])
-
 
         ];
     }
