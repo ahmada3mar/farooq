@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('assets/css/colors/blue.css')}}" type="text/css">
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />

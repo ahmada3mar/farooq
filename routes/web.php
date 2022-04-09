@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Models\Course;
 use App\Models\Lecture;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -44,9 +45,11 @@ Route::group([
     Route::get('/404', function () {
         return Inertia::render('404');
     });
-    Route::get('/course', function () {
-        $nums = [1,2,3,4];
-        return Inertia::render('course',['video' => Lecture::first()->url(),'nums' => $nums]);
+    Route::get('/course/{id}', function ($id) {
+
+        // $rr = Course::with('units.lectures')->first() ;
+        // dd($rr->units->lectures->where('id' , $l_id));
+        return Inertia::render('course',['course' => Course::with('units.lectures.question.answers')->find($id)]);
     });
     Route::get('/403', function () {
         return Inertia::render('403');
