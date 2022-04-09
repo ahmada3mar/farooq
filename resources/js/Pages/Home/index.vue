@@ -448,7 +448,7 @@
         <!-- Section Headline -->
         <div class="col-xl-12">
           <div class="section-headline centered margin-top-0 margin-bottom-45">
-            <h3>Featured Cities</h3>
+            <h3>مساقات مقترحة</h3>
           </div>
         </div>
 
@@ -457,11 +457,11 @@
           <a
             href="jobs-list-layout-1.html"
             class="photo-box"
-            data-background-image="images/featured-city-01.jpg"
+            data-background-image="/storage/erth.jpg"
           >
             <div class="photo-box-content">
-              <h3>San Francisco</h3>
-              <span>376 Jobs</span>
+              <h3>علوم ارض</h3>
+              <span>376 مشترك</span>
             </div>
           </a>
         </div>
@@ -471,27 +471,27 @@
           <a
             href="jobs-list-layout-full-page-map.html"
             class="photo-box"
-            data-background-image="images/featured-city-02.jpg"
+            data-background-image="/storage/ar.jpg"
           >
             <div class="photo-box-content">
-              <h3>New York</h3>
-              <span>645 Jobs</span>
+              <h3>مهارات اتصال</h3>
+              <span>645 مشترك</span>
             </div>
           </a>
         </div>
 
         <div class="col-xl-3 col-md-6">
           <!-- Photo Box -->
-          <a
-            href="jobs-grid-layout-full-page.html"
+          <Link
+            href="/course/1/1"
             class="photo-box"
-            data-background-image="images/featured-city-03.jpg"
+            data-background-image="/storage/math.jpg"
           >
             <div class="photo-box-content">
-              <h3>Los Angeles</h3>
-              <span>832 Jobs</span>
+              <h3>رياضيات</h3>
+              <span>832 مشترك</span>
             </div>
-          </a>
+          </Link>
         </div>
 
         <div class="col-xl-3 col-md-6">
@@ -499,11 +499,11 @@
           <a
             href="jobs-list-layout-2.html"
             class="photo-box"
-            data-background-image="images/featured-city-04.jpg"
+            data-background-image="/storage/ph.jpg"
           >
             <div class="photo-box-content">
-              <h3>Miami</h3>
-              <span>513 Jobs</span>
+              <h3>فيزياء</h3>
+              <span>513 مشترك</span>
             </div>
           </a>
         </div>
@@ -1065,16 +1065,16 @@
 
 <script>
 export default {
+    // inject:['init_jq'],
   props: {
     courses: Number,
     teachers: Number,
     subscriber: Number,
   },
   mounted() {
-    $(".counter").counterUp({
-      delay: 10,
-      time: 800,
-    });
+    //   console.log('home')
+// this.init_jq()
+applayJq()
   },
 };
 </script>

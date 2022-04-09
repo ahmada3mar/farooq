@@ -114,7 +114,7 @@ class Lecture extends Resource
             }),
 
             Trix::make( __('description'), 'description')
-                ->rules('required',  'max:254'),
+                ->rules('required'),
 
         ];
     }
