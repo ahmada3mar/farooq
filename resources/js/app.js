@@ -4,6 +4,7 @@ import { createInertiaApp , Head, Link } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
 // import "./jquery-3.3.1.min.js"
 
+
 import Layout from './Shared/Layout.vue'
 
 

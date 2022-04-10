@@ -1070,7 +1070,8 @@ export default {
   },
   mounted() {
     // this.jq()
-    rrrr()
+
+ready()
 
   },
 };
