@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Models\Course;
 use App\Models\Lecture;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -29,10 +31,6 @@ Route::get('/test' , function(){
 
 Route::resource('users', UserController::class);
 
-Route::group([
-    'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath'  ]
-], function () {
 
     Route::get('/', function () {
         $tt = trans('auth.failed');
@@ -45,13 +43,20 @@ Route::group([
     Route::get('/404', function () {
         return Inertia::render('404');
     });
-    Route::get('/course/{id}', function ($id) {
 
-        // $rr = Course::with('units.lectures')->first() ;
-        // dd($rr->units->lectures->where('id' , $l_id));
-        return Inertia::render('course',['course' => Course::with('units.lectures.question.answers')->find($id)]);
-    });
     Route::get('/403', function () {
         return Inertia::render('403');
+    });
+
+Route::get('/login', function () {
+    return Inertia::render('Login');
+})->name('login');
+Route::post('/login', [LoginController::class , 'login']);
+
+
+Route::middleware('auth')->group(function(){
+    Route::get('/course/{id}', function ($id) {
+
+        return Inertia::render('course',['course' => Course::with('units.lectures.question.answers')->find($id)]);
     });
 });

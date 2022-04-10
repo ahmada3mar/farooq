@@ -7,6 +7,47 @@
       <!-- Header -->
       <div id="header">
         <div class="container">
+
+                        <!-- Main Navigation -->
+            <nav class="navigation">
+              <ul class="responsive">
+                <li>
+                    <ul></ul>
+                  <Link href="/">من نحن</Link>
+                </li>
+                <li>
+                    <ul></ul>
+                  <Link href="/">المعلمين</Link>
+                </li>
+
+                <li>
+                  <a class="arow" href="#">التوجيهي</a>
+                  <ul class="dropdown-nav">
+                    <li><a href="/">علمي</a></li>
+                    <li><a href="/contact">أدبي</a></li>
+                    <li><a href="/404">صناعي</a></li>
+                    <li><a href="/403">فندقي</a></li>
+                    <li><a href="/test">زراعي</a></li>
+                    <li><a href="/course">تمريض</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <Link class="arow" href="/">الكورسات</Link>
+                  <ul class="dropdown-nav">
+                    <li><a href="/">الصفوف الأساسية</a></li>
+                    <li><a href="/contact">الصفوف الأعدادية</a></li>
+                    <li><a href="/404">الصفوف الثانوية</a></li>
+                  </ul>
+                </li>
+                <li>
+                    <ul></ul>
+                  <Link href="/">الصفحة الرئيسية</Link>
+                </li>
+
+              </ul>
+            </nav>
+            <div class="clearfix"></div>
+            <!-- Main Navigation / End -->
           <!-- Left Side Content -->
           <div class="left-side">
             <!-- Logo -->
@@ -16,174 +57,7 @@
               /></a>
             </div>
 
-            <!-- Main Navigation -->
-            <nav class="navigation">
-              <ul class="responsive">
-                <li>
-                  <Link href="/" class="current">{{ __('home') }}</Link>
-                </li>
 
-                <li>
-                  <a href="#">Find Work</a>
-                  <ul class="dropdown-nav">
-                    <li>
-                      <a href="#">Browse Jobs</a>
-                      <ul class="dropdown-nav">
-                        <li>
-                          <a href="jobs-list-layout-full-page-map.html"
-                            >Full Page List + Map</a
-                          >
-                        </li>
-                        <li>
-                          <a href="jobs-grid-layout-full-page-map.html"
-                            >Full Page Grid + Map</a
-                          >
-                        </li>
-                        <li>
-                          <a href="jobs-grid-layout-full-page.html"
-                            >Full Page Grid</a
-                          >
-                        </li>
-                        <li>
-                          <a href="jobs-list-layout-1.html">List Layout 1</a>
-                        </li>
-                        <li>
-                          <a href="jobs-list-layout-2.html">List Layout 2</a>
-                        </li>
-                        <li><a href="jobs-grid-layout.html">Grid Layout</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#">Browse Tasks</a>
-                      <ul class="dropdown-nav">
-                        <li>
-                          <a href="tasks-list-layout-1.html">List Layout 1</a>
-                        </li>
-                        <li>
-                          <a href="tasks-list-layout-2.html">List Layout 2</a>
-                        </li>
-                        <li>
-                          <a href="tasks-grid-layout.html">Grid Layout</a>
-                        </li>
-                        <li>
-                          <a href="tasks-grid-layout-full-page.html"
-                            >Full Page Grid</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="browse-companies.html">Browse Companies</a>
-                    </li>
-                    <li><a href="single-job-page.html">Job Page</a></li>
-                    <li><a href="single-task-page.html">Task Page</a></li>
-                    <li>
-                      <a href="single-company-profile.html">Company Profile</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="#">For Employers</a>
-                  <ul class="dropdown-nav">
-                    <li>
-                      <a href="#">Find a Freelancer</a>
-                      <ul class="dropdown-nav">
-                        <li>
-                          <a href="freelancers-grid-layout-full-page.html"
-                            >Full Page Grid</a
-                          >
-                        </li>
-                        <li>
-                          <a href="freelancers-grid-layout.html">Grid Layout</a>
-                        </li>
-                        <li>
-                          <a href="freelancers-list-layout-1.html"
-                            >List Layout 1</a
-                          >
-                        </li>
-                        <li>
-                          <a href="freelancers-list-layout-2.html"
-                            >List Layout 2</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="single-freelancer-profile.html"
-                        >Freelancer Profile</a
-                      >
-                    </li>
-                    <li><a href="dashboard-post-a-job.html">Post a Job</a></li>
-                    <li>
-                      <a href="dashboard-post-a-task.html">Post a Task</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="#">Dashboard</a>
-                  <ul class="dropdown-nav">
-                    <li><a href="dashboard.html">Dashboard</a></li>
-                    <li><a href="dashboard-messages.html">Messages</a></li>
-                    <li><a href="dashboard-bookmarks.html">Bookmarks</a></li>
-                    <li><a href="dashboard-reviews.html">Reviews</a></li>
-                    <li>
-                      <a href="dashboard-manage-jobs.html">Jobs</a>
-                      <ul class="dropdown-nav">
-                        <li>
-                          <a href="dashboard-manage-jobs.html">Manage Jobs</a>
-                        </li>
-                        <li>
-                          <a href="dashboard-manage-candidates.html"
-                            >Manage Candidates</a
-                          >
-                        </li>
-                        <li>
-                          <a href="dashboard-post-a-job.html">Post a Job</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="dashboard-manage-tasks.html">Tasks</a>
-                      <ul class="dropdown-nav">
-                        <li>
-                          <a href="dashboard-manage-tasks.html">Manage Tasks</a>
-                        </li>
-                        <li>
-                          <a href="dashboard-manage-bidders.html"
-                            >Manage Bidders</a
-                          >
-                        </li>
-                        <li>
-                          <a href="dashboard-my-active-bids.html"
-                            >My Active Bids</a
-                          >
-                        </li>
-                        <li>
-                          <a href="dashboard-post-a-task.html">Post a Task</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="dashboard-settings.html">Settings</a></li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="#">Pages</a>
-                  <ul class="dropdown-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/contact">Contact us</a></li>
-                    <li><a href="/404">404</a></li>
-                    <li><a href="/403">403</a></li>
-                    <li><a href="/test">test</a></li>
-                    <li><a href="/course">course</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-            <div class="clearfix"></div>
-            <!-- Main Navigation / End -->
           </div>
           <!-- Left Side Content / End -->
 
@@ -460,10 +334,10 @@
               <nav class="navigation">
                 <ul class="responsive">
                   <li>
-                    <a href="#" class="current">{{ __('register') }}</a>
+                    <a href="#">{{ __('register') }}</a>
                   </li>
                   <li>
-                    <a href="#" class="current">{{ __('signin') }}</a>
+                    <a href="#">{{ __('signin') }}</a>
                   </li>
                 </ul>
               </nav>

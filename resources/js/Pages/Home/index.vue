@@ -31,13 +31,11 @@
           <div class="intro-banner-search-form margin-top-95">
             <!-- Search Field -->
             <div class="intro-search-field">
-              <label for="intro-keywords" class="field-title ripple-effect">{{
-                __("what_course")
-              }}</label>
+              <label for="intro-keywords" class="field-title ripple-effect">عن ماذا تبحث ؟</label>
               <input
                 id="intro-keywords"
                 type="text"
-                :placeholder="__('course_title')"
+                placeholder="اسم المادة و ماشابه"
               />
             </div>
 
@@ -47,7 +45,7 @@
                 class="button ripple-effect"
                 onclick="window.location.href='jobs-list-layout-full-page-map.html'"
               >
-                Search
+                بحث
               </button>
             </div>
           </div>
@@ -60,15 +58,15 @@
           <ul class="intro-stats margin-top-45 hide-under-992px">
             <li>
               <strong class="counter">541521</strong>
-              <span>{{ __("courses") }}</span>
+              <span>عدد الكورسات</span>
             </li>
             <li>
               <strong class="counter">{{ teachers }}</strong>
-              <span>{{ __("teachers") }}</span>
+              <span>المعلمين</span>
             </li>
             <li>
               <strong class="counter">{{ subscriber }}</strong>
-              <span>{{ __("subscriber") }}</span>
+              <span>المسجلين</span>
             </li>
           </ul>
         </div>
@@ -1063,18 +1061,17 @@
 </template>
 
 
-<script>
+<script >
 export default {
-    // inject:['init_jq'],
   props: {
     courses: Number,
     teachers: Number,
     subscriber: Number,
   },
   mounted() {
-    //   console.log('home')
-// this.init_jq()
-applayJq()
+    // this.jq()
+    rrrr()
+
   },
 };
 </script>

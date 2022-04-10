@@ -1,8 +1,8 @@
 import { createApp, h } from 'vue'
 import  {translations}  from './translation'
-import applayJq from"./custom.js"
 import { createInertiaApp , Head, Link } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
+// import "./jquery-3.3.1.min.js"
 
 import Layout from './Shared/Layout.vue'
 
@@ -21,7 +21,6 @@ createInertiaApp({
       .component("Head", Head)
       .component("Link", Link)
       .mixin(translations)
-      .mixin({methods:{applayJq: applayJq()}})
       .mount(el);
   },
   title: title => 'Farooq' + (title ? ` | ${title}` : ''),
