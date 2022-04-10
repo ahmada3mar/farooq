@@ -44,6 +44,10 @@ Route::resource('users', UserController::class);
         return Inertia::render('404');
     });
 
+    Route::get('/profile', function () {
+        return Inertia::render('Profile');
+    });
+
     Route::get('/403', function () {
         return Inertia::render('403');
     });
@@ -53,10 +57,24 @@ Route::get('/login', function () {
 })->name('login');
 Route::post('/login', [LoginController::class , 'login']);
 
+Route::get('/Register', function () {
+    return Inertia::render('Register');
+})->name('Register');
+// Route::post('/Register', [RegisterController::class , 'Register']);
+
 
 Route::middleware('auth')->group(function(){
     Route::get('/course/{id}', function ($id) {
 
         return Inertia::render('course',['course' => Course::with('units.lectures.question.answers')->find($id)]);
     });
+    Route::get('/course2/{id}', function ($id) {
+
+        return Inertia::render('course2',['course' => Course::with('units.lectures.question.answers')->find($id)]);
+    });
 });
+
+Route::fallback(function () {
+    return Inertia::render('404');
+});
+
