@@ -7,16 +7,18 @@
       <!-- Header -->
       <div id="header">
         <div class="container">
+          <div class="clearfix"></div>
+          <!-- Main Navigation / End -->
+          <!-- Left Side Content -->
+          <div class="left-side flexbetween">
 
-                        <!-- Main Navigation -->
+            <!-- Main Navigation -->
             <nav class="navigation">
-              <ul class="responsive">
+              <ul class="responsive flexbetween">
                 <li>
-                    <ul></ul>
                   <Link href="/">من نحن</Link>
                 </li>
                 <li>
-                    <ul></ul>
                   <Link href="/">المعلمين</Link>
                 </li>
 
@@ -35,34 +37,38 @@
                   <Link class="arow" href="/">الكورسات</Link>
                   <ul class="dropdown-nav">
                     <li><a href="/">الصفوف الأساسية</a></li>
-                    <li><a href="/contact">الصفوف الأعدادية</a></li>
-                    <li><a href="/404">الصفوف الثانوية</a></li>
+                    <li>
+                      <a href="/contact">الصفوف الأعدادية</a>
+                    </li>
+                    <li>
+                      <a href="/404">الصفوف الثانوية</a>
+                    </li>
                   </ul>
                 </li>
                 <li>
-                    <ul></ul>
                   <Link href="/">الصفحة الرئيسية</Link>
                 </li>
-
               </ul>
             </nav>
-            <div class="clearfix"></div>
-            <!-- Main Navigation / End -->
-          <!-- Left Side Content -->
-          <div class="left-side">
+            
             <!-- Logo -->
             <div id="logo">
-              <a href="/"
-                ><img src="/assets/images/logo.png" alt=""
-              /></a>
-            </div>
-
-
+              <a href="/"><img src="/assets/images/logo.png" alt="" /></a>
+            </div>  
+              <!-- Mobile Navigation Button -->
+            <span class="mmenu-trigger">
+              <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </span>                      
+            <div class="clearfix"></div>
           </div>
           <!-- Left Side Content / End -->
 
           <!-- Right Side Content / End -->
-          <div class="right-side">
+          <div class="right-side flexCenter">
             <div v-if="$page.props.auth">
               <!--  User Notifications -->
               <div class="header-widget hide-on-mobile">
@@ -98,8 +104,8 @@
                                 ><i class="icon-material-outline-group"></i
                               ></span>
                               <span class="notification-text">
-                                <strong>Michael Shannah</strong> applied for a
-                                job
+                                <strong>Michael Shannah</strong>
+                                applied for a job
                                 <span class="color"
                                   >Full Stack Software Engineer</span
                                 >
@@ -114,8 +120,8 @@
                                 ><i class="icon-material-outline-gavel"></i
                               ></span>
                               <span class="notification-text">
-                                <strong>Gilbert Allanis</strong> placed a bid on
-                                your
+                                <strong>Gilbert Allanis</strong>
+                                placed a bid on your
                                 <span class="color">iOS App Development</span>
                                 project
                               </span>
@@ -145,7 +151,8 @@
                                 ><i class="icon-material-outline-group"></i
                               ></span>
                               <span class="notification-text">
-                                <strong>Sindy Forrest</strong> applied for a job
+                                <strong>Sindy Forrest</strong>
+                                applied for a job
                                 <span class="color"
                                   >Full Stack Software Engineer</span
                                 >
@@ -284,7 +291,8 @@
                           />
                         </div>
                         <div class="user-name">
-                          Tom Smith <span>Freelancer</span>
+                          Tom Smith
+                          <span>Freelancer</span>
                         </div>
                       </div>
 
@@ -327,29 +335,21 @@
               </div>
               <!-- User Menu / End -->
 
-              <!-- Mobile Navigation Button -->
             </div>
-
             <div v-else>
               <nav class="navigation">
                 <ul class="responsive">
                   <li>
-                    <a href="#">{{ __('register') }}</a>
+                    <a href="#">{{ __("register") }}</a>
                   </li>
                   <li>
-                    <a href="#">{{ __('signin') }}</a>
+                    <a href="#">{{ __("signin") }}</a>
                   </li>
                 </ul>
               </nav>
             </div>
 
-            <span class="mmenu-trigger">
-              <button class="hamburger hamburger--collapse" type="button">
-                <span class="hamburger-box">
-                  <span class="hamburger-inner"></span>
-                </span>
-              </button>
-            </span>
+
           </div>
           <!-- Right Side Content / End -->
         </div>
@@ -372,20 +372,15 @@
               <!-- Footer Rows Container -->
               <div class="footer-rows-container">
                 <!-- Left Side -->
-                <div class="footer-rows-left">
-                  <div class="footer-row">
-                    <div class="footer-row-inner footer-logo">
-                        <a href="/"
-                          ><img src="/assets/images/logo.png" alt=""/>
-                        </a>
+                  <div class="footer-row borderRight">
+                      <a href="/"
+                        ><img class="footer-row-inner footer-logo" src="/assets/images/logo.png" alt="" />
+                      </a>
                     </div>
-                  </div>
-                </div>
 
                 <!-- Right Side -->
-                <div class="footer-rows-right">
                   <!-- Social Icons -->
-                  <div class="footer-row">
+                  <div class="footer-row borderLeft">
                     <div class="footer-row-inner">
                       <ul class="footer-social-links">
                         <li>
@@ -432,23 +427,6 @@
                       <div class="clearfix"></div>
                     </div>
                   </div>
-
-                  <!-- Language Switcher -->
-                  <div class="footer-row">
-                    <div class="footer-row-inner">
-                      <select
-                        class="selectpicker language-switcher"
-                        data-selected-text-format="count"
-                        data-size="5"
-                      >
-                        <option selected>English</option>
-                        <option>Français</option>
-                        <option>Español</option>
-                        <option>Deutsch</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
               </div>
               <!-- Footer Rows Container / End -->
             </div>

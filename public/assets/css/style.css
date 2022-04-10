@@ -1,108 +1,5 @@
 @charset "UTF-8";
 
-/*
-* Author: Vasterad
-* URL: http://purethemes.net
-*/
-
-/* -------------------------------------------------------------- */
-/* Table of Contents
------------------------------------------------------------------
-
-01. Import Section ----------------------------------------------
-
-02. Layout Components -------------------------------------------
-  # Forms Reset & Styles
-  # Header
-  # Header Notifications
-  # User Menu
-  # Navigation
-  # Mega Menu
-  # Sticky Header
-  # Transparent Header
-  # mmenu.js - mobile menu
-  # Footer
-  # Pagination
-  # Sidebar Styles
-  # Notify Box
-  # Titlebar
-  # Single Page Header
-  # Blog Post
-  # Contact Page
-
-03. Listings Styles ---------------------------------------------
-  # Full Width Page Layout
-  # Job Listing - List Layout
-  # Job Listing - Compact List Layout
-  # Job Listing - Grid Layout
-  # Tasks - List Layout
-  # Tasks - Grid Layout
-  # Freelancers - Grid Layout
-  # Freelancers - List Layout
-  # Browse Companies
-
-04. User Interface Elements -------------------------------------
-  # Buttons
-  # Button with Sliding Icon
-  # List Styles
-  # Marks
-  # Notification Boxes
-  # Tables
-  # Accordion
-  # Tabs
-  # Copy to clipboard
-  # Share Buttons
-  # Verified Badge
-  # Star Rating
-  # Leave Rating Stars
-  # Ripple Effect
-  # Input With Icon
-  # Keywords Input
-  # Clickable Tags
-  # On/Off Switch
-  # Radio Button
-  # Checkbox
-  # Custom Upload Button
-  # Intro Banner
-  # Category Boxes
-  # Photo Box
-  # Pricing Plans
-  # Checkout Page
-  # Icon Boxes
-  # Testimonials
-  # Text Banner
-  # Counters
-  # Countdown
-  # Bidding Widget
-
-05. Scripts Styles ----------------------------------------------
-  # Slick Slider
-  # Simlpebar.js (custom scrollbar)
-  # Tippy.js Tooltips
-  # Magnific Popup
-  # Popup tabs
-  # Boostrap Slider
-  # Bootstrap-select
-  # Snackbar
-  # Google Autocomplete
-  # Google Maps
-  # Leaflet Maps
-
-06. Single Pages ------------------------------------------------
-  # Single Job Page
-  # Single Freelancer Profile
-
-07. Dashboard ---------------------------------------------------
-  # Dashboard Navigation
-  # Dashboard Elements
-  # Dashboard Messages
-
-08. Others ------------------------------------------------------
-  # Common Styles
-  # Icons Cheatsheet Styles
-  # Offsets
-
-*/
 
 /* -------------------------------------------------------------- */
 /* 01. Import Section
@@ -2231,8 +2128,8 @@ em.mm-counter+a.mm-fullsubopen+span {
 	top: 50%;
  }
 
-.footer-row:first-child { padding-left: 0; border-left: none; }
-.footer-row:last-child { padding-right: 0; border: none; }
+/* .footer-row:first-child { padding-left: 0; border-left: none; }
+.footer-row:last-child { padding-right: 0; border: none; } */
 
 .footer-rows-right .footer-row:first-child {
 	padding-left: 40px;
@@ -2509,14 +2406,14 @@ em.mm-counter+a.mm-fullsubopen+span {
 	    height: 46px;
 	}
 
-	#footer .footer-row {
+	/* #footer .footer-row {
 		padding: 0;
 		float: none;
 		padding: 20px 0 0 0;
 		display: block;
 		width: 100%;
 		border: none;
-	}
+	} */
 
 	.footer-rows-container .footer-rows-left,
 	.footer-rows-container .footer-rows-right{ display: block }
@@ -2949,7 +2846,7 @@ body #backtotop a {
     top: 0;
     left: 0;
     z-index: 15;
-    background: linear-gradient(to right,rgba(247,247,247,1) 50%,rgba(247,247,247,0.8) 70%,rgba(247,247,247,0.8) 90%);
+    background: linear-gradient(to right,rgba(247,247,247,0.5) 50%,rgba(247,247,247,0.5) 70%,rgba(247,247,247,0.5) 90%);
 }
 
 .single-page-header:after {
