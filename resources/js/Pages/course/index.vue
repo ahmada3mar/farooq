@@ -61,46 +61,6 @@
                 and polemical presentations of subject matter—which are however
                 considered to be Islamically acceptable—and his descriptions of
                 the beginning of Islam post-date the events by several
-                generations, al-Tabari having died in 923 CE.[20][21] Differing
-                views about how to deal with the available sources has led to
-                the development of four different approaches to the history of
-                early Islam. All four methods have some level of support
-                today.[22][23] The descriptive method uses the outlines of
-                Islamic traditions, while being adjusted for the stories of
-                miracles and faith-centred claims within those sources.[24]
-                Edward Gibbon and Gustav Weil represent some of the first
-                historians following the descriptive method. On the source
-                critical method, a comparison of all the sources is sought in
-                order to identify which informants to the sources are weak and
-                thereby distinguish spurious material.[25] The work of William
-                Montgomery Watt and that of Wilferd Madelung are two source
-                critical examples. On the tradition critical method, the sources
-                are believed to be based on oral traditions with unclear origins
-                and transmission history, and so are treated very
-                cautiously.[26] Ignaz Goldziher was the pioneer of the tradition
-                critical method, and Uri Rubin gives a contemporary example. The
-                skeptical method doubts nearly all of the material in the
-                traditional sources, regarding any possible historical core as
-                too difficult to decipher from distorted and fabricated
-                material.[27] An early example of the sceptical method was the
-                work of John Wansbrough. Nowadays, the popularity of the
-                different methods employed varies on the scope of the works
-                under consideration. For overview treatments of the history of
-                early Islam, the descriptive approach is more popular. For
-                scholars who look at the beginnings of Islam in depth, the
-                source critical and tradition critical methods are more often
-                followed.[22] After the 8th century CE, the quality of sources
-                improves.[28] Those sources which treated earlier times with a
-                large temporal and cultural gap now begin to give accounts which
-                are more contemporaneous, the quality of genre of available
-                historical accounts improves, and new documentary sources—such
-                as official documents, correspondence and poetry—appear.[28] For
-                the time prior to the beginning of Islam—in the 6th century
-                CE—sources are superior as well, if still of mixed quality. In
-                particular, the sources covering the Sasanian realm of influence
-                in the 6th century CE are poor, while the sources for Byzantine
-                areas at the time are of a respectable quality, and complemented
-                by Syriac Christian sources for Syria and Iraq.[29]
               </div>
             </div>
           </div>

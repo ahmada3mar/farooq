@@ -1,7 +1,432 @@
-.footer-rows-left{
-    .footer-row{
-        .footer-row-inner{
+.footer-rows-container {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .footer-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 10px;
+
+        .footer-row-inner {
+            transform: none;
             top: 0%;
         }
+    }
+}
+
+.single-page-header {
+    .background-image-container {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        left: 0%;
+        z-index: 10;
+    }
+}
+
+.video-description{
+    padding: 5px;
+    margin: 5px;
+    border-radius: .3rem;
+    background-color: $main;
+    color: white;
+}
+
+.single-page-header .header-image {
+    height: 140px;
+    flex: 0 0 140px;
+    margin-right: 35px;
+    background: rgba(255, 255, 255, 0.082);
+    border-radius: 4px;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 10%);
+    display: flex;
+    padding: 1px;
+
+    img {
+        background: #fff;
+
+    }
+}
+
+
+
+#logo {
+    border-right: none;
+    border-left: 1px solid #e0e0e0;
+    padding-left: 30px;
+
+}
+
+.borderLeft {
+    border-left: 1px solid #484848;
+
+}
+
+.borderRight {
+    border-right: 1px solid #484848;
+
+}
+
+
+.arabic {
+    text-decoration: rtl !important;
+    text-align: right !important;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+
+}
+
+.center {
+    display: grid !important;
+    place-items: center;
+}
+
+.flexCenter {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexcolumn {
+    display: flex !important;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+}
+
+.flexbetween {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation {
+    margin-top: 0;
+}
+
+.account-type input.account-type-radio:checked~label {
+    background-color: $main;
+}
+
+.flexbetweenToBack {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deletePopup {
+    // opacity: 0;
+    // display: none;
+
+    position: absolute;
+    z-index: 5000;
+    width: 100vw;
+    height: 100vh;
+
+    display: grid !important;
+    place-items: center;
+    background-color: rgba(51, 51, 51, 0.212);
+    opacity: 1 !important;
+
+}
+
+
+
+.cardButtons {
+    margin: 10px 0 10px 0;
+
+    .button {
+        margin: 0 3px;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+
+.tableBotton {
+    width: 45%;
+}
+
+.showdeletePopup {
+    display: grid !important;
+    place-items: center;
+    background-color: rgba(51, 51, 51, 0.082);
+    opacity: 1 !important;
+}
+
+.flexCenterToBlock {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexBetweenToBlock {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between;
+}
+
+.icon-material-outline-supervisor-account {
+    .flexStart {
+        text-align: center !important;
+        align-items: center;
+
+        p {
+            margin: 0 !important;
+        }
+
+        .col-xl-3 {
+            margin: 5px !important;
+        }
+    }
+}
+
+
+.flexStart {
+    display: flex !important;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.myEditBTN {
+    position: absolute !important;
+    left: 6.3rem;
+}
+
+
+.background-image-container {
+    background-position: center !important;
+}
+
+
+.position-relative {
+    position: relative;
+}
+
+.hideElement {
+    position: absolute !important;
+    display: none !important;
+}
+
+#navigation ul li:hover ul a:only-child,
+#navigation ul a:only-child {
+    padding: 7px 9px !important;
+}
+
+.mmenu-trigger {
+    top: 0;
+    color: #812b2ba4;
+}
+
+.signButtons {
+    display: flex;
+    gap: 7px;
+}
+
+.hidden {
+    display: none;
+}
+
+.hiddenElement {
+    position: absolute;
+    opacity: 0;
+}
+
+.text-danger {
+    color: red;
+}
+
+.invalid-feedback {
+    color: red !important;
+}
+
+.text-warning {
+    color: #8f872e !important;
+    background-color: #FBFADD !important;
+}
+
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+
+}
+
+.popupForm {
+    max-width: 820px !important;
+    margin: 30px auto !important;
+}
+
+.popupFormS {
+    max-width: 820px;
+    margin: 30px auto;
+}
+
+.resetStyles {
+    all: none;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.fit-content {
+    width: fit-content;
+}
+
+
+// hide input type number arrows
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+@media (max-width: 768px) {
+    .borderLeft {
+        border: none;
+
+    }
+
+    .borderRight {
+        border: none;
+    }
+
+    .footer-rows-container {
+        padding: 0;
+    }
+
+    #logo {
+        border-right: none;
+        border-left: none;
+        padding-left: 5px;
+        padding-right: 0;
+        margin-right: 10px;
+
+    }
+
+}
+
+@media (max-width: 1099px) {
+
+    #logo {
+
+        padding-right: 0;
+        margin-right: 10px;
+
+    }
+
+}
+
+@media (max-width: 600px) {
+    .tableBotton {
+        width: auto;
+    }
+
+    .basic-table {
+        td {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .signButtons {
+        gap: 5px;
+
+        span.button,
+        button.button,
+        input[type="button"],
+        input[type="submit"],
+        a.button {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+    }
+
+    .mmenu-trigger {
+        margin: 0 -5px 0 15px;
+    }
+
+    .deleteBTN {
+        position: absolute;
+        right: 5px;
+        float: right;
+        padding: 25px 35px 0 0;
+    }
+
+    .relativePosition {
+        position: relative;
+    }
+
+    .compact-list-layout {
+
+        .job-listing {
+            padding-right: 50px !important;
+
+        }
+
+    }
+
+    .flexCenterToBlock {
+        display: block !important;
+        align-items: initial;
+        justify-content: initial;
+    }
+
+
+    .flexbetweenToBlock {
+        display: block !important;
+        align-items: initial;
+        justify-content: initial;
+    }
+
+
+    .phoneMargainTop15 {
+        margin-top: 15px;
+    }
+
+}
+
+
+
+
+// just for Galaxy-fold
+@media (max-width: 340px) {
+    .signButtons {
+
+        gap: 5px;
+
+        span.button,
+        button.button,
+        input[type="button"],
+        input[type="submit"],
+        a.button {
+            padding: 2.5px 5px;
+            font-size: 10px;
+        }
+
+    }
+
+    .mmenu-trigger {
+        margin: 0 -15px 0 7px;
     }
 }

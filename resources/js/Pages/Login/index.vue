@@ -14,7 +14,7 @@
 				<!-- Welcome Text -->
 				<div class="welcome-text">
 					<h3>مرحبا بك مجددا</h3>
-					<span>ليس لديك حساب ؟ <a href="pages-register.html">قم بالتسجيل</a></span>
+					<span>ليس لديك حساب ؟ <a href="Register">قم بالتسجيل</a></span>
 				</div>
 
 				<!-- Form -->
