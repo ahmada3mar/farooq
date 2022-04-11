@@ -1,17 +1,25 @@
 "use strict";
 (self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Home_index_vue"],{
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Home/index.vue?vue&type=script&lang=js":
-/*!***********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Home/index.vue?vue&type=script&lang=js ***!
-  \***********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Home/index.vue?vue&type=script&setup=true&lang=js":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Home/index.vue?vue&type=script&setup=true&lang=js ***!
+  \**********************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+/* harmony import */ var vue3_carousel_dist_carousel_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue3-carousel/dist/carousel.css */ "./node_modules/vue3-carousel/dist/carousel.css");
+/* harmony import */ var vue3_carousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue3-carousel */ "./node_modules/vue3-carousel/dist/carousel.es.js");
+var __default__ = {
+  components: {
+    Carousel: vue3_carousel__WEBPACK_IMPORTED_MODULE_0__.Carousel,
+    Slide: vue3_carousel__WEBPACK_IMPORTED_MODULE_0__.Slide,
+    Pagination: vue3_carousel__WEBPACK_IMPORTED_MODULE_0__.Pagination,
+    Navigation: vue3_carousel__WEBPACK_IMPORTED_MODULE_0__.Navigation
+  },
   props: {
     courses: Number,
     teachers: Number,
@@ -19,9 +27,28 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     // this.jq()
-    rrrr();
+    ready();
   }
-});
+};
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/Object.assign(__default__, {
+  setup: function setup(__props, _ref) {
+    var expose = _ref.expose;
+    expose();
+    var __returned__ = {
+      Carousel: vue3_carousel__WEBPACK_IMPORTED_MODULE_0__.Carousel,
+      Slide: vue3_carousel__WEBPACK_IMPORTED_MODULE_0__.Slide,
+      Pagination: vue3_carousel__WEBPACK_IMPORTED_MODULE_0__.Pagination,
+      Navigation: vue3_carousel__WEBPACK_IMPORTED_MODULE_0__.Navigation
+    };
+    Object.defineProperty(__returned__, '__isScriptSetup', {
+      enumerable: false,
+      value: true
+    });
+    return __returned__;
+  }
+}));
 
 /***/ }),
 
@@ -160,18 +187,204 @@ var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"section gray padding-top-65 padding-bottom-70 full-width-carousel-fix\"><div class=\"container\"><div class=\"row\"><div class=\"col-xl-12\"><!-- Section Headline --><div class=\"section-headline margin-top-0 margin-bottom-25\"><h3>Highest Rated Freelancers</h3><a href=\"freelancers-grid-layout.html\" class=\"headline-link\">Browse All Freelancers</a></div></div><div class=\"col-xl-12\"><div class=\"default-slick-carousel freelancers-container freelancers-grid-layout\"><!--Freelancer --><div class=\"freelancer\"><!-- Overview --><div class=\"freelancer-overview\"><div class=\"freelancer-overview-inner\"><!-- Bookmark Icon --><span class=\"bookmark-icon\"></span><!-- Avatar --><div class=\"freelancer-avatar\"><div class=\"verified-badge\"></div><a href=\"single-freelancer-profile.html\"><img src=\"assets/images/user-avatar-big-01.jpg\" alt=\"\"></a></div><!-- Name --><div class=\"freelancer-name\"><h4><a href=\"single-freelancer-profile.html\">Tom Smith <img class=\"flag\" src=\"assets/images/flags/gb.svg\" alt=\"\" title=\"United Kingdom\" data-tippy-placement=\"top\"></a></h4><span>UI/UX Designer</span></div><!-- Rating --><div class=\"freelancer-rating\"><div class=\"star-rating\" data-rating=\"5.0\"></div></div></div></div><!-- Details --><div class=\"freelancer-details\"><div class=\"freelancer-details-list\"><ul><li> Location <strong><i class=\"icon-material-outline-location-on\"></i> London</strong></li><li>Rate <strong>$60 / hr</strong></li><li>Job Success <strong>95%</strong></li></ul></div><a href=\"single-freelancer-profile.html\" class=\"button button-sliding-icon ripple-effect\">View Profile <i class=\"icon-material-outline-arrow-right-alt\"></i></a></div></div><!-- Freelancer / End --><!--Freelancer --><div class=\"freelancer\"><!-- Overview --><div class=\"freelancer-overview\"><div class=\"freelancer-overview-inner\"><!-- Bookmark Icon --><span class=\"bookmark-icon\"></span><!-- Avatar --><div class=\"freelancer-avatar\"><div class=\"verified-badge\"></div><a href=\"single-freelancer-profile.html\"><img src=\"assets/images/user-avatar-big-02.jpg\" alt=\"\"></a></div><!-- Name --><div class=\"freelancer-name\"><h4><a href=\"#\">David Peterson <img class=\"flag\" src=\"assets/images/flags/de.svg\" alt=\"\" title=\"Germany\" data-tippy-placement=\"top\"></a></h4><span>iOS Expert + Node Dev</span></div><!-- Rating --><div class=\"freelancer-rating\"><div class=\"star-rating\" data-rating=\"5.0\"></div></div></div></div><!-- Details --><div class=\"freelancer-details\"><div class=\"freelancer-details-list\"><ul><li> Location <strong><i class=\"icon-material-outline-location-on\"></i> Berlin</strong></li><li>Rate <strong>$40 / hr</strong></li><li>Job Success <strong>88%</strong></li></ul></div><a href=\"single-freelancer-profile.html\" class=\"button button-sliding-icon ripple-effect\">View Profile <i class=\"icon-material-outline-arrow-right-alt\"></i></a></div></div><!-- Freelancer / End --><!--Freelancer --><div class=\"freelancer\"><!-- Overview --><div class=\"freelancer-overview\"><div class=\"freelancer-overview-inner\"><!-- Bookmark Icon --><span class=\"bookmark-icon\"></span><!-- Avatar --><div class=\"freelancer-avatar\"><a href=\"single-freelancer-profile.html\"><img src=\"assets/images/user-avatar-placeholder.png\" alt=\"\"></a></div><!-- Name --><div class=\"freelancer-name\"><h4><a href=\"#\">Marcin Kowalski <img class=\"flag\" src=\"assets/images/flags/pl.svg\" alt=\"\" title=\"Poland\" data-tippy-placement=\"top\"></a></h4><span>Front-End Developer</span></div><!-- Rating --><div class=\"freelancer-rating\"><div class=\"star-rating\" data-rating=\"4.9\"></div></div></div></div><!-- Details --><div class=\"freelancer-details\"><div class=\"freelancer-details-list\"><ul><li> Location <strong><i class=\"icon-material-outline-location-on\"></i> Warsaw</strong></li><li>Rate <strong>$50 / hr</strong></li><li>Job Success <strong>100%</strong></li></ul></div><a href=\"single-freelancer-profile.html\" class=\"button button-sliding-icon ripple-effect\">View Profile <i class=\"icon-material-outline-arrow-right-alt\"></i></a></div></div><!-- Freelancer / End --><!--Freelancer --><div class=\"freelancer\"><!-- Overview --><div class=\"freelancer-overview\"><div class=\"freelancer-overview-inner\"><!-- Bookmark Icon --><span class=\"bookmark-icon\"></span><!-- Avatar --><div class=\"freelancer-avatar\"><div class=\"verified-badge\"></div><a href=\"single-freelancer-profile.html\"><img src=\"assets/images/user-avatar-big-03.jpg\" alt=\"\"></a></div><!-- Name --><div class=\"freelancer-name\"><h4><a href=\"#\">Sindy Forest <img class=\"flag\" src=\"assets/images/flags/au.svg\" alt=\"\" title=\"Australia\" data-tippy-placement=\"top\"></a></h4><span>Magento Certified Developer</span></div><!-- Rating --><div class=\"freelancer-rating\"><div class=\"star-rating\" data-rating=\"5.0\"></div></div></div></div><!-- Details --><div class=\"freelancer-details\"><div class=\"freelancer-details-list\"><ul><li> Location <strong><i class=\"icon-material-outline-location-on\"></i> Brisbane</strong></li><li>Rate <strong>$70 / hr</strong></li><li>Job Success <strong>100%</strong></li></ul></div><a href=\"single-freelancer-profile.html\" class=\"button button-sliding-icon ripple-effect\">View Profile <i class=\"icon-material-outline-arrow-right-alt\"></i></a></div></div><!-- Freelancer / End --><!--Freelancer --><div class=\"freelancer\"><!-- Overview --><div class=\"freelancer-overview\"><div class=\"freelancer-overview-inner\"><!-- Bookmark Icon --><span class=\"bookmark-icon\"></span><!-- Avatar --><div class=\"freelancer-avatar\"><a href=\"single-freelancer-profile.html\"><img src=\"assets/images/user-avatar-placeholder.png\" alt=\"\"></a></div><!-- Name --><div class=\"freelancer-name\"><h4><a href=\"#\">Sebastiano Piccio <img class=\"flag\" src=\"assets/images/flags/it.svg\" alt=\"\" title=\"Italy\" data-tippy-placement=\"top\"></a></h4><span>Laravel Dev</span></div><!-- Rating --><div class=\"freelancer-rating\"><div class=\"star-rating\" data-rating=\"4.5\"></div></div></div></div><!-- Details --><div class=\"freelancer-details\"><div class=\"freelancer-details-list\"><ul><li> Location <strong><i class=\"icon-material-outline-location-on\"></i> Milan</strong></li><li>Rate <strong>$80 / hr</strong></li><li>Job Success <strong>89%</strong></li></ul></div><a href=\"single-freelancer-profile.html\" class=\"button button-sliding-icon ripple-effect\">View Profile <i class=\"icon-material-outline-arrow-right-alt\"></i></a></div></div><!-- Freelancer / End --><!--Freelancer --><div class=\"freelancer\"><!-- Overview --><div class=\"freelancer-overview\"><div class=\"freelancer-overview-inner\"><!-- Bookmark Icon --><span class=\"bookmark-icon\"></span><!-- Avatar --><div class=\"freelancer-avatar\"><a href=\"single-freelancer-profile.html\"><img src=\"assets/images/user-avatar-placeholder.png\" alt=\"\"></a></div><!-- Name --><div class=\"freelancer-name\"><h4><a href=\"#\">Gabriel Lagueux <img class=\"flag\" src=\"assets/images/flags/fr.svg\" alt=\"\" title=\"France\" data-tippy-placement=\"top\"></a></h4><span>WordPress Expert</span></div><!-- Rating --><div class=\"freelancer-rating\"><div class=\"star-rating\" data-rating=\"5.0\"></div></div></div></div><!-- Details --><div class=\"freelancer-details\"><div class=\"freelancer-details-list\"><ul><li> Location <strong><i class=\"icon-material-outline-location-on\"></i> Paris</strong></li><li>Rate <strong>$50 / hr</strong></li><li>Job Success <strong>100%</strong></li></ul></div><a href=\"single-freelancer-profile.html\" class=\"button button-sliding-icon ripple-effect\">View Profile <i class=\"icon-material-outline-arrow-right-alt\"></i></a></div></div><!-- Freelancer / End --></div></div></div></div></div>", 1);
+var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col freelancer"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Overview "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-overview"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-overview-inner"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Bookmark Icon "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "bookmark-icon"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Avatar "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-avatar"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "verified-badge"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "single-freelancer-profile.html"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "assets/images/user-avatar-big-01.jpg",
+  alt: ""
+})])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Name "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-name"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "single-freelancer-profile.html"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Tom Smith "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  "class": "flag",
+  src: "assets/images/flags/gb.svg",
+  alt: "",
+  title: "United Kingdom",
+  "data-tippy-placement": "top"
+})])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "UI/UX Designer")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Rating "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-rating"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "star-rating",
+  "data-rating": "5.0"
+})])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Details "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-details"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-details-list"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Location "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icon-material-outline-location-on"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" London")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Rate "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, "$60 / hr")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Job Success "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, "95%")])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "single-freelancer-profile.html",
+  "class": "button button-sliding-icon ripple-effect"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("View Profile "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icon-material-outline-arrow-right-alt"
+})])])], -1
+/* HOISTED */
+);
 
-var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"section padding-top-60 padding-bottom-75\"><div class=\"container\"><div class=\"row\"><div class=\"col-xl-12\"><!-- Section Headline --><div class=\"section-headline centered margin-top-0 margin-bottom-35\"><h3>Membership Plans</h3></div></div><div class=\"col-xl-12\"><!-- Billing Cycle  --><div class=\"billing-cycle-radios margin-bottom-70\"><div class=\"radio billed-monthly-radio\"><input id=\"radio-5\" name=\"radio-payment-type\" type=\"radio\" checked><label for=\"radio-5\"><span class=\"radio-label\"></span> Billed Monthly</label></div><div class=\"radio billed-yearly-radio\"><input id=\"radio-6\" name=\"radio-payment-type\" type=\"radio\"><label for=\"radio-6\"><span class=\"radio-label\"></span> Billed Yearly <span class=\"small-label\">Save 10%</span></label></div></div><!-- Pricing Plans Container --><div class=\"pricing-plans-container\"><!-- Plan --><div class=\"pricing-plan\"><h3>Basic Plan</h3><p class=\"margin-top-10\"> One time fee for one listing or task highlighted in search results. </p><div class=\"pricing-plan-label billed-monthly-label\"><strong>$19</strong>/ monthly </div><div class=\"pricing-plan-label billed-yearly-label\"><strong>$205</strong>/ yearly </div><div class=\"pricing-plan-features\"><strong>Features of Basic Plan</strong><ul><li>1 Listing</li><li>30 Days Visibility</li><li>Highlighted in Search Results</li></ul></div><a href=\"pages-checkout-page.html\" class=\"button full-width margin-top-20\">Buy Now</a></div><!-- Plan --><div class=\"pricing-plan recommended\"><div class=\"recommended-badge\">Recommended</div><h3>Standard Plan</h3><p class=\"margin-top-10\"> One time fee for one listing or task highlighted in search results. </p><div class=\"pricing-plan-label billed-monthly-label\"><strong>$49</strong>/ monthly </div><div class=\"pricing-plan-label billed-yearly-label\"><strong>$529</strong>/ yearly </div><div class=\"pricing-plan-features\"><strong>Features of Standard Plan</strong><ul><li>5 Listings</li><li>60 Days Visibility</li><li>Highlighted in Search Results</li></ul></div><a href=\"pages-checkout-page.html\" class=\"button full-width margin-top-20\">Buy Now</a></div><!-- Plan --><div class=\"pricing-plan\"><h3>Extended Plan</h3><p class=\"margin-top-10\"> One time fee for one listing or task highlighted in search results. </p><div class=\"pricing-plan-label billed-monthly-label\"><strong>$99</strong>/ monthly </div><div class=\"pricing-plan-label billed-yearly-label\"><strong>$1069</strong>/ yearly </div><div class=\"pricing-plan-features\"><strong>Features of Extended Plan</strong><ul><li>Unlimited Listings Listing</li><li>90 Days Visibility</li><li>Highlighted in Search Results</li></ul></div><a href=\"pages-checkout-page.html\" class=\"button full-width margin-top-20\">Buy Now</a></div></div></div></div></div></div>", 1);
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Overview "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-overview"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-overview-inner"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Bookmark Icon "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "bookmark-icon"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Avatar "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-avatar"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "verified-badge"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "single-freelancer-profile.html"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "assets/images/user-avatar-big-01.jpg",
+  alt: ""
+})])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Name "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-name"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "single-freelancer-profile.html"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Tom Smith "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  "class": "flag",
+  src: "assets/images/flags/gb.svg",
+  alt: "",
+  title: "United Kingdom",
+  "data-tippy-placement": "top"
+})])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "UI/UX Designer")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Rating "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-rating"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "star-rating",
+  "data-rating": "5.0"
+})])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Details "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-details"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-details-list"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Location "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icon-material-outline-location-on"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" London")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Rate "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, "$60 / hr")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Job Success "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, "95%")])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "single-freelancer-profile.html",
+  "class": "button button-sliding-icon ripple-effect"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("View Profile "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icon-material-outline-arrow-right-alt"
+})])])], -1
+/* HOISTED */
+);
+
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Overview "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-overview"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-overview-inner"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Bookmark Icon "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "bookmark-icon"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Avatar "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-avatar"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "verified-badge"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "single-freelancer-profile.html"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "assets/images/user-avatar-big-01.jpg",
+  alt: ""
+})])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Name "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-name"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "single-freelancer-profile.html"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Tom Smith "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  "class": "flag",
+  src: "assets/images/flags/gb.svg",
+  alt: "",
+  title: "United Kingdom",
+  "data-tippy-placement": "top"
+})])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "UI/UX Designer")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Rating "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-rating"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "star-rating",
+  "data-rating": "5.0"
+})])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Details "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-details"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-details-list"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Location "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icon-material-outline-location-on"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" London")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Rate "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, "$60 / hr")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Job Success "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, "95%")])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "single-freelancer-profile.html",
+  "class": "button button-sliding-icon ripple-effect"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("View Profile "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icon-material-outline-arrow-right-alt"
+})])])], -1
+/* HOISTED */
+);
+
+var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Overview "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-overview"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-overview-inner"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Bookmark Icon "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "bookmark-icon"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Avatar "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-avatar"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "verified-badge"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "single-freelancer-profile.html"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "assets/images/user-avatar-big-01.jpg",
+  alt: ""
+})])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Name "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-name"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "single-freelancer-profile.html"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Tom Smith "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  "class": "flag",
+  src: "assets/images/flags/gb.svg",
+  alt: "",
+  title: "United Kingdom",
+  "data-tippy-placement": "top"
+})])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "UI/UX Designer")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Rating "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-rating"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "star-rating",
+  "data-rating": "5.0"
+})])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Details "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-details"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "freelancer-details-list"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Location "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icon-material-outline-location-on"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" London")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Rate "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, "$60 / hr")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Job Success "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, "95%")])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "single-freelancer-profile.html",
+  "class": "button button-sliding-icon ripple-effect"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("View Profile "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "icon-material-outline-arrow-right-alt"
+})])])], -1
+/* HOISTED */
+);
+
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"section padding-top-60 padding-bottom-75\"><div class=\"container\"><div class=\"row\"><div class=\"col-xl-12\"><!-- Section Headline --><div class=\"section-headline centered margin-top-0 margin-bottom-35\"><h3>Membership Plans</h3></div></div><div class=\"col-xl-12\"><!-- Billing Cycle  --><div class=\"billing-cycle-radios margin-bottom-70\"><div class=\"radio billed-monthly-radio\"><input id=\"radio-5\" name=\"radio-payment-type\" type=\"radio\" checked><label for=\"radio-5\"><span class=\"radio-label\"></span> Billed Monthly</label></div><div class=\"radio billed-yearly-radio\"><input id=\"radio-6\" name=\"radio-payment-type\" type=\"radio\"><label for=\"radio-6\"><span class=\"radio-label\"></span> Billed Yearly <span class=\"small-label\">Save 10%</span></label></div></div><!-- Pricing Plans Container --><div class=\"pricing-plans-container\"><!-- Plan --><div class=\"pricing-plan\"><h3>Basic Plan</h3><p class=\"margin-top-10\"> One time fee for one listing or task highlighted in search results. </p><div class=\"pricing-plan-label billed-monthly-label\"><strong>$19</strong>/ monthly </div><div class=\"pricing-plan-label billed-yearly-label\"><strong>$205</strong>/ yearly </div><div class=\"pricing-plan-features\"><strong>Features of Basic Plan</strong><ul><li>1 Listing</li><li>30 Days Visibility</li><li>Highlighted in Search Results</li></ul></div><a href=\"pages-checkout-page.html\" class=\"button full-width margin-top-20\">Buy Now</a></div><!-- Plan --><div class=\"pricing-plan recommended\"><div class=\"recommended-badge\">Recommended</div><h3>Standard Plan</h3><p class=\"margin-top-10\"> One time fee for one listing or task highlighted in search results. </p><div class=\"pricing-plan-label billed-monthly-label\"><strong>$49</strong>/ monthly </div><div class=\"pricing-plan-label billed-yearly-label\"><strong>$529</strong>/ yearly </div><div class=\"pricing-plan-features\"><strong>Features of Standard Plan</strong><ul><li>5 Listings</li><li>60 Days Visibility</li><li>Highlighted in Search Results</li></ul></div><a href=\"pages-checkout-page.html\" class=\"button full-width margin-top-20\">Buy Now</a></div><!-- Plan --><div class=\"pricing-plan\"><h3>Extended Plan</h3><p class=\"margin-top-10\"> One time fee for one listing or task highlighted in search results. </p><div class=\"pricing-plan-label billed-monthly-label\"><strong>$99</strong>/ monthly </div><div class=\"pricing-plan-label billed-yearly-label\"><strong>$1069</strong>/ yearly </div><div class=\"pricing-plan-features\"><strong>Features of Extended Plan</strong><ul><li>Unlimited Listings Listing</li><li>90 Days Visibility</li><li>Highlighted in Search Results</li></ul></div><a href=\"pages-checkout-page.html\" class=\"button full-width margin-top-20\">Buy Now</a></div></div></div></div></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Intro Banner\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" add class \"disable-gradient\" to enable consistent background overlay "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Intro Headline "), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Search Bar "), _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Stats "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.teachers), 1
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Intro Banner\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" add class \"disable-gradient\" to enable consistent background overlay "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Intro Headline "), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Search Bar "), _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Stats "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.teachers), 1
   /* TEXT */
   ), _hoisted_11]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.subscriber), 1
   /* TEXT */
-  ), _hoisted_13])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Boxes "), _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Boxes / End "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Features Jobs "), _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Featured Jobs / End "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Features Cities "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Section Headline "), _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Photo Box "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  ), _hoisted_13])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Boxes "), _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Boxes / End "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Features Jobs "), _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Featured Jobs / End "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Features Cities "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Section Headline "), _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Photo Box "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "/course/1/1",
     "class": "photo-box",
     "data-background-image": "/storage/math.jpg"
@@ -182,7 +395,66 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })]), _hoisted_24])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Features Cities / End "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Highest Rated Freelancers "), _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Highest Rated Freelancers / End"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Membership Plans "), _hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Membership Plans / End")], 64
+  })]), _hoisted_24])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Features Cities / End "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Highest Rated Freelancers "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Carousel"], {
+    snapAlign: "center",
+    breakpoints: {
+      1200: {
+        itemsToShow: 3
+      },
+      800: {
+        itemsToShow: 2
+      }
+    },
+    wrapAround: true,
+    "class": "container",
+    "items-to-show": 1
+  }, {
+    addons: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Navigation"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Pagination"])];
+    }),
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Slide"], {
+        key: 1
+      }, {
+        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+          return [_hoisted_25];
+        }),
+        _: 1
+        /* STABLE */
+
+      })), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Slide"], {
+        key: 2
+      }, {
+        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+          return [_hoisted_26];
+        }),
+        _: 1
+        /* STABLE */
+
+      })), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Slide"], {
+        key: 3
+      }, {
+        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+          return [_hoisted_27];
+        }),
+        _: 1
+        /* STABLE */
+
+      })), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Slide"], {
+        key: 4
+      }, {
+        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+          return [_hoisted_28];
+        }),
+        _: 1
+        /* STABLE */
+
+      }))];
+    }),
+    _: 1
+    /* STABLE */
+
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Highest Rated Freelancers / End"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Membership Plans "), _hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Membership Plans / End")], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -200,14 +472,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _index_vue_vue_type_template_id_0f04e50b__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=0f04e50b */ "./resources/js/Pages/Home/index.vue?vue&type=template&id=0f04e50b");
-/* harmony import */ var _index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js */ "./resources/js/Pages/Home/index.vue?vue&type=script&lang=js");
-/* harmony import */ var H_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _index_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Pages/Home/index.vue?vue&type=script&setup=true&lang=js");
+/* harmony import */ var D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,H_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_0f04e50b__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Home/index.vue"]])
+const __exports__ = /*#__PURE__*/(0,D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_index_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_0f04e50b__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Home/index.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -216,17 +488,17 @@ if (false) {}
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Home/index.vue?vue&type=script&lang=js":
-/*!*******************************************************************!*\
-  !*** ./resources/js/Pages/Home/index.vue?vue&type=script&lang=js ***!
-  \*******************************************************************/
+/***/ "./resources/js/Pages/Home/index.vue?vue&type=script&setup=true&lang=js":
+/*!******************************************************************************!*\
+  !*** ./resources/js/Pages/Home/index.vue?vue&type=script&setup=true&lang=js ***!
+  \******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_index_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./index.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Home/index.vue?vue&type=script&lang=js");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_index_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./index.vue?vue&type=script&setup=true&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Home/index.vue?vue&type=script&setup=true&lang=js");
  
 
 /***/ }),

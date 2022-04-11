@@ -511,35 +511,9 @@
   <!-- Features Cities / End -->
 
   <!-- Highest Rated Freelancers -->
-  <div
-    class="
-      section
-      gray
-      padding-top-65 padding-bottom-70
-      full-width-carousel-fix
-    "
-  >
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <!-- Section Headline -->
-          <div class="section-headline margin-top-0 margin-bottom-25">
-            <h3>Highest Rated Freelancers</h3>
-            <a href="freelancers-grid-layout.html" class="headline-link"
-              >Browse All Freelancers</a
-            >
-          </div>
-        </div>
-
-        <div class="col-xl-12">
-          <div
-            class="
-              default-slick-carousel
-              freelancers-container freelancers-grid-layout
-            "
-          >
-            <!--Freelancer -->
-            <div class="freelancer">
+  <carousel snapAlign="center" :breakpoints="{1200:{itemsToShow:3} , 800:{itemsToShow:2}}" :wrapAround="true" class="container" :items-to-show="1">
+    <slide :key="1" >
+                 <div class="col freelancer">
               <!-- Overview -->
               <div class="freelancer-overview">
                 <div class="freelancer-overview-inner">
@@ -600,10 +574,9 @@
                 ></a>
               </div>
             </div>
-            <!-- Freelancer / End -->
-
-            <!--Freelancer -->
-            <div class="freelancer">
+    </slide>
+    <slide :key="2" >
+                 <div class=" freelancer">
               <!-- Overview -->
               <div class="freelancer-overview">
                 <div class="freelancer-overview-inner">
@@ -614,24 +587,24 @@
                   <div class="freelancer-avatar">
                     <div class="verified-badge"></div>
                     <a href="single-freelancer-profile.html"
-                      ><img src="assets/images/user-avatar-big-02.jpg" alt=""
+                      ><img src="assets/images/user-avatar-big-01.jpg" alt=""
                     /></a>
                   </div>
 
                   <!-- Name -->
                   <div class="freelancer-name">
                     <h4>
-                      <a href="#"
-                        >David Peterson
+                      <a href="single-freelancer-profile.html"
+                        >Tom Smith
                         <img
                           class="flag"
-                          src="assets/images/flags/de.svg"
+                          src="assets/images/flags/gb.svg"
                           alt=""
-                          title="Germany"
+                          title="United Kingdom"
                           data-tippy-placement="top"
                       /></a>
                     </h4>
-                    <span>iOS Expert + Node Dev</span>
+                    <span>UI/UX Designer</span>
                   </div>
 
                   <!-- Rating -->
@@ -649,11 +622,11 @@
                       Location
                       <strong
                         ><i class="icon-material-outline-location-on"></i>
-                        Berlin</strong
+                        London</strong
                       >
                     </li>
-                    <li>Rate <strong>$40 / hr</strong></li>
-                    <li>Job Success <strong>88%</strong></li>
+                    <li>Rate <strong>$60 / hr</strong></li>
+                    <li>Job Success <strong>95%</strong></li>
                   </ul>
                 </div>
                 <a
@@ -664,75 +637,9 @@
                 ></a>
               </div>
             </div>
-            <!-- Freelancer / End -->
-
-            <!--Freelancer -->
-            <div class="freelancer">
-              <!-- Overview -->
-              <div class="freelancer-overview">
-                <div class="freelancer-overview-inner">
-                  <!-- Bookmark Icon -->
-                  <span class="bookmark-icon"></span>
-
-                  <!-- Avatar -->
-                  <div class="freelancer-avatar">
-                    <a href="single-freelancer-profile.html"
-                      ><img
-                        src="assets/images/user-avatar-placeholder.png"
-                        alt=""
-                    /></a>
-                  </div>
-
-                  <!-- Name -->
-                  <div class="freelancer-name">
-                    <h4>
-                      <a href="#"
-                        >Marcin Kowalski
-                        <img
-                          class="flag"
-                          src="assets/images/flags/pl.svg"
-                          alt=""
-                          title="Poland"
-                          data-tippy-placement="top"
-                      /></a>
-                    </h4>
-                    <span>Front-End Developer</span>
-                  </div>
-
-                  <!-- Rating -->
-                  <div class="freelancer-rating">
-                    <div class="star-rating" data-rating="4.9"></div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Details -->
-              <div class="freelancer-details">
-                <div class="freelancer-details-list">
-                  <ul>
-                    <li>
-                      Location
-                      <strong
-                        ><i class="icon-material-outline-location-on"></i>
-                        Warsaw</strong
-                      >
-                    </li>
-                    <li>Rate <strong>$50 / hr</strong></li>
-                    <li>Job Success <strong>100%</strong></li>
-                  </ul>
-                </div>
-                <a
-                  href="single-freelancer-profile.html"
-                  class="button button-sliding-icon ripple-effect"
-                  >View Profile
-                  <i class="icon-material-outline-arrow-right-alt"></i
-                ></a>
-              </div>
-            </div>
-            <!-- Freelancer / End -->
-
-            <!--Freelancer -->
-            <div class="freelancer">
+    </slide>
+    <slide :key="3" >
+                 <div class=" freelancer">
               <!-- Overview -->
               <div class="freelancer-overview">
                 <div class="freelancer-overview-inner">
@@ -743,24 +650,24 @@
                   <div class="freelancer-avatar">
                     <div class="verified-badge"></div>
                     <a href="single-freelancer-profile.html"
-                      ><img src="assets/images/user-avatar-big-03.jpg" alt=""
+                      ><img src="assets/images/user-avatar-big-01.jpg" alt=""
                     /></a>
                   </div>
 
                   <!-- Name -->
                   <div class="freelancer-name">
                     <h4>
-                      <a href="#"
-                        >Sindy Forest
+                      <a href="single-freelancer-profile.html"
+                        >Tom Smith
                         <img
                           class="flag"
-                          src="assets/images/flags/au.svg"
+                          src="assets/images/flags/gb.svg"
                           alt=""
-                          title="Australia"
+                          title="United Kingdom"
                           data-tippy-placement="top"
                       /></a>
                     </h4>
-                    <span>Magento Certified Developer</span>
+                    <span>UI/UX Designer</span>
                   </div>
 
                   <!-- Rating -->
@@ -778,11 +685,11 @@
                       Location
                       <strong
                         ><i class="icon-material-outline-location-on"></i>
-                        Brisbane</strong
+                        London</strong
                       >
                     </li>
-                    <li>Rate <strong>$70 / hr</strong></li>
-                    <li>Job Success <strong>100%</strong></li>
+                    <li>Rate <strong>$60 / hr</strong></li>
+                    <li>Job Success <strong>95%</strong></li>
                   </ul>
                 </div>
                 <a
@@ -793,10 +700,9 @@
                 ></a>
               </div>
             </div>
-            <!-- Freelancer / End -->
-
-            <!--Freelancer -->
-            <div class="freelancer">
+    </slide>
+    <slide :key="4" >
+                 <div class=" freelancer">
               <!-- Overview -->
               <div class="freelancer-overview">
                 <div class="freelancer-overview-inner">
@@ -805,92 +711,26 @@
 
                   <!-- Avatar -->
                   <div class="freelancer-avatar">
+                    <div class="verified-badge"></div>
                     <a href="single-freelancer-profile.html"
-                      ><img
-                        src="assets/images/user-avatar-placeholder.png"
-                        alt=""
+                      ><img src="assets/images/user-avatar-big-01.jpg" alt=""
                     /></a>
                   </div>
 
                   <!-- Name -->
                   <div class="freelancer-name">
                     <h4>
-                      <a href="#"
-                        >Sebastiano Piccio
+                      <a href="single-freelancer-profile.html"
+                        >Tom Smith
                         <img
                           class="flag"
-                          src="assets/images/flags/it.svg"
+                          src="assets/images/flags/gb.svg"
                           alt=""
-                          title="Italy"
+                          title="United Kingdom"
                           data-tippy-placement="top"
                       /></a>
                     </h4>
-                    <span>Laravel Dev</span>
-                  </div>
-
-                  <!-- Rating -->
-                  <div class="freelancer-rating">
-                    <div class="star-rating" data-rating="4.5"></div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Details -->
-              <div class="freelancer-details">
-                <div class="freelancer-details-list">
-                  <ul>
-                    <li>
-                      Location
-                      <strong
-                        ><i class="icon-material-outline-location-on"></i>
-                        Milan</strong
-                      >
-                    </li>
-                    <li>Rate <strong>$80 / hr</strong></li>
-                    <li>Job Success <strong>89%</strong></li>
-                  </ul>
-                </div>
-                <a
-                  href="single-freelancer-profile.html"
-                  class="button button-sliding-icon ripple-effect"
-                  >View Profile
-                  <i class="icon-material-outline-arrow-right-alt"></i
-                ></a>
-              </div>
-            </div>
-            <!-- Freelancer / End -->
-
-            <!--Freelancer -->
-            <div class="freelancer">
-              <!-- Overview -->
-              <div class="freelancer-overview">
-                <div class="freelancer-overview-inner">
-                  <!-- Bookmark Icon -->
-                  <span class="bookmark-icon"></span>
-
-                  <!-- Avatar -->
-                  <div class="freelancer-avatar">
-                    <a href="single-freelancer-profile.html"
-                      ><img
-                        src="assets/images/user-avatar-placeholder.png"
-                        alt=""
-                    /></a>
-                  </div>
-
-                  <!-- Name -->
-                  <div class="freelancer-name">
-                    <h4>
-                      <a href="#"
-                        >Gabriel Lagueux
-                        <img
-                          class="flag"
-                          src="assets/images/flags/fr.svg"
-                          alt=""
-                          title="France"
-                          data-tippy-placement="top"
-                      /></a>
-                    </h4>
-                    <span>WordPress Expert</span>
+                    <span>UI/UX Designer</span>
                   </div>
 
                   <!-- Rating -->
@@ -908,11 +748,11 @@
                       Location
                       <strong
                         ><i class="icon-material-outline-location-on"></i>
-                        Paris</strong
+                        London</strong
                       >
                     </li>
-                    <li>Rate <strong>$50 / hr</strong></li>
-                    <li>Job Success <strong>100%</strong></li>
+                    <li>Rate <strong>$60 / hr</strong></li>
+                    <li>Job Success <strong>95%</strong></li>
                   </ul>
                 </div>
                 <a
@@ -923,12 +763,14 @@
                 ></a>
               </div>
             </div>
-            <!-- Freelancer / End -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </slide>
+
+    <template #addons>
+      <navigation />
+      <pagination />
+    </template>
+  </carousel>
+
   <!-- Highest Rated Freelancers / End-->
 
   <!-- Membership Plans -->
@@ -1060,18 +902,30 @@
   <!-- Membership Plans / End-->
 </template>
 
+<script setup>
+import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+</script>
 
 <script >
+
 export default {
+    components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
   props: {
     courses: Number,
     teachers: Number,
     subscriber: Number,
   },
-  mounted() {
+  mounted ()   {
     // this.jq()
-    rrrr()
 
+
+ready()
   },
 };
 </script>

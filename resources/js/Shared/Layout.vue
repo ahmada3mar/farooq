@@ -11,10 +11,10 @@
           <!-- Main Navigation / End -->
           <!-- Left Side Content -->
           <div class="left-side flexbetween">
-
             <!-- Main Navigation -->
+
             <nav class="navigation">
-              <ul class="responsive flexbetween">
+              <ul class="responsive">
                 <li>
                   <Link href="/">من نحن</Link>
                 </li>
@@ -50,20 +50,48 @@
                 </li>
               </ul>
             </nav>
-            
+
             <!-- Logo -->
             <div id="logo">
               <a href="/"><img src="/assets/images/logo.png" alt="" /></a>
-            </div>  
-              <!-- Mobile Navigation Button -->
-            <span class="mmenu-trigger">
-              <button class="hamburger hamburger--collapse" type="button">
-                <span class="hamburger-box">
-                  <span class="hamburger-inner"></span>
-                </span>
-              </button>
-            </span>                      
-            <div class="clearfix"></div>
+            </div>
+            <Slide class="navigation mobile" :disableEsc="true" right>
+              <ul class="responsive">
+                <li>
+                  <Link href="/">من نحن</Link>
+                </li>
+                <li>
+                  <Link href="/">المعلمين</Link>
+                </li>
+
+                <li>
+                  <a class="arow" href="#">التوجيهي</a>
+                  <ul class="dropdown-nav">
+                    <li><a href="/">علمي</a></li>
+                    <li><a href="/contact">أدبي</a></li>
+                    <li><a href="/404">صناعي</a></li>
+                    <li><a href="/403">فندقي</a></li>
+                    <li><a href="/test">زراعي</a></li>
+                    <li><a href="/course">تمريض</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <Link class="arow" href="/">الكورسات</Link>
+                  <ul class="dropdown-nav">
+                    <li><a href="/">الصفوف الأساسية</a></li>
+                    <li>
+                      <a href="/contact">الصفوف الأعدادية</a>
+                    </li>
+                    <li>
+                      <a href="/404">الصفوف الثانوية</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <Link href="/">الصفحة الرئيسية</Link>
+                </li>
+              </ul>
+            </Slide>
           </div>
           <!-- Left Side Content / End -->
 
@@ -334,7 +362,6 @@
                 </div>
               </div>
               <!-- User Menu / End -->
-
             </div>
             <div v-else>
               <nav class="navigation">
@@ -348,8 +375,6 @@
                 </ul>
               </nav>
             </div>
-
-
           </div>
           <!-- Right Side Content / End -->
         </div>
@@ -372,61 +397,65 @@
               <!-- Footer Rows Container -->
               <div class="footer-rows-container">
                 <!-- Left Side -->
-                  <div class="footer-row borderRight">
-                      <a href="/"
-                        ><img class="footer-row-inner footer-logo" src="/assets/images/logo.png" alt="" />
-                      </a>
-                    </div>
+                <div class="footer-row borderRight">
+                  <a href="/"
+                    ><img
+                      class="footer-row-inner footer-logo"
+                      src="/assets/images/logo.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
 
                 <!-- Right Side -->
-                  <!-- Social Icons -->
-                  <div class="footer-row borderLeft">
-                    <div class="footer-row-inner">
-                      <ul class="footer-social-links">
-                        <li>
-                          <a
-                            href="#"
-                            title="Facebook"
-                            data-tippy-placement="bottom"
-                            data-tippy-theme="light"
-                          >
-                            <i class="icon-brand-facebook-f"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            title="Twitter"
-                            data-tippy-placement="bottom"
-                            data-tippy-theme="light"
-                          >
-                            <i class="icon-brand-twitter"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            title="Google Plus"
-                            data-tippy-placement="bottom"
-                            data-tippy-theme="light"
-                          >
-                            <i class="icon-brand-google-plus-g"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            title="LinkedIn"
-                            data-tippy-placement="bottom"
-                            data-tippy-theme="light"
-                          >
-                            <i class="icon-brand-linkedin-in"></i>
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="clearfix"></div>
-                    </div>
+                <!-- Social Icons -->
+                <div class="footer-row borderLeft">
+                  <div class="footer-row-inner">
+                    <ul class="footer-social-links">
+                      <li>
+                        <a
+                          href="#"
+                          title="Facebook"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-brand-facebook-f"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          title="Twitter"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-brand-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          title="Google Plus"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-brand-google-plus-g"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          title="LinkedIn"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-brand-linkedin-in"></i>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
                   </div>
+                </div>
               </div>
               <!-- Footer Rows Container / End -->
             </div>
@@ -555,3 +584,13 @@
   </div>
   <!-- Wrapper / End -->
 </template>
+
+<script>
+import { Slide } from "vue3-burger-menu";
+
+export default {
+  components: {
+    Slide, // Register your component
+  },
+};
+</script>
