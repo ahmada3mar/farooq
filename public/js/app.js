@@ -100,7 +100,7 @@ var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 );
 
 var _hoisted_16 = {
-  "class": "responsive"
+  "class": "responsiveMobile"
 };
 
 var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("من نحن");
@@ -358,7 +358,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-        href: "/"
+        href: "/course2/1"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
           return [_hoisted_17];
@@ -478,7 +478,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       render: function render() {
         return (0,vue__WEBPACK_IMPORTED_MODULE_1__.h)(App, props);
       }
-    }).use(plugin).component("Head", _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_3__.Head).component("Link", _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_3__.Link).mixin(_translation__WEBPACK_IMPORTED_MODULE_2__.translations).mount(el);
+    }).use(plugin).component("Head", _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_3__.Head).component("Link", _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_3__.Link).mixin(_translation__WEBPACK_IMPORTED_MODULE_2__.translations).mixin({
+      mounted: function mounted() {
+        photoBox();
+      }
+    }).mount(el);
   },
   title: function title(_title) {
     return 'Farooq' + (_title ? " | ".concat(_title) : '');

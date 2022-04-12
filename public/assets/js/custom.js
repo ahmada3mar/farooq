@@ -1,5 +1,69 @@
 /* ----------------- Start Document ----------------- */
 jQuery('body').append('<div id="backtotop"><a href="#"></a></div>');
+const accordion = () => {
+    const jQueryaccordion = jQuery(".js-accordion");
+    const jQueryaccordion_header = jQueryaccordion.find(".js-accordion-header");
+
+    // default settings
+    const settings = {
+        // animation speed
+        speed: 400,
+
+        // close all other accordion items if true
+        oneOpen: false,
+    };
+
+    return {
+        // pass configurable object literal
+        init: function (jQuerysettings) {
+        jQueryaccordion_header.on("click", function () {
+            accordion().toggle(jQuery(this));
+        });
+
+        jQuery.extend(settings, jQuerysettings);
+
+        // ensure only one accordion is active if oneOpen is true
+        if (settings.oneOpen && jQuery(".js-accordion-item.active").length > 1) {
+            jQuery(".js-accordion-item.active:not(:first)").removeClass("active");
+        }
+
+        // reveal the active accordion bodies
+        jQuery(".js-accordion-item.active").find("> .js-accordion-body").show();
+        },
+        toggle: function (jQuerythis) {
+        if (
+            settings.oneOpen &&
+            jQuerythis[0] !=
+            jQuerythis
+                .closest(".js-accordion")
+                .find("> .js-accordion-item.active > .js-accordion-header")[0]
+        ) {
+            jQuerythis
+            .closest(".js-accordion")
+            .find("> .js-accordion-item")
+            .removeClass("active")
+            .find(".js-accordion-body")
+            .slideUp();
+        }
+
+        // show/hide the clicked accordion item
+        jQuerythis.closest(".js-accordion-item").toggleClass("active");
+        jQuerythis.next().stop().slideToggle(settings.speed);
+        },
+    };
+    };
+
+const photoBox = ()=>{
+    jQuery(".photo-box, .photo-section, .video-container").each(function () {
+        var photoBox = jQuery(this);
+        var photoBoxBG = jQuery(this).attr('data-background-image');
+
+        if (photoBox !== undefined) {
+            jQuery(this).css('background-image', 'url(' + photoBoxBG + ')');
+        }
+    });
+}
+
 jQuery(document).ready(function(){
     console.log('gggggggggg')
 
@@ -476,60 +540,6 @@ jQuery(document).ready(function(){
     /*----------------------------------------------------*/
     /*	Accordion @Lewis Briffa
     /*----------------------------------------------------*/
-    var accordion = (function () {
-
-        var jQueryaccordion = jQuery('.js-accordion');
-        var jQueryaccordion_header = jQueryaccordion.find('.js-accordion-header');
-
-        // default settings
-        var settings = {
-            // animation speed
-            speed: 400,
-
-            // close all other accordion items if true
-            oneOpen: false
-        };
-
-        return {
-            // pass configurable object literal
-            init: function (jQuerysettings) {
-                jQueryaccordion_header.on('click', function () {
-                    accordion.toggle(jQuery(this));
-                });
-
-                jQuery.extend(settings, jQuerysettings);
-
-                // ensure only one accordion is active if oneOpen is true
-                if (settings.oneOpen && jQuery('.js-accordion-item.active').length > 1) {
-                    jQuery('.js-accordion-item.active:not(:first)').removeClass('active');
-                }
-
-                // reveal the active accordion bodies
-                jQuery('.js-accordion-item.active').find('> .js-accordion-body').show();
-            },
-            toggle: function (jQuerythis) {
-
-                if (settings.oneOpen && jQuerythis[0] != jQuerythis.closest('.js-accordion').find('> .js-accordion-item.active > .js-accordion-header')[0]) {
-                    jQuerythis.closest('.js-accordion')
-                        .find('> .js-accordion-item')
-                        .removeClass('active')
-                        .find('.js-accordion-body')
-                        .slideUp();
-                }
-
-                // show/hide the clicked accordion item
-                jQuerythis.closest('.js-accordion-item').toggleClass('active');
-                jQuerythis.next().stop().slideToggle(settings.speed);
-            }
-        };
-    })();
-
-    jQuery(document).ready(function () {
-        accordion.init({
-            speed: 300,
-            oneOpen: true
-        });
-    });
 
 
     /*--------------------------------------------------*/
@@ -907,14 +917,7 @@ jQuery(document).ready(function(){
     });
 
     // Photo Boxes
-    jQuery(".photo-box, .photo-section, .video-container").each(function () {
-        var photoBox = jQuery(this);
-        var photoBoxBG = jQuery(this).attr('data-background-image');
 
-        if (photoBox !== undefined) {
-            jQuery(this).css('background-image', 'url(' + photoBoxBG + ')');
-        }
-    });
 
 
     /*----------------------------------------------------*/
