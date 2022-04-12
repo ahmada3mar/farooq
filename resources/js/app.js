@@ -20,6 +20,7 @@ createInertiaApp({
       .component("Head", Head)
       .component("Link", Link)
       .mixin(translations)
+      .mixin({mounted(){photoBox()}})
       .mount(el);
   },
   title: title => 'Farooq' + (title ? ` | ${title}` : ''),

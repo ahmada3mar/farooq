@@ -243,7 +243,10 @@ export default {
     },
   },
   mounted() {
-    rrrr();
+    accordion().init({
+      speed: 300,
+      oneOpen: true,
+    });
   },
   updated() {
     /*----------------------------------------------------*/

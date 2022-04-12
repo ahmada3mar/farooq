@@ -56,9 +56,9 @@
               <a href="/"><img src="/assets/images/logo.png" alt="" /></a>
             </div>
             <Slide class="navigation mobile" :disableEsc="true" right>
-              <ul class="responsive">
+              <ul class="responsiveMobile">
                 <li>
-                  <Link href="/">من نحن</Link>
+                  <Link href="/course2/1">من نحن</Link>
                 </li>
                 <li>
                   <Link href="/">المعلمين</Link>
