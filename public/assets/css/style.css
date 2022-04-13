@@ -915,7 +915,9 @@ ul.responsive{
 	visibility: visible;
 	pointer-events: all;
 }
-
+a.arow{
+    direction: ltr;
+}
 /* Indicator Arrow */
 a.arow::before {
 	font-family: "Material-Icons";
@@ -936,6 +938,8 @@ a.arow::before {
 	top: 1px;
 	position: relative;
 }
+
+
 
 
 .navigation ul ul.dropdown-nav ul.dropdown-nav li:hover a:after,
@@ -4484,7 +4488,6 @@ span.blog-item-tag {
 .job-listing .job-listing-company-logo {
 	flex: 1;
 	max-width: 55px;
-	margin-right: 25px;
 	position: relative;
 	top: 3px;
 }
@@ -4496,7 +4499,7 @@ span.blog-item-tag {
 
 .job-listing .job-listing-description {
 	flex: 1;
-	padding-top: 3px;
+	padding: 3px 20px;
 }
 
 .job-listing .job-listing-description p {
@@ -4629,7 +4632,7 @@ span.blog-item-tag {
 
 .compact-list-layout .job-listing .job-listing-company-logo {
 	max-width: 50px;
-	margin-right: 30px;
+	margin-left: 30px;
 	top: 0;
 }
 
@@ -16332,7 +16335,6 @@ ul.dashboard-box-list > li:hover {
 	.section-headline {
 		display: block;
 		position: relative;
-		padding-right: 20%;
 	}
 
 	.section-headline.centered {
@@ -16389,7 +16391,7 @@ ul.dashboard-box-list > li:hover {
 	/* Headline Link */
 	a.headline-link {
 		position: absolute;
-		right: 0;
+		left:  0;
 		bottom: 0;
 	}
 
@@ -16398,14 +16400,14 @@ ul.dashboard-box-list > li:hover {
 		top: 3px;
 	}
 
-	a.headline-link:after {
-		content: "\e995";
+	a.headline-link::before {
+		content: "\27F5";
 		font-family: "Material-Icons";
 		font-size: 21px;
 		line-height: 0;
 		position: relative;
-		top: 4px;
-		margin-left: 5px;
+		top: 0px;
+		margin-right: 5px;
 	}
 
 	@media (max-width: 768px) {
