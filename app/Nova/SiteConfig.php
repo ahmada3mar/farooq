@@ -3,24 +3,22 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Avatar;
-use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Password;
-use Laravel\Nova\Fields\Place;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Http\Requests\NovaRequest;
-use Vyuldashev\NovaPermission\RoleSelect;
+use \Epartment\NovaDependencyContainer\NovaDependencyContainer ;
+use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Trix;
+use Timothyasp\Color\Color;
 
-
-class User extends Resource
+class SiteConfig extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\User::class;
+    public static $model = \App\Models\SiteConfig::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -28,11 +26,10 @@ class User extends Resource
      * @var string
      */
     public static $title = 'name';
+    // public static $viaRelationship = 'question';
 
-    public static function group(): string
-    {
-        return __('nova-permission-tool::navigation.sidebar-label');
-    }
+    public static $group = 'settings';
+
 
     /**
      * Get the displayable label of the resource.
@@ -41,7 +38,7 @@ class User extends Resource
      */
     public static function label()
     {
-        return __('users');
+        return __('site_config');
     }
 
     /**
@@ -51,7 +48,7 @@ class User extends Resource
      */
     public static function singularLabel()
     {
-        return __('users');
+        return __('site_config');
     }
 
     /**
@@ -60,10 +57,8 @@ class User extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email', 'avatar'
+        'key'
     ];
-
-
 
     /**
      * Get the fields displayed by the resource.
@@ -77,40 +72,37 @@ class User extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()->hideFromIndex(),
 
-            Avatar::make('Pictur' , 'avatar')->maxWidth(50),
-
-            Text::make('Name')
+            Text::make(__('key'), 'key')
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-            Text::make('Email')
-                ->sortable()
-                ->rules('required', 'email', 'max:254')
-                ->creationRules('unique:users,email')
-                ->updateRules('unique:users,email,{{resourceId}}'),
+                Select::make( __('type'), 'type')
+                ->options([
+                    '0' => __('text'),
+                    '1' => __('image'),
+                    '2' => __('color'),
+                ])
+                ->displayUsingLabels()
+                ->creationRules('required', 'numeric')
+                ->updateRules('nullable', 'numeric'),
 
-            Text::make('Mobile')
-                ->sortable()
-                ->rules('required', 'max:254')
-                ->creationRules('unique:users,mobile')
-                ->updateRules('unique:users,mobile,{{resourceId}}'),
+            NovaDependencyContainer::make([
+                Trix::make( __('value'), 'value')
+                ->rules('required'),
+            ])->dependsOn('type' , 0),
 
-                Place::make('City')
-                ->sortable()
-                ->rules('required', 'max:254'),
+            NovaDependencyContainer::make([
+                Image::make( __('value'), 'value')
+                ->rules('required'),
+            ])->dependsOn('type' , 1),
 
-                Text::make('Area')
-                ->sortable()
-                ->rules('required', 'max:254'),
-
-            Password::make('Password')
-                ->onlyOnForms()
-                ->creationRules('required', 'string', 'min:8')
-                ->updateRules('nullable', 'string', 'min:8'),
-            RoleSelect::make('Role', 'roles'),
-
+            NovaDependencyContainer::make([
+                Color::make( __('value'), 'value')
+                ->slider()
+                ->rules('required'),
+            ])->dependsOn('type' , 2),
 
         ];
     }
