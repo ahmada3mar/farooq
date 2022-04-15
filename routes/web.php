@@ -48,8 +48,8 @@ Route::resource('users', UserController::class);
         return Inertia::render('404');
     });
 
-    Route::get('/profile', function () {
-        return Inertia::render('Profile');
+    Route::get('/profile/{user}', function (User $user) {
+        return Inertia::render('Profile2' , compact('user'));
     });
 
     Route::get('/403', function () {

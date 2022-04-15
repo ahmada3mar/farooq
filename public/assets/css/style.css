@@ -2892,14 +2892,16 @@ body #backtotop a {
 .single-page-header:before {
     content: "";
     position: absolute;
+    opacity: 0.5;
     height: 100%;
     width: 100%;
     display: block;
     top: 0;
     left: 0;
     z-index: 15;
-    background: linear-gradient(to right,rgba(247,247,247,0.5) 50%,rgba(247,247,247,0.5) 70%,rgba(247,247,247,0.5) 90%);
+   background:  linear-gradient(to right,rgb(255 255 255) 50%,rgb(247 247 247 / 0%) 70%,rgb(247 247 247 / 0%) 90%);
 }
+
 
 .single-page-header:after {
     z-index: 5;
@@ -4710,6 +4712,7 @@ span.blog-item-tag {
 ------------------------------------- */
 .grid-layout {
 	display: flex;
+    flex-direction: row-reverse;
 	flex-wrap: wrap;
 	width: calc(100% + 30px);
 }
@@ -4726,6 +4729,7 @@ span.blog-item-tag {
 .grid-layout .job-listing-details {
 	flex-grow: 1;
     display: flex;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     align-items: center;
     padding: 30px;
@@ -4758,7 +4762,6 @@ span.blog-item-tag {
 
 .grid-layout .job-listing .job-listing-company-logo {
 	max-width: 56px;
-	margin-right: 24px;
 	top: 1px;
 	flex: 0 0 56px;
 }
