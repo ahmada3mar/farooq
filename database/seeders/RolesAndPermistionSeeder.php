@@ -1,12 +1,21 @@
 <?php
 
 namespace Database\Seeders;
+
+use App\Models\Answer;
+use App\Models\Course;
+use App\Models\Lecture;
+use App\Models\Question;
+use App\Models\Section;
+use App\Models\SiteConfig;
+use App\Models\unit;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\PermissionRegistrar;
 use App\Models\User;
+use App\Models\UserInformation;
 
 class RolesAndPermistionSeeder extends Seeder
 {
@@ -24,6 +33,14 @@ class RolesAndPermistionSeeder extends Seeder
             User::class,
             Role::class,
             Permission::class,
+            Question::class,
+            Answer::class,
+            Course::class,
+            Lecture::class,
+            unit::class,
+            SiteConfig::class,
+            Section::class,
+            UserInformation::class
             // ... // List all your Models you want to have Permissions for.
         ]);
 

@@ -2,6 +2,9 @@
 
 namespace App\Nova;
 
+use App\Models\Section;
+use App\Nova\Section as NovaSection;
+use Epartment\NovaDependencyContainer\NovaDependencyContainer;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Gravatar;
@@ -11,6 +14,7 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Password;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Vyuldashev\NovaPermission\RoleSelect;
@@ -84,32 +88,53 @@ class Course extends Resource
         return [
             ID::make()->hideFromIndex(),
 
-            Image::make( __('iamge'),'image')->maxWidth(50),
-            Image::make( __('cover'), 'cover')->maxWidth(50)->hideFromIndex(),
+            Image::make(__('iamge'), 'image')->maxWidth(50),
+            Image::make(__('cover'), 'cover')->maxWidth(50)->hideFromIndex(),
 
             Text::make(__('name'), 'name')
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-            Text::make( __('description'), 'description')
+            Text::make(__('description'), 'description')
                 ->sortable()
                 ->rules('required',  'max:254'),
 
 
-            Number::make( __('class') , 'class')
+            Select::make(__('class'), 'class')
+                ->options([
+                    1 => 'الأول',
+                    2 => 'الثاني',
+                    3 => 'الثالث',
+                    4 => 'الرابع',
+                    5 => 'الخامس',
+                    6 => 'السادس',
+                    7 => 'السابع',
+                    8 => 'الثامن',
+                    19 => 'التاسع',
+                    10 => 'العاشر',
+                    11 => 'الأول ثانوي',
+                    12 => 'الثاني ثانوي',
+                ])
                 ->creationRules('required', 'numeric', 'min:1', 'max:12')
                 ->updateRules('nullable', 'numeric', 'min:1', 'max:12'),
 
-            Number::make( __('price'), 'price')
+                NovaDependencyContainer::make([
+                    Select::make( __('section'), 'section_id')
+                    ->options(Section::pluck('name' , 'id')->toArray())
+                    ->rules('required', 'numeric'),
+                ])->dependsOn('class' , 11 )->dependsOn('class' , 12),
+
+            Number::make(__('price'), 'price')
                 ->creationRules('required', 'numeric')
                 ->updateRules('nullable', 'numeric'),
 
-                NestedForm::make('Unit' , 'units' , Unit::class),
-            HasMany::make( __('units') , 'units' , unit::class)->nullable(),
-            HasMany::make( __('lectures') , 'lectures' , Lecture::class)->nullable(),
+            NestedForm::make('Unit', 'units', Unit::class),
+            HasMany::make(__('units'), 'units', unit::class)->nullable(),
+            HasMany::make(__('lectures'), 'lectures', Lecture::class)->nullable(),
 
-            BelongsTo::make( __('instructor'), 'user', User::class)->withMeta(['placeholder'=>trans('contant.sel_instructor')])
-
+            BelongsTo::make(__('instructor'), 'user', User::class)
+            ->withMeta(['placeholder' => trans('contant.sel_instructor')]
+            )->searchable()
         ];
     }
 

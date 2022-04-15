@@ -20,7 +20,7 @@
             </div>
 
             <div class="header-details flexcolumn">
-              <h3>{{ course.name }}</h3>
+              <h3>{{ course?.name }}</h3>
               <h5>المدرس فلان العلنتاني</h5>
             </div>
             <div class="right-side">
@@ -46,11 +46,11 @@
     <div class="row">
       <!-- Content -->
       <div class="col-xl-8 col-lg-8 content-right-offset">
-        <div class="single-page-section" v-if="lectur.name">
+        <div class="single-page-section" v-if="lectur?.name">
           <div v-if="lectur.type == 1">
             <div class="card">
               <h3 class="card-header py-3">
-                {{ lectur.question.name }}
+                {{ lectur.question?.name }}
               </h3>
               <div class="card-body">
                 <div :key="an.id" v-for="an in lectur.question.answers">
@@ -70,7 +70,7 @@
                         type="radio"
                       />
                       <span class="checkmark"></span>
-                      {{ an.name }}
+                      {{ an?.name }}
                     </label>
                     <br />
                   </div>
@@ -103,7 +103,7 @@
             >
               <div class="accordion__item js-accordion-item">
                 <div class="accordion-header js-accordion-header">
-                  {{ lectur.name }}
+                  {{ lectur?.name }}
                 </div>
                 <div class="accordion-body js-accordion-body px-4">
                   <div v-html="lectur.description"></div>
@@ -142,7 +142,7 @@
               v-for="unit in course.units"
             >
               <div class="accordion-header js-accordion-header">
-                {{ unit.name }}
+                {{ unit?.name }}
               </div>
 
               <!-- Accordtion Body -->
@@ -154,7 +154,7 @@
                   @click="changeVid(lectur)"
                   class="accordion-body__contents link"
                 >
-                  {{ lectur.name }}
+                  {{ lectur?.name }}
                 </div>
               </div>
             </div>

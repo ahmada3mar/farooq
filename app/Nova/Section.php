@@ -3,24 +3,18 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Avatar;
-use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Password;
-use Laravel\Nova\Fields\Place;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Http\Requests\NovaRequest;
-use Vyuldashev\NovaPermission\RoleSelect;
 
 
-class User extends Resource
+class Section extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\User::class;
+    public static $model = \App\Models\Section::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -29,10 +23,8 @@ class User extends Resource
      */
     public static $title = 'name';
 
-    public static function group(): string
-    {
-        return __('nova-permission-tool::navigation.sidebar-label');
-    }
+
+
 
     /**
      * Get the displayable label of the resource.
@@ -41,7 +33,7 @@ class User extends Resource
      */
     public static function label()
     {
-        return __('users');
+        return __('section');
     }
 
     /**
@@ -51,7 +43,7 @@ class User extends Resource
      */
     public static function singularLabel()
     {
-        return __('users');
+        return __('section');
     }
 
     /**
@@ -60,10 +52,8 @@ class User extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email', 'avatar'
+        'name'
     ];
-
-
 
     /**
      * Get the fields displayed by the resource.
@@ -77,41 +67,11 @@ class User extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()->hideFromIndex(),
 
-            Avatar::make('Pictur' , 'avatar')->maxWidth(50),
-
-            Text::make('Name')
+            Text::make(__('name'), 'name')
                 ->sortable()
                 ->rules('required', 'max:255'),
-
-            Text::make('Email')
-                ->sortable()
-                ->rules('required', 'email', 'max:254')
-                ->creationRules('unique:users,email')
-                ->updateRules('unique:users,email,{{resourceId}}'),
-
-            Text::make('Mobile')
-                ->sortable()
-                ->rules('required', 'max:254')
-                ->creationRules('unique:users,mobile')
-                ->updateRules('unique:users,mobile,{{resourceId}}'),
-
-                Place::make('City')
-                ->sortable()
-                ->rules('required', 'max:254'),
-
-                Text::make('Area')
-                ->sortable()
-                ->rules('required', 'max:254'),
-
-            Password::make('Password')
-                ->onlyOnForms()
-                ->creationRules('required', 'string', 'min:8')
-                ->updateRules('nullable', 'string', 'min:8'),
-            RoleSelect::make('Role', 'roles'),
-
-
         ];
     }
 
