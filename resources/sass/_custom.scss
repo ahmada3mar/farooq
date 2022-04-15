@@ -112,6 +112,11 @@
     align-items: center;
     justify-content: space-between;
 }
+.flexRight {
+    display: flex !important;
+    align-items: center;
+    justify-content: right;
+}
 
 .navigation {
     margin-top: 0;
