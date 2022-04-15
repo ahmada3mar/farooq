@@ -23,7 +23,7 @@ class Lecture extends Model
 
     public function question(){
 
-        return $this->hasMany(Question::class);
+        return $this->hasOne(Question::class);
     }
 
     public function getUrlAttribute($value){

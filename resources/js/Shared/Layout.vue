@@ -7,204 +7,116 @@
       <!-- Header -->
       <div id="header">
         <div class="container">
+          <div class="clearfix"></div>
+          <!-- Main Navigation / End -->
           <!-- Left Side Content -->
-          <div class="left-side">
-            <!-- Logo -->
-            <div id="logo">
-              <a href="/"
-                ><img src="/assets/images/logo.png" alt=""
-              /></a>
-            </div>
-
+          <div class="left-side flexbetween">
             <!-- Main Navigation -->
+
             <nav class="navigation">
               <ul class="responsive">
                 <li>
-                  <Link href="/" class="current">{{ __('home') }}</Link>
+                  <Link href="/">من نحن</Link>
+                </li>
+                <li>
+                  <Link href="/">المعلمين</Link>
                 </li>
 
                 <li>
-                  <a href="#">Find Work</a>
+                  <a class="arow" href="#">التوجيهي</a>
                   <ul class="dropdown-nav">
+                    <li><a href="/">علمي</a></li>
+                    <li><a href="/contact">أدبي</a></li>
+                    <li><a href="/404">صناعي</a></li>
+                    <li><a href="/403">فندقي</a></li>
+                    <li><a href="/test">زراعي</a></li>
+                    <li><a href="/course">تمريض</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <Link class="arow" href="/">الكورسات</Link>
+                  <ul class="dropdown-nav">
+                    <li><a href="/">الصفوف الأساسية</a></li>
                     <li>
-                      <a href="#">Browse Jobs</a>
-                      <ul class="dropdown-nav">
-                        <li>
-                          <a href="jobs-list-layout-full-page-map.html"
-                            >Full Page List + Map</a
-                          >
-                        </li>
-                        <li>
-                          <a href="jobs-grid-layout-full-page-map.html"
-                            >Full Page Grid + Map</a
-                          >
-                        </li>
-                        <li>
-                          <a href="jobs-grid-layout-full-page.html"
-                            >Full Page Grid</a
-                          >
-                        </li>
-                        <li>
-                          <a href="jobs-list-layout-1.html">List Layout 1</a>
-                        </li>
-                        <li>
-                          <a href="jobs-list-layout-2.html">List Layout 2</a>
-                        </li>
-                        <li><a href="jobs-grid-layout.html">Grid Layout</a></li>
-                      </ul>
+                      <a href="/contact">الصفوف الأعدادية</a>
                     </li>
                     <li>
-                      <a href="#">Browse Tasks</a>
-                      <ul class="dropdown-nav">
-                        <li>
-                          <a href="tasks-list-layout-1.html">List Layout 1</a>
-                        </li>
-                        <li>
-                          <a href="tasks-list-layout-2.html">List Layout 2</a>
-                        </li>
-                        <li>
-                          <a href="tasks-grid-layout.html">Grid Layout</a>
-                        </li>
-                        <li>
-                          <a href="tasks-grid-layout-full-page.html"
-                            >Full Page Grid</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="browse-companies.html">Browse Companies</a>
-                    </li>
-                    <li><a href="single-job-page.html">Job Page</a></li>
-                    <li><a href="single-task-page.html">Task Page</a></li>
-                    <li>
-                      <a href="single-company-profile.html">Company Profile</a>
+                      <a href="/404">الصفوف الثانوية</a>
                     </li>
                   </ul>
                 </li>
-
                 <li>
-                  <a href="#">For Employers</a>
-                  <ul class="dropdown-nav">
-                    <li>
-                      <a href="#">Find a Freelancer</a>
-                      <ul class="dropdown-nav">
-                        <li>
-                          <a href="freelancers-grid-layout-full-page.html"
-                            >Full Page Grid</a
-                          >
-                        </li>
-                        <li>
-                          <a href="freelancers-grid-layout.html">Grid Layout</a>
-                        </li>
-                        <li>
-                          <a href="freelancers-list-layout-1.html"
-                            >List Layout 1</a
-                          >
-                        </li>
-                        <li>
-                          <a href="freelancers-list-layout-2.html"
-                            >List Layout 2</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="single-freelancer-profile.html"
-                        >Freelancer Profile</a
-                      >
-                    </li>
-                    <li><a href="dashboard-post-a-job.html">Post a Job</a></li>
-                    <li>
-                      <a href="dashboard-post-a-task.html">Post a Task</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="#">Dashboard</a>
-                  <ul class="dropdown-nav">
-                    <li><a href="dashboard.html">Dashboard</a></li>
-                    <li><a href="dashboard-messages.html">Messages</a></li>
-                    <li><a href="dashboard-bookmarks.html">Bookmarks</a></li>
-                    <li><a href="dashboard-reviews.html">Reviews</a></li>
-                    <li>
-                      <a href="dashboard-manage-jobs.html">Jobs</a>
-                      <ul class="dropdown-nav">
-                        <li>
-                          <a href="dashboard-manage-jobs.html">Manage Jobs</a>
-                        </li>
-                        <li>
-                          <a href="dashboard-manage-candidates.html"
-                            >Manage Candidates</a
-                          >
-                        </li>
-                        <li>
-                          <a href="dashboard-post-a-job.html">Post a Job</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="dashboard-manage-tasks.html">Tasks</a>
-                      <ul class="dropdown-nav">
-                        <li>
-                          <a href="dashboard-manage-tasks.html">Manage Tasks</a>
-                        </li>
-                        <li>
-                          <a href="dashboard-manage-bidders.html"
-                            >Manage Bidders</a
-                          >
-                        </li>
-                        <li>
-                          <a href="dashboard-my-active-bids.html"
-                            >My Active Bids</a
-                          >
-                        </li>
-                        <li>
-                          <a href="dashboard-post-a-task.html">Post a Task</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="dashboard-settings.html">Settings</a></li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="#">Pages</a>
-                  <ul class="dropdown-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/contact">Contact us</a></li>
-                    <li><a href="/404">404</a></li>
-                    <li><a href="/403">403</a></li>
-                    <li><a href="/test">test</a></li>
-                    <li><a href="/course">course</a></li>
-                  </ul>
+                  <Link href="/">الصفحة الرئيسية</Link>
                 </li>
               </ul>
             </nav>
-            <div class="clearfix"></div>
-            <!-- Main Navigation / End -->
+
+            <!-- Logo -->
+            <div id="logo">
+              <a href="/"><img src="/assets/images/logo.png" alt="" /></a>
+            </div>
+            <Slide class="navigation mobile" :disableEsc="true" right>
+              <ul class="responsiveMobile">
+                <li>
+                  <Link href="/course2/1">من نحن</Link>
+                </li>
+                <li>
+                  <Link href="/">المعلمين</Link>
+                </li>
+
+                <li>
+                  <a class="arow" href="#">التوجيهي</a>
+                  <ul class="dropdown-nav">
+                    <li><a href="/">علمي</a></li>
+                    <li><a href="/contact">أدبي</a></li>
+                    <li><a href="/404">صناعي</a></li>
+                    <li><a href="/403">فندقي</a></li>
+                    <li><a href="/test">زراعي</a></li>
+                    <li><a href="/course">تمريض</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <Link class="arow" href="/">الكورسات</Link>
+                  <ul class="dropdown-nav">
+                    <li><a href="/">الصفوف الأساسية</a></li>
+                    <li>
+                      <a href="/contact">الصفوف الأعدادية</a>
+                    </li>
+                    <li>
+                      <a href="/404">الصفوف الثانوية</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <Link href="/">الصفحة الرئيسية</Link>
+                </li>
+              </ul>
+            </Slide>
           </div>
           <!-- Left Side Content / End -->
 
           <!-- Right Side Content / End -->
-          <div class="right-side">
-            <div v-if="$page.props.auth">
+          <div class="right-side flexCenter">
+            <div v-if="auth">
               <!--  User Notifications -->
               <div class="header-widget hide-on-mobile">
                 <!-- Notifications -->
                 <div class="header-notifications">
                   <!-- Trigger -->
                   <div class="header-notifications-trigger">
-                    <a href="#"
-                      ><i class="icon-feather-bell"></i><span>4</span></a
+                    <Link class="logout" href="/logout">
+                      تسجيل خروج
+                      </Link
                     >
                   </div>
 
-                  <!-- Dropdown -->
-                  <div class="header-notifications-dropdown">
+                  <!-- <div class="header-notifications-dropdown">
                     <div class="header-notifications-headline">
                       <h4>Notifications</h4>
+                                Your job listing
+                                <span class="color"
+                                  >Full Stack PHP Developer</span
+                                >
                       <button
                         class="mark-as-read ripple-effect-dark"
                         title="Mark all as read"
@@ -217,15 +129,14 @@
                     <div class="header-notifications-content">
                       <div class="header-notifications-scroll" data-simplebar>
                         <ul>
-                          <!-- Notification -->
                           <li class="notifications-not-read">
                             <a href="dashboard-manage-candidates.html">
                               <span class="notification-icon"
                                 ><i class="icon-material-outline-group"></i
                               ></span>
                               <span class="notification-text">
-                                <strong>Michael Shannah</strong> applied for a
-                                job
+                                <strong>Michael Shannah</strong>
+                                applied for a job
                                 <span class="color"
                                   >Full Stack Software Engineer</span
                                 >
@@ -233,45 +144,39 @@
                             </a>
                           </li>
 
-                          <!-- Notification -->
                           <li>
                             <a href="dashboard-manage-bidders.html">
                               <span class="notification-icon"
                                 ><i class="icon-material-outline-gavel"></i
                               ></span>
                               <span class="notification-text">
-                                <strong>Gilbert Allanis</strong> placed a bid on
-                                your
+                                <strong>Gilbert Allanis</strong>
+                                placed a bid on your
                                 <span class="color">iOS App Development</span>
                                 project
                               </span>
                             </a>
                           </li>
 
-                          <!-- Notification -->
                           <li>
                             <a href="dashboard-manage-jobs.html">
                               <span class="notification-icon"
                                 ><i class="icon-material-outline-autorenew"></i
                               ></span>
                               <span class="notification-text">
-                                Your job listing
-                                <span class="color"
-                                  >Full Stack PHP Developer</span
-                                >
                                 is expiring.
                               </span>
                             </a>
                           </li>
 
-                          <!-- Notification -->
                           <li>
                             <a href="dashboard-manage-candidates.html">
                               <span class="notification-icon"
                                 ><i class="icon-material-outline-group"></i
                               ></span>
                               <span class="notification-text">
-                                <strong>Sindy Forrest</strong> applied for a job
+                                <strong>Sindy Forrest</strong>
+                                applied for a job
                                 <span class="color"
                                   >Full Stack Software Engineer</span
                                 >
@@ -281,105 +186,11 @@
                         </ul>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
 
                 <!-- Messages -->
-                <div class="header-notifications">
-                  <div class="header-notifications-trigger">
-                    <a href="#"
-                      ><i class="icon-feather-mail"></i><span>3</span></a
-                    >
-                  </div>
 
-                  <!-- Dropdown -->
-                  <div class="header-notifications-dropdown">
-                    <div class="header-notifications-headline">
-                      <h4>Messages</h4>
-                      <button
-                        class="mark-as-read ripple-effect-dark"
-                        title="Mark all as read"
-                        data-tippy-placement="left"
-                      >
-                        <i class="icon-feather-check-square"></i>
-                      </button>
-                    </div>
-
-                    <div class="header-notifications-content">
-                      <div class="header-notifications-scroll" data-simplebar>
-                        <ul>
-                          <!-- Notification -->
-                          <li class="notifications-not-read">
-                            <a href="dashboard-messages.html">
-                              <span class="notification-avatar status-online"
-                                ><img
-                                  src="/assets/images/user-avatar-small-03.jpg"
-                                  alt=""
-                              /></span>
-                              <div class="notification-text">
-                                <strong>David Peterson</strong>
-                                <p class="notification-msg-text">
-                                  Thanks for reaching out. I'm quite busy right
-                                  now on many...
-                                </p>
-                                <span class="color">4 hours ago</span>
-                              </div>
-                            </a>
-                          </li>
-
-                          <!-- Notification -->
-                          <li class="notifications-not-read">
-                            <a href="dashboard-messages.html">
-                              <span class="notification-avatar status-offline"
-                                ><img
-                                  src="/assets/images/user-avatar-small-02.jpg"
-                                  alt=""
-                              /></span>
-                              <div class="notification-text">
-                                <strong>Sindy Forest</strong>
-                                <p class="notification-msg-text">
-                                  Hi Tom! Hate to break it to you, but I'm
-                                  actually on vacation until...
-                                </p>
-                                <span class="color">Yesterday</span>
-                              </div>
-                            </a>
-                          </li>
-
-                          <!-- Notification -->
-                          <li class="notifications-not-read">
-                            <a href="dashboard-messages.html">
-                              <span class="notification-avatar status-online"
-                                ><img
-                                  src="/assets/images/user-avatar-placeholder.png"
-                                  alt=""
-                              /></span>
-                              <div class="notification-text">
-                                <strong>Marcin Kowalski</strong>
-                                <p class="notification-msg-text">
-                                  I received payment. Thanks for cooperation!
-                                </p>
-                                <span class="color">Yesterday</span>
-                              </div>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <a
-                      href="dashboard-messages.html"
-                      class="
-                        header-notifications-button
-                        ripple-effect
-                        button-sliding-icon
-                      "
-                      >View All Messages<i
-                        class="icon-material-outline-arrow-right-alt"
-                      ></i
-                    ></a>
-                  </div>
-                </div>
               </div>
               <!--  User Notifications / End -->
 
@@ -391,7 +202,7 @@
                     <a href="#"
                       ><div class="user-avatar status-online">
                         <img
-                          src="/assets/images/user-avatar-small-01.jpg"
+                          :src="`/storage/${auth.avatar}`"
                           alt=""
                         /></div
                     ></a>
@@ -405,12 +216,13 @@
                       <div class="user-details">
                         <div class="user-avatar status-online">
                           <img
-                            src="/assets/images/user-avatar-small-01.jpg"
+                            :src="`/storage/${auth.avatar}`"
                             alt=""
                           />
                         </div>
                         <div class="user-name">
-                          Tom Smith <span>Freelancer</span>
+                          {{ auth.name }}
+                          <span>Freelancer</span>
                         </div>
                       </div>
 
@@ -452,30 +264,19 @@
                 </div>
               </div>
               <!-- User Menu / End -->
-
-              <!-- Mobile Navigation Button -->
             </div>
-
             <div v-else>
               <nav class="navigation">
                 <ul class="responsive">
                   <li>
-                    <a href="#" class="current">{{ __('register') }}</a>
+                    <Link href="/Register">{{ __("register") }}</Link>
                   </li>
                   <li>
-                    <a href="#" class="current">{{ __('signin') }}</a>
+                    <Link href="/login">{{ __("signin") }} </Link>
                   </li>
                 </ul>
               </nav>
             </div>
-
-            <span class="mmenu-trigger">
-              <button class="hamburger hamburger--collapse" type="button">
-                <span class="hamburger-box">
-                  <span class="hamburger-inner"></span>
-                </span>
-              </button>
-            </span>
           </div>
           <!-- Right Side Content / End -->
         </div>
@@ -498,81 +299,63 @@
               <!-- Footer Rows Container -->
               <div class="footer-rows-container">
                 <!-- Left Side -->
-                <div class="footer-rows-left">
-                  <div class="footer-row">
-                    <div class="footer-row-inner footer-logo">
-                        <a href="/"
-                          ><img src="/assets/images/logo.png" alt=""/>
-                        </a>
-                    </div>
-                  </div>
+                <div class="footer-row borderRight">
+                  <a href="/"
+                    ><img
+                      class="footer-row-inner footer-logo"
+                      src="/assets/images/logo.png"
+                      alt=""
+                    />
+                  </a>
                 </div>
 
                 <!-- Right Side -->
-                <div class="footer-rows-right">
-                  <!-- Social Icons -->
-                  <div class="footer-row">
-                    <div class="footer-row-inner">
-                      <ul class="footer-social-links">
-                        <li>
-                          <a
-                            href="#"
-                            title="Facebook"
-                            data-tippy-placement="bottom"
-                            data-tippy-theme="light"
-                          >
-                            <i class="icon-brand-facebook-f"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            title="Twitter"
-                            data-tippy-placement="bottom"
-                            data-tippy-theme="light"
-                          >
-                            <i class="icon-brand-twitter"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            title="Google Plus"
-                            data-tippy-placement="bottom"
-                            data-tippy-theme="light"
-                          >
-                            <i class="icon-brand-google-plus-g"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="#"
-                            title="LinkedIn"
-                            data-tippy-placement="bottom"
-                            data-tippy-theme="light"
-                          >
-                            <i class="icon-brand-linkedin-in"></i>
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="clearfix"></div>
-                    </div>
-                  </div>
-
-                  <!-- Language Switcher -->
-                  <div class="footer-row">
-                    <div class="footer-row-inner">
-                      <select
-                        class="selectpicker language-switcher"
-                        data-selected-text-format="count"
-                        data-size="5"
-                      >
-                        <option selected>English</option>
-                        <option>Français</option>
-                        <option>Español</option>
-                        <option>Deutsch</option>
-                      </select>
-                    </div>
+                <!-- Social Icons -->
+                <div class="footer-row borderLeft">
+                  <div class="footer-row-inner">
+                    <ul class="footer-social-links">
+                      <li>
+                        <a
+                          href="#"
+                          title="Facebook"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-brand-facebook-f"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          title="Twitter"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-brand-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          title="Google Plus"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-brand-google-plus-g"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          title="LinkedIn"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-brand-linkedin-in"></i>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
                   </div>
                 </div>
               </div>
@@ -703,3 +486,29 @@
   </div>
   <!-- Wrapper / End -->
 </template>
+
+<script>
+import { Slide } from "vue3-burger-menu";
+
+export default {
+    props:{
+
+        auth:Object,
+    },
+  components: {
+    Slide, // Register your component
+  },
+};
+</script>
+
+<style scoped>
+.logout::before{
+    position: relative;
+    content: "\e988";
+    font-family: 'Feather-Icons' !important;
+    transform: scale(-1, 1);
+      display: inline-block;
+      top: 4px;
+
+}
+</style>

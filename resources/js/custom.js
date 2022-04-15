@@ -1,8 +1,8 @@
-import "./jquery-3.3.1.min.js" 
+import "./jquery-3.3.1.min.js"
 
 /* ----------------- Start Document ----------------- */
-
-    $(document).ready(function () {
+export default function applayJq(){
+   return $(document).ready(function () {
 
         /*--------------------------------------------------*/
         /*  Mobile Menu - mmenu.js
@@ -1365,3 +1365,4 @@ import "./jquery-3.3.1.min.js"
 
         // ------------------ End Document ------------------ //
     });
+}

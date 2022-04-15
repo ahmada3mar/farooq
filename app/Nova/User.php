@@ -3,9 +3,11 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Password;
+use Laravel\Nova\Fields\Place;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Vyuldashev\NovaPermission\RoleSelect;
@@ -58,8 +60,10 @@ class User extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email',
+        'id', 'name', 'email', 'avatar'
     ];
+
+
 
     /**
      * Get the fields displayed by the resource.
@@ -75,7 +79,7 @@ class User extends Resource
         return [
             ID::make()->sortable(),
 
-            Gravatar::make()->maxWidth(50),
+            Avatar::make('Pictur' , 'avatar')->maxWidth(50),
 
             Text::make('Name')
                 ->sortable()
@@ -86,6 +90,20 @@ class User extends Resource
                 ->rules('required', 'email', 'max:254')
                 ->creationRules('unique:users,email')
                 ->updateRules('unique:users,email,{{resourceId}}'),
+
+            Text::make('Mobile')
+                ->sortable()
+                ->rules('required', 'max:254')
+                ->creationRules('unique:users,mobile')
+                ->updateRules('unique:users,mobile,{{resourceId}}'),
+
+                Place::make('City')
+                ->sortable()
+                ->rules('required', 'max:254'),
+
+                Text::make('Area')
+                ->sortable()
+                ->rules('required', 'max:254'),
 
             Password::make('Password')
                 ->onlyOnForms()
