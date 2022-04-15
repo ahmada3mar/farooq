@@ -73,7 +73,7 @@ Route::get('/Register', function () {
 Route::middleware('auth')->group(function(){
     Route::get('/course/{id}', function ($id) {
 
-        return Inertia::render('course',['course' => Course::with('units.lectures.question.answers')->find($id)]);
+        return Inertia::render('course2',['course' => Course::with('units.lectures.question.answers')->find($id)]);
     });
     Route::get('/course2/{id}', function ($id) {
 

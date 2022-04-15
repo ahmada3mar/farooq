@@ -2899,7 +2899,7 @@ body #backtotop a {
     top: 0;
     left: 0;
     z-index: 15;
-   background:  linear-gradient(to right,rgb(255 255 255) 50%,rgb(247 247 247 / 0%) 70%,rgb(247 247 247 / 0%) 90%);
+    background: linear-gradient(to right,rgba(247,247,247,0.5) 50%,rgba(247,247,247,0.5) 70%,rgba(247,247,247,0.5) 90%);
 }
 
 
