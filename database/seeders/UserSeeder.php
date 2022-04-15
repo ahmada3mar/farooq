@@ -22,6 +22,9 @@ class UserSeeder extends Seeder
             ],
             [
                 'name' => 'admin',
+                'mobile' => '0777777777',
+                'city'=>'amman',
+                'area'=>'amman',
                 'password' => bcrypt('123456')
             ]
         );

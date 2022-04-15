@@ -17,7 +17,7 @@ class AddUserInformationToUserTable extends Migration
             $table->string('mobile')->after('remember_token');
             $table->string('city')->after('mobile');
             $table->string('area')->after('city');
-            $table->string('avatar')->after('area');
+            $table->string('avatar')->after('area')->nullable();
             $table->double('balance')->default(0.00)->after('avatar');
         });
     }
