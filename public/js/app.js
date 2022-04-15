@@ -929,6 +929,22 @@ var map = {
 		"./resources/js/Pages/Profile/index.vue",
 		"resources_js_Pages_Profile_index_vue"
 	],
+	"./Profile2": [
+		"./resources/js/Pages/Profile2/index.vue",
+		"resources_js_Pages_Profile2_index_vue"
+	],
+	"./Profile2/": [
+		"./resources/js/Pages/Profile2/index.vue",
+		"resources_js_Pages_Profile2_index_vue"
+	],
+	"./Profile2/index": [
+		"./resources/js/Pages/Profile2/index.vue",
+		"resources_js_Pages_Profile2_index_vue"
+	],
+	"./Profile2/index.vue": [
+		"./resources/js/Pages/Profile2/index.vue",
+		"resources_js_Pages_Profile2_index_vue"
+	],
 	"./Register": [
 		"./resources/js/Pages/Register/index.vue",
 		"resources_js_Pages_Register_index_vue"

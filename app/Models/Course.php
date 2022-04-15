@@ -24,6 +24,7 @@ class Course extends Model
         12=> 'الثاني ثانوي',
     ];
 
+
     public function user(){
 
        return $this->belongsTo(User::class);
