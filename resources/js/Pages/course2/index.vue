@@ -50,10 +50,10 @@
           <div v-if="lectur.type == 1">
             <div class="card">
               <h3 class="card-header py-3">
-                {{ lectur.question?.name }}
+                {{ lectur?.question?.name }}
               </h3>
               <div class="card-body">
-                <div :key="an.id" v-for="an in lectur.question.answers">
+                <div :key="an.id" v-for="an in lectur.question.answers || []">
                   <div
                     class="
                       d-flex
@@ -139,7 +139,7 @@
             <div
               class="accordion__item js-accordion-item"
               :key="unit.id"
-              v-for="unit in course.units"
+              v-for="unit in course.units || []"
             >
               <div class="accordion-header js-accordion-header">
                 {{ unit?.name }}

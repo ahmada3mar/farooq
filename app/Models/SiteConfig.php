@@ -9,5 +9,4 @@ class SiteConfig extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['key' , 'value'];
 }

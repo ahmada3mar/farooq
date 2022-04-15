@@ -94,15 +94,17 @@ class SiteConfig extends Resource
             ])->dependsOn('type' , 0),
 
             NovaDependencyContainer::make([
-                Image::make( __('value'), 'value')
-                ->rules('required'),
-            ])->dependsOn('type' , 1),
-
-            NovaDependencyContainer::make([
                 Color::make( __('value'), 'value')
-                ->slider()
-                ->rules('required'),
-            ])->dependsOn('type' , 2),
+                ->chrome()
+                ])->dependsOn('type' , '2'),
+
+                NovaDependencyContainer::make([
+                    Image::make( __('value'), 'value')
+                    ->maxWidth('100')
+                    ->rules('required'),
+                ])->dependsOn('type' , '1'),
+
+
 
         ];
     }
