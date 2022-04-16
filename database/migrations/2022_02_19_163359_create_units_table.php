@@ -17,7 +17,7 @@ class CreateUnitsTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('order');
-            $table->string('description')->nullable();
+            $table->longText('description')->nullable();
             $table->unsignedBigInteger('course_id');
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->timestamps();

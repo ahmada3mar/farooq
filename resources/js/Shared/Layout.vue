@@ -133,7 +133,7 @@
 
                     <ul class="user-menu-small-nav">
                       <li>
-                        <a href="admin"
+                        <a href="/admin"
                           >
                           لوحة التحكم
                           <i class="icon-material-outline-dashboard"></i>
