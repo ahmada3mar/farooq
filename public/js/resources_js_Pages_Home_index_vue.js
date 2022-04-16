@@ -850,7 +850,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Plan "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_85, [_hoisted_86, _hoisted_87, _hoisted_88, _hoisted_89, _hoisted_90, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"pricing-plan-features\">\r\n                <strong>Features of Standard Plan</strong>\r\n                <ul>\r\n                  <li>5 Listings</li>\r\n                  <li>60 Days Visibility</li>\r\n                  <li>Highlighted in Search Results</li>\r\n                </ul>\r\n              </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Plan "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_85, [_hoisted_86, _hoisted_87, _hoisted_88, _hoisted_89, _hoisted_90, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"pricing-plan-features\">\n                <strong>Features of Standard Plan</strong>\n                <ul>\n                  <li>5 Listings</li>\n                  <li>60 Days Visibility</li>\n                  <li>Highlighted in Search Results</li>\n                </ul>\n              </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "pages-checkout-page.html",
     "class": "button full-width margin-top-20"
   }, {
@@ -893,7 +893,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.price-logo[data-v-0f04e50b] {\r\n  width: 50;\r\n  height: 50;\r\n  background: teal;\r\n  justify-content: center;\r\n  align-items: center;\r\n  display: flex;\r\n  color: white;\r\n  font-weight: bold;\n}\n.up[data-v-0f04e50b] {\r\n  font-size: 15px;\n}\n.bottom[data-v-0f04e50b] {\r\n  font-size: 16px;\r\n  top: 2px !important;\n}\n.pricing-plan[data-v-0f04e50b] {\r\n  display: flex;\r\n  font-weight: bold;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  height: 500px;\r\n  /* color: whitesmoke; */\r\n  /* background-image: url(\"/assets/images/price.png\"); */\n}\n.intro-banner[data-v-0f04e50b]:after,\r\n.intro-banner[data-v-0f04e50b]:before {\r\n  background: linear-gradient(\r\n    to left,\r\n    var(--shadow) 20%,\r\n    rgba(250, 250, 250, 0.1) 80%,\r\n    rgba(250, 250, 250, 0) 100%\r\n  );\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.price-logo[data-v-0f04e50b] {\n  width: 50;\n  height: 50;\n  background: teal;\n  justify-content: center;\n  align-items: center;\n  display: flex;\n  color: white;\n  font-weight: bold;\n}\n.up[data-v-0f04e50b] {\n  font-size: 15px;\n}\n.bottom[data-v-0f04e50b] {\n  font-size: 16px;\n  top: 2px !important;\n}\n.pricing-plan[data-v-0f04e50b] {\n  display: flex;\n  font-weight: bold;\n  flex-direction: column;\n  justify-content: space-between;\n  height: 500px;\n  /* color: whitesmoke; */\n  /* background-image: url(\"/assets/images/price.png\"); */\n}\n.intro-banner[data-v-0f04e50b]:after,\n.intro-banner[data-v-0f04e50b]:before {\n  background: linear-gradient(\n    to left,\n    var(--shadow) 20%,\n    rgba(250, 250, 250, 0.1) 80%,\n    rgba(250, 250, 250, 0) 100%\n  );\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -942,7 +942,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_vue_vue_type_template_id_0f04e50b_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=0f04e50b&scoped=true */ "./resources/js/Pages/Home/index.vue?vue&type=template&id=0f04e50b&scoped=true");
 /* harmony import */ var _index_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Pages/Home/index.vue?vue&type=script&setup=true&lang=js");
 /* harmony import */ var _index_vue_vue_type_style_index_0_id_0f04e50b_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.vue?vue&type=style&index=0&id=0f04e50b&scoped=true&lang=css */ "./resources/js/Pages/Home/index.vue?vue&type=style&index=0&id=0f04e50b&scoped=true&lang=css");
-/* harmony import */ var H_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -950,7 +950,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,H_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_0f04e50b_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-0f04e50b"],['__file',"resources/js/Pages/Home/index.vue"]])
+const __exports__ = /*#__PURE__*/(0,D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_0f04e50b_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-0f04e50b"],['__file',"resources/js/Pages/Home/index.vue"]])
 /* hot reload */
 if (false) {}
 
