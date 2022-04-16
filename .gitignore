@@ -3,6 +3,7 @@
 /public/storage
 /storage/*.key
 /vendor
+farooq.rar
 .env
 .env.backup
 .phpunit.result.cache
