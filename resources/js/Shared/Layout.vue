@@ -23,25 +23,24 @@
                 </li>
 
                 <li>
-                  <a class="arow" href="#">التوجيهي</a>
+                  <Link class="arow" href="/courses?class=12">التوجيهي</Link>
                   <ul class="dropdown-nav">
-                    <li><a href="/">علمي</a></li>
-                    <li><a href="/contact">أدبي</a></li>
-                    <li><a href="/404">صناعي</a></li>
-                    <li><a href="/403">فندقي</a></li>
-                    <li><a href="/test">زراعي</a></li>
-                    <li><a href="/course">تمريض</a></li>
+                    <li v-for="section in sections" :key="section.id">
+                      <Link :href="`/courses?section=${section.id}`">{{
+                        section.name
+                      }}</Link>
+                    </li>
                   </ul>
                 </li>
                 <li>
-                  <Link class="arow" href="/">الكورسات</Link>
+                  <Link class="arow" href="/courses">الكورسات</Link>
                   <ul class="dropdown-nav">
-                    <li><a href="/">الصفوف الأساسية</a></li>
+                    <li><Link href="/courses?category=primary">الصفوف الأساسية</Link></li>
                     <li>
-                      <a href="/contact">الصفوف الأعدادية</a>
+                      <Link href="/courses?category=secondary">الصفوف الأعدادية</Link>
                     </li>
                     <li>
-                      <a href="/404">الصفوف الثانوية</a>
+                      <Link href="/courses?category=highschool">الصفوف الثانوية</Link>
                     </li>
                   </ul>
                 </li>
@@ -55,7 +54,7 @@
             <div id="logo">
               <a href="/"><img src="/assets/images/logo.png" alt="" /></a>
             </div>
-            <Slide class="navigation mobile" :disableEsc="true" right>
+            <Slide class="navigation mobile"   right>
               <ul class="responsiveMobile">
                 <li>
                   <Link href="/course2/1">من نحن</Link>
@@ -67,23 +66,22 @@
                 <li>
                   <a class="arow" href="#">التوجيهي</a>
                   <ul class="dropdown-nav">
-                    <li><a href="/">علمي</a></li>
-                    <li><a href="/contact">أدبي</a></li>
-                    <li><a href="/404">صناعي</a></li>
-                    <li><a href="/403">فندقي</a></li>
-                    <li><a href="/test">زراعي</a></li>
-                    <li><a href="/course">تمريض</a></li>
+                    <li v-for="section in sections" :key="section.id">
+                      <Link :href="`/courses?section=${section.id}`">{{
+                        section.name
+                      }}</Link>
+                    </li>
                   </ul>
                 </li>
                 <li>
-                  <Link class="arow" href="/">الكورسات</Link>
+                  <Link class="arow" href="/courses">الكورسات</Link>
                   <ul class="dropdown-nav">
-                    <li><a href="/">الصفوف الأساسية</a></li>
+                    <li><Link href="/courses?category=primary">الصفوف الأساسية</Link></li>
                     <li>
-                      <a href="/contact">الصفوف الأعدادية</a>
+                      <Link href="/courses?category=secondary">الصفوف الأعدادية</Link>
                     </li>
                     <li>
-                      <a href="/404">الصفوف الثانوية</a>
+                      <Link href="/courses?category=highschool">الصفوف الثانوية</Link>
                     </li>
                   </ul>
                 </li>
@@ -104,10 +102,7 @@
                 <div class="header-notifications">
                   <!-- Trigger -->
                   <div class="header-notifications-trigger">
-                    <Link class="logout" href="/logout">
-                      تسجيل خروج
-                      </Link
-                    >
+                    <Link class="logout" href="/logout"> تسجيل خروج </Link>
                   </div>
 
                   <!-- <div class="header-notifications-dropdown">
@@ -190,7 +185,6 @@
                 </div>
 
                 <!-- Messages -->
-
               </div>
               <!--  User Notifications / End -->
 
@@ -201,10 +195,7 @@
                   <div class="header-notifications-trigger">
                     <a href="#"
                       ><div class="user-avatar status-online">
-                        <img
-                          :src="`/storage/${auth.avatar}`"
-                          alt=""
-                        /></div
+                        <img :src="`/storage/${auth.avatar}`" alt="" /></div
                     ></a>
                   </div>
 
@@ -215,10 +206,7 @@
                       <!-- User Name / Avatar -->
                       <div class="user-details">
                         <div class="user-avatar status-online">
-                          <img
-                            :src="`/storage/${auth.avatar}`"
-                            alt=""
-                          />
+                          <img :src="`/storage/${auth.avatar}`" alt="" />
                         </div>
                         <div class="user-name">
                           {{ auth.name }}
@@ -269,10 +257,10 @@
               <nav class="navigation">
                 <ul class="responsive">
                   <li>
-                    <Link href="/Register">{{ __("register") }}</Link>
+                    <Link href="/Register">تسجيل</Link>
                   </li>
                   <li>
-                    <Link href="/login">{{ __("signin") }} </Link>
+                    <Link href="/login">تسجيل الدخول </Link>
                   </li>
                 </ul>
               </nav>
@@ -491,10 +479,10 @@
 import { Slide } from "vue3-burger-menu";
 
 export default {
-    props:{
-
-        auth:Object,
-    },
+  props: {
+    sections: Array,
+    auth: Object,
+  },
   components: {
     Slide, // Register your component
   },
@@ -502,13 +490,12 @@ export default {
 </script>
 
 <style scoped>
-.logout::before{
-    position: relative;
-    content: "\e988";
-    font-family: 'Feather-Icons' !important;
-    transform: scale(-1, 1);
-      display: inline-block;
-      top: 4px;
-
+.logout::before {
+  position: relative;
+  content: "\e988";
+  font-family: "Feather-Icons" !important;
+  transform: scale(-1, 1);
+  display: inline-block;
+  top: 4px;
 }
 </style>
