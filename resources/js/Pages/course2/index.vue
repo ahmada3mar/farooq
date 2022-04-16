@@ -254,10 +254,7 @@ export default {
     },
   },
   mounted() {
-    accordion().init({
-      speed: 300,
-      oneOpen: true,
-    });
+    accordion().init({});
   },
 };
 </script>

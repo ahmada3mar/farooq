@@ -64,6 +64,57 @@ const photoBox = ()=>{
     });
 }
 
+const Dropdown = ()=>{
+    
+    /*--------------------------------------------------*/
+    /*  Notification Dropdowns
+    /*--------------------------------------------------*/
+    jQuery(".header-notifications").each(function () {
+        var userMenu = jQuery(this);
+        var userMenuTrigger = jQuery(this).find('.header-notifications-trigger a');
+
+        jQuery(userMenuTrigger).on('click', function (event) {
+            event.preventDefault();
+
+            if (jQuery(this).closest(".header-notifications").is(".active")) {
+                close_user_dropdown();
+            } else {
+                close_user_dropdown();
+                userMenu.addClass('active');
+            }
+        });
+    });
+
+    // Closing function
+    function close_user_dropdown() {
+        jQuery('.header-notifications').removeClass("active");
+    }
+
+    // Closes notification dropdown on click outside the conatainer
+    var mouse_is_inside = false;
+
+    jQuery(".header-notifications").on("mouseenter", function () {
+        mouse_is_inside = true;
+    });
+    jQuery(".header-notifications").on("mouseleave", function () {
+        mouse_is_inside = false;
+    });
+
+    jQuery("body").mouseup(function () {
+        if (!mouse_is_inside) close_user_dropdown();
+    });
+
+    // Close with ESC
+    jQuery(document).keyup(function (e) {
+        if (e.keyCode == 27) {
+            close_user_dropdown();
+        }
+    });
+
+
+
+}
+
 jQuery(document).ready(function(){
 
     /*--------------------------------------------------*/
@@ -190,52 +241,6 @@ jQuery(document).ready(function(){
         }
         slideFade(jQuery(this).parent());
     });
-
-    /*--------------------------------------------------*/
-    /*  Notification Dropdowns
-    /*--------------------------------------------------*/
-    jQuery(".header-notifications").each(function () {
-        var userMenu = jQuery(this);
-        var userMenuTrigger = jQuery(this).find('.header-notifications-trigger a');
-
-        jQuery(userMenuTrigger).on('click', function (event) {
-            event.preventDefault();
-
-            if (jQuery(this).closest(".header-notifications").is(".active")) {
-                close_user_dropdown();
-            } else {
-                close_user_dropdown();
-                userMenu.addClass('active');
-            }
-        });
-    });
-
-    // Closing function
-    function close_user_dropdown() {
-        jQuery('.header-notifications').removeClass("active");
-    }
-
-    // Closes notification dropdown on click outside the conatainer
-    var mouse_is_inside = false;
-
-    jQuery(".header-notifications").on("mouseenter", function () {
-        mouse_is_inside = true;
-    });
-    jQuery(".header-notifications").on("mouseleave", function () {
-        mouse_is_inside = false;
-    });
-
-    jQuery("body").mouseup(function () {
-        if (!mouse_is_inside) close_user_dropdown();
-    });
-
-    // Close with ESC
-    jQuery(document).keyup(function (e) {
-        if (e.keyCode == 27) {
-            close_user_dropdown();
-        }
-    });
-
 
     /*--------------------------------------------------*/
     /*  User Status Switch

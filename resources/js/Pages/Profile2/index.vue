@@ -148,7 +148,7 @@
                                         <i
                                             class="icon-material-outline-business-center"
                                         ></i>
-                                        <div>
+                                        <div class="margin-right-30">
                                         <span>الوضيفة</span>
                                         <h5>مدرس عربي</h5>
                                         </div>
@@ -157,20 +157,26 @@
                                         <i
                                             class="icon-material-outline-location-on"
                                         ></i>
+                                        <div class="margin-right-30">
                                         <span>الموقع</span>
                                         <h5>{{ user.city }} {{ user.area }}</h5>
+                                        </div>
                                     </li>
                                     <li>
                                         <i class="icon-feather-book"></i>
+                                        <div class="margin-right-30">
                                         <span>الكورسات</span>
                                         <h5>{{ user.courses.length }}</h5>
+                                        </div>
                                     </li>
                                     <li>
                                         <i
                                             class="icon-material-outline-access-time"
                                         ></i>
+                                        <div class="margin-right-30">
                                         <span>الخبرة</span>
                                         <h5>5 سنوات</h5>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -359,6 +365,7 @@ export default {
             speed: 300,
             oneOpen: true,
         });
+
     },
     updated() {
         /*----------------------------------------------------*/
@@ -393,5 +400,8 @@ export default {
 .job-overview .job-overview-inner ul li i{
   left: unset;
   right: 0;
+}
+.single-page-section {
+    overflow: hidden;
 }
 </style>

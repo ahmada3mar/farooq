@@ -25,8 +25,8 @@
                 <li>
                   <Link class="arow" href="/courses?class=12">التوجيهي</Link>
                   <ul class="dropdown-nav">
-                    <li v-for="section in sections" :key="section.id">
-                      <Link :href="`/courses?section=${section.id}`">{{
+                    <li v-for="section in sections" :key="section?.id">
+                      <Link :href="`/courses?section=${section?.id}`">{{
                         section.name
                       }}</Link>
                     </li>
@@ -66,8 +66,8 @@
                 <li>
                   <a class="arow" href="#">التوجيهي</a>
                   <ul class="dropdown-nav">
-                    <li v-for="section in sections" :key="section.id">
-                      <Link :href="`/courses?section=${section.id}`">{{
+                    <li v-for="section in sections" :key="section?.id">
+                      <Link :href="`/courses?section=${section?.id}`">{{
                         section.name
                       }}</Link>
                     </li>
@@ -96,155 +96,55 @@
           <!-- Right Side Content / End -->
           <div class="right-side flexCenter">
             <div v-if="auth">
-              <!--  User Notifications -->
-              <div class="header-widget hide-on-mobile">
-                <!-- Notifications -->
-                <div class="header-notifications">
-                  <!-- Trigger -->
-                  <div class="header-notifications-trigger">
-                    <Link class="logout" href="/logout"> تسجيل خروج </Link>
-                  </div>
-
-                  <!-- <div class="header-notifications-dropdown">
-                    <div class="header-notifications-headline">
-                      <h4>Notifications</h4>
-                                Your job listing
-                                <span class="color"
-                                  >Full Stack PHP Developer</span
-                                >
-                      <button
-                        class="mark-as-read ripple-effect-dark"
-                        title="Mark all as read"
-                        data-tippy-placement="left"
-                      >
-                        <i class="icon-feather-check-square"></i>
-                      </button>
-                    </div>
-
-                    <div class="header-notifications-content">
-                      <div class="header-notifications-scroll" data-simplebar>
-                        <ul>
-                          <li class="notifications-not-read">
-                            <a href="dashboard-manage-candidates.html">
-                              <span class="notification-icon"
-                                ><i class="icon-material-outline-group"></i
-                              ></span>
-                              <span class="notification-text">
-                                <strong>Michael Shannah</strong>
-                                applied for a job
-                                <span class="color"
-                                  >Full Stack Software Engineer</span
-                                >
-                              </span>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a href="dashboard-manage-bidders.html">
-                              <span class="notification-icon"
-                                ><i class="icon-material-outline-gavel"></i
-                              ></span>
-                              <span class="notification-text">
-                                <strong>Gilbert Allanis</strong>
-                                placed a bid on your
-                                <span class="color">iOS App Development</span>
-                                project
-                              </span>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a href="dashboard-manage-jobs.html">
-                              <span class="notification-icon"
-                                ><i class="icon-material-outline-autorenew"></i
-                              ></span>
-                              <span class="notification-text">
-                                is expiring.
-                              </span>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a href="dashboard-manage-candidates.html">
-                              <span class="notification-icon"
-                                ><i class="icon-material-outline-group"></i
-                              ></span>
-                              <span class="notification-text">
-                                <strong>Sindy Forrest</strong>
-                                applied for a job
-                                <span class="color"
-                                  >Full Stack Software Engineer</span
-                                >
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div> -->
-                </div>
-
-                <!-- Messages -->
-              </div>
-              <!--  User Notifications / End -->
-
               <!-- User Menu -->
-              <div class="header-widget">
+              <div class="header-widget navProfile">
                 <!-- Messages -->
                 <div class="header-notifications user-menu">
                   <div class="header-notifications-trigger">
-                    <a href="#"
-                      ><div class="user-avatar status-online">
-                        <img :src="`/storage/${auth.avatar}`" alt="" /></div
+                    <a :href="`#`">
+                      <div class="user-avatar ">
+                        <div class="navProfileImage">
+                          <img :src="`/storage/${auth.avatar}`" alt="" />
+                        </div>
+                        </div
                     ></a>
                   </div>
 
                   <!-- Dropdown -->
                   <div class="header-notifications-dropdown">
                     <!-- User Status -->
+                    <a :href="`/profile/${user?.id}`">
                     <div class="user-status">
                       <!-- User Name / Avatar -->
                       <div class="user-details">
-                        <div class="user-avatar status-online">
+                      <div class="user-avatar ">
+                        <div class="navProfileImage">
                           <img :src="`/storage/${auth.avatar}`" alt="" />
                         </div>
+                        </div
+                    >
                         <div class="user-name">
                           {{ auth.name }}
                           <span>Freelancer</span>
                         </div>
                       </div>
-
-                      <!-- User Status Switcher -->
-                      <div class="status-switch" id="snackbar-user-status">
-                        <label class="user-online current-status">Online</label>
-                        <label class="user-invisible">Invisible</label>
-                        <!-- Status Indicator -->
-                        <span
-                          class="status-indicator"
-                          aria-hidden="true"
-                        ></span>
-                      </div>
                     </div>
+                    </a>
 
                     <ul class="user-menu-small-nav">
                       <li>
-                        <a href="dashboard.html"
-                          ><i class="icon-material-outline-dashboard"></i>
-                          Dashboard</a
+                        <a href="admin"
+                          >
+                          لوحة التحكم
+                          <i class="icon-material-outline-dashboard"></i>
+                          </a
                         >
                       </li>
                       <li>
-                        <a href="dashboard-settings.html"
-                          ><i class="icon-material-outline-settings"></i>
-                          Settings</a
-                        >
-                      </li>
-                      <li>
-                        <a href="index-logged-out.html"
-                          ><i
-                            class="icon-material-outline-power-settings-new"
-                          ></i>
-                          Logout</a
+                        <a href="/logout"
+                          >
+                           <Link class="logout" href="/logout"> تسجيل خروج </Link>
+                          </a
                         >
                       </li>
                     </ul>
@@ -486,11 +386,14 @@ export default {
   components: {
     Slide, // Register your component
   },
+    mounted() {
+    Dropdown().init({ });
+  },
 };
 </script>
 
 <style scoped>
-.logout::before {
+.logout::after {
   position: relative;
   content: "\e988";
   font-family: "Feather-Icons" !important;
@@ -498,4 +401,13 @@ export default {
   display: inline-block;
   top: 4px;
 }
+.user-menu .header-notifications-dropdown{
+  right: -135px;
+}
+.navProfile{
+      border-right: 1px solid #e0e0e0 !important;
+      border-left: none;
+      padding-right: 30px !important;
+      padding-left: 5px !important;
+      }
 </style>

@@ -473,7 +473,6 @@ var _hoisted_73 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-<<<<<<< HEAD
 var _hoisted_74 = {
   "class": "section padding-top-60 padding-bottom-75"
 };
@@ -599,18 +598,11 @@ var _hoisted_95 = /*#__PURE__*/_withScopeId(function () {
 });
 
 var _hoisted_96 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("شراء الآن");
-=======
-var _hoisted_115 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"section padding-top-60 padding-bottom-75\" data-v-0f04e50b><div class=\"container\" data-v-0f04e50b><div class=\"row\" data-v-0f04e50b><div class=\"col-xl-12\" data-v-0f04e50b><!-- Section Headline --><div class=\"section-headline centered margin-top-0 margin-bottom-35\" data-v-0f04e50b><h3 data-v-0f04e50b>البطاقات</h3></div></div><div class=\"col-xl-12 py-5\" data-v-0f04e50b><!-- Pricing Plans Container --><div class=\"pricing-plans-container\" data-v-0f04e50b><!-- Plan --><div class=\"pricing-plan arabic\" data-v-0f04e50b><h3 data-v-0f04e50b>رصيد بقيمة 50 دينار</h3><p class=\"margin-top-10\" data-v-0f04e50b> تدفع لمرة واحد تمكنك من شراء المساقات ذات قمة 50 دنانير او اقل </p><div class=\"pricing-plan-label billed-monthly-label\" data-v-0f04e50b><strong data-v-0f04e50b>50 JOD</strong></div><a href=\"pages-checkout-page.html\" class=\"button full-width margin-top-20\" data-v-0f04e50b>شراء الآن</a></div><!-- Plan --><div class=\"pricing-plan recommended arabic\" data-v-0f04e50b><div class=\"recommended-badge\" data-v-0f04e50b>موصى به</div><h3 data-v-0f04e50b>رصيد بقيمة 100 دينار</h3><p class=\"margin-top-10\" data-v-0f04e50b> تدفع لمرة واحد تمكنك من شراء المساقات ذات قمة 100 دنانير او اقل </p><div class=\"pricing-plan-label billed-monthly-label\" data-v-0f04e50b><strong data-v-0f04e50b>100 JOD</strong></div><div class=\"pricing-plan-label billed-yearly-label\" data-v-0f04e50b><strong data-v-0f04e50b>$529</strong>/ yearly </div><!-- &lt;div class=&quot;pricing-plan-features&quot;&gt;\r\n                &lt;strong&gt;Features of Standard Plan&lt;/strong&gt;\r\n                &lt;ul&gt;\r\n                  &lt;li&gt;5 Listings&lt;/li&gt;\r\n                  &lt;li&gt;60 Days Visibility&lt;/li&gt;\r\n                  &lt;li&gt;Highlighted in Search Results&lt;/li&gt;\r\n                &lt;/ul&gt;\r\n              &lt;/div&gt; --><a href=\"pages-checkout-page.html\" class=\"button full-width margin-top-20\" data-v-0f04e50b>شراء الآن</a></div><!-- Plan --><div class=\"pricing-plan arabic\" data-v-0f04e50b><h3 data-v-0f04e50b>رصيد بقيمة 10 دنانير</h3><p class=\"margin-top-10\" data-v-0f04e50b> تدفع لمرة واحد تمكنك من شراء المساقات ذات قمة 10 دنانير او اقل </p><div class=\"pricing-plan-label billed-monthly-label\" data-v-0f04e50b><strong data-v-0f04e50b>10 JOD</strong></div><a href=\"pages-checkout-page.html\" class=\"button full-width bottom-0\" data-v-0f04e50b>شراء الآن</a></div></div></div></div></div></div>", 1);
->>>>>>> 0eb3eb57d3cfe224561f53899c953d5898fcc207
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
-<<<<<<< HEAD
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-=======
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Intro Banner\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" add class \"disable-gradient\" to enable consistent background overlay "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
->>>>>>> 0eb3eb57d3cfe224561f53899c953d5898fcc207
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)({
       '--shadow': $data.shadow
     }),
@@ -630,189 +622,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   ), _hoisted_16])])])])])], 4
   /* STYLE */
-<<<<<<< HEAD
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(10, function (index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
       key: index,
       href: "/courses?class=".concat(index),
       "class": "category-box"
-=======
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Boxes "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Boxes Container "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_23, _hoisted_24, _hoisted_25];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_26, _hoisted_27, _hoisted_28];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_29, _hoisted_30, _hoisted_31];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Box "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_32, _hoisted_33, _hoisted_34];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_35, _hoisted_36, _hoisted_37];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_38, _hoisted_39, _hoisted_40];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Box "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_41, _hoisted_42, _hoisted_43];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Box "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_44, _hoisted_45, _hoisted_46];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Box "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Box "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Box "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Box "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_47, _hoisted_48, _hoisted_49];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_50, _hoisted_51, _hoisted_52];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_53, _hoisted_54, _hoisted_55];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_56, _hoisted_57, _hoisted_58];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_59, _hoisted_60, _hoisted_61];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_62, _hoisted_63, _hoisted_64];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_65, _hoisted_66, _hoisted_67];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/classes/1",
-    "class": "category-box"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_68, _hoisted_69, _hoisted_70];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Box ")])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Category Boxes / End "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Features Jobs "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_71, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_72, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_73, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_74, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Section Headline "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_75, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/course",
-    "class": "headline-link"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_76];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), _hoisted_77]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Jobs Container "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_78, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.courses, function (course) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Link, {
-      key: course.id,
-      href: "/course/".concat(course.id),
-      "class": "job-listing with-apply-button"
->>>>>>> 0eb3eb57d3cfe224561f53899c953d5898fcc207
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
         return [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(index), 1
@@ -1036,7 +850,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Plan "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_85, [_hoisted_86, _hoisted_87, _hoisted_88, _hoisted_89, _hoisted_90, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"pricing-plan-features\">\n                <strong>Features of Standard Plan</strong>\n                <ul>\n                  <li>5 Listings</li>\n                  <li>60 Days Visibility</li>\n                  <li>Highlighted in Search Results</li>\n                </ul>\n              </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Plan "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_85, [_hoisted_86, _hoisted_87, _hoisted_88, _hoisted_89, _hoisted_90, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"pricing-plan-features\">\r\n                <strong>Features of Standard Plan</strong>\r\n                <ul>\r\n                  <li>5 Listings</li>\r\n                  <li>60 Days Visibility</li>\r\n                  <li>Highlighted in Search Results</li>\r\n                </ul>\r\n              </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "pages-checkout-page.html",
     "class": "button full-width margin-top-20"
   }, {

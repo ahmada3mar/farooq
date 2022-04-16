@@ -148,6 +148,20 @@
 
 }
 
+.user-avatar  {
+    .navProfileImage{
+
+        width: 3rem;
+        height: 3rem;
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    img{
+
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
 
 
 .cardButtons {
