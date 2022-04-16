@@ -3,31 +3,54 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
-use App\Models\Section;
-use App\Models\SiteConfig;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class HomeController extends Controller
+class CoursesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $settings = SiteConfig::where('key', 'LIKE', 'home%')->get();
+        $query = Course::query();
 
-        $courses = Course::with('user' , 'section')->inRandomOrder()->limit(5)->get();
+        if($request->has('class')){
+            $query->where('class' , $request->class);
+        }
 
-        $mostSelling = Course::orderBy('subscriber' , 'DESC')->limit(4)->get();
+        if($request->has('section')){
+            $query->whereHas('section' , function($q) use ($request){
+               return $q->where('id',  $request->section);
+            });
+        }
 
-        $instructos = User::with('courses')->role('instructor')->get();
+        if($request->has('category')){
+            switch ($request->category) {
+                case 'primary':
+                    $query->where('class' , '<=' , 6);
+                    break;
 
+                case 'secondary':
+                    $query->where('class' , '>=' , 7)->where('class' , '<=' , 10);
+                    break;
 
-        return Inertia::render('Home', compact('settings' , 'courses' , 'mostSelling' , 'instructos' ));
+                case 'highschool':
+                    $query->where('class' , '>' , 10);
+                    break;
+            }
+        }
+
+        if($request->has('name')){
+            $query->where('name' , 'LIKE %' , "{$request->class}%");
+        }
+
+       $courses =  $query->with('user')->withCount('lectures')->latest()->paginate(20);
+
+        return Inertia::render('Courses' , compact('courses'));
+
     }
 
     /**

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
@@ -69,6 +70,7 @@ Route::get('/Register', function () {
 })->name('Register');
 // Route::post('/Register', [RegisterController::class , 'Register']);
 
+Route::get('/courses', [CoursesController::class , 'index']);
 
 Route::middleware('auth')->group(function(){
     Route::get('/course/{id}', function ($id) {
