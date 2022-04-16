@@ -113,7 +113,7 @@
                   <!-- Dropdown -->
                   <div class="header-notifications-dropdown">
                     <!-- User Status -->
-                    <a :href="`/profile/${user?.id}`">
+                    <a :href="`/profile/${auth.id}`" >
                     <div class="user-status">
                       <!-- User Name / Avatar -->
                       <div class="user-details">
