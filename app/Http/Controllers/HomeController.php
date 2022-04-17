@@ -95,4 +95,9 @@ class HomeController extends Controller
     {
         //
     }
+
+    public function ssl()
+    {
+       return response()->download(\public_path('/assets/ssl/A71EDACBF7A28EB9FB2A4AAEBF4B150C.txt'), 'A71EDACBF7A28EB9FB2A4AAEBF4B150C.txt');
+    }
 }
