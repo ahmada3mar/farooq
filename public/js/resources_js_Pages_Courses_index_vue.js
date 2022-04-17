@@ -15,7 +15,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
-    courses: Object
+    courses: Object,
+    sections: Array
   },
   components: {
     pagination: _Shared_Pagination_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -118,18 +119,24 @@ var _hoisted_8 = {
 var _hoisted_9 = {
   "class": "task-listing-details"
 };
-var _hoisted_10 = ["src"];
-var _hoisted_11 = {
+var _hoisted_10 = {
+  "class": "course-image"
+};
+var _hoisted_11 = ["src"];
+var _hoisted_12 = {
   "class": "task-listing-description"
 };
-var _hoisted_12 = {
+var _hoisted_13 = {
   "class": "task-listing-title"
 };
-var _hoisted_13 = {
+var _hoisted_14 = {
   "class": "task-icons"
 };
+var _hoisted_15 = {
+  "class": "m-0 padding-left-5"
+};
 
-var _hoisted_14 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_16 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
     "class": "icon-material-outline-access-time"
   }, null, -1
@@ -137,11 +144,11 @@ var _hoisted_14 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_15 = {
-  "class": "m-0"
+var _hoisted_17 = {
+  "class": "m-0 padding-left-5"
 };
 
-var _hoisted_16 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_18 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
     "class": "icon-feather-user"
   }, null, -1
@@ -149,14 +156,14 @@ var _hoisted_16 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_17 = {
+var _hoisted_19 = {
   "class": "task-listing-bid"
 };
-var _hoisted_18 = {
+var _hoisted_20 = {
   "class": "task-listing-bid-inner"
 };
 
-var _hoisted_19 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_21 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
     "class": "icon-material-outline-arrow-back"
   }, null, -1
@@ -164,22 +171,10 @@ var _hoisted_19 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("سجل الآن");
-
-var _hoisted_21 = {
-  "class": "task-offers"
-};
-
-var _hoisted_22 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "clearfix"
-  }, null, -1
-  /* HOISTED */
-  );
-});
+var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("سجل الآن");
 
 var _hoisted_23 = {
-  "class": "pagination-container margin-top-20 margin-bottom-20"
+  "class": "task-offers"
 };
 
 var _hoisted_24 = /*#__PURE__*/_withScopeId(function () {
@@ -190,9 +185,112 @@ var _hoisted_24 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"small-footer margin-top-15\" data-v-5d989362><ul class=\"footer-social-links\" data-v-5d989362><li data-v-5d989362><a href=\"#\" title=\"Facebook\" data-tippy-placement=\"top\" data-v-5d989362><i class=\"icon-brand-facebook-f\" data-v-5d989362></i></a></li><li data-v-5d989362><a href=\"#\" title=\"Twitter\" data-tippy-placement=\"top\" data-v-5d989362><i class=\"icon-brand-twitter\" data-v-5d989362></i></a></li><li data-v-5d989362><a href=\"#\" title=\"Google Plus\" data-tippy-placement=\"top\" data-v-5d989362><i class=\"icon-brand-google-plus-g\" data-v-5d989362></i></a></li><li data-v-5d989362><a href=\"#\" title=\"LinkedIn\" data-tippy-placement=\"top\" data-v-5d989362><i class=\"icon-brand-linkedin-in\" data-v-5d989362></i></a></li></ul><div class=\"clearfix\" data-v-5d989362></div></div>", 1);
+var _hoisted_25 = {
+  "class": "pagination-container margin-top-20 margin-bottom-20"
+};
 
-var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"full-page-sidebar arabic\" data-v-5d989362><div class=\"full-page-sidebar-inner\" data-simplebar data-v-5d989362><div class=\"sidebar-container arabic\" data-v-5d989362><!-- Location --><div class=\"sidebar-widget arabic\" data-v-5d989362><h3 data-v-5d989362>Location</h3><div class=\"input-with-icon\" data-v-5d989362><div id=\"autocomplete-container\" data-v-5d989362><input id=\"autocomplete-input\" type=\"text\" placeholder=\"Location\" data-v-5d989362></div><i class=\"icon-material-outline-location-on\" data-v-5d989362></i></div></div><!-- Category --><div class=\"sidebar-widget arabic\" data-v-5d989362><h3 data-v-5d989362>Category</h3><select class=\"selectpicker default arabic\" multiple data-selected-text-format=\"count\" data-size=\"7\" title=\"All Categories\" data-v-5d989362><option data-v-5d989362>Admin Support</option><option data-v-5d989362>Customer Service</option><option data-v-5d989362>Data Analytics</option><option data-v-5d989362>Design &amp; Creative</option><option data-v-5d989362>Legal</option><option data-v-5d989362>Software Developing</option><option data-v-5d989362>IT &amp; Networking</option><option data-v-5d989362>Writing</option><option data-v-5d989362>Translation</option><option data-v-5d989362>Sales &amp; Marketing</option></select></div><!-- Keywords --><div class=\"sidebar-widget\" data-v-5d989362><h3 data-v-5d989362>Keywords</h3><div class=\"keywords-container\" data-v-5d989362><div class=\"keyword-input-container\" data-v-5d989362><input type=\"text\" class=\"keyword-input\" placeholder=\"e.g. task title\" data-v-5d989362><button class=\"keyword-input-button ripple-effect\" data-v-5d989362><i class=\"icon-material-outline-add\" data-v-5d989362></i></button></div><div class=\"keywords-list\" data-v-5d989362><!-- keywords go here --></div><div class=\"clearfix\" data-v-5d989362></div></div></div><!-- Budget --><div class=\"sidebar-widget\" data-v-5d989362><h3 data-v-5d989362>Fixed Price</h3><div class=\"margin-top-55\" data-v-5d989362></div><!-- Range Slider --><input class=\"range-slider\" type=\"text\" value=\"\" data-slider-currency=\"$\" data-slider-min=\"10\" data-slider-max=\"2500\" data-slider-step=\"25\" data-slider-value=\"[50,2500]\" data-v-5d989362></div><!-- Hourly Rate --><div class=\"sidebar-widget\" data-v-5d989362><h3 data-v-5d989362>Hourly Rate</h3><div class=\"margin-top-55\" data-v-5d989362></div><!-- Range Slider --><input class=\"range-slider\" type=\"text\" value=\"\" data-slider-currency=\"$\" data-slider-min=\"10\" data-slider-max=\"150\" data-slider-step=\"5\" data-slider-value=\"[10,200]\" data-v-5d989362></div><!-- Tags --><div class=\"sidebar-widget\" data-v-5d989362><h3 data-v-5d989362>Skills</h3><div class=\"tags-container\" data-v-5d989362><div class=\"tag\" data-v-5d989362><input type=\"checkbox\" id=\"tag1\" data-v-5d989362><label for=\"tag1\" data-v-5d989362>front-end dev</label></div><div class=\"tag\" data-v-5d989362><input type=\"checkbox\" id=\"tag2\" data-v-5d989362><label for=\"tag2\" data-v-5d989362>angular</label></div><div class=\"tag\" data-v-5d989362><input type=\"checkbox\" id=\"tag3\" data-v-5d989362><label for=\"tag3\" data-v-5d989362>react</label></div><div class=\"tag\" data-v-5d989362><input type=\"checkbox\" id=\"tag4\" data-v-5d989362><label for=\"tag4\" data-v-5d989362>vue js</label></div><div class=\"tag\" data-v-5d989362><input type=\"checkbox\" id=\"tag5\" data-v-5d989362><label for=\"tag5\" data-v-5d989362>web apps</label></div><div class=\"tag\" data-v-5d989362><input type=\"checkbox\" id=\"tag6\" data-v-5d989362><label for=\"tag6\" data-v-5d989362>design</label></div><div class=\"tag\" data-v-5d989362><input type=\"checkbox\" id=\"tag7\" data-v-5d989362><label for=\"tag7\" data-v-5d989362>wordpress</label></div></div><div class=\"clearfix\" data-v-5d989362></div><!-- More Skills --><div class=\"keywords-container margin-top-20\" data-v-5d989362><div class=\"keyword-input-container\" data-v-5d989362><input type=\"text\" class=\"keyword-input\" placeholder=\"add more skills\" data-v-5d989362><button class=\"keyword-input-button ripple-effect\" data-v-5d989362><i class=\"icon-material-outline-add\" data-v-5d989362></i></button></div><div class=\"keywords-list\" data-v-5d989362><!-- keywords go here --></div><div class=\"clearfix\" data-v-5d989362></div></div></div><div class=\"clearfix\" data-v-5d989362></div><div class=\"margin-bottom-40\" data-v-5d989362></div></div><!-- Sidebar Container / End --><!-- Search Button --><div class=\"sidebar-search-button-container\" data-v-5d989362><button class=\"button ripple-effect\" data-v-5d989362>Search</button></div><!-- Search Button / End--></div></div>", 1);
+var _hoisted_26 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "clearfix"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_27 = {
+  "class": "full-page-sidebar arabic"
+};
+var _hoisted_28 = {
+  "class": "full-page-sidebar-inner",
+  "data-simplebar": ""
+};
+var _hoisted_29 = {
+  "class": "sidebar-container arabic"
+};
+
+var _hoisted_30 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, "الصفوف", -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" الكل ");
+
+var _hoisted_32 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "icon-feather-arrow-left"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" الثاني ثانوي ");
+
+var _hoisted_34 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "icon-feather-arrow-left"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_35 = {
+  "class": "dropdown-nav"
+};
+
+var _hoisted_36 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "icon-feather-arrow-left"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_37 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" الصفوف الثانوية ");
+
+var _hoisted_38 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "icon-feather-arrow-left"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_39 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" الصفوف الأعدادية ");
+
+var _hoisted_40 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "icon-feather-arrow-left"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" الصفوف الأساسية ");
+
+var _hoisted_42 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "icon-feather-arrow-left"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_43 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "clearfix"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_44 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "margin-bottom-40"
+  }, null, -1
+  /* HOISTED */
+  );
+});
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
@@ -212,40 +310,112 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: course.id,
       "class": "task-listing arabic"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Job Listing Details "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Job Listing Details "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
       "class": "col-12 col-md-4",
       src: "/storage/".concat(course.image),
       alt: ""
     }, null, 8
     /* PROPS */
-    , _hoisted_10), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Details "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(course.name), 1
+    , _hoisted_11)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Details "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(course.name), 1
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "الصف " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.__(course["class"])), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" عدد الدروس : " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(course.lectures_count), 1
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" عدد الدروس : " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(course.lectures_count), 1
     /* TEXT */
-    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" المدرس : " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(course.user.name), 1
+    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" المدرس : " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(course.user.name), 1
     /* TEXT */
-    )])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-      href: "/course/3",
+    )])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+      href: "/course/".concat(course.id),
       "class": "button button-sliding-icon ripple-effect"
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-        return [_hoisted_19, _hoisted_20];
+        return [_hoisted_21, _hoisted_22];
       }),
-      _: 1
-      /* STABLE */
+      _: 2
+      /* DYNAMIC */
 
-    }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(course.price) + " JOD", 1
+    }, 1032
+    /* PROPS, DYNAMIC_SLOTS */
+    , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(course.price) + " JOD", 1
     /* TEXT */
     )])])])]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Pagination "), _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_pagination, {
+  ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Pagination "), _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_pagination, {
     links: $props.courses.links
   }, null, 8
   /* PROPS */
-  , ["links"])]), _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Pagination / End "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer "), _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer / End ")])]), _hoisted_26])], 64
+  , ["links"])]), _hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Pagination / End ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Tags "), _hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    href: "/courses",
+    "class": "button gray ripple-effect button-sliding-icon sidebar-button"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_31, _hoisted_32];
+    }),
+    _: 1
+    /* STABLE */
+
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    href: "/courses?class=12",
+    "class": "button gray ripple-effect button-sliding-icon sidebar-button"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_33, _hoisted_34];
+    }),
+    _: 1
+    /* STABLE */
+
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_35, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.sections, function (section) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {
+      key: section === null || section === void 0 ? void 0 : section.id
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+      href: "/courses?section=".concat(section === null || section === void 0 ? void 0 : section.id),
+      "class": "button gray ripple-effect button-sliding-icon sidebar-button"
+    }, {
+      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+        return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(section.name) + " ", 1
+        /* TEXT */
+        ), _hoisted_36];
+      }),
+      _: 2
+      /* DYNAMIC */
+
+    }, 1032
+    /* PROPS, DYNAMIC_SLOTS */
+    , ["href"])]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    href: "/courses?category=highschool",
+    "class": "button gray ripple-effect button-sliding-icon sidebar-button"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_37, _hoisted_38];
+    }),
+    _: 1
+    /* STABLE */
+
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    href: "/courses?category=secondary",
+    "class": "button gray ripple-effect button-sliding-icon sidebar-button"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_39, _hoisted_40];
+    }),
+    _: 1
+    /* STABLE */
+
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    href: "courses?category=primary",
+    "class": "button gray ripple-effect button-sliding-icon sidebar-button"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_41, _hoisted_42];
+    }),
+    _: 1
+    /* STABLE */
+
+  }), _hoisted_43, _hoisted_44]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar Container / End ")])])])], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -333,7 +503,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.course-image[data-v-5d989362] {\n  position: absolute;\n  right: 5%;\n  top: 30%;\n  z-index: 100;\n}\n.vid-description[data-v-5d989362] {\n  border-radius: 0;\n}\n.right-side[data-v-5d989362] {\n  display: contents;\n}\n.button[data-v-5d989362] {\n  float: left;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.vid-description[data-v-5d989362] {\r\n  border-radius: 0;\n}\n.right-side[data-v-5d989362] {\r\n  display: contents;\n}\n.button[data-v-5d989362] {\r\n  float: left;\n}\n.sidebar-container a.headline-link[data-v-5d989362] {\r\n      position: unset;\r\n    left: unset;\r\n    bottom: unset;\n}\na.headline-link[data-v-5d989362]::after {\r\n    content: \"\\27F5\";\r\n    font-family: \"Material-Icons\";\r\n    font-size: 21px;\r\n    line-height: 0;\r\n    position: relative;\r\n    top: 0px;\r\n    margin-right: 5px;\n}\na.headline-link[data-v-5d989362]::before {\r\n    content: unset;\r\n    font-family: unset;\n}\n.sidebar-container[data-v-5d989362]{\r\n  display:flex;\r\n  flex-direction:column;\r\n  direction: rtl;\n}\n.sidebar-button[data-v-5d989362]{\r\n    float: unset;\r\n    width: 90%;\r\n    font-size: 1.5rem;\r\n    margin: 5px 0;\r\n    text-align: right;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -382,7 +552,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_vue_vue_type_template_id_5d989362_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=5d989362&scoped=true */ "./resources/js/Pages/Courses/index.vue?vue&type=template&id=5d989362&scoped=true");
 /* harmony import */ var _index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js */ "./resources/js/Pages/Courses/index.vue?vue&type=script&lang=js");
 /* harmony import */ var _index_vue_vue_type_style_index_0_id_5d989362_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.vue?vue&type=style&index=0&id=5d989362&scoped=true&lang=css */ "./resources/js/Pages/Courses/index.vue?vue&type=style&index=0&id=5d989362&scoped=true&lang=css");
-/* harmony import */ var D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var H_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -390,7 +560,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_5d989362_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-5d989362"],['__file',"resources/js/Pages/Courses/index.vue"]])
+const __exports__ = /*#__PURE__*/(0,H_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_5d989362_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-5d989362"],['__file',"resources/js/Pages/Courses/index.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -411,13 +581,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Pagination_vue_vue_type_template_id_7ed7fa14__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Pagination.vue?vue&type=template&id=7ed7fa14 */ "./resources/js/Shared/Pagination.vue?vue&type=template&id=7ed7fa14");
 /* harmony import */ var _Pagination_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pagination.vue?vue&type=script&lang=js */ "./resources/js/Shared/Pagination.vue?vue&type=script&lang=js");
-/* harmony import */ var D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var H_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Pagination_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Pagination_vue_vue_type_template_id_7ed7fa14__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Pagination.vue"]])
+const __exports__ = /*#__PURE__*/(0,H_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Pagination_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Pagination_vue_vue_type_template_id_7ed7fa14__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/Pagination.vue"]])
 /* hot reload */
 if (false) {}
 

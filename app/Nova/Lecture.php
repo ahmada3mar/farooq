@@ -102,6 +102,8 @@ class Lecture extends Resource
             ])->dependsOn('type' , 0),
 
             HasMany::make( 'question', 'question' , Question::class),
+            HasMany::make(__('Attachments'), 'Attachment', Attachment::class)->nullable(),
+            NestedForm::make('Attachment', 'Attachment', Attachment::class)->hideWhenUpdating(),
 
 
            NestedForm::make('Question' , 'question' , Question::class)

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Section;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -16,6 +17,7 @@ class CoursesController extends Controller
     public function index(Request $request)
     {
         $query = Course::query();
+        $sections = Section::all();
 
         if($request->has('class')){
             $query->where('class' , $request->class);
@@ -49,7 +51,7 @@ class CoursesController extends Controller
 
        $courses =  $query->with('user')->withCount('lectures')->latest()->paginate(20);
 
-        return Inertia::render('Courses' , compact('courses'));
+        return Inertia::render('Courses' , compact('courses' , 'sections'));
 
     }
 

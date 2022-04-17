@@ -144,7 +144,7 @@ var _hoisted_20 = {
   key: 0
 };
 var _hoisted_21 = {
-  "class": "card"
+  "class": "card col-12 padding-0"
 };
 var _hoisted_22 = {
   "class": "card-header py-3"
@@ -188,7 +188,7 @@ var _hoisted_30 = {
 };
 var _hoisted_31 = ["src"];
 var _hoisted_32 = {
-  "class": "accordion js-accordion w-auto margin-bottom-30 margin-right-15 margin-left-15 vid-description"
+  "class": "accordion js-accordion w-auto margin-bottom-30 vid-description"
 };
 var _hoisted_33 = {
   "class": "accordion__item js-accordion-item"
@@ -200,37 +200,42 @@ var _hoisted_35 = {
   "class": "accordion-body js-accordion-body px-4"
 };
 var _hoisted_36 = ["innerHTML"];
-var _hoisted_37 = {
+
+var _hoisted_37 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"accordion__item js-accordion-item\" data-v-b67a1efe><div class=\"accordion-header js-accordion-header\" data-v-b67a1efe> المرفقات </div><div class=\"accordion-body js-accordion-body px-4\" data-v-b67a1efe><div class=\"attachments-container arabic right\" data-v-b67a1efe><a href=\"#\" class=\"attachment-box ripple-effect\" data-v-b67a1efe><span data-v-b67a1efe>Cover Letter</span><i data-v-b67a1efe>PDF</i></a><a href=\"#\" class=\"attachment-box ripple-effect\" data-v-b67a1efe><span data-v-b67a1efe>Cover Letter</span><i data-v-b67a1efe>PDF</i></a><a href=\"#\" class=\"attachment-box ripple-effect\" data-v-b67a1efe><span data-v-b67a1efe>Cover Letter</span><i data-v-b67a1efe>PDF</i></a><a href=\"#\" class=\"attachment-box ripple-effect\" data-v-b67a1efe><span data-v-b67a1efe>Cover Letter</span><i data-v-b67a1efe>PDF</i></a></div></div></div>", 1);
+
+var _hoisted_38 = {
   "class": "col-xl-4 col-lg-4"
 };
-var _hoisted_38 = {
+var _hoisted_39 = {
   "class": "sidebar-container"
 };
-var _hoisted_39 = {
+var _hoisted_40 = {
   "class": "accordion js-accordion margin-bottom-30"
 };
+var _hoisted_41 = {
+  "class": "accordion__item js-accordion-item"
+};
 
-var _hoisted_40 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_42 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "accordion__item js-accordion-item"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "accordion-header js-accordion-header"
-  }, "الوصف"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "accordion-body js-accordion-body"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, " The study of the earliest periods in Islamic history is made difficult by a lack of sources.[18] For example, the most important historiographical source for the origins of Islam is the work of al-Tabari.[19] While al-Tabari is considered an excellent historian by the standards of his time and place, he made liberal use of mythical, legendary, stereotyped, distorted, and polemical presentations of subject matter—which are however considered to be Islamically acceptable—and his descriptions of the beginning of Islam post-date the events by several ")])], -1
+  }, "الوصف", -1
   /* HOISTED */
   );
 });
 
-var _hoisted_41 = {
-  "class": "accordion-header js-accordion-header"
-};
-var _hoisted_42 = {
+var _hoisted_43 = {
   "class": "accordion-body js-accordion-body"
 };
-var _hoisted_43 = ["onClick"];
+var _hoisted_44 = {
+  "class": "accordion-header js-accordion-header"
+};
+var _hoisted_45 = {
+  "class": "accordion-body js-accordion-body"
+};
+var _hoisted_46 = ["onClick"];
 
-var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"section margin-top-65 margin-bottom-65 text-right\" data-v-b67a1efe><div class=\"container\" data-v-b67a1efe><div class=\"row\" data-v-b67a1efe><!-- Section Headline --><div class=\"col-xl-12\" data-v-b67a1efe><div class=\"section-headline centered margin-top-0 margin-bottom-45\" data-v-b67a1efe><h3 data-v-b67a1efe>مساقات مشابهة</h3></div></div><div class=\"col-xl-3 col-md-6\" data-v-b67a1efe><!-- Photo Box --><a href=\"jobs-list-layout-1.html\" class=\"photo-box\" data-background-image=\"/storage/erth.jpg\" data-v-b67a1efe><div class=\"photo-box-content\" data-v-b67a1efe><h3 data-v-b67a1efe>علوم ارض</h3><span data-v-b67a1efe>376 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-b67a1efe><!-- Photo Box --><a href=\"jobs-list-layout-full-page-map.html\" class=\"photo-box\" data-background-image=\"/storage/ar.jpg\" data-v-b67a1efe><div class=\"photo-box-content\" data-v-b67a1efe><h3 data-v-b67a1efe>مهارات اتصال</h3><span data-v-b67a1efe>645 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-b67a1efe><!-- Photo Box --><a href=\"jobs-grid-layout-full-page.html\" class=\"photo-box\" data-background-image=\"/storage/math.jpg\" data-v-b67a1efe><div class=\"photo-box-content\" data-v-b67a1efe><h3 data-v-b67a1efe>رياضيات</h3><span data-v-b67a1efe>832 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-b67a1efe><!-- Photo Box --><a href=\"jobs-list-layout-2.html\" class=\"photo-box\" data-background-image=\"/storage/ph.jpg\" data-v-b67a1efe><div class=\"photo-box-content\" data-v-b67a1efe><h3 data-v-b67a1efe>فيزياء</h3><span data-v-b67a1efe>513 مشترك</span></div></a></div></div></div></div>", 1);
+var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"section margin-top-65 margin-bottom-65 text-right\" data-v-b67a1efe><div class=\"container\" data-v-b67a1efe><div class=\"row\" data-v-b67a1efe><!-- Section Headline --><div class=\"col-xl-12\" data-v-b67a1efe><div class=\"section-headline centered margin-top-0 margin-bottom-45\" data-v-b67a1efe><h3 data-v-b67a1efe>مساقات مشابهة</h3></div></div><div class=\"col-xl-3 col-md-6\" data-v-b67a1efe><!-- Photo Box --><a href=\"jobs-list-layout-1.html\" class=\"photo-box\" data-background-image=\"/storage/erth.jpg\" data-v-b67a1efe><div class=\"photo-box-content\" data-v-b67a1efe><h3 data-v-b67a1efe>علوم ارض</h3><span data-v-b67a1efe>376 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-b67a1efe><!-- Photo Box --><a href=\"jobs-list-layout-full-page-map.html\" class=\"photo-box\" data-background-image=\"/storage/ar.jpg\" data-v-b67a1efe><div class=\"photo-box-content\" data-v-b67a1efe><h3 data-v-b67a1efe>مهارات اتصال</h3><span data-v-b67a1efe>645 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-b67a1efe><!-- Photo Box --><a href=\"jobs-grid-layout-full-page.html\" class=\"photo-box\" data-background-image=\"/storage/math.jpg\" data-v-b67a1efe><div class=\"photo-box-content\" data-v-b67a1efe><h3 data-v-b67a1efe>رياضيات</h3><span data-v-b67a1efe>832 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-b67a1efe><!-- Photo Box --><a href=\"jobs-list-layout-2.html\" class=\"photo-box\" data-background-image=\"/storage/ph.jpg\" data-v-b67a1efe><div class=\"photo-box-content\" data-v-b67a1efe><h3 data-v-b67a1efe>فيزياء</h3><span data-v-b67a1efe>513 مشترك</span></div></a></div></div></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _$props$course, _$data$lectur, _$data$lectur2, _$data$lectur2$questi, _$data$lectur3;
@@ -253,7 +258,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , _hoisted_15)])])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "background-image-container",
-    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)('background:url(/storage/' + $props.course.cover + ')')
+    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)('background:url(/storage/' + +')')
   }, null, 4
   /* STYLE */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Page Content\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(_$data$lectur = $data.lectur) !== null && _$data$lectur !== void 0 && _$data$lectur.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_19, [$data.lectur.type == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_$data$lectur2 = $data.lectur) === null || _$data$lectur2 === void 0 ? void 0 : (_$data$lectur2$questi = _$data$lectur2.question) === null || _$data$lectur2$questi === void 0 ? void 0 : _$data$lectur2$questi.name), 1
@@ -274,7 +279,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }), 128
   /* KEYED_FRAGMENT */
   )), _hoisted_29])])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("iframe", {
-    "class": "col-12",
+    "class": "col-12 padding-right-0 padding-left-0",
     height: "350",
     src: 'https://www.youtube.com/embed/' + $data.lectur.url,
     title: "YouTube video player",
@@ -283,19 +288,21 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     allowfullscreen: ""
   }, null, 8
   /* PROPS */
-  , _hoisted_31), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_$data$lectur3 = $data.lectur) === null || _$data$lectur3 === void 0 ? void 0 : _$data$lectur3.name), 1
+  , _hoisted_31)])), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_$data$lectur3 = $data.lectur) === null || _$data$lectur3 === void 0 ? void 0 : _$data$lectur3.name), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     innerHTML: $data.lectur.description
   }, null, 8
   /* PROPS */
-  , _hoisted_36)])])])]))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [_hoisted_40, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.course.units || [], function (unit) {
+  , _hoisted_36)])]), _hoisted_37])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [_hoisted_42, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_43, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.course.description), 1
+  /* TEXT */
+  )])]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.course.units || [], function (unit) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       "class": "accordion__item js-accordion-item",
       key: unit.id
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(unit === null || unit === void 0 ? void 0 : unit.name), 1
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_44, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(unit === null || unit === void 0 ? void 0 : unit.name), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Accordtion Body "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Accordion Content "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(unit.lectures, function (lectur) {
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Accordtion Body "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Accordion Content "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(unit.lectures, function (lectur) {
       return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
         key: lectur.id,
         onClick: function onClick($event) {
@@ -304,13 +311,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         "class": "accordion-body__contents link"
       }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lectur === null || lectur === void 0 ? void 0 : lectur.name), 9
       /* TEXT, PROPS */
-      , _hoisted_43);
+      , _hoisted_46);
     }), 128
     /* KEYED_FRAGMENT */
     ))])]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])])])])]), _hoisted_44], 64
+  ))])])])])]), _hoisted_47], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -333,7 +340,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.course-image[data-v-b67a1efe] {\r\n  position: absolute;\r\n  right: 5%;\r\n  top: 30%;\r\n  z-index: 100;\n}\n.vid-description[data-v-b67a1efe] {\r\n  border-radius: 0;\n}\n.right-side[data-v-b67a1efe]{\r\n    display: contents;\n}\n.button[data-v-b67a1efe]{\r\n    float: left;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.course-image[data-v-b67a1efe] {\r\n  position: absolute;\r\n  right: 5%;\r\n  top: 30%;\r\n  z-index: 100;\n}\n.vid-description[data-v-b67a1efe] {\r\n  border-radius: 0;\n}\n.right-side[data-v-b67a1efe]{\r\n    display: contents;\n}\n.button[data-v-b67a1efe]{\r\n    float: left;\n}\n.right[data-v-b67a1efe]{\r\ndirection: rtl;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -382,7 +389,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_vue_vue_type_template_id_b67a1efe_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=b67a1efe&scoped=true */ "./resources/js/Pages/course2/index.vue?vue&type=template&id=b67a1efe&scoped=true");
 /* harmony import */ var _index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js */ "./resources/js/Pages/course2/index.vue?vue&type=script&lang=js");
 /* harmony import */ var _index_vue_vue_type_style_index_0_id_b67a1efe_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.vue?vue&type=style&index=0&id=b67a1efe&scoped=true&lang=css */ "./resources/js/Pages/course2/index.vue?vue&type=style&index=0&id=b67a1efe&scoped=true&lang=css");
-/* harmony import */ var D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var H_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -390,7 +397,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_b67a1efe_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-b67a1efe"],['__file',"resources/js/Pages/course2/index.vue"]])
+const __exports__ = /*#__PURE__*/(0,H_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_b67a1efe_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-b67a1efe"],['__file',"resources/js/Pages/course2/index.vue"]])
 /* hot reload */
 if (false) {}
 
