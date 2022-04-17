@@ -29,6 +29,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/.well-known/pki-validation/A71EDACBF7A28EB9FB2A4AAEBF4B150C.txt' , [HomeController::class , 'ssl']);
 
 Route::get('/test' , function(){
     $rrr = User::with('courses')->role('instructor')->first();
