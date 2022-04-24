@@ -33,6 +33,9 @@
     @inertiaHead
   </head>
   <body>
+  @if (env('APP_ENV') != 'production')
+    <div class="fullwidth dev-header">You'r on devlopment mode | Staging &#128187; &#128295; &#128296; </div>
+  @endif
     @inertia
   </body>
 </html>
