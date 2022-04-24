@@ -1274,7 +1274,7 @@ body .navigation ul ul ul { margin-top: 0; }
 /* Sticky Header
 ------------------------------------- */
 #header-container {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -1282,12 +1282,12 @@ body .navigation ul ul ul { margin-top: 0; }
 
 #wrapper.wrapper-with-transparent-header #header .right-side { background-color: transparent; }
 #header { transition: background 0.3s; }
-#wrapper { padding-top: 82px; }
+/* #wrapper { padding-top: 82px; } */
 #wrapper.wrapper-with-transparent-header { padding-top: 0 !important;}
 
 @media (max-width: 1099px) {
   #wrapper { padding-top: 0 !important; }
-  #header-container { position: relative !important; }
+  /* #header-container { position: relative !important; } */
   #header-container.transparent-header { position: absolute; }
 }
 
