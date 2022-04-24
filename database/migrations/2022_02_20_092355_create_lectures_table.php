@@ -16,7 +16,7 @@ class CreateLecturesTable extends Migration
         Schema::create('lectures', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
+            $table->longText('description');
             $table->string('url')->nullable();
             $table->integer('order');
             $table->enum('type' , [0 , 1]);

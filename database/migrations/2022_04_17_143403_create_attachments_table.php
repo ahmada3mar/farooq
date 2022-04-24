@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateQuestionsTable extends Migration
+class CreateAttachmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateQuestionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('questions', function (Blueprint $table) {
+        Schema::create('attachments', function (Blueprint $table) {
             $table->id();
-            $table->longText('name');
+            $table->timestamps();
+            $table->string('name')->nullable();
+            $table->string('attachment')->nullable();
             $table->unsignedBigInteger('lecture_id');
             $table->foreign('lecture_id')->references('id')->on('lectures')->onDelete('CASCADE')->onUpdate('CASCADE');
-            $table->timestamps();
         });
     }
 
@@ -29,6 +30,6 @@ class CreateQuestionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('questions');
+        Schema::dropIfExists('attachments');
     }
 }

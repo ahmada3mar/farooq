@@ -2,6 +2,7 @@ import { createApp, h } from 'vue'
 import  {translations}  from './translation'
 import { createInertiaApp , Head, Link } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
+import applayJquery from './custom'
 // import "./jquery-3.3.1.min.js"
 import Layout from './Shared/Layout.vue'
 
@@ -21,6 +22,7 @@ createInertiaApp({
       .component("Link", Link)
       .mixin(translations)
       .mixin({mounted(){photoBox()}})
+      .mixin(applayJquery)
       .mount(el);
   },
   title: title => 'Farooq' + (title ? ` | ${title}` : ''),

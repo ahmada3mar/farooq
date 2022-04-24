@@ -25,6 +25,10 @@ class Lecture extends Model
 
         return $this->hasOne(Question::class);
     }
+    public function attachment(){
+
+        return $this->hasMany(Attachment::class);
+    }
 
     public function getUrlAttribute($value){
         $parts = parse_url($value);

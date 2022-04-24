@@ -12,6 +12,16 @@
   font-weight: normal;
   font-style: normal;
 }
+.dev-header{
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    color: #fff;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 999999999;
+}
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -3128,6 +3138,12 @@
   justify-content: space-between;
 }
 
+.flexRight {
+  display: flex !important;
+  align-items: center;
+  justify-content: right;
+}
+
 .navigation {
   margin-top: 0;
 }
@@ -3151,6 +3167,17 @@
   place-items: center;
   background-color: rgba(51, 51, 51, 0.212);
   opacity: 1 !important;
+}
+
+.user-avatar .navProfileImage {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user-avatar img {
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .cardButtons {
@@ -3235,6 +3262,14 @@
   gap: 7px;
 }
 
+.padding-0 {
+  padding: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 .hidden {
   display: none;
 }
@@ -3260,6 +3295,27 @@
 .inactiveLink {
   pointer-events: none;
   cursor: default;
+}
+
+.task-listing-details {
+  flex-direction: row !important;
+}
+
+.course-image {
+  height: 120px;
+  max-height: 100%;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.course-image img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  /* remove extra space below image */
+  padding: 0 !important;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .popupForm {
@@ -3380,6 +3436,13 @@ input[type=number] {
 
   .phoneMargainTop15 {
     margin-top: 15px;
+  }
+
+  .course-image {
+    height: unset;
+    max-height: unset;
+    max-width: unset;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 340px) {

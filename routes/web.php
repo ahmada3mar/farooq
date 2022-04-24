@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
@@ -28,6 +29,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/.well-known/pki-validation/B4959002757F80C0696D11A55A6748DF.txt' , [HomeController::class , 'ssl']);
 
 Route::get('/test' , function(){
     $rrr = User::with('courses')->role('instructor')->first();
@@ -48,8 +50,8 @@ Route::resource('users', UserController::class);
         return Inertia::render('404');
     });
 
-    Route::get('/profile', function () {
-        return Inertia::render('Profile');
+    Route::get('/profile/{user}', function (User $user) {
+        return Inertia::render('Profile2' , compact('user'));
     });
 
     Route::get('/403', function () {
@@ -69,11 +71,12 @@ Route::get('/Register', function () {
 })->name('Register');
 // Route::post('/Register', [RegisterController::class , 'Register']);
 
+Route::get('/courses', [CoursesController::class , 'index']);
 
 Route::middleware('auth')->group(function(){
     Route::get('/course/{id}', function ($id) {
 
-        return Inertia::render('course',['course' => Course::with('units.lectures.question.answers')->find($id)]);
+        return Inertia::render('course2',['course' => Course::with('units.lectures.question.answers')->find($id)]);
     });
     Route::get('/course2/{id}', function ($id) {
 

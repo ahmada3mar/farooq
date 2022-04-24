@@ -4,11 +4,13 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Avatar;
+use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Place;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Vyuldashev\NovaPermission\RoleSelect;
 
@@ -60,7 +62,7 @@ class User extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email', 'avatar'
+        'id', 'name', 'email', 'description', 'avatar'
     ];
 
 
@@ -80,30 +82,48 @@ class User extends Resource
             ID::make()->sortable(),
 
             Avatar::make('Pictur' , 'avatar')->maxWidth(50),
+            Image::make(__('cover'), 'cover')->maxWidth(50)->hideFromIndex(),
+
 
             Text::make('Name')
                 ->sortable()
                 ->rules('required', 'max:255'),
-
             Text::make('Email')
                 ->sortable()
                 ->rules('required', 'email', 'max:254')
                 ->creationRules('unique:users,email')
                 ->updateRules('unique:users,email,{{resourceId}}'),
-
             Text::make('Mobile')
                 ->sortable()
                 ->rules('required', 'max:254')
                 ->creationRules('unique:users,mobile')
                 ->updateRules('unique:users,mobile,{{resourceId}}'),
-
-                Place::make('City')
+            Text::make('title')
                 ->sortable()
-                ->rules('required', 'max:254'),
-
-                Text::make('Area')
+                ->rules('required', 'max:255'),
+            Place::make('City')
                 ->sortable()
-                ->rules('required', 'max:254'),
+                ->rules( 'max:254'),
+
+            Text::make('Area')
+                ->sortable()
+                ->rules( 'max:254'),
+
+            Text::make('experience')
+                ->sortable()
+                ->rules( 'max:255'),
+            Text::make('facebook')
+                ->sortable()
+                ->rules( 'max:255'),
+            Text::make('twitter')
+                ->sortable()
+                ->rules( 'max:255'),
+            Text::make('telegram')
+                ->sortable()
+                ->rules( 'max:255'),
+            Trix::make( __('description'), 'description')
+                ->rules('required'),
+
 
             Password::make('Password')
                 ->onlyOnForms()

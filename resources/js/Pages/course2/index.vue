@@ -36,7 +36,7 @@
     </div>
     <div
       class="background-image-container"
-      :style="'background:url(/storage/' + course.cover + ')'"
+      :style="'background:url(/storage/' +  + ')'"
     ></div>
   </div>
 
@@ -48,12 +48,12 @@
       <div class="col-xl-8 col-lg-8 content-right-offset">
         <div class="single-page-section" v-if="lectur?.name">
           <div v-if="lectur.type == 1">
-            <div class="card">
+            <div class="card col-12 padding-0">
               <h3 class="card-header py-3">
-                {{ lectur.question?.name }}
+                {{ lectur?.question?.name }}
               </h3>
               <div class="card-body">
-                <div :key="an.id" v-for="an in lectur.question.answers">
+                <div :key="an.id" v-for="an in lectur.question.answers || []">
                   <div
                     class="
                       d-flex
@@ -84,7 +84,7 @@
           </div>
           <div v-else>
             <iframe
-              class="col-12"
+              class="col-12 padding-right-0 padding-left-0"
               height="350"
               :src="'https://www.youtube.com/embed/' + lectur.url"
               title="YouTube video player"
@@ -92,12 +92,13 @@
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+          </div>
             <div
               class="
                 accordion
                 js-accordion
                 w-auto
-                margin-bottom-30 margin-right-15 margin-left-15
+                margin-bottom-30 
                 vid-description
               "
             >
@@ -109,8 +110,23 @@
                   <div v-html="lectur.description"></div>
                 </div>
               </div>
+              <div class="accordion__item js-accordion-item">
+                <div class="accordion-header js-accordion-header">
+                  المرفقات
+                </div>
+                <div class="accordion-body js-accordion-body px-4">
+                  <div class="attachments-container arabic right">
+                    <a href="#" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
+                    <a href="#" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
+                    <a href="#" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
+                    <a href="#" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
+
+
+                  </div>
+
+                </div>
+              </div>
             </div>
-          </div>
         </div>
       </div>
 
@@ -122,16 +138,7 @@
               <div class="accordion-header js-accordion-header">الوصف</div>
               <div class="accordion-body js-accordion-body">
                 <div>
-                  The study of the earliest periods in Islamic history is made
-                  difficult by a lack of sources.[18] For example, the most
-                  important historiographical source for the origins of Islam is
-                  the work of al-Tabari.[19] While al-Tabari is considered an
-                  excellent historian by the standards of his time and place, he
-                  made liberal use of mythical, legendary, stereotyped,
-                  distorted, and polemical presentations of subject matter—which
-                  are however considered to be Islamically acceptable—and his
-                  descriptions of the beginning of Islam post-date the events by
-                  several
+{{course.description}}
                 </div>
               </div>
             </div>
@@ -139,7 +146,7 @@
             <div
               class="accordion__item js-accordion-item"
               :key="unit.id"
-              v-for="unit in course.units"
+              v-for="unit in course.units || []"
             >
               <div class="accordion-header js-accordion-header">
                 {{ unit?.name }}
@@ -254,10 +261,7 @@ export default {
     },
   },
   mounted() {
-    accordion().init({
-      speed: 300,
-      oneOpen: true,
-    });
+    accordion().init({});
   },
 };
 </script>
@@ -280,5 +284,8 @@ export default {
 
 .button{
     float: left;
+}
+.right{
+direction: rtl;
 }
 </style>
