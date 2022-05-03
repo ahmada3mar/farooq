@@ -1,26 +1,16 @@
 <template>
 <!-- Titlebar
 ================================================== -->
-<div id="titlebar" class="gradient">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-
-				<h2>{{ __('contact') }}</h2>
-
-				<!-- Breadcrumbs -->
-				<nav id="breadcrumbs" class="dark">
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="#">Pages</a></li>
-						<li>Contact</li>
-					</ul>
-				</nav>
-
-			</div>
-		</div>
-	</div>
-</div>
+  <div class="intro-banner">
+    <div
+      class="background-image-container"
+      :style="
+        'background-image: url(' +
+        (background ? '/storage/' + background : '/assets/images/banner.jpg') +
+        ')'
+      "
+    ></div>
+  </div>
 
 
 <!-- Content
@@ -51,10 +41,6 @@
 						</li>
 					</ul>
 
-				</div>
-				<div id="single-job-map-container">
-					<div id="singleListingMap" data-latitude="31.966874" data-longitude="35.881324" data-map-icon="im im-icon-Hamburger"></div>
-					<a href="#" id="streetView">Street View</a>
 				</div>
 			</div>
 		</div>

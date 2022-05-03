@@ -9,7 +9,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class HomeController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,7 +28,7 @@ class HomeController extends Controller
         $instructos = User::with('courses')->role('instructor')->get();
 
 
-        return Inertia::render('Home', compact('settings' , 'courses' , 'mostSelling' , 'instructos' ));
+        return Inertia::render('Contact', compact('settings' , 'courses' , 'mostSelling' , 'instructos' ));
     }
 
     /**

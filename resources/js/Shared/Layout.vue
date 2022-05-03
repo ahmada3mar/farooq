@@ -16,7 +16,7 @@
             <nav class="navigation">
               <ul class="responsive">
                 <li>
-                  <Link href="/">من نحن</Link>
+                  <Link href="/contact">من نحن</Link>
                 </li>
                 <li>
                   <Link href="/">المعلمين</Link>
@@ -57,10 +57,7 @@
             <Slide class="navigation mobile"   right>
               <ul class="responsiveMobile">
                 <li>
-                  <Link href="/course2/1">من نحن</Link>
-                </li>
-                <li>
-                  <Link href="/">المعلمين</Link>
+                  <Link href="/">الصفحة الرئيسية</Link>
                 </li>
 
                 <li>
@@ -86,8 +83,21 @@
                   </ul>
                 </li>
                 <li>
-                  <Link href="/">الصفحة الرئيسية</Link>
+                  <Link href="/">المعلمين</Link>
+                </li>                
+                <li>
+                  <Link href="/contact">من نحن</Link>
                 </li>
+                <template  v-if="auth">
+                </template>
+                <template  v-else>
+                  <li>
+                    <Link href="/Register">تسجيل</Link>
+                  </li>
+                  <li>
+                    <Link href="/login">تسجيل الدخول </Link>
+                  </li>
+                </template>
               </ul>
             </Slide>
           </div>
@@ -125,7 +135,7 @@
                     >
                         <div class="user-name">
                           {{ auth.name }}
-                          <span>Freelancer</span>
+                          
                         </div>
                       </div>
                     </div>
@@ -133,8 +143,8 @@
 
                     <ul class="user-menu-small-nav">
                       <li>
-                        <a href="/admin"
-                          >
+                        <a href="/admin" target="_blank">
+                          
                           لوحة التحكم
                           <i class="icon-material-outline-dashboard"></i>
                           </a
@@ -202,9 +212,9 @@
                 <div class="footer-row borderLeft">
                   <div class="footer-row-inner">
                     <ul class="footer-social-links">
-                      <li>
+                      <li v-if="web_facebook">
                         <a
-                          href="#"
+                          href="web_facebook"
                           title="Facebook"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
@@ -212,9 +222,9 @@
                           <i class="icon-brand-facebook-f"></i>
                         </a>
                       </li>
-                      <li>
+                      <li v-if="web_twitter">
                         <a
-                          href="#"
+                          :href="web_twitter"
                           title="Twitter"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
@@ -222,19 +232,19 @@
                           <i class="icon-brand-twitter"></i>
                         </a>
                       </li>
-                      <li>
+                      <li v-if="web_instagram">
                         <a
-                          href="#"
-                          title="Google Plus"
+                          href="web_instagram"
+                          title="Instagram"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
                         >
-                          <i class="icon-brand-google-plus-g"></i>
+                          <i class="icon-feather-instagram"></i>
                         </a>
                       </li>
-                      <li>
+                      <li v-if="web_linkedin">
                         <a
-                          href="#"
+                          href="web_linkedin"
                           title="LinkedIn"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
@@ -362,8 +372,8 @@
       <div class="footer-bottom-section">
         <div class="container">
           <div class="row">
-            <div class="col-xl-12">
-              © 2019 <strong>Hireo</strong>. All Rights Reserved.
+            <div class="col-xl-12 all-right-footer" >
+                جميع الحقوق محفوظة. © <strong>الفاروق</strong> {{new Date().getFullYear()}} 
             </div>
           </div>
         </div>
@@ -379,10 +389,25 @@
 import { Slide } from "vue3-burger-menu";
 
 export default {
-  props: {
+    props: {
     sections: Array,
     auth: Object,
+    footerConfig: Array,
+
   },
+    data() {
+      console.log('this.footerConfig', this.footerConfig);
+      if(this.footerConfig){
+        return {
+          web_facebook: this.footerConfig.find((s) => s.key == "web_facebook")?.value || "",
+          web_twitter: this.footerConfig.find((s) => s.key == "web_twitter")?.value || "",
+          web_linkedin: this.footerConfig.find((s) => s.key == "web_linkedin")?.value || "",
+          web_instagram: this.footerConfig.find((s) => s.key == "web_instagram")?.value || "",
+      }
+    };
+  },
+
+  
   components: {
     Slide, // Register your component
   },
@@ -410,4 +435,12 @@ export default {
       padding-right: 30px !important;
       padding-left: 5px !important;
       }
+ #header .container {
+   gap: 0 ;
+   padding: 0;
+ }  
+ .all-right-footer{
+   text-decoration: rtl !important;
+ }
+   
 </style>
