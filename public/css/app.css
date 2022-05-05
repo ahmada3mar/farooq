@@ -3099,6 +3099,12 @@
   text-align: right !important;
 }
 
+.arabicCenter {
+  -webkit-text-decoration: rtl !important;
+          text-decoration: rtl !important;
+  text-align: center !important;
+}
+
 .profile-header {
   display: flex;
   justify-content: right;
@@ -3113,6 +3119,11 @@
 .flexCenter {
   display: flex !important;
   align-items: center;
+  justify-content: center;
+}
+
+.flexCenterTop {
+  display: flex !important;
   justify-content: center;
 }
 
@@ -3157,6 +3168,18 @@
   place-items: center;
   background-color: rgba(51, 51, 51, 0.212);
   opacity: 1 !important;
+}
+
+.contact-section {
+  margin: 2rem 0;
+  text-align: center;
+  -webkit-text-decoration: rtl;
+          text-decoration: rtl;
+}
+.contact-section h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .user-avatar .navProfileImage {

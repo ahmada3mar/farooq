@@ -18,17 +18,9 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $settings = SiteConfig::where('key', 'LIKE', 'home%')->get();
+        $settings = SiteConfig::where('key', 'LIKE', 'about%')->get();
         
-
-        $courses = Course::with('user' , 'section')->inRandomOrder()->limit(5)->get();
-
-        $mostSelling = Course::orderBy('subscriber' , 'DESC')->limit(4)->get();
-
-        $instructos = User::with('courses')->role('instructor')->get();
-
-
-        return Inertia::render('Contact', compact('settings' , 'courses' , 'mostSelling' , 'instructos' ));
+        return Inertia::render('Contact', compact('settings' ));
     }
 
     /**

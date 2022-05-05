@@ -196,66 +196,7 @@
             <div class="col-xl-12">
               <!-- Footer Rows Container -->
               <div class="footer-rows-container">
-                <!-- Left Side -->
-                <div class="footer-row borderRight">
-                  <a href="/"
-                    ><img
-                      class="footer-row-inner footer-logo"
-                      src="/assets/images/logo.png"
-                      alt=""
-                    />
-                  </a>
-                </div>
 
-                <!-- Right Side -->
-                <!-- Social Icons -->
-                <div class="footer-row borderLeft">
-                  <div class="footer-row-inner">
-                    <ul class="footer-social-links">
-                      <li v-if="web_facebook">
-                        <a
-                          href="web_facebook"
-                          title="Facebook"
-                          data-tippy-placement="bottom"
-                          data-tippy-theme="light"
-                        >
-                          <i class="icon-brand-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li v-if="web_twitter">
-                        <a
-                          :href="web_twitter"
-                          title="Twitter"
-                          data-tippy-placement="bottom"
-                          data-tippy-theme="light"
-                        >
-                          <i class="icon-brand-twitter"></i>
-                        </a>
-                      </li>
-                      <li v-if="web_instagram">
-                        <a
-                          href="web_instagram"
-                          title="Instagram"
-                          data-tippy-placement="bottom"
-                          data-tippy-theme="light"
-                        >
-                          <i class="icon-feather-instagram"></i>
-                        </a>
-                      </li>
-                      <li v-if="web_linkedin">
-                        <a
-                          href="web_linkedin"
-                          title="LinkedIn"
-                          data-tippy-placement="bottom"
-                          data-tippy-theme="light"
-                        >
-                          <i class="icon-brand-linkedin-in"></i>
-                        </a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
               </div>
               <!-- Footer Rows Container / End -->
             </div>
@@ -267,102 +208,101 @@
       <!-- Footer Middle Section -->
       <div class="footer-middle-section">
         <div class="container">
-          <div class="row">
+          <div class="row flexCenterTop">
+            <template v-if="this.footerConfig && this.footerConfig.length > 0">
             <!-- Links -->
             <div class="col-xl-2 col-lg-2 col-md-3">
               <div class="footer-links">
-                <h3>For Candidates</h3>
+                    <ul class="">
+                      <li v-if="web_facebook">
+                        <a
+                          href="web_facebook"
+                          title="Facebook"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-brand-facebook-f"> Facebook</i>
+                        </a>
+                      </li>
+                      <li v-if="web_twitter">
+                        <a
+                          :href="web_twitter"
+                          title="Twitter"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-brand-twitter"> Twitter</i>
+                        </a>
+                      </li>
+                      <li v-if="web_instagram">
+                        <a
+                          href="web_instagram"
+                          title="Instagram"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-feather-instagram"> Instagram</i>
+                        </a>
+                      </li>
+                      <li v-if="web_linkedin">
+                        <a
+                          href="web_linkedin"
+                          title="LinkedIn"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-brand-linkedin-in"> Linkedin</i>
+                        </a>
+                      </li>
+                    </ul>
+              </div>
+            </div>
+            </template>
+            <!-- Links -->
+            <div class="col-xl-2 col-lg-2 col-md-3">
+              <div class="footer-links">
                 <ul>
+                <template  v-if="auth">
                   <li>
-                    <a href="#"><span>Browse Jobs</span></a>
+                    <Link class="arabicCenter" href="/">الصفحة الرئيسية</Link>
                   </li>
                   <li>
-                    <a href="#"><span>Add Resume</span></a>
+                    <Link class="arabicCenter" :href="`/profile/${auth.id}`">الصفحة الشخصية</Link>
+                  </li>
+                </template>
+                <template  v-else>
+                  <li>
+                    <Link class="arabicCenter" href="/">الصفحة الرئيسية</Link>
                   </li>
                   <li>
-                    <a href="#"><span>Job Alerts</span></a>
+                    <Link class="arabicCenter" href="/Register">تسجيل</Link>
                   </li>
                   <li>
-                    <a href="#"><span>My Bookmarks</span></a>
+                    <Link class="arabicCenter" href="/login">تسجيل الدخول </Link>
+                  </li>
+                </template>
+                  <li>
+                    <Link class="arabicCenter" href="/contact">من نحن</Link>
+                  </li>
+                  <li>
+                    <Link class="arabicCenter" href="/">المعلمين</Link>
                   </li>
                 </ul>
               </div>
             </div>
-
             <!-- Links -->
             <div class="col-xl-2 col-lg-2 col-md-3">
               <div class="footer-links">
-                <h3>For Employers</h3>
-                <ul>
-                  <li>
-                    <a href="#"><span>Browse Candidates</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Post a Job</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Post a Task</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Plans & Pricing</span></a>
-                  </li>
-                </ul>
+                  <a href="/"
+                    ><img
+                      class=""
+                      src="/assets/images/logo.png"
+                      alt=""
+                    />
+                  </a>
               </div>
             </div>
 
-            <!-- Links -->
-            <div class="col-xl-2 col-lg-2 col-md-3">
-              <div class="footer-links">
-                <h3>Helpful Links</h3>
-                <ul>
-                  <li>
-                    <a href="#"><span>Contact</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Privacy Policy</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Terms of Use</span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Links -->
-            <div class="col-xl-2 col-lg-2 col-md-3">
-              <div class="footer-links">
-                <h3>Account</h3>
-                <ul>
-                  <li>
-                    <a href="#"><span>Log In</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>My Account</span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Newsletter -->
-            <div class="col-xl-4 col-lg-4 col-md-12">
-              <h3>
-                <i class="icon-feather-mail"></i> Sign Up For a Newsletter
-              </h3>
-              <p>
-                Weekly breaking news, analysis and cutting edge advices on job
-                searching.
-              </p>
-              <form action="#" method="get" class="newsletter">
-                <input
-                  type="text"
-                  name="fname"
-                  placeholder="Enter your email address"
-                />
-                <button type="submit">
-                  <i class="icon-feather-arrow-right"></i>
-                </button>
-              </form>
-            </div>
           </div>
         </div>
       </div>
@@ -397,7 +337,7 @@ export default {
   },
     data() {
       console.log('this.footerConfig', this.footerConfig);
-      if(this.footerConfig){
+      if(this.footerConfig && this.footerConfig.length > 0){
         return {
           web_facebook: this.footerConfig.find((s) => s.key == "web_facebook")?.value || "",
           web_twitter: this.footerConfig.find((s) => s.key == "web_twitter")?.value || "",

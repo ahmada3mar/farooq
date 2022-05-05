@@ -13,7 +13,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
-    name: String
+    name: String,
+    settings: Object
+  },
+  data: function data() {
+    var _this$settings$find, _this$settings$find2, _this$settings$find3, _this$settings$find4;
+
+    return {
+      background: (_this$settings$find = this.settings.find(function (s) {
+        return s.key == "about_alfarouq_image";
+      })) === null || _this$settings$find === void 0 ? void 0 : _this$settings$find.value,
+      about: (_this$settings$find2 = this.settings.find(function (s) {
+        return s.key == "about_alfarouq";
+      })) === null || _this$settings$find2 === void 0 ? void 0 : _this$settings$find2.value,
+      message: (_this$settings$find3 = this.settings.find(function (s) {
+        return s.key == "about_alfarouq_message";
+      })) === null || _this$settings$find3 === void 0 ? void 0 : _this$settings$find3.value,
+      vision: (_this$settings$find4 = this.settings.find(function (s) {
+        return s.key == "about_alfarouq_vision";
+      })) === null || _this$settings$find4 === void 0 ? void 0 : _this$settings$find4.value
+    };
   }
 });
 
@@ -34,16 +53,70 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "intro-banner"
 };
+var _hoisted_2 = {
+  "class": "container"
+};
+var _hoisted_3 = {
+  "class": "row"
+};
+var _hoisted_4 = {
+  "class": "col-xl-12"
+};
+var _hoisted_5 = {
+  "class": "contact-location-info margin-bottom-50"
+};
+var _hoisted_6 = {
+  "class": "contact-address center"
+};
+var _hoisted_7 = {
+  key: 0,
+  "class": "contact-section"
+};
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"container\"><div class=\"row\"><div class=\"col-xl-12\"><div class=\"contact-location-info margin-bottom-50\"><div class=\"contact-address\"><ul><li class=\"contact-address-headline\">Our Office</li><li>425 Makka Street, Amman, Jordan</li><li>Phone +962 7 7898 2290</li><li><a href=\"#\">info@qorrah.com</a></li><li><div class=\"freelancer-socials\"><ul><li><a href=\"//www.facebook.com/QorrahInitiative\" title=\"facebook\" data-tippy-placement=\"top\"><i class=\"icon-brand-facebook\"></i></a></li><li><a href=\"https://www.linkedin.com/company/cesterdad/\" title=\"linkedin\" data-tippy-placement=\"top\"><i class=\"icon-brand-linkedin\"></i></a></li><li><a href=\"//www.twitter.com/Cesterdad\" title=\"Twitter\" data-tippy-placement=\"top\"><i class=\"icon-brand-twitter\"></i></a></li><li><a href=\"//www.instagram.com/qorrahinitiative/\" title=\"Instagram\" data-tippy-placement=\"top\"><i class=\"icon-brand-instagram\"></i></a></li></ul></div></li></ul></div></div></div><div class=\"col-xl-8 col-lg-8 offset-xl-2 offset-lg-2\"><section id=\"contact\" class=\"margin-bottom-60\"><h3 class=\"headline margin-top-15 margin-bottom-35\">Any questions? Feel free to contact us!</h3><!-- @if (count($errors) &gt; 0)\r\n\t\t\t\t&lt;div class=&quot;alert alert-danger&quot;&gt;\r\n\t\t\t\t &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;×&lt;/button&gt;\r\n\t\t\t\t &lt;ul&gt;\r\n\t\t\t\t  @foreach ($errors-&gt;all() as $error)\r\n\t\t\t\t   &lt;li&gt;{{ $error }}&lt;/li&gt;\r\n\t\t\t\t  @endforeach\r\n\t\t\t\t &lt;/ul&gt;\r\n\t\t\t\t&lt;/div&gt;\r\n\t\t\t   @endif\r\n\t\t\t\t&lt;form method=&quot;post&quot; name=&quot;contactform&quot; id=&quot;contactform&quot; action=&quot;{{ route(&#39;contact&#39;) }}&quot; autocomplete=&quot;on&quot;&gt;\r\n\t\t\t\t\t@csrf\r\n\t\t\t\t\t&lt;div class=&quot;row&quot;&gt;\r\n\t\t\t\t\t\t&lt;div class=&quot;col-md-6&quot;&gt;\r\n\t\t\t\t\t\t\t&lt;div class=&quot;input-with-icon-left&quot;&gt;\r\n\r\n\t\t\t\t\t\t\t\t@if (Auth::check())\r\n\r\n\t\t\t\t\t\t\t\t&lt;input class=&quot;with-border&quot; name=&quot;name&quot; type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Your Name&quot; value=&quot;{{Auth::user()-&gt;name}}&quot; required=&quot;required&quot; /&gt;\r\n\t\t\t\t\t\t\t\t@else\r\n\t\t\t\t\t\t\t\t&lt;input class=&quot;with-border&quot; name=&quot;name&quot; type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Your Name&quot; required=&quot;required&quot; /&gt;\r\n\t\t\t\t\t\t\t\t@endif\r\n\r\n\t\t\t\t\t\t\t\t&lt;i class=&quot;icon-material-outline-account-circle&quot;&gt;&lt;/i&gt;\r\n\t\t\t\t\t\t\t&lt;/div&gt;\r\n\t\t\t\t\t\t&lt;/div&gt;\r\n\r\n\t\t\t\t\t\t&lt;div class=&quot;col-md-6&quot;&gt;\r\n\t\t\t\t\t\t\t&lt;div class=&quot;input-with-icon-left&quot;&gt;\r\n\t\t\t\t\t\t\t\t@if (Auth::user())\r\n\r\n\t\t\t\t\t\t\t\t&lt;input class=&quot;with-border&quot; name=&quot;email&quot; type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;Email Address&quot; value=&quot;{{Auth::user()-&gt;email}}&quot; pattern=&quot;^[A-Za-z0-9](([_\\.\\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\\.\\-]?[a-zA-Z0-9]+)*)\\.([A-Za-z]{2,})$&quot; required=&quot;required&quot; /&gt;\r\n\t\t\t\t\t\t\t\t@else\r\n\t\t\t\t\t\t\t\t&lt;input class=&quot;with-border&quot; name=&quot;email&quot; type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;Email Address&quot; pattern=&quot;^[A-Za-z0-9](([_\\.\\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\\.\\-]?[a-zA-Z0-9]+)*)\\.([A-Za-z]{2,})$&quot; required=&quot;required&quot; /&gt;\r\n\r\n\t\t\t\t\t\t\t\t@endif\r\n\t\t\t\t\t\t\t\t&lt;i class=&quot;icon-material-outline-email&quot;&gt;&lt;/i&gt;\r\n\t\t\t\t\t\t\t&lt;/div&gt;\r\n\t\t\t\t\t\t&lt;/div&gt;\r\n\t\t\t\t\t&lt;/div&gt;\r\n\r\n\t\t\t\t\t&lt;div class=&quot;input-with-icon-left&quot;&gt;\r\n\t\t\t\t\t\t&lt;input class=&quot;with-border&quot; name=&quot;subject&quot; type=&quot;text&quot; id=&quot;subject&quot; placeholder=&quot;Subject&quot; required=&quot;required&quot; /&gt;\r\n\t\t\t\t\t\t&lt;i class=&quot;icon-material-outline-assignment&quot;&gt;&lt;/i&gt;\r\n\t\t\t\t\t&lt;/div&gt;\r\n\r\n\t\t\t\t\t&lt;div&gt;\r\n\t\t\t\t\t\t&lt;textarea class=&quot;with-border&quot; name=&quot;comments&quot; cols=&quot;40&quot; rows=&quot;5&quot; id=&quot;comments&quot; placeholder=&quot;Message&quot; spellcheck=&quot;true&quot; required=&quot;required&quot;&gt;&lt;/textarea&gt;\r\n\t\t\t\t\t&lt;/div&gt;\r\n\r\n\t\t\t\t\t&lt;input type=&quot;submit&quot; class=&quot;submit button margin-top-15&quot; id=&quot;submit&quot; value=&quot;Submit Message&quot; /&gt;\r\n\r\n\t\t\t\t&lt;/form&gt; --></section></div></div></div>", 1);
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, "حول الفاروق", -1
+/* HOISTED */
+);
 
+var _hoisted_9 = ["innerHTML"];
+var _hoisted_10 = {
+  key: 1,
+  "class": "contact-section"
+};
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, " رسالة الفاروق", -1
+/* HOISTED */
+);
+
+var _hoisted_12 = ["innerHTML"];
+var _hoisted_13 = {
+  key: 2,
+  "class": "contact-section"
+};
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, "رؤية الفاروق", -1
+/* HOISTED */
+);
+
+var _hoisted_15 = ["innerHTML"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Titlebar\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "background-image-container",
-    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)('background-image: url(' + (_ctx.background ? '/storage/' + _ctx.background : '/assets/images/banner.jpg') + ')')
+    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)('background-image: url(' + ($data.background ? '/storage/' + $data.background : '/assets/images/banner.jpg') + ')')
   }, null, 4
   /* STYLE */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Container "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Container / End ")], 64
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Container "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [$data.about ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    innerHTML: $data.about
+  }, null, 8
+  /* PROPS */
+  , _hoisted_9)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.message ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    innerHTML: $data.message
+  }, null, 8
+  /* PROPS */
+  , _hoisted_12)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.vision ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    innerHTML: $data.vision
+  }, null, 8
+  /* PROPS */
+  , _hoisted_15)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Container / End ")], 64
   /* STABLE_FRAGMENT */
   );
 }
