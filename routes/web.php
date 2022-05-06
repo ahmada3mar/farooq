@@ -3,6 +3,7 @@
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Models\Course;
@@ -79,10 +80,11 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
     Route::get('/courses', [CoursesController::class, 'index']);
 
     Route::middleware('auth')->group(function () {
-        Route::get('/course/{id}', function ($id) {
+        Route::get('/course/{id}', [CourseController::class, 'index']);
+        // Route::get('/course/{id}', function ($id) {
 
-            return Inertia::render('course2', ['course' => Course::with('units.lectures.question.answers')->find($id)]);
-        });
+        //     return Inertia::render('course2', ['course' => Course::with('units.lectures.question.answers')->find($id)]);
+        // });
         Route::get('/course2/{id}', function ($id) {
 
             // dd(Course::with('units.lectures.question.answers')->find($id));

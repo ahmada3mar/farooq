@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Attachment;
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class CourseController extends Controller
 {
@@ -12,9 +14,13 @@ class CourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $course = Course::with('units.lectures.question.answers')->with('units.lectures.attachment')->find($request->id);
+        return Inertia::render('course2', compact('course' ));
+
+
+
     }
 
     /**
