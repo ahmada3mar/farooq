@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSiteConfigTable extends Migration
+class AlterLecturesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateSiteConfigTable extends Migration
      */
     public function up()
     {
-        Schema::create('site_configs', function (Blueprint $table) {
-            $table->id();
-            $table->string('key');
-            $table->longText('value');
-            $table->smallInteger('type');
-            $table->timestamps();
+        Schema::table('lectures', function (Blueprint $table) {
+            $table->dropColumn('course_id');
         });
     }
+
 
     /**
      * Reverse the migrations.
@@ -29,6 +26,6 @@ class CreateSiteConfigTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('site_config');
+        //
     }
 }

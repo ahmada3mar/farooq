@@ -15,7 +15,7 @@
             <h3>
               <strong></strong>
               <br />
-              <div v-html="description || ''"></div>
+              <div :style="{ '--descriptionColor': descriptionColor }" class="home_description" v-html="description || ''"></div>
             </h3>
           </div>
         </div>
@@ -50,7 +50,7 @@
       </div>
 
       <!-- Stats -->
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-12">
           <ul class="intro-stats margin-top-45 hide-under-992px">
             <li>
@@ -67,7 +67,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -143,15 +143,6 @@
                   <div class="job-listing-footer">
                     <ul>
                       <li>
-                        التقييم
-                        <i class="icon-material-outline-star-border bottom"></i>
-                        <i class="icon-material-outline-star-border bottom"></i>
-                        <i class="icon-material-outline-star-border bottom"></i>
-
-                        <i class="icon-line-awesome-star up"></i>
-                        <i class="icon-line-awesome-star up"></i>
-                      </li>
-                      <li>
                         <i class="icon-material-outline-school"></i>
                         الصف {{ __(course.class) }}
                         <b>{{ course.section?.name }}</b>
@@ -225,12 +216,8 @@
         <!-- Overview -->
         <div class="freelancer-overview">
           <div class="freelancer-overview-inner">
-            <!-- Bookmark Icon -->
-            <span class="bookmark-icon"></span>
-
             <!-- Avatar -->
             <div class="freelancer-avatar">
-              <div class="verified-badge"></div>
               <Link :href="`/profile/${user.id}`"
                 ><img :src="`/storage/${user.avatar}`" alt=""
               /></Link>
@@ -304,10 +291,25 @@
           <div class="pricing-plans-container">
             <!-- Plan -->
             <div class="pricing-plan arabic">
+              <h3>رصيد بقيمة 35 دينار</h3>
+              <p class="margin-top-10">
+                تدفع لمرة واحد تمكنك من شراء المساقات ذات قمة 35 دنانير               </p>
+              <div class="pricing-plan-label billed-monthly-label">
+                <strong>35 JOD</strong>
+              </div>
+              <Link
+                href="pages-checkout-page.html"
+                class="button full-width margin-top-20"
+                >شراء الآن</Link
+              >
+            </div>
+
+            <!-- Plan -->
+            <div class="pricing-plan recommended arabic">
+              <div class="recommended-badge"></div>
               <h3>رصيد بقيمة 50 دينار</h3>
               <p class="margin-top-10">
-                تدفع لمرة واحد تمكنك من شراء المساقات ذات قمة 50 دنانير او اقل
-              </p>
+                تدفع لمرة واحد تمكنك من شراء المساقات ذات قمة 50 دنانير               </p>
               <div class="pricing-plan-label billed-monthly-label">
                 <strong>50 JOD</strong>
               </div>
@@ -319,41 +321,12 @@
             </div>
 
             <!-- Plan -->
-            <div class="pricing-plan recommended arabic">
-              <div class="recommended-badge">موصى به</div>
-              <h3>رصيد بقيمة 100 دينار</h3>
-              <p class="margin-top-10">
-                تدفع لمرة واحد تمكنك من شراء المساقات ذات قمة 100 دنانير او اقل
-              </p>
-              <div class="pricing-plan-label billed-monthly-label">
-                <strong>100 JOD</strong>
-              </div>
-              <div class="pricing-plan-label billed-yearly-label">
-                <strong>$529</strong>/ yearly
-              </div>
-              <!-- <div class="pricing-plan-features">
-                <strong>Features of Standard Plan</strong>
-                <ul>
-                  <li>5 Listings</li>
-                  <li>60 Days Visibility</li>
-                  <li>Highlighted in Search Results</li>
-                </ul>
-              </div> -->
-              <Link
-                href="pages-checkout-page.html"
-                class="button full-width margin-top-20"
-                >شراء الآن</Link
-              >
-            </div>
-
-            <!-- Plan -->
             <div class="pricing-plan arabic">
-              <h3>رصيد بقيمة 10 دنانير</h3>
+              <h3>رصيد بقيمة 20 دنانير</h3>
               <p class="margin-top-10">
-                تدفع لمرة واحد تمكنك من شراء المساقات ذات قمة 10 دنانير او اقل
-              </p>
+                تدفع لمرة واحد تمكنك من شراء المساقات ذات قمة 20 دنانير               </p>
               <div class="pricing-plan-label billed-monthly-label">
-                <strong>10 JOD</strong>
+                <strong>20 JOD</strong>
               </div>
               <Link
                 href="pages-checkout-page.html"
@@ -397,6 +370,7 @@ export default {
       description: this.settings.find((s) => s.key == "home_description")
         ?.value,
       shadow: this.settings.find((s) => s.key == "home_shadow")?.value || "",
+      descriptionColor: this.settings.find((s) => s.key == "home_description_color")?.value || "#777",
     };
   },
   mounted() {
@@ -443,5 +417,9 @@ export default {
     rgba(250, 250, 250, 0.1) 80%,
     rgba(250, 250, 250, 0) 100%
   );
+}
+.home_description{
+    margin-bottom: 1rem;
+    color: var(--descriptionColor) ;
 }
 </style>

@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Providers;
+use Illuminate\Support\Facades\View;
 
+use App\Models\SiteConfig;
 use Illuminate\Support\ServiceProvider;
 use Inertia\Inertia;
 
@@ -24,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-       //
+        $footerConfig = SiteConfig::where('key', 'LIKE', 'web%')->get();
+        view::share('footerConfig', $footerConfig);
     }
 }

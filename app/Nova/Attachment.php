@@ -48,11 +48,7 @@ class Attachment extends Resource
             Text::make('name')
             ->sortable()
             ->rules('required', 'max:255'),
-            File::make('Attachment')
-            ->disk('s3')
-            ->storeOriginalName('attachment_name')
-            ->storeSize('attachment_size')
-            ->acceptedTypes('.pdf|.jpg|.png|jpeg|.docx|.doc|.xlsx|.xls'),
+            File::make('Attachment')->rules('file' , 'max:50000'),
             BelongsTo::make( __('lecture') , 'lecture' , Lecture::class),
 
         ];

@@ -11,6 +11,8 @@ class Lecture extends Model
     use HasFactory;
 
 
+    protected  $with = ['attachment'];
+
 
     public function course() {
 
@@ -25,6 +27,7 @@ class Lecture extends Model
 
         return $this->hasOne(Question::class);
     }
+
     public function attachment(){
 
         return $this->hasMany(Attachment::class);

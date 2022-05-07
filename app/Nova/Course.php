@@ -130,7 +130,6 @@ class Course extends Resource
 
             NestedForm::make('Unit', 'units', Unit::class),
             HasMany::make(__('units'), 'units', unit::class)->nullable(),
-            HasMany::make(__('lectures'), 'lectures', Lecture::class)->nullable(),
 
             BelongsTo::make(__('instructor'), 'user', User::class)
             ->withMeta(['placeholder' => trans('contant.sel_instructor')]
