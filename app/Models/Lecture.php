@@ -11,6 +11,8 @@ class Lecture extends Model
     use HasFactory;
 
 
+    protected  $with = ['attachment'];
+
 
     public function course() {
 

@@ -33,6 +33,12 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 Route::get('/.well-known/pki-validation/B4959002757F80C0696D11A55A6748DF.txt' , [HomeController::class , 'ssl']);
+Route::get('/download/{path}/{name}/{ext}' , function($path,$name , $ext){
+
+
+    return response()->download(storage_path("app/public/$path") , $name . '.' . $ext );
+
+});
 
 //footer sittings that will show in all pages
 

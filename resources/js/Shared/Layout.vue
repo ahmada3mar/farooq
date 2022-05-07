@@ -84,7 +84,7 @@
                 </li>
                 <li>
                   <Link href="/">المعلمين</Link>
-                </li>                
+                </li>
                 <li>
                   <Link href="/contact">من نحن</Link>
                 </li>
@@ -135,7 +135,7 @@
                     >
                         <div class="user-name">
                           {{ auth.name }}
-                          
+
                         </div>
                       </div>
                     </div>
@@ -144,7 +144,7 @@
                     <ul class="user-menu-small-nav">
                       <li>
                         <a href="/admin" target="_blank">
-                          
+
                           لوحة التحكم
                           <i class="icon-material-outline-dashboard"></i>
                           </a
@@ -209,14 +209,14 @@
       <div class="footer-middle-section">
         <div class="container">
           <div class="row flexCenterTop">
-            <template v-if="this.footerConfig && this.footerConfig.length > 0">
+            <template v-if="this.web_config.length > 0">
             <!-- Links -->
             <div class="col-xl-2 col-lg-2 col-md-3">
               <div class="footer-links">
                     <ul class="">
                       <li v-if="web_facebook">
                         <a
-                          href="web_facebook"
+                          :href="web_facebook"
                           title="Facebook"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
@@ -236,7 +236,7 @@
                       </li>
                       <li v-if="web_instagram">
                         <a
-                          href="web_instagram"
+                          :href="web_instagram"
                           title="Instagram"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
@@ -246,7 +246,7 @@
                       </li>
                       <li v-if="web_linkedin">
                         <a
-                          href="web_linkedin"
+                          :href="web_linkedin"
                           title="LinkedIn"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
@@ -313,7 +313,7 @@
         <div class="container">
           <div class="row">
             <div class="col-xl-12 all-right-footer" >
-                جميع الحقوق محفوظة. © <strong>الفاروق</strong> {{new Date().getFullYear()}} 
+                جميع الحقوق محفوظة. © <strong>الفاروق</strong> {{new Date().getFullYear()}}
             </div>
           </div>
         </div>
@@ -332,26 +332,26 @@ export default {
     props: {
     sections: Array,
     auth: Object,
-    footerConfig: Array,
+    web_config: Array,
 
   },
     data() {
-      console.log('this.footerConfig', this.footerConfig);
-      if(this.footerConfig && this.footerConfig.length > 0){
+      if(this.web_config.length > 0){
         return {
-          web_facebook: this.footerConfig.find((s) => s.key == "web_facebook")?.value || "",
-          web_twitter: this.footerConfig.find((s) => s.key == "web_twitter")?.value || "",
-          web_linkedin: this.footerConfig.find((s) => s.key == "web_linkedin")?.value || "",
-          web_instagram: this.footerConfig.find((s) => s.key == "web_instagram")?.value || "",
+          web_facebook: this.web_config.find((s) => s.key == "web_facebook")?.value || "",
+          web_twitter: this.web_config.find((s) => s.key == "web_twitter")?.value || "",
+          web_linkedin: this.web_config.find((s) => s.key == "web_linkedin")?.value || "",
+          web_instagram: this.web_config.find((s) => s.key == "web_instagram")?.value || "",
       }
     };
   },
 
-  
+
   components: {
     Slide, // Register your component
   },
     mounted() {
+        console.log(this.web_facebook)
     Dropdown().init({ });
   },
 };
@@ -378,9 +378,9 @@ export default {
  #header .container {
    gap: 0 ;
    padding: 0;
- }  
+ }
  .all-right-footer{
    text-decoration: rtl !important;
  }
-   
+
 </style>

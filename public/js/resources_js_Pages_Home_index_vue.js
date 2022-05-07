@@ -773,11 +773,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-<<<<<<< HEAD
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Plan "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_85, [_hoisted_86, _hoisted_87, _hoisted_88, _hoisted_89, _hoisted_90, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"pricing-plan-features\">\n                <strong>Features of Standard Plan</strong>\n                <ul>\n                  <li>5 Listings</li>\n                  <li>60 Days Visibility</li>\n                  <li>Highlighted in Search Results</li>\n                </ul>\n              </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-=======
   })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Plan "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_74, [_hoisted_75, _hoisted_76, _hoisted_77, _hoisted_78, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
->>>>>>> 46fc5c11a14bbc4375f02257875976f2c94e45c3
     href: "pages-checkout-page.html",
     "class": "button full-width margin-top-20"
   }, {
@@ -820,11 +816,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-<<<<<<< HEAD
-___CSS_LOADER_EXPORT___.push([module.id, "\n.price-logo[data-v-0f04e50b] {\n  width: 50;\n  height: 50;\n  background: teal;\n  justify-content: center;\n  align-items: center;\n  display: flex;\n  color: white;\n  font-weight: bold;\n}\n.up[data-v-0f04e50b] {\n  font-size: 15px;\n}\n.bottom[data-v-0f04e50b] {\n  font-size: 16px;\n  top: 2px !important;\n}\n.pricing-plan[data-v-0f04e50b] {\n  display: flex;\n  font-weight: bold;\n  flex-direction: column;\n  justify-content: space-between;\n  height: 500px;\n  /* color: whitesmoke; */\n  /* background-image: url(\"/assets/images/price.png\"); */\n}\n.intro-banner[data-v-0f04e50b]:after,\n.intro-banner[data-v-0f04e50b]:before {\n  background: linear-gradient(\n    to left,\n    var(--shadow) 20%,\n    rgba(250, 250, 250, 0.1) 80%,\n    rgba(250, 250, 250, 0) 100%\n  );\n}\n", ""]);
-=======
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.price-logo[data-v-0f04e50b] {\r\n  width: 50;\r\n  height: 50;\r\n  background: teal;\r\n  justify-content: center;\r\n  align-items: center;\r\n  display: flex;\r\n  color: white;\r\n  font-weight: bold;\n}\n.up[data-v-0f04e50b] {\r\n  font-size: 15px;\n}\n.bottom[data-v-0f04e50b] {\r\n  font-size: 16px;\r\n  top: 2px !important;\n}\n.pricing-plan[data-v-0f04e50b] {\r\n  display: flex;\r\n  font-weight: bold;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  height: 500px;\r\n  /* color: whitesmoke; */\r\n  /* background-image: url(\"/assets/images/price.png\"); */\n}\n.intro-banner[data-v-0f04e50b]:after,\r\n.intro-banner[data-v-0f04e50b]:before {\r\n  background: linear-gradient(\r\n    to left,\r\n    var(--shadow) 20%,\r\n    rgba(250, 250, 250, 0.1) 80%,\r\n    rgba(250, 250, 250, 0) 100%\r\n  );\n}\n.home_description[data-v-0f04e50b]{\r\n    margin-bottom: 1rem;\r\n    color: var(--descriptionColor) ;\n}\r\n", ""]);
->>>>>>> 46fc5c11a14bbc4375f02257875976f2c94e45c3
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -98,7 +98,7 @@
                 accordion
                 js-accordion
                 w-auto
-                margin-bottom-30 
+                margin-bottom-30
                 vid-description
               "
             >
@@ -110,23 +110,23 @@
                   <div v-html="lectur.description"></div>
                 </div>
               </div>
+            <template v-if="this.lectur.attachment?.length > 0">
               <div class="accordion__item js-accordion-item">
                 <div class="accordion-header js-accordion-header">
                   المرفقات
                 </div>
                 <div class="accordion-body js-accordion-body px-4">
-                  <!-- <template v-if="this.attachments && this.attachments.length > 0">
                   <div class="attachments-container arabic right"
-                  :key="attachments.id"
-                  v-for="attachments in lectur"
+
                   >
-                    <a :href="attachments.name" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
+                    <a  :key="attachment.id"
+                  v-for="attachment in lectur.attachment" :href="`/download/${attachment.attachment}/${attachment.name}/${attachment.attachment.split('.').pop()}`" class="attachment-box ripple-effect"><span>{{attachment.name}}</span><i>{{ attachment.attachment.split('.').pop() }}</i></a>
 
                   </div>
-                  </template> -->
 
                 </div>
               </div>
+                  </template>
             </div>
         </div>
       </div>
@@ -251,18 +251,17 @@ export default {
     course: Object,
   },
   data() {
-    console.table("this.course", this.course);
     return {
       lectur: this.course?.units[0]?.lectures[0],
-      attachments: this.course?.units[0]?.lectures[0]?.attachment,
     };
   },
   methods: {
     changeVid(lectur) {
       this.lectur = lectur;
-      this.attachments = this.lectur?.attachment;
-      console.log('this.attachments', this.attachments);
     },
+    download(link){
+        Inertia.get(link)
+    }
   },
   mounted() {
     accordion().init({});
