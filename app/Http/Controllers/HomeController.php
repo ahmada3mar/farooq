@@ -19,6 +19,7 @@ class HomeController extends Controller
     public function index()
     {
         $settings = SiteConfig::where('key', 'LIKE', 'home%')->get();
+        
 
         $courses = Course::with('user' , 'section')->inRandomOrder()->limit(5)->get();
 

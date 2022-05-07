@@ -115,14 +115,15 @@
                   المرفقات
                 </div>
                 <div class="accordion-body js-accordion-body px-4">
-                  <div class="attachments-container arabic right">
-                    <a href="#" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
-                    <a href="#" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
-                    <a href="#" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
-                    <a href="#" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
-
+                  <!-- <template v-if="this.attachments && this.attachments.length > 0">
+                  <div class="attachments-container arabic right"
+                  :key="attachments.id"
+                  v-for="attachments in lectur"
+                  >
+                    <a :href="attachments.name" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
 
                   </div>
+                  </template> -->
 
                 </div>
               </div>
@@ -253,11 +254,14 @@ export default {
     console.table("this.course", this.course);
     return {
       lectur: this.course?.units[0]?.lectures[0],
+      attachments: this.course?.units[0]?.lectures[0]?.attachment,
     };
   },
   methods: {
     changeVid(lectur) {
       this.lectur = lectur;
+      this.attachments = this.lectur?.attachment;
+      console.log('this.attachments', this.attachments);
     },
   },
   mounted() {

@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Nova\unit as NovaUnit;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
@@ -11,6 +12,7 @@ use Laravel\Nova\Fields\Text;
 use \Epartment\NovaDependencyContainer\NovaDependencyContainer ;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Trix;
+use SebastianBergmann\CodeCoverage\Report\Xml\Unit;
 use Yassi\NestedForm\NestedForm;
 
 class Lecture extends Resource
@@ -74,9 +76,8 @@ class Lecture extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->hideFromIndex(),
 
-            BelongsTo::make( __('course') , 'course'),
+            ID::make()->hideFromIndex(),
             BelongsTo::make( __('unit') , 'unit'),
 
             Text::make(__('name'), 'name')
@@ -102,8 +103,10 @@ class Lecture extends Resource
             ])->dependsOn('type' , 0),
 
             HasMany::make( 'question', 'question' , Question::class),
-            HasMany::make(__('Attachments'), 'Attachment', Attachment::class)->nullable(),
-            NestedForm::make('Attachment', 'Attachment', Attachment::class)->hideWhenUpdating(),
+
+            HasMany::make(__('Attachments'), 'attachment', Attachment::class)->nullable(),
+
+            NestedForm::make('Attachment', 'attachment', Attachment::class),
 
 
            NestedForm::make('Question' , 'question' , Question::class)

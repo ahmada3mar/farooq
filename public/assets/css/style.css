@@ -2146,7 +2146,7 @@ em.mm-counter+a.mm-fullsubopen+span {
 
 .footer-rows-container {
 	display: block;
-	height: 96px;
+	height: 20px !important;
 	position: relative;
 	z-index: 100;
 }
@@ -2288,7 +2288,7 @@ em.mm-counter+a.mm-fullsubopen+span {
 
 /* Middle Section */
 .footer-middle-section {
-	padding: 60px 0;
+	padding: 20px 0;
 	position: relative;
 	z-index: 10;
 }
@@ -2412,7 +2412,7 @@ em.mm-counter+a.mm-fullsubopen+span {
 
 /* Copyrights */
 .footer-bottom-section {
-	padding: 25px 0;
+	padding: 10px 0;
 	border-top: 1px solid #484848;
 	text-align: center;
 }
@@ -2435,7 +2435,7 @@ em.mm-counter+a.mm-fullsubopen+span {
 
 	.footer-rows-container {
 		height: auto;
-		padding: 20px 0 40px 0;
+		padding: 10px 0 10px 0;
 	}
 
 	.footer-rows-left,

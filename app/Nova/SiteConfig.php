@@ -74,7 +74,21 @@ class SiteConfig extends Resource
         return [
             ID::make()->hideFromIndex(),
 
-            Text::make(__('key'), 'key')
+                Select::make( __('key'), 'key')
+                ->options([
+                    'home_shadow' => __('home shadow'),
+                    'home_cover_image' => __('home cover image'),
+                    'home_description' => __('home description'),
+                    'home_description_color' => __('home description color'),
+                    'about_alfarouq' => __('about alfarouq'),
+                    'about_alfarouq_image' => __('about alfarouq image'),
+                    'about_alfarouq_message' => __('alfarouq message'),
+                    'about_alfarouq_vision' => __('alfarouq vision'),
+                    'web_facebook' => __('facebook'),
+                    'web_twitter' => __('twitter'),
+                    'web_linkedin' => __('linkedin'),
+                    'web_instagram' => __('instagram'),
+                ])
                 ->sortable()
                 ->rules('required', 'max:255'),
 
@@ -83,6 +97,7 @@ class SiteConfig extends Resource
                     '0' => __('text'),
                     '1' => __('image'),
                     '2' => __('color'),
+                    '3' => __('link'),
                 ])
                 ->displayUsingLabels()
                 ->creationRules('required', 'numeric')
@@ -92,6 +107,8 @@ class SiteConfig extends Resource
                 Trix::make( __('value'), 'value')
                 ->rules('required'),
             ])->dependsOn('type' , 0),
+
+
 
             NovaDependencyContainer::make([
                 Color::make( __('value'), 'value')
@@ -104,7 +121,11 @@ class SiteConfig extends Resource
                     ->rules('required'),
                 ])->dependsOn('type' , '1'),
 
-
+                NovaDependencyContainer::make([
+                    Text::make( __('value'), 'value')
+                    ->rules('required')
+                    ->help('Includes the full url with https://'),
+                ])->dependsOn('type' , 3),
 
         ];
     }

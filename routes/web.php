@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Models\Course;
@@ -12,6 +14,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\AllPagesConfig;
 use Inertia\Inertia;
 use Laravel\Nova\Http\Controllers\LoginController as ControllersLoginController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -31,61 +34,66 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 */
 Route::get('/.well-known/pki-validation/B4959002757F80C0696D11A55A6748DF.txt' , [HomeController::class , 'ssl']);
 
-Route::get('/test' , function(){
-    $rrr = User::with('courses')->role('instructor')->first();
-
-    return Inertia::render('Test',['video' => Lecture::first()->url]);
-});
-
-Route::resource('users', UserController::class);
+//footer sittings that will show in all pages
 
 
-    Route::get('/' , [HomeController::class , 'index']);
-    Route::get('/logout' , [LoginController::class , 'logout']);
+    Route::get('/.well-known/pki-validation/A71EDACBF7A28EB9FB2A4AAEBF4B150C.txt', [HomeController::class, 'ssl']);
 
-    Route::get('/contact', function () {
-        return Inertia::render('Contact');
+    Route::get('/test', function () {
+        $rrr = User::with('courses')->role('instructor')->first();
+
+        return Inertia::render('Test', ['video' => Lecture::first()->url]);
     });
+
+    Route::resource('users', UserController::class);
+
+
+    Route::get('/', [HomeController::class, 'index']);
+    Route::get('/logout', [LoginController::class, 'logout']);
+
+    Route::get('/contact', [ContactController::class, 'index']);
+
     Route::get('/404', function () {
         return Inertia::render('404');
     });
 
     Route::get('/profile/{user}', function (User $user) {
-        return Inertia::render('Profile2' , compact('user'));
+        return Inertia::render('Profile2', compact('user'));
     });
 
     Route::get('/403', function () {
         return Inertia::render('403');
     });
 
-Route::get('/login', function () {
-    if(Auth::check()){
-        return redirect()->intended('/');
-    }
-    return Inertia::render('Login');
-})->name('login');
-Route::post('/login', [LoginController::class , 'login']);
+    Route::get('/login', function () {
+        if (Auth::check()) {
+            return redirect()->intended('/');
+        }
+        return Inertia::render('Login');
+    })->name('login');
+    Route::post('/login', [LoginController::class, 'login']);
 
-Route::get('/Register', function () {
-    return Inertia::render('Register');
-})->name('Register');
-// Route::post('/Register', [RegisterController::class , 'Register']);
+    Route::get('/Register', function () {
+        return Inertia::render('Register');
+    })->name('Register');
+    // Route::post('/Register', [RegisterController::class , 'Register']);
 
-Route::get('/courses', [CoursesController::class , 'index']);
+    Route::get('/courses', [CoursesController::class, 'index']);
 
-Route::middleware('auth')->group(function(){
-    Route::get('/course/{id}', function ($id) {
+    Route::middleware('auth')->group(function () {
+        Route::get('/course/{id}', [CourseController::class, 'index']);
+        // Route::get('/course/{id}', function ($id) {
 
-        return Inertia::render('course2',['course' => Course::with('units.lectures.question.answers')->find($id)]);
+        //     return Inertia::render('course2', ['course' => Course::with('units.lectures.question.answers')->find($id)]);
+        // });
+        Route::get('/course2/{id}', function ($id) {
+
+            // dd(Course::with('units.lectures.question.answers')->find($id));
+            return Inertia::render('course2', ['course' => Course::with('units.lectures.question.answers')->find($id)]);
+        });
     });
-    Route::get('/course2/{id}', function ($id) {
 
-        // dd(Course::with('units.lectures.question.answers')->find($id));
-        return Inertia::render('course2',['course' => Course::with('units.lectures.question.answers')->find($id)]);
+    Route::fallback(function () {
+        return Inertia::render('404');
     });
-});
-
-Route::fallback(function () {
-    return Inertia::render('404');
-});
 

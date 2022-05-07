@@ -125,8 +125,8 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "text",
   "class": "input-text with-border",
-  name: "emailaddress-register",
-  id: "emailaddress-register",
+  name: "emailaddress",
+  id: "emailaddress",
   placeholder: "ايميل",
   required: ""
 })]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -138,8 +138,8 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "password",
   "class": "input-text with-border",
-  name: "password-register",
-  id: "password-register",
+  name: "password",
+  id: "password",
   placeholder: "كلمة المرور",
   required: ""
 })]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {

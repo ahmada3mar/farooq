@@ -81,6 +81,10 @@
     text-decoration: rtl !important;
     text-align: right !important;
 }
+.arabicCenter {
+    text-decoration: rtl !important;
+    text-align: center !important;
+}
 
 .profile-header {
     display: flex;
@@ -97,6 +101,10 @@
 .flexCenter {
     display: flex !important;
     align-items: center;
+    justify-content: center;
+}
+.flexCenterTop {
+    display: flex !important;
     justify-content: center;
 }
 
@@ -146,6 +154,18 @@
     background-color: rgba(51, 51, 51, 0.212);
     opacity: 1 !important;
 
+}
+
+.contact-section{
+	margin: 2rem 0;
+	text-align: center;
+	text-decoration: rtl;
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
 }
 
 .user-avatar  {
@@ -331,7 +351,22 @@
     width: fit-content;
 }
 
+.freelancer-overview {
+    .freelancer-avatar {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        overflow: hidden;
 
+        img {
+            border-radius: 0;
+            cursor: pointer;
+        }
+    } 
+}
+.bm-menu{
+    white-space: nowrap !important;
+  }
 // hide input type number arrows
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

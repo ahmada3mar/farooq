@@ -16,16 +16,21 @@ __webpack_require__.r(__webpack_exports__);
     course: Object
   },
   data: function data() {
-    var _this$course, _this$course$units$;
+    var _this$course, _this$course$units$, _this$course2, _this$course2$units$, _this$course2$units$$;
 
     console.table("this.course", this.course);
     return {
-      lectur: (_this$course = this.course) === null || _this$course === void 0 ? void 0 : (_this$course$units$ = _this$course.units[0]) === null || _this$course$units$ === void 0 ? void 0 : _this$course$units$.lectures[0]
+      lectur: (_this$course = this.course) === null || _this$course === void 0 ? void 0 : (_this$course$units$ = _this$course.units[0]) === null || _this$course$units$ === void 0 ? void 0 : _this$course$units$.lectures[0],
+      attachments: (_this$course2 = this.course) === null || _this$course2 === void 0 ? void 0 : (_this$course2$units$ = _this$course2.units[0]) === null || _this$course2$units$ === void 0 ? void 0 : (_this$course2$units$$ = _this$course2$units$.lectures[0]) === null || _this$course2$units$$ === void 0 ? void 0 : _this$course2$units$$.attachment
     };
   },
   methods: {
     changeVid: function changeVid(lectur) {
+      var _this$lectur;
+
       this.lectur = lectur;
+      this.attachments = (_this$lectur = this.lectur) === null || _this$lectur === void 0 ? void 0 : _this$lectur.attachment;
+      console.log('this.attachments', this.attachments);
     }
   },
   mounted: function mounted() {
@@ -201,7 +206,17 @@ var _hoisted_35 = {
 };
 var _hoisted_36 = ["innerHTML"];
 
-var _hoisted_37 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"accordion__item js-accordion-item\" data-v-b67a1efe><div class=\"accordion-header js-accordion-header\" data-v-b67a1efe> المرفقات </div><div class=\"accordion-body js-accordion-body px-4\" data-v-b67a1efe><div class=\"attachments-container arabic right\" data-v-b67a1efe><a href=\"#\" class=\"attachment-box ripple-effect\" data-v-b67a1efe><span data-v-b67a1efe>Cover Letter</span><i data-v-b67a1efe>PDF</i></a><a href=\"#\" class=\"attachment-box ripple-effect\" data-v-b67a1efe><span data-v-b67a1efe>Cover Letter</span><i data-v-b67a1efe>PDF</i></a><a href=\"#\" class=\"attachment-box ripple-effect\" data-v-b67a1efe><span data-v-b67a1efe>Cover Letter</span><i data-v-b67a1efe>PDF</i></a><a href=\"#\" class=\"attachment-box ripple-effect\" data-v-b67a1efe><span data-v-b67a1efe>Cover Letter</span><i data-v-b67a1efe>PDF</i></a></div></div></div>", 1);
+var _hoisted_37 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "accordion__item js-accordion-item"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "accordion-header js-accordion-header"
+  }, " المرفقات "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "accordion-body js-accordion-body px-4"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <template v-if=\"this.attachments && this.attachments.length > 0\">\r\n                  <div class=\"attachments-container arabic right\"\r\n                  :key=\"attachments.id\"\r\n                  v-for=\"attachments in lectur\"\r\n                  >\r\n                    <a :href=\"attachments.name\" class=\"attachment-box ripple-effect\"><span>Cover Letter</span><i>PDF</i></a>\r\n\r\n                  </div>\r\n                  </template> ")])], -1
+  /* HOISTED */
+  );
+});
 
 var _hoisted_38 = {
   "class": "col-xl-4 col-lg-4"
