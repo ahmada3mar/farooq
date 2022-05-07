@@ -1566,6 +1566,16 @@ li.mm-vertical.mm-opened>.mm-panel {
     left: auto
 }
 
+.dev-header{
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    color: whitesmoke;
+    position: sticky;
+    top: 0;
+    z-index: 99999999999;
+}
+
 .mm-navbar {
     border-bottom: 1px solid;
     border-color: inherit;
