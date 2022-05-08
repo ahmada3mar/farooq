@@ -52,15 +52,7 @@
             <div class="accordion-header js-accordion-header">الوصف</div>
             <div class="accordion-body js-accordion-body">
               <div>
-                The study of the earliest periods in Islamic history is made
-                difficult by a lack of sources.[18] For example, the most
-                important historiographical source for the origins of Islam is
-                the work of al-Tabari.[19] While al-Tabari is considered an
-                excellent historian by the standards of his time and place, he
-                made liberal use of mythical, legendary, stereotyped, distorted,
-                and polemical presentations of subject matter—which are however
-                considered to be Islamically acceptable—and his descriptions of
-                the beginning of Islam post-date the events by several
+                {{ course.description }}
               </div>
             </div>
           </div>

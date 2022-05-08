@@ -48,7 +48,7 @@ class Attachment extends Resource
             Text::make('name')
             ->sortable()
             ->rules('required', 'max:255'),
-            File::make('Attachment')->rules('file' , 'max:50000'),
+            File::make('Attachment')->rules('file' , 'max:80000'),
             BelongsTo::make( __('lecture') , 'lecture' , Lecture::class),
 
         ];
