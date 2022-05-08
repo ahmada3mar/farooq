@@ -85,6 +85,7 @@ Route::get('/download/{path}/{name}/{ext}' , function($path,$name , $ext){
     // Route::post('/Register', [RegisterController::class , 'Register']);
 
     Route::get('/courses', [CoursesController::class, 'index']);
+    Route::get('/documents', [DocumentsController::class, 'index']);
 
     Route::middleware('auth')->group(function () {
         Route::get('/course/{id}', [CourseController::class, 'index']);

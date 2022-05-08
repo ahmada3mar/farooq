@@ -14,25 +14,25 @@
 
         <!-- Tasks Container -->
         <div class="tasks-list-container tasks-grid-layout margin-top-35">
-          <div  v-for="course in courses.data" :key="course.id" class="task-listing arabic">
+          <div  v-for="document in docs.data" :key="document.id" class="task-listing arabic">
             <!-- Job Listing Details -->
             <div class="task-listing-details">
               <div class="course-image">
-            <img class="col-12 col-md-4" :src="`/storage/${course.image}`" alt="">
+            <img class="col-12 col-md-4" :src="`/storage/${document.image}`" alt="">
               </div>
               <!-- Details -->
               <div class="task-listing-description">
-                <h3 class="task-listing-title">{{course.name}}</h3>
-                                  <span>الصف {{ __(course.class) }}</span>
+                <h3 class="task-listing-title">{{document.name}}</h3>
+                                  <span>الصف {{ __(document.class) }}</span>
 
                 <ul class="task-icons">
                   <li class="m-0 padding-left-5">
                     <i class="icon-material-outline-access-time"></i>
-                     عدد الدروس : {{ course.lectures_count }}
+                     عدد الدروس : {{ document.lectures_count }}
                   </li>
                   <li class="m-0 padding-left-5">
                     <i class="icon-feather-user"></i>
-                      المدرس : {{course.user.name}}
+                      المدرس : {{document.user.name}}
                   </li>
                 </ul>
               </div>
@@ -57,7 +57,7 @@
         <!-- Pagination -->
         <div class="clearfix"></div>
         <div class="pagination-container margin-top-20 margin-bottom-20">
-          <pagination :links="courses.links" />
+          <pagination :links="docs.links" />
         </div>
         <div class="clearfix"></div>
         <!-- Pagination / End -->
@@ -74,11 +74,6 @@
             <h3>الصفوف</h3>
              	<Link href="/courses" class="button gray ripple-effect button-sliding-icon sidebar-button">  الكل <i class="icon-feather-arrow-left"></i></Link>
              	<Link href="/courses?class=12" class="button gray ripple-effect button-sliding-icon sidebar-button ">  الثاني ثانوي <i class="icon-feather-arrow-left"></i></Link>
-                <ul class="dropdown-nav ">
-                    <li v-for="section in sections" :key="section?.id">
-             	<Link :href="`/courses?section=${section?.id}`" class="button gray ripple-effect button-sliding-icon sidebar-button">  {{section.name}} <i class="icon-feather-arrow-left"></i></Link>
-                    </li>
-                </ul>
              	<Link href="/courses?category=highschool" class="button gray ripple-effect button-sliding-icon sidebar-button">  الصفوف الثانوية <i class="icon-feather-arrow-left"></i></Link>
              	<Link href="/courses?category=secondary" class="button gray ripple-effect button-sliding-icon sidebar-button">  الصفوف الأعدادية <i class="icon-feather-arrow-left"></i></Link>
              	<Link href="courses?category=primary" class="button gray ripple-effect button-sliding-icon sidebar-button">  الصفوف الأساسية <i class="icon-feather-arrow-left"></i></Link>
@@ -100,10 +95,7 @@ import pagination from "../../Shared/Pagination.vue";
 
 export default {
   props: {
-    courses: Object,
-    sections: Array,
-     isCoursesPage : Boolean,
-
+    docs: Object,
 
   },
   components: {

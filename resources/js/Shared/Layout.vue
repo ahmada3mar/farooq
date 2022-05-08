@@ -184,7 +184,7 @@
     <div class="clearfix"></div>
     <!-- Header Container / End -->
 
-    <slot />
+    <slot  />
 
     <!-- Footer
 ================================================== -->
@@ -351,7 +351,6 @@ export default {
     Slide, // Register your component
   },
     mounted() {
-        console.log(this.web_facebook)
     Dropdown().init({ });
   },
 };

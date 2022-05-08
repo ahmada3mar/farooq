@@ -21,33 +21,6 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-12">
-          <div class="intro-banner-search-form margin-top-95">
-            <!-- Search Field -->
-            <div class="intro-search-field">
-              <label for="intro-keywords" class="field-title ripple-effect"
-                >عن ماذا تبحث ؟</label
-              >
-              <input
-                id="intro-keywords"
-                type="text"
-                placeholder="اسم المادة و ماشابه"
-              />
-            </div>
-
-            <!-- Button -->
-            <div class="intro-search-button">
-              <button
-                class="button ripple-effect"
-                onclick="window.location.href='jobs-list-layout-full-page-map.html'"
-              >
-                بحث
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <!-- Stats -->
       <!-- <div class="row">
@@ -117,6 +90,7 @@
   </div>
 
 
+<!-- courses -->
   <div class="section gray margin-top-45 padding-top-65 padding-bottom-75">
     <div class="container">
       <div class="row">
@@ -171,6 +145,7 @@
     </div>
   </div>
 
+<!-- most sellers -->
   <div class="section margin-top-65 margin-bottom-65">
     <div class="container">
       <div class="row">
@@ -201,7 +176,56 @@
       </div>
     </div>
   </div>
-  <!-- Features Cities / End -->
+
+    <!-- documents -->
+  <div class="section gray margin-top-45 margin-bottom-65 padding-top-65 padding-bottom-75">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <!-- Section Headline -->
+          <div class="section-headline margin-top-0 margin-bottom-35">
+            <Link href="/documents" class="headline-link">عرض الكل</Link>
+            <h3 class="arabic">أسئلة سنوات</h3>
+          </div>
+
+          <!-- Jobs Container -->
+          <div class="listings-container compact-list-layout margin-top-35">
+            <Link
+              v-for="document in docs"
+              :key="document.id"
+              :href="`/download/${document.path}/${document.name}/${document.path.split('.').pop()}`"
+              class="job-listing with-apply-button"
+            >
+              <div class="job-listing-details">
+                <span class="list-apply-button ripple-effect" >تنزيل</span>
+                <div class="job-listing-description arabic">
+                  <h3 class="job-listing-title">{{ document.name }}</h3>
+                  <div class="job-listing-footer">
+                    <ul>
+                      <li>
+                        {{ document.downloads }}
+                        تنزيل
+                      </li>
+                      <li>
+                        <i class="icon-material-outline-school"></i>
+                        الصف {{ __(document.class) }}
+                        <b>{{ document.course }}</b>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="job-listing-company-logo">
+                  <i class="icon-material-outline-attach-file font3rem"></i>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Highest Rated Freelancers -->
   <carousel
@@ -361,6 +385,7 @@ export default {
     settings: Object,
     courses: Array,
     mostSelling: Array,
+    docs: Array,
     instructos: Array,
     sections: Array,
   },
@@ -422,4 +447,9 @@ export default {
     margin-bottom: 1rem;
     color: var(--descriptionColor) ;
 }
+
+.font3rem{
+    font-size: 3rem;
+}
+
 </style>
