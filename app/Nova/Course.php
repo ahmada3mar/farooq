@@ -17,12 +17,10 @@ use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Vyuldashev\NovaPermission\RoleSelect;
 use Yassi\NestedForm\NestedForm;
 
 
-
-class Course extends Resource
+class Course extends ResourceForUser
 {
     /**
      * The model the resource corresponds to.
@@ -130,6 +128,7 @@ class Course extends Resource
 
             NestedForm::make('Unit', 'units', Unit::class),
             HasMany::make(__('units'), 'units', unit::class)->nullable(),
+            Checkboxes::make('gg'),
 
             BelongsTo::make(__('instructor'), 'user', User::class)
             ->withMeta(['placeholder' => trans('contant.sel_instructor')]

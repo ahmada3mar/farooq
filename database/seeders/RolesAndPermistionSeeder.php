@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Answer;
+use App\Models\Attachment;
 use App\Models\Course;
+use App\Models\Document;
 use App\Models\Lecture;
 use App\Models\Question;
 use App\Models\Section;
@@ -40,7 +42,9 @@ class RolesAndPermistionSeeder extends Seeder
             unit::class,
             SiteConfig::class,
             Section::class,
-            UserInformation::class
+            UserInformation::class,
+            Attachment::class,
+            Document::class,
             // ... // List all your Models you want to have Permissions for.
         ]);
 
@@ -78,6 +82,11 @@ class RolesAndPermistionSeeder extends Seeder
                     Permission::updateOrCreate([
 
                         'name' =>  'restore '  . $permission,
+                    ]);
+
+                    Permission::updateOrCreate([
+
+                        'name' =>  'view own '  . $permission,
                     ]);
         });
 

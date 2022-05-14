@@ -13,6 +13,10 @@ class Answer extends Model
         'name',
 
     ];
+    protected $hidden  = [
+        'is_correct',
+
+    ];
 
 
     public function question(){
