@@ -8,58 +8,67 @@
   <div class="full-page-container">
     <div class="full-page-content-container" data-simplebar>
       <div class="full-page-content-inner">
-        <div class="notify-box margin-top-15">
-          <h3 class="page-title arabic">المساقات</h3>
-        </div>
 
-        <!-- Tasks Container -->
-        <div class="tasks-list-container tasks-grid-layout margin-top-35">
-          <div  v-for="document in docs.data" :key="document.id" class="task-listing arabic">
-            <!-- Job Listing Details -->
-            <div class="task-listing-details">
-              <div class="course-image">
-            <img class="col-12 col-md-4" :src="`/storage/${document.image}`" alt="">
-              </div>
-              <!-- Details -->
-              <div class="task-listing-description">
-                <h3 class="task-listing-title">{{document.name}}</h3>
-                                  <span>الصف {{ __(document.class) }}</span>
+    <!-- documents -->
+  <div class="section gray margin-top-45 margin-bottom-65 padding-top-65 padding-bottom-75">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <!-- Section Headline -->
+          <div class="section-headline margin-top-0 margin-bottom-35">
+            <h3 class="arabic">أسئلة سنوات</h3>
+          </div>
 
-                <ul class="task-icons">
-                  <li class="m-0 padding-left-5">
-                    <i class="icon-material-outline-access-time"></i>
-                     عدد الدروس : {{ document.lectures_count }}
-                  </li>
-                  <li class="m-0 padding-left-5">
-                    <i class="icon-feather-user"></i>
-                      المدرس : {{document.user.name}}
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <!-- Jobs Container -->
+          <div class="listings-container compact-list-layout margin-top-35">
+            <Link
+              v-for="document in docs"
+              :key="document.id"
+              :href="`/document/download/${document.id}`"
+              class="job-listing with-apply-button"
+            >
+              <div class="job-listing-details">
+                <span class="list-apply-button ripple-effect" >تنزيل</span>
+                <div class="job-listing-description arabic">
+                  <h3 class="job-listing-title">{{ document.name }}</h3>
+                  <div class="job-listing-footer">
+                    <ul>
+                      <li>
+                        {{ document.downloads }}
+                        تنزيل
+                      </li>
+                      <li>
+                        <i class="icon-feather-book-open"></i>
+                        المادة {{ __(document.course.name) }}
 
-            <div class="task-listing-bid">
-              <div class="task-listing-bid-inner">
-                <Link
-                  :href="`/course/${ course.id }`"
-                  class="button button-sliding-icon ripple-effect"
-                  ><i class="icon-material-outline-arrow-back"></i>سجل
-                  الآن</Link
-                >
-                <div class="task-offers">
-                  <b>{{course.price}} JOD</b>
+                      </li>
+                      <li>
+                        <i class="icon-material-outline-school"></i>
+                        الصف {{ __(document.class) }}
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="job-listing-company-logo">
+                  <i class="icon-material-outline-attach-file font3rem"></i>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
 
         <!-- Pagination -->
-        <div class="clearfix"></div>
+        <!-- <div class="clearfix"></div>
         <div class="pagination-container margin-top-20 margin-bottom-20">
           <pagination :links="docs.links" />
         </div>
-        <div class="clearfix"></div>
+        <div class="clearfix"></div> -->
         <!-- Pagination / End -->
 
       </div>
@@ -150,4 +159,7 @@ a.headline-link::before {
     margin: 5px 0;
     text-align: right;
   }
+  .font3rem{
+    font-size: 3rem;
+}
 </style>
