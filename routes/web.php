@@ -4,6 +4,7 @@ use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\DocumentsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Models\Course;
@@ -15,6 +16,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AllPagesConfig;
+use App\Models\Document;
 use Inertia\Inertia;
 use Laravel\Nova\Http\Controllers\LoginController as ControllersLoginController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -33,10 +35,19 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 Route::get('/.well-known/pki-validation/B4959002757F80C0696D11A55A6748DF.txt' , [HomeController::class , 'ssl']);
+// Route::get('/document/download/{id}', [DocumentsController::class, 'download']);
 Route::get('/download/{path}/{name}/{ext}' , function($path,$name , $ext){
 
 
     return response()->download(storage_path("app/public/$path") , $name . '.' . $ext );
+
+});
+Route::resource('documents', DocumentsController::class);
+Route::get('/document/download/{id}' , function($id){
+
+    $document = Document::findOrFail($id);
+    $document->increment('downloads');
+    return response()->download(storage_path("app/public/$document->path") , "$document->name" . '.' . substr(strrchr($document->path, "."), 1) );
 
 });
 
@@ -50,7 +61,7 @@ Route::get('/download/{path}/{name}/{ext}' , function($path,$name , $ext){
 
         return Inertia::render('Test', ['video' => Lecture::first()->url]);
     });
-
+    
     Route::resource('users', UserController::class);
 
 

@@ -43,4 +43,9 @@ class Document extends Model
         17 => 'النحو والصرف',
         18 => 'الجغرافيا',
     ];
+
+    public function course() {
+
+        return $this->belongsTo(Course::class);
+     }
 }

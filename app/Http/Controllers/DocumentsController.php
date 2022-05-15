@@ -15,41 +15,43 @@ class DocumentsController extends Controller
      */
     public function index(Request $request)
     {
-        $query = Document::query();
+        $docs = Document::orderBy('downloads' , 'DESC')->with('course')->limit(5)->get();
 
-        if($request->has('class')){
-            $query->where('class' , $request->class);
-        }
+    //     $query = Document::query();
 
-        if($request->has('section')){
-            $query->whereHas('section' , function($q) use ($request){
-               return $q->where('id',  $request->section);
-            });
-        }
+    //     if($request->has('class')){
+    //         $query->where('class' , $request->class);
+    //     }
 
-        if($request->has('category')){
-            switch ($request->category) {
-                case 'primary':
-                    $query->where('class' , '<=' , 6);
-                    break;
+    //     if($request->has('section')){
+    //         $query->whereHas('section' , function($q) use ($request){
+    //            return $q->where('id',  $request->section);
+    //         });
+    //     }
 
-                case 'secondary':
-                    $query->where('class' , '>=' , 7)->where('class' , '<=' , 10);
-                    break;
+    //     if($request->has('category')){
+    //         switch ($request->category) {
+    //             case 'primary':
+    //                 $query->where('class' , '<=' , 6);
+    //                 break;
 
-                case 'highschool':
-                    $query->where('class' , '>' , 10);
-                    break;
-            }
-        }
+    //             case 'secondary':
+    //                 $query->where('class' , '>=' , 7)->where('class' , '<=' , 10);
+    //                 break;
 
-        if($request->has('name')){
-            $query->where('name' , 'LIKE %' , "{$request->class}%");
-        }
+    //             case 'highschool':
+    //                 $query->where('class' , '>' , 10);
+    //                 break;
+    //         }
+    //     }
 
-       $courses =  $query->with('user')->withCount('lectures')->latest()->paginate(20);
+    //     if($request->has('name')){
+    //         $query->where('name' , 'LIKE %' , "{$request->class}%");
+    //     }
 
-        return Inertia::render('Courses' , compact('courses' , 'sections'));
+    //    $courses =  $query->with('user')->withCount('lectures')->latest()->paginate(20);
+
+        return Inertia::render('Documents' , compact('docs' ));
 
     }
 
@@ -62,6 +64,7 @@ class DocumentsController extends Controller
     {
         //
     }
+
 
     /**
      * Store a newly created resource in storage.
