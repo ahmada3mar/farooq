@@ -116,7 +116,7 @@
                   المرفقات
                 </div>
                 <div class="accordion-body js-accordion-body px-4">
-                  <div class="attachments-container arabic right"
+                  <div class="attachments-container arabic right "
 
                   >
                     <a  :key="attachment.id"
