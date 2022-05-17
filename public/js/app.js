@@ -19,7 +19,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      open: false
+      open: false,
+      units: this.course.units.filter(function (u) {
+        return u.lectures.length > 0;
+      })
     };
   },
   methods: {
@@ -164,7 +167,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "accordion-header js-accordion-header"
   }, "الوصف"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.course.description), 1
   /* TEXT */
-  )])]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.course.units || [], function (unit) {
+  )])]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.units || [], function (unit) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       "class": "accordion__item js-accordion-item",
       key: unit.id
