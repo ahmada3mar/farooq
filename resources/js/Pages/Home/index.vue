@@ -193,7 +193,7 @@
             <Link
               v-for="document in docs"
               :key="document.id"
-              :href="`/download/${document.path}/${document.name}/${document.path.split('.').pop()}`"
+              :href="`/document/download/${document.id}`"
               class="job-listing with-apply-button"
             >
               <div class="job-listing-details">
@@ -207,9 +207,13 @@
                         تنزيل
                       </li>
                       <li>
+                        <i class="icon-feather-book-open"></i>
+                        المادة {{ __(document.course.name) }}
+
+                      </li>
+                      <li>
                         <i class="icon-material-outline-school"></i>
                         الصف {{ __(document.class) }}
-                        <b>{{ document.course }}</b>
                       </li>
 
                     </ul>
@@ -400,6 +404,8 @@ export default {
     };
   },
   mounted() {
+
+    console.log('docs', this.docs);
     // this.jq()
     // console.log( this.settings.find(s=>s.key == 'home_cover_image')?.value || '/assets/images/banner.jpg' )
     // ready();
