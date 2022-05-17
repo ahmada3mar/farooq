@@ -165,7 +165,7 @@
         <Link
             :href="`/course/${course.id}`"
             class="photo-box"
-            :data-background-image="`/storage/${course.image}`"
+            :style="`background-image:url(/storage/${course.image})`"
           >
             <div class="photo-box-content">
               <h3>{{ course.name }}</h3>
@@ -364,6 +364,7 @@
     </div>
   </div>
   <!-- Membership Plans / End-->
+
 </template>
 
 <script setup>
@@ -401,7 +402,7 @@ export default {
   mounted() {
     // this.jq()
     // console.log( this.settings.find(s=>s.key == 'home_cover_image')?.value || '/assets/images/banner.jpg' )
-    ready();
+    // ready();
   },
 };
 </script>

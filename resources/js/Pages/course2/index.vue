@@ -36,7 +36,7 @@
     </div>
     <div
       class="background-image-container"
-      :style="'background:url(/storage/' +  + ')'"
+      :style="'background:url(/storage/' + +')'"
     ></div>
   </div>
 
@@ -93,80 +93,16 @@
               allowfullscreen
             ></iframe>
           </div>
-            <div
-              class="
-                accordion
-                js-accordion
-                w-auto
-                margin-bottom-30
-                vid-description
-              "
-            >
-              <div class="accordion__item js-accordion-item">
-                <div class="accordion-header js-accordion-header">
-                  {{ lectur?.name }}
-                </div>
-                <div class="accordion-body js-accordion-body px-4">
-                  <div v-html="lectur.description"></div>
-                </div>
-              </div>
-            <template v-if="this.lectur.attachment?.length > 0">
-              <div class="accordion__item js-accordion-item">
-                <div class="accordion-header js-accordion-header">
-                  المرفقات
-                </div>
-                <div class="accordion-body js-accordion-body px-4">
-                  <div class="attachments-container arabic right"
 
-                  >
-                    <a  :key="attachment.id"
-                  v-for="attachment in lectur.attachment" :href="`/download/${attachment.attachment}/${attachment.name}/${attachment.attachment.split('.').pop()}`" class="attachment-box ripple-effect"><span>{{attachment.name}}</span><i>{{ attachment.attachment.split('.').pop() }}</i></a>
+          <CourseAccordionVue :lectur="lectur" />
 
-                  </div>
-
-                </div>
-              </div>
-                  </template>
-            </div>
         </div>
       </div>
 
       <!-- Sidebar -->
       <div class="col-xl-4 col-lg-4">
         <div class="sidebar-container">
-          <div class="accordion js-accordion margin-bottom-30">
-            <div class="accordion__item js-accordion-item">
-              <div class="accordion-header js-accordion-header">الوصف</div>
-              <div class="accordion-body js-accordion-body">
-                <div>
-{{course.description}}
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="accordion__item js-accordion-item"
-              :key="unit.id"
-              v-for="unit in course.units || []"
-            >
-              <div class="accordion-header js-accordion-header">
-                {{ unit?.name }}
-              </div>
-
-              <!-- Accordtion Body -->
-              <div class="accordion-body js-accordion-body">
-                <!-- Accordion Content -->
-                <div
-                  :key="lectur.id"
-                  v-for="lectur in unit.lectures"
-                  @click="changeVid(lectur)"
-                  class="accordion-body__contents link"
-                >
-                  {{ lectur?.name }}
-                </div>
-              </div>
-            </div>
-          </div>
+          <Accordion :changeVid="changeVid" :course="course" />
         </div>
       </div>
     </div>
@@ -242,10 +178,12 @@
   </div>
 </template>
 
-<script setup>
-</script>
+
 
 <script>
+import Accordion from "../../Shared/Accordion.vue";
+import CourseAccordionVue from "../../Shared/CourseAccordion.vue";
+
 export default {
   props: {
     course: Object,
@@ -259,13 +197,9 @@ export default {
     changeVid(lectur) {
       this.lectur = lectur;
     },
-    download(link){
-        Inertia.get(link)
-    }
+
   },
-  mounted() {
-    accordion().init({});
-  },
+  components: { Accordion, CourseAccordionVue },
 };
 </script>
 
@@ -281,14 +215,14 @@ export default {
   border-radius: 0;
 }
 
-.right-side{
-    display: contents;
+.right-side {
+  display: contents;
 }
 
-.button{
-    float: left;
+.button {
+  float: left;
 }
-.right{
-direction: rtl;
+.right {
+  direction: rtl;
 }
 </style>

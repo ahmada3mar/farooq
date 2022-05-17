@@ -109,9 +109,9 @@
               <!-- User Menu -->
               <div class="header-widget navProfile">
                 <!-- Messages -->
-                <div class="header-notifications user-menu">
+                <div :class="`header-notifications user-menu ${infoStatus && 'active'}`">
                   <div class="header-notifications-trigger">
-                    <a :href="`#`">
+                    <a @click="togleInfo">
                       <div class="user-avatar ">
                         <div class="navProfileImage">
                           <img :src="`/storage/${auth.avatar}`" alt="" />
@@ -121,7 +121,7 @@
                   </div>
 
                   <!-- Dropdown -->
-                  <div class="header-notifications-dropdown">
+                  <div :class="`header-notifications-dropdown`">
                     <!-- User Status -->
                     <a :href="`/profile/${auth.id}`" >
                     <div class="user-status">
@@ -185,141 +185,11 @@
     <!-- Header Container / End -->
 
     <slot  />
+    <Footer ></Footer>
 
     <!-- Footer
 ================================================== -->
-    <div id="footer">
-      <!-- Footer Top Section -->
-      <div class="footer-top-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <!-- Footer Rows Container -->
-              <div class="footer-rows-container">
 
-              </div>
-              <!-- Footer Rows Container / End -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Footer Top Section / End -->
-
-      <!-- Footer Middle Section -->
-      <div class="footer-middle-section">
-        <div class="container">
-          <div class="row flexCenterTop">
-            <template v-if="this.web_config.length > 0">
-            <!-- Links -->
-            <div class="col-xl-2 col-lg-2 col-md-3">
-              <div class="footer-links">
-                    <ul class="">
-                      <li v-if="web_facebook">
-                        <a
-                          :href="web_facebook"
-                          title="Facebook"
-                          data-tippy-placement="bottom"
-                          data-tippy-theme="light"
-                        >
-                          <i class="icon-brand-facebook-f"> Facebook</i>
-                        </a>
-                      </li>
-                      <li v-if="web_twitter">
-                        <a
-                          :href="web_twitter"
-                          title="Twitter"
-                          data-tippy-placement="bottom"
-                          data-tippy-theme="light"
-                        >
-                          <i class="icon-brand-twitter"> Twitter</i>
-                        </a>
-                      </li>
-                      <li v-if="web_instagram">
-                        <a
-                          :href="web_instagram"
-                          title="Instagram"
-                          data-tippy-placement="bottom"
-                          data-tippy-theme="light"
-                        >
-                          <i class="icon-feather-instagram"> Instagram</i>
-                        </a>
-                      </li>
-                      <li v-if="web_linkedin">
-                        <a
-                          :href="web_linkedin"
-                          title="LinkedIn"
-                          data-tippy-placement="bottom"
-                          data-tippy-theme="light"
-                        >
-                          <i class="icon-brand-linkedin-in"> Linkedin</i>
-                        </a>
-                      </li>
-                    </ul>
-              </div>
-            </div>
-            </template>
-            <!-- Links -->
-            <div class="col-xl-2 col-lg-2 col-md-3">
-              <div class="footer-links">
-                <ul>
-                <template  v-if="auth">
-                  <li>
-                    <Link class="arabicCenter" href="/">الصفحة الرئيسية</Link>
-                  </li>
-                  <li>
-                    <Link class="arabicCenter" :href="`/profile/${auth.id}`">الصفحة الشخصية</Link>
-                  </li>
-                </template>
-                <template  v-else>
-                  <li>
-                    <Link class="arabicCenter" href="/">الصفحة الرئيسية</Link>
-                  </li>
-                  <li>
-                    <Link class="arabicCenter" href="/Register">تسجيل</Link>
-                  </li>
-                  <li>
-                    <Link class="arabicCenter" href="/login">تسجيل الدخول </Link>
-                  </li>
-                </template>
-                  <li>
-                    <Link class="arabicCenter" href="/contact">من نحن</Link>
-                  </li>
-                  <li>
-                    <Link class="arabicCenter" href="/">المعلمين</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- Links -->
-            <div class="col-xl-2 col-lg-2 col-md-3">
-              <div class="footer-links">
-                  <a href="/"
-                    ><img
-                      class=""
-                      src="/assets/images/logo.png"
-                      alt=""
-                    />
-                  </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <!-- Footer Middle Section / End -->
-
-      <!-- Footer Copyrights -->
-      <div class="footer-bottom-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12 all-right-footer" >
-                جميع الحقوق محفوظة. © <strong>الفاروق</strong> {{new Date().getFullYear()}}
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Footer Copyrights / End -->
-    </div>
     <!-- Footer / End -->
   </div>
   <!-- Wrapper / End -->
@@ -327,31 +197,30 @@
 
 <script>
 import { Slide } from "vue3-burger-menu";
+import Footer from "../Shared/Footer.vue";
+
 
 export default {
     props: {
     sections: Array,
     auth: Object,
-    web_config: Array,
 
   },
-    data() {
-      if(this.web_config.length > 0){
-        return {
-          web_facebook: this.web_config.find((s) => s.key == "web_facebook")?.value || "",
-          web_twitter: this.web_config.find((s) => s.key == "web_twitter")?.value || "",
-          web_linkedin: this.web_config.find((s) => s.key == "web_linkedin")?.value || "",
-          web_instagram: this.web_config.find((s) => s.key == "web_instagram")?.value || "",
-      }
-    };
-  },
-
 
   components: {
     Slide, // Register your component
+    Footer
   },
-    mounted() {
-    Dropdown().init({ });
+  data(){
+      return{
+          infoStatus : false
+      }
+  },
+    methods :{
+        togleInfo(e){
+            this.infoStatus = !this.infoStatus
+        }
+    // Dropdown().init({ });
   },
 };
 </script>

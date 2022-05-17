@@ -19,7 +19,11 @@
         "build-multi": "cd nova-components/Multi && npm run dev",
         "build-multi-prod": "cd nova-components/Multi && npm run prod",
         "build-checkboxes": "cd nova-components/Checkboxes && npm run dev",
-        "build-checkboxes-prod": "cd nova-components/Checkboxes && npm run prod"
+        "build-checkboxes-prod": "cd nova-components/Checkboxes && npm run prod",
+        "build-checkboxesi": "cd nova-components/Checkboxesi && npm run dev",
+        "build-checkboxesi-prod": "cd nova-components/Checkboxesi && npm run prod",
+        "build-checkboxi": "cd nova-components/Checkboxi && npm run dev",
+        "build-checkboxi-prod": "cd nova-components/Checkboxi && npm run prod"
     },
     "devDependencies": {
         "@vue/compiler-sfc": "^3.2.29",

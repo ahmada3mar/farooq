@@ -22,7 +22,8 @@
         "mustafakhaleddev/nova-rtl-support": "^0.1.0",
         "timothyasp/nova-color-field": "^1.0",
         "vyuldashev/nova-permission": "^3.0",
-        "yassi/nova-nested-form": "^3.0"
+        "yassi/nova-nested-form": "^3.0",
+        "farooq/checkboxes": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -80,8 +81,11 @@
         {
             "type": "path",
             "url": "./lang"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Checkboxes"
         }
-
     ],
     "minimum-stability": "dev",
     "prefer-stable": true

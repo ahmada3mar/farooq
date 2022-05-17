@@ -26,7 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $footerConfig = SiteConfig::where('key', 'LIKE', 'web%')->get();
-        view::share('footerConfig', $footerConfig);
+
     }
 }
