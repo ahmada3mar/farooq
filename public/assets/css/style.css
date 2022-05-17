@@ -625,7 +625,7 @@ a.header-notifications-button i {
 }
 
 .user-menu .header-notifications-trigger,
-.user-menu .header-notifications-trigger a { top: 50%; }
+.user-menu .header-notifications-trigger a { top: 50%; cursor: pointer; }
 
 .user-menu .header-notifications-dropdown {
 	top: calc(100% - 8px);
@@ -6360,12 +6360,20 @@ table.basic-table { margin-bottom: 0; }
 	background: #fff;
 	color: #666;
 	display: none;
+    padding: 0;
+    /* transition: all 1s; */
 }
 
-.accordion-body__contents {
+
+.accordion-body__contents , .accordion-body__description {
 	padding: 25px;
 	font-size: 16px;
 	line-height: 28px;
+}
+
+.accordion-body__contents:hover{
+    cursor: pointer;
+    background-color: rgb(215, 227, 230);
 }
 
 .accordion__item.active:last-child .accordion-header { border-radius: none; }
@@ -14558,10 +14566,10 @@ a.attachment-box:hover i {
 /*  07. Dashboard
 ----------------------------------------------------------------- */
 /* Full Page Adjustments */
-.full-page-container,
+/* .full-page-container,
 .dashboard-container {
     height: calc(100vh - 82px);
-}
+} */
 
 @media (max-width: 1099px) {
 	.full-page-container,

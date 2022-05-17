@@ -2,9 +2,9 @@ import { createApp, h } from 'vue'
 import  {translations}  from './translation'
 import { createInertiaApp , Head, Link } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
-import applayJquery from './custom'
-// import "./jquery-3.3.1.min.js"
 import Layout from './Shared/Layout.vue'
+import Accordion from './Shared/Accordion.vue'
+
 
 
 createInertiaApp({
@@ -18,11 +18,10 @@ createInertiaApp({
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
       .use(plugin)
+      .use(Accordion)
       .component("Head", Head)
       .component("Link", Link)
       .mixin(translations)
-      .mixin({mounted(){photoBox()}})
-      .mixin(applayJquery)
       .mount(el);
   },
   title: title => 'Farooq' + (title ? ` | ${title}` : ''),

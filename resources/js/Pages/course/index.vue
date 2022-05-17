@@ -47,7 +47,8 @@
   <div class="d-flex col-12 mt-4 text-right">
     <div class="col-3">
       <div class="sidebar-container">
-        <div class="accordion js-accordion margin-bottom-30">
+
+        <vue-collapsible-panel-group class="accordion js-accordion margin-bottom-30">
           <div class="accordion__item js-accordion-item">
             <div class="accordion-header js-accordion-header">الوصف</div>
             <div class="accordion-body js-accordion-body">
@@ -79,7 +80,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </vue-collapsible-panel-group>
       </div>
     </div>
     <div class="col-6">
@@ -234,12 +235,7 @@ export default {
       this.lectur = lectur;
     },
   },
-  mounted() {
-    accordion().init({
-      speed: 300,
-      oneOpen: true,
-    });
-  },
+
   updated() {
     /*----------------------------------------------------*/
     /*	Accordion @Lewis Briffa

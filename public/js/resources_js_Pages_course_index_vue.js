@@ -27,12 +27,6 @@ __webpack_require__.r(__webpack_exports__);
       this.lectur = lectur;
     }
   },
-  mounted: function mounted() {
-    accordion().init({
-      speed: 300,
-      oneOpen: true
-    });
-  },
   updated: function updated() {
     /*----------------------------------------------------*/
 
@@ -114,13 +108,10 @@ var _hoisted_11 = {
   "class": "sidebar-container"
 };
 var _hoisted_12 = {
-  "class": "accordion js-accordion margin-bottom-30"
-};
-var _hoisted_13 = {
   "class": "accordion__item js-accordion-item"
 };
 
-var _hoisted_14 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_13 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "accordion-header js-accordion-header"
   }, "الوصف", -1
@@ -128,46 +119,46 @@ var _hoisted_14 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_15 = {
+var _hoisted_14 = {
   "class": "accordion-body js-accordion-body"
 };
-var _hoisted_16 = {
+var _hoisted_15 = {
   "class": "accordion-header js-accordion-header"
 };
-var _hoisted_17 = {
+var _hoisted_16 = {
   "class": "accordion-body js-accordion-body"
 };
-var _hoisted_18 = ["onClick"];
-var _hoisted_19 = {
+var _hoisted_17 = ["onClick"];
+var _hoisted_18 = {
   "class": "col-6"
 };
-var _hoisted_20 = {
+var _hoisted_19 = {
   "class": "sidebar-container"
+};
+var _hoisted_20 = {
+  key: 0
 };
 var _hoisted_21 = {
   key: 0
 };
 var _hoisted_22 = {
-  key: 0
-};
-var _hoisted_23 = {
   "class": "card"
 };
-var _hoisted_24 = {
+var _hoisted_23 = {
   "class": "card-header py-3"
 };
-var _hoisted_25 = {
+var _hoisted_24 = {
   "class": "card-body"
 };
-var _hoisted_26 = {
+var _hoisted_25 = {
   "class": "d-flex flex-row-reverse align-items-center position-relative"
 };
-var _hoisted_27 = {
+var _hoisted_26 = {
   "class": "radio"
 };
-var _hoisted_28 = ["id"];
+var _hoisted_27 = ["id"];
 
-var _hoisted_29 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_28 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
     "class": "checkmark"
   }, null, -1
@@ -175,13 +166,13 @@ var _hoisted_29 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_30 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_29 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
   /* HOISTED */
   );
 });
 
-var _hoisted_31 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_30 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     href: "#",
     "class": "button ripple-effect mt-5 px-5"
@@ -190,27 +181,27 @@ var _hoisted_31 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_32 = {
+var _hoisted_31 = {
   key: 1
 };
-var _hoisted_33 = {
+var _hoisted_32 = {
   "class": "col-12"
 };
-var _hoisted_34 = ["src"];
+var _hoisted_33 = ["src"];
+var _hoisted_34 = {
+  "class": "col-12"
+};
 var _hoisted_35 = {
-  "class": "col-12"
-};
-var _hoisted_36 = {
   "class": "sidebar-container"
 };
-var _hoisted_37 = {
+var _hoisted_36 = {
   "class": "accordion js-accordion margin-bottom-30 rounded-0"
 };
-var _hoisted_38 = {
+var _hoisted_37 = {
   "class": "accordion__item js-accordion-item"
 };
 
-var _hoisted_39 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_38 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "accordion-header js-accordion-header"
   }, " الوصف ", -1
@@ -218,15 +209,17 @@ var _hoisted_39 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_40 = {
+var _hoisted_39 = {
   "class": "accordion-body js-accordion-body"
 };
-var _hoisted_41 = ["innerHTML"];
+var _hoisted_40 = ["innerHTML"];
 
-var _hoisted_42 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"section margin-top-65 margin-bottom-65 text-right\" data-v-8e05fe32><div class=\"container\" data-v-8e05fe32><div class=\"row\" data-v-8e05fe32><!-- Section Headline --><div class=\"col-xl-12\" data-v-8e05fe32><div class=\"section-headline centered margin-top-0 margin-bottom-45\" data-v-8e05fe32><h3 data-v-8e05fe32>مساقات مشابهة</h3></div></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-list-layout-1.html\" class=\"photo-box\" data-background-image=\"/storage/erth.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>علوم ارض</h3><span data-v-8e05fe32>376 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-list-layout-full-page-map.html\" class=\"photo-box\" data-background-image=\"/storage/ar.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>مهارات اتصال</h3><span data-v-8e05fe32>645 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-grid-layout-full-page.html\" class=\"photo-box\" data-background-image=\"/storage/math.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>رياضيات</h3><span data-v-8e05fe32>832 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-list-layout-2.html\" class=\"photo-box\" data-background-image=\"/storage/ph.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>فيزياء</h3><span data-v-8e05fe32>513 مشترك</span></div></a></div></div></div></div>", 1);
+var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"section margin-top-65 margin-bottom-65 text-right\" data-v-8e05fe32><div class=\"container\" data-v-8e05fe32><div class=\"row\" data-v-8e05fe32><!-- Section Headline --><div class=\"col-xl-12\" data-v-8e05fe32><div class=\"section-headline centered margin-top-0 margin-bottom-45\" data-v-8e05fe32><h3 data-v-8e05fe32>مساقات مشابهة</h3></div></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-list-layout-1.html\" class=\"photo-box\" data-background-image=\"/storage/erth.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>علوم ارض</h3><span data-v-8e05fe32>376 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-list-layout-full-page-map.html\" class=\"photo-box\" data-background-image=\"/storage/ar.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>مهارات اتصال</h3><span data-v-8e05fe32>645 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-grid-layout-full-page.html\" class=\"photo-box\" data-background-image=\"/storage/math.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>رياضيات</h3><span data-v-8e05fe32>832 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-list-layout-2.html\" class=\"photo-box\" data-background-image=\"/storage/ph.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>فيزياء</h3><span data-v-8e05fe32>513 مشترك</span></div></a></div></div></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
+
+  var _component_vue_collapsible_panel_group = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("vue-collapsible-panel-group");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Head, null, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -235,7 +228,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Titlebar\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("\r\n<div class=\"single-page-header \" data-background-image=\"/assets/images/logo.png\">\r\n\t<div class=\"radio\">\r\n\t\t<div class=\"row\">\r\n\t\t\t<div class=\"col-md-12\">\r\n\t\t\t\t<div class=\"single-page-header-inner\">\r\n\t\t\t\t\t<div class=\"left-side\">\r\n\t\t\t\t\t\t<div class=\"header-image \"><img src=\"/assets/images/logo.png\" alt=\"Name\"></div>\r\n\t\t\t\t\t\t<div class=\"header-details\">\r\n\t\t\t\t\t\t\t<h1>Name</h1>\r\n\t\t\t\t\t\t\t<p>Ename</p>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"right-side\">\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Page Content\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Titlebar\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("\n<div class=\"single-page-header \" data-background-image=\"/assets/images/logo.png\">\n\t<div class=\"radio\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<div class=\"single-page-header-inner\">\n\t\t\t\t\t<div class=\"left-side\">\n\t\t\t\t\t\t<div class=\"header-image \"><img src=\"/assets/images/logo.png\" alt=\"Name\"></div>\n\t\t\t\t\t\t<div class=\"header-details\">\n\t\t\t\t\t\t\t<h1>Name</h1>\n\t\t\t\t\t\t\t<p>Ename</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"right-side\">\n\t\t\t\t\t</div>\n\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Page Content\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)('background:url(/storage/' + $props.course.cover + ')'),
     "class": "jumbotron jumbotron-fluid py-5"
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.course.name), 1
@@ -247,47 +240,56 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , _hoisted_8)])])], 4
   /* STYLE */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.course.description), 1
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_vue_collapsible_panel_group, {
+    "class": "accordion js-accordion margin-bottom-30"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.course.description), 1
+      /* TEXT */
+      )])]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.course.units, function (unit) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+          "class": "accordion__item js-accordion-item",
+          key: unit.id
+        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(unit.name), 1
+        /* TEXT */
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Accordtion Body "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Accordion Content "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(unit.lectures, function (lectur) {
+          return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+            key: lectur.id,
+            onClick: function onClick($event) {
+              return $options.changeVid(lectur);
+            },
+            "class": "accordion-body__contents link"
+          }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lectur.name), 9
+          /* TEXT, PROPS */
+          , _hoisted_17);
+        }), 128
+        /* KEYED_FRAGMENT */
+        ))])]);
+      }), 128
+      /* KEYED_FRAGMENT */
+      ))];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [$data.lectur.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, [$data.lectur.type == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.lectur.question.name), 1
   /* TEXT */
-  )])]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.course.units, function (unit) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
-      "class": "accordion__item js-accordion-item",
-      key: unit.id
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(unit.name), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Accordtion Body "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Accordion Content "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(unit.lectures, function (lectur) {
-      return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
-        key: lectur.id,
-        onClick: function onClick($event) {
-          return $options.changeVid(lectur);
-        },
-        "class": "accordion-body__contents link"
-      }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lectur.name), 9
-      /* TEXT, PROPS */
-      , _hoisted_18);
-    }), 128
-    /* KEYED_FRAGMENT */
-    ))])]);
-  }), 128
-  /* KEYED_FRAGMENT */
-  ))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [$data.lectur.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_21, [$data.lectur.type == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.lectur.question.name), 1
-  /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.lectur.question.answers, function (an) {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.lectur.question.answers, function (an) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: an.id
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
       "class": "my-0 mx-2",
       name: "answer",
       id: an.id,
       type: "radio"
     }, null, 8
     /* PROPS */
-    , _hoisted_28), _hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(an.name), 1
+    , _hoisted_27), _hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(an.name), 1
     /* TEXT */
-    )]), _hoisted_30])]);
+    )]), _hoisted_29])]);
   }), 128
   /* KEYED_FRAGMENT */
-  )), _hoisted_31])])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.lectur.name), 1
+  )), _hoisted_30])])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.lectur.name), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("iframe", {
     "class": "col-12",
@@ -299,11 +301,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     allowfullscreen: ""
   }, null, 8
   /* PROPS */
-  , _hoisted_34), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [_hoisted_39, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  , _hoisted_33), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [_hoisted_38, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     innerHTML: $data.lectur.description
   }, null, 8
   /* PROPS */
-  , _hoisted_41)])])])])])]))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]), _hoisted_42], 64
+  , _hoisted_40)])])])])])]))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]), _hoisted_41], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -326,7 +328,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.course-image[data-v-8e05fe32] {\r\n  position: absolute;\r\n  right: 5%;\r\n  top: 30%;\r\n  z-index: 100;\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.course-image[data-v-8e05fe32] {\n  position: absolute;\n  right: 5%;\n  top: 30%;\n  z-index: 100;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -375,7 +377,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_vue_vue_type_template_id_8e05fe32_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=8e05fe32&scoped=true */ "./resources/js/Pages/course/index.vue?vue&type=template&id=8e05fe32&scoped=true");
 /* harmony import */ var _index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js */ "./resources/js/Pages/course/index.vue?vue&type=script&lang=js");
 /* harmony import */ var _index_vue_vue_type_style_index_0_id_8e05fe32_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.vue?vue&type=style&index=0&id=8e05fe32&scoped=true&lang=css */ "./resources/js/Pages/course/index.vue?vue&type=style&index=0&id=8e05fe32&scoped=true&lang=css");
-/* harmony import */ var H_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -383,7 +385,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,H_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_8e05fe32_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-8e05fe32"],['__file',"resources/js/Pages/course/index.vue"]])
+const __exports__ = /*#__PURE__*/(0,D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_8e05fe32_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-8e05fe32"],['__file',"resources/js/Pages/course/index.vue"]])
 /* hot reload */
 if (false) {}
 
