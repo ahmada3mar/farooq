@@ -16,7 +16,7 @@
             <nav class="navigation">
               <ul class="responsive">
                 <li>
-                  <Link href="/">من نحن</Link>
+                  <Link href="/contact">من نحن</Link>
                 </li>
                 <li>
                   <Link href="/">المعلمين</Link>
@@ -57,10 +57,7 @@
             <Slide class="navigation mobile"   right>
               <ul class="responsiveMobile">
                 <li>
-                  <Link href="/course2/1">من نحن</Link>
-                </li>
-                <li>
-                  <Link href="/">المعلمين</Link>
+                  <Link href="/">الصفحة الرئيسية</Link>
                 </li>
 
                 <li>
@@ -86,8 +83,21 @@
                   </ul>
                 </li>
                 <li>
-                  <Link href="/">الصفحة الرئيسية</Link>
+                  <Link href="/">المعلمين</Link>
                 </li>
+                <li>
+                  <Link href="/contact">من نحن</Link>
+                </li>
+                <template  v-if="auth">
+                </template>
+                <template  v-else>
+                  <li>
+                    <Link href="/Register">تسجيل</Link>
+                  </li>
+                  <li>
+                    <Link href="/login">تسجيل الدخول </Link>
+                  </li>
+                </template>
               </ul>
             </Slide>
           </div>
@@ -99,9 +109,9 @@
               <!-- User Menu -->
               <div class="header-widget navProfile">
                 <!-- Messages -->
-                <div class="header-notifications user-menu">
+                <div :class="`header-notifications user-menu ${infoStatus && 'active'}`">
                   <div class="header-notifications-trigger">
-                    <a :href="`#`">
+                    <a @click="togleInfo">
                       <div class="user-avatar ">
                         <div class="navProfileImage">
                           <img :src="`/storage/${auth.avatar}`" alt="" />
@@ -111,7 +121,7 @@
                   </div>
 
                   <!-- Dropdown -->
-                  <div class="header-notifications-dropdown">
+                  <div :class="`header-notifications-dropdown`">
                     <!-- User Status -->
                     <a :href="`/profile/${auth.id}`" >
                     <div class="user-status">
@@ -125,7 +135,7 @@
                     >
                         <div class="user-name">
                           {{ auth.name }}
-                          <span>Freelancer</span>
+
                         </div>
                       </div>
                     </div>
@@ -133,8 +143,8 @@
 
                     <ul class="user-menu-small-nav">
                       <li>
-                        <a href="/admin"
-                          >
+                        <a href="/admin" target="_blank">
+
                           لوحة التحكم
                           <i class="icon-material-outline-dashboard"></i>
                           </a
@@ -174,202 +184,12 @@
     <div class="clearfix"></div>
     <!-- Header Container / End -->
 
-    <slot />
+    <slot  />
+    <Footer ></Footer>
 
     <!-- Footer
 ================================================== -->
-    <div id="footer">
-      <!-- Footer Top Section -->
-      <div class="footer-top-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <!-- Footer Rows Container -->
-              <div class="footer-rows-container">
-                <!-- Left Side -->
-                <div class="footer-row borderRight">
-                  <a href="/"
-                    ><img
-                      class="footer-row-inner footer-logo"
-                      src="/assets/images/logo.png"
-                      alt=""
-                    />
-                  </a>
-                </div>
 
-                <!-- Right Side -->
-                <!-- Social Icons -->
-                <div class="footer-row borderLeft">
-                  <div class="footer-row-inner">
-                    <ul class="footer-social-links">
-                      <li>
-                        <a
-                          href="#"
-                          title="Facebook"
-                          data-tippy-placement="bottom"
-                          data-tippy-theme="light"
-                        >
-                          <i class="icon-brand-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          title="Twitter"
-                          data-tippy-placement="bottom"
-                          data-tippy-theme="light"
-                        >
-                          <i class="icon-brand-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          title="Google Plus"
-                          data-tippy-placement="bottom"
-                          data-tippy-theme="light"
-                        >
-                          <i class="icon-brand-google-plus-g"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          title="LinkedIn"
-                          data-tippy-placement="bottom"
-                          data-tippy-theme="light"
-                        >
-                          <i class="icon-brand-linkedin-in"></i>
-                        </a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                </div>
-              </div>
-              <!-- Footer Rows Container / End -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Footer Top Section / End -->
-
-      <!-- Footer Middle Section -->
-      <div class="footer-middle-section">
-        <div class="container">
-          <div class="row">
-            <!-- Links -->
-            <div class="col-xl-2 col-lg-2 col-md-3">
-              <div class="footer-links">
-                <h3>For Candidates</h3>
-                <ul>
-                  <li>
-                    <a href="#"><span>Browse Jobs</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Add Resume</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Job Alerts</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>My Bookmarks</span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Links -->
-            <div class="col-xl-2 col-lg-2 col-md-3">
-              <div class="footer-links">
-                <h3>For Employers</h3>
-                <ul>
-                  <li>
-                    <a href="#"><span>Browse Candidates</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Post a Job</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Post a Task</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Plans & Pricing</span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Links -->
-            <div class="col-xl-2 col-lg-2 col-md-3">
-              <div class="footer-links">
-                <h3>Helpful Links</h3>
-                <ul>
-                  <li>
-                    <a href="#"><span>Contact</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Privacy Policy</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>Terms of Use</span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Links -->
-            <div class="col-xl-2 col-lg-2 col-md-3">
-              <div class="footer-links">
-                <h3>Account</h3>
-                <ul>
-                  <li>
-                    <a href="#"><span>Log In</span></a>
-                  </li>
-                  <li>
-                    <a href="#"><span>My Account</span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Newsletter -->
-            <div class="col-xl-4 col-lg-4 col-md-12">
-              <h3>
-                <i class="icon-feather-mail"></i> Sign Up For a Newsletter
-              </h3>
-              <p>
-                Weekly breaking news, analysis and cutting edge advices on job
-                searching.
-              </p>
-              <form action="#" method="get" class="newsletter">
-                <input
-                  type="text"
-                  name="fname"
-                  placeholder="Enter your email address"
-                />
-                <button type="submit">
-                  <i class="icon-feather-arrow-right"></i>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Footer Middle Section / End -->
-
-      <!-- Footer Copyrights -->
-      <div class="footer-bottom-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              © 2019 <strong>Hireo</strong>. All Rights Reserved.
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Footer Copyrights / End -->
-    </div>
     <!-- Footer / End -->
   </div>
   <!-- Wrapper / End -->
@@ -377,17 +197,30 @@
 
 <script>
 import { Slide } from "vue3-burger-menu";
+import Footer from "../Shared/Footer.vue";
+
 
 export default {
-  props: {
+    props: {
     sections: Array,
     auth: Object,
+
   },
+
   components: {
     Slide, // Register your component
+    Footer
   },
-    mounted() {
-    Dropdown().init({ });
+  data(){
+      return{
+          infoStatus : false
+      }
+  },
+    methods :{
+        togleInfo(e){
+            this.infoStatus = !this.infoStatus
+        }
+    // Dropdown().init({ });
   },
 };
 </script>
@@ -410,4 +243,12 @@ export default {
       padding-right: 30px !important;
       padding-left: 5px !important;
       }
+ #header .container {
+   gap: 0 ;
+   padding: 0;
+ }
+ .all-right-footer{
+   text-decoration: rtl !important;
+ }
+
 </style>

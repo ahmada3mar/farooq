@@ -16,7 +16,7 @@ class CreateSiteConfigTable extends Migration
         Schema::create('site_configs', function (Blueprint $table) {
             $table->id();
             $table->string('key');
-            $table->string('value');
+            $table->longText('value');
             $table->smallInteger('type');
             $table->timestamps();
         });

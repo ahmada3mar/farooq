@@ -36,7 +36,7 @@
     </div>
     <div
       class="background-image-container"
-      :style="'background:url(/storage/' +  + ')'"
+      :style="'background:url(/storage/' + +')'"
     ></div>
   </div>
 
@@ -93,79 +93,16 @@
               allowfullscreen
             ></iframe>
           </div>
-            <div
-              class="
-                accordion
-                js-accordion
-                w-auto
-                margin-bottom-30 
-                vid-description
-              "
-            >
-              <div class="accordion__item js-accordion-item">
-                <div class="accordion-header js-accordion-header">
-                  {{ lectur?.name }}
-                </div>
-                <div class="accordion-body js-accordion-body px-4">
-                  <div v-html="lectur.description"></div>
-                </div>
-              </div>
-              <div class="accordion__item js-accordion-item">
-                <div class="accordion-header js-accordion-header">
-                  المرفقات
-                </div>
-                <div class="accordion-body js-accordion-body px-4">
-                  <div class="attachments-container arabic right">
-                    <a href="#" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
-                    <a href="#" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
-                    <a href="#" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
-                    <a href="#" class="attachment-box ripple-effect"><span>Cover Letter</span><i>PDF</i></a>
 
+          <CourseAccordionVue :lectur="lectur" />
 
-                  </div>
-
-                </div>
-              </div>
-            </div>
         </div>
       </div>
 
       <!-- Sidebar -->
       <div class="col-xl-4 col-lg-4">
         <div class="sidebar-container">
-          <div class="accordion js-accordion margin-bottom-30">
-            <div class="accordion__item js-accordion-item">
-              <div class="accordion-header js-accordion-header">الوصف</div>
-              <div class="accordion-body js-accordion-body">
-                <div>
-{{course.description}}
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="accordion__item js-accordion-item"
-              :key="unit.id"
-              v-for="unit in course.units || []"
-            >
-              <div class="accordion-header js-accordion-header">
-                {{ unit?.name }}
-              </div>
-
-              <!-- Accordtion Body -->
-              <div class="accordion-body js-accordion-body">
-                <!-- Accordion Content -->
-                <div
-                  :key="lectur.id"
-                  v-for="lectur in unit.lectures"
-                  @click="changeVid(lectur)"
-                  class="accordion-body__contents link"
-                >
-                  {{ lectur?.name }}
-                </div>
-              </div>
-            </div>
-          </div>
+          <Accordion :changeVid="changeVid" :course="course" />
         </div>
       </div>
     </div>
@@ -241,16 +178,17 @@
   </div>
 </template>
 
-<script setup>
-</script>
+
 
 <script>
+import Accordion from "../../Shared/Accordion.vue";
+import CourseAccordionVue from "../../Shared/CourseAccordion.vue";
+
 export default {
   props: {
     course: Object,
   },
   data() {
-    console.table("this.course", this.course);
     return {
       lectur: this.course?.units[0]?.lectures[0],
     };
@@ -259,10 +197,9 @@ export default {
     changeVid(lectur) {
       this.lectur = lectur;
     },
+
   },
-  mounted() {
-    accordion().init({});
-  },
+  components: { Accordion, CourseAccordionVue },
 };
 </script>
 
@@ -278,14 +215,14 @@ export default {
   border-radius: 0;
 }
 
-.right-side{
-    display: contents;
+.right-side {
+  display: contents;
 }
 
-.button{
-    float: left;
+.button {
+  float: left;
 }
-.right{
-direction: rtl;
+.right {
+  direction: rtl;
 }
 </style>

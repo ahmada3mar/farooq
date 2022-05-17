@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Models\Section;
+use App\Models\SiteConfig;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Middleware;
@@ -42,8 +43,8 @@ class HandleInertiaRequests extends Middleware
         return array_merge(parent::share($request), [
             'auth' => Auth::user() ,
             'locale' => $locale,
-            'env' => env('APP_ENV' , 'production'),
             'sections' => Section::all(),
+            'web_config' => SiteConfig::all(),
             'language' =>  translations(
                 resource_path('lang/'. $locale .'.json')
             )

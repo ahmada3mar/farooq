@@ -11,7 +11,6 @@ use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Vyuldashev\NovaPermission\RoleSelect;
 use \Epartment\NovaDependencyContainer\NovaDependencyContainer ;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\HasMany;

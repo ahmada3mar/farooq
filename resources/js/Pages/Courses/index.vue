@@ -102,6 +102,8 @@ export default {
   props: {
     courses: Object,
     sections: Array,
+     isCoursesPage : Boolean,
+
 
   },
   components: {

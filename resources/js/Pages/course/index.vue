@@ -47,20 +47,13 @@
   <div class="d-flex col-12 mt-4 text-right">
     <div class="col-3">
       <div class="sidebar-container">
-        <div class="accordion js-accordion margin-bottom-30">
+
+        <vue-collapsible-panel-group class="accordion js-accordion margin-bottom-30">
           <div class="accordion__item js-accordion-item">
             <div class="accordion-header js-accordion-header">الوصف</div>
             <div class="accordion-body js-accordion-body">
               <div>
-                The study of the earliest periods in Islamic history is made
-                difficult by a lack of sources.[18] For example, the most
-                important historiographical source for the origins of Islam is
-                the work of al-Tabari.[19] While al-Tabari is considered an
-                excellent historian by the standards of his time and place, he
-                made liberal use of mythical, legendary, stereotyped, distorted,
-                and polemical presentations of subject matter—which are however
-                considered to be Islamically acceptable—and his descriptions of
-                the beginning of Islam post-date the events by several
+                {{ course.description }}
               </div>
             </div>
           </div>
@@ -87,7 +80,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </vue-collapsible-panel-group>
       </div>
     </div>
     <div class="col-6">
@@ -242,12 +235,7 @@ export default {
       this.lectur = lectur;
     },
   },
-  mounted() {
-    accordion().init({
-      speed: 300,
-      oneOpen: true,
-    });
-  },
+
   updated() {
     /*----------------------------------------------------*/
     /*	Accordion @Lewis Briffa

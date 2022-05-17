@@ -27,12 +27,6 @@ __webpack_require__.r(__webpack_exports__);
       this.lectur = lectur;
     }
   },
-  mounted: function mounted() {
-    accordion().init({
-      speed: 300,
-      oneOpen: true
-    });
-  },
   updated: function updated() {
     /*----------------------------------------------------*/
 
@@ -114,58 +108,57 @@ var _hoisted_11 = {
   "class": "sidebar-container"
 };
 var _hoisted_12 = {
-  "class": "accordion js-accordion margin-bottom-30"
+  "class": "accordion__item js-accordion-item"
 };
 
 var _hoisted_13 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "accordion__item js-accordion-item"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "accordion-header js-accordion-header"
-  }, "الوصف"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "accordion-body js-accordion-body"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, " The study of the earliest periods in Islamic history is made difficult by a lack of sources.[18] For example, the most important historiographical source for the origins of Islam is the work of al-Tabari.[19] While al-Tabari is considered an excellent historian by the standards of his time and place, he made liberal use of mythical, legendary, stereotyped, distorted, and polemical presentations of subject matter—which are however considered to be Islamically acceptable—and his descriptions of the beginning of Islam post-date the events by several ")])], -1
+  }, "الوصف", -1
   /* HOISTED */
   );
 });
 
 var _hoisted_14 = {
-  "class": "accordion-header js-accordion-header"
-};
-var _hoisted_15 = {
   "class": "accordion-body js-accordion-body"
 };
-var _hoisted_16 = ["onClick"];
-var _hoisted_17 = {
+var _hoisted_15 = {
+  "class": "accordion-header js-accordion-header"
+};
+var _hoisted_16 = {
+  "class": "accordion-body js-accordion-body"
+};
+var _hoisted_17 = ["onClick"];
+var _hoisted_18 = {
   "class": "col-6"
 };
-var _hoisted_18 = {
-  "class": "sidebar-container"
-};
 var _hoisted_19 = {
-  key: 0
+  "class": "sidebar-container"
 };
 var _hoisted_20 = {
   key: 0
 };
 var _hoisted_21 = {
-  "class": "card"
+  key: 0
 };
 var _hoisted_22 = {
-  "class": "card-header py-3"
+  "class": "card"
 };
 var _hoisted_23 = {
-  "class": "card-body"
+  "class": "card-header py-3"
 };
 var _hoisted_24 = {
-  "class": "d-flex flex-row-reverse align-items-center position-relative"
+  "class": "card-body"
 };
 var _hoisted_25 = {
+  "class": "d-flex flex-row-reverse align-items-center position-relative"
+};
+var _hoisted_26 = {
   "class": "radio"
 };
-var _hoisted_26 = ["id"];
+var _hoisted_27 = ["id"];
 
-var _hoisted_27 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_28 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
     "class": "checkmark"
   }, null, -1
@@ -173,13 +166,13 @@ var _hoisted_27 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_28 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_29 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
   /* HOISTED */
   );
 });
 
-var _hoisted_29 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_30 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     href: "#",
     "class": "button ripple-effect mt-5 px-5"
@@ -188,27 +181,27 @@ var _hoisted_29 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_30 = {
+var _hoisted_31 = {
   key: 1
 };
-var _hoisted_31 = {
+var _hoisted_32 = {
   "class": "col-12"
 };
-var _hoisted_32 = ["src"];
-var _hoisted_33 = {
-  "class": "col-12"
-};
+var _hoisted_33 = ["src"];
 var _hoisted_34 = {
-  "class": "sidebar-container"
+  "class": "col-12"
 };
 var _hoisted_35 = {
-  "class": "accordion js-accordion margin-bottom-30 rounded-0"
+  "class": "sidebar-container"
 };
 var _hoisted_36 = {
+  "class": "accordion js-accordion margin-bottom-30 rounded-0"
+};
+var _hoisted_37 = {
   "class": "accordion__item js-accordion-item"
 };
 
-var _hoisted_37 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_38 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "accordion-header js-accordion-header"
   }, " الوصف ", -1
@@ -216,15 +209,17 @@ var _hoisted_37 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_38 = {
+var _hoisted_39 = {
   "class": "accordion-body js-accordion-body"
 };
-var _hoisted_39 = ["innerHTML"];
+var _hoisted_40 = ["innerHTML"];
 
-var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"section margin-top-65 margin-bottom-65 text-right\" data-v-8e05fe32><div class=\"container\" data-v-8e05fe32><div class=\"row\" data-v-8e05fe32><!-- Section Headline --><div class=\"col-xl-12\" data-v-8e05fe32><div class=\"section-headline centered margin-top-0 margin-bottom-45\" data-v-8e05fe32><h3 data-v-8e05fe32>مساقات مشابهة</h3></div></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-list-layout-1.html\" class=\"photo-box\" data-background-image=\"/storage/erth.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>علوم ارض</h3><span data-v-8e05fe32>376 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-list-layout-full-page-map.html\" class=\"photo-box\" data-background-image=\"/storage/ar.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>مهارات اتصال</h3><span data-v-8e05fe32>645 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-grid-layout-full-page.html\" class=\"photo-box\" data-background-image=\"/storage/math.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>رياضيات</h3><span data-v-8e05fe32>832 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-list-layout-2.html\" class=\"photo-box\" data-background-image=\"/storage/ph.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>فيزياء</h3><span data-v-8e05fe32>513 مشترك</span></div></a></div></div></div></div>", 1);
+var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"section margin-top-65 margin-bottom-65 text-right\" data-v-8e05fe32><div class=\"container\" data-v-8e05fe32><div class=\"row\" data-v-8e05fe32><!-- Section Headline --><div class=\"col-xl-12\" data-v-8e05fe32><div class=\"section-headline centered margin-top-0 margin-bottom-45\" data-v-8e05fe32><h3 data-v-8e05fe32>مساقات مشابهة</h3></div></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-list-layout-1.html\" class=\"photo-box\" data-background-image=\"/storage/erth.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>علوم ارض</h3><span data-v-8e05fe32>376 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-list-layout-full-page-map.html\" class=\"photo-box\" data-background-image=\"/storage/ar.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>مهارات اتصال</h3><span data-v-8e05fe32>645 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-grid-layout-full-page.html\" class=\"photo-box\" data-background-image=\"/storage/math.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>رياضيات</h3><span data-v-8e05fe32>832 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-8e05fe32><!-- Photo Box --><a href=\"jobs-list-layout-2.html\" class=\"photo-box\" data-background-image=\"/storage/ph.jpg\" data-v-8e05fe32><div class=\"photo-box-content\" data-v-8e05fe32><h3 data-v-8e05fe32>فيزياء</h3><span data-v-8e05fe32>513 مشترك</span></div></a></div></div></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
+
+  var _component_vue_collapsible_panel_group = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("vue-collapsible-panel-group");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Head, null, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -245,45 +240,56 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , _hoisted_8)])])], 4
   /* STYLE */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.course.units, function (unit) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
-      "class": "accordion__item js-accordion-item",
-      key: unit.id
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(unit.name), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Accordtion Body "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Accordion Content "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(unit.lectures, function (lectur) {
-      return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
-        key: lectur.id,
-        onClick: function onClick($event) {
-          return $options.changeVid(lectur);
-        },
-        "class": "accordion-body__contents link"
-      }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lectur.name), 9
-      /* TEXT, PROPS */
-      , _hoisted_16);
-    }), 128
-    /* KEYED_FRAGMENT */
-    ))])]);
-  }), 128
-  /* KEYED_FRAGMENT */
-  ))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [$data.lectur.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_19, [$data.lectur.type == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.lectur.question.name), 1
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_vue_collapsible_panel_group, {
+    "class": "accordion js-accordion margin-bottom-30"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.course.description), 1
+      /* TEXT */
+      )])]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.course.units, function (unit) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+          "class": "accordion__item js-accordion-item",
+          key: unit.id
+        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(unit.name), 1
+        /* TEXT */
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Accordtion Body "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Accordion Content "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(unit.lectures, function (lectur) {
+          return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+            key: lectur.id,
+            onClick: function onClick($event) {
+              return $options.changeVid(lectur);
+            },
+            "class": "accordion-body__contents link"
+          }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lectur.name), 9
+          /* TEXT, PROPS */
+          , _hoisted_17);
+        }), 128
+        /* KEYED_FRAGMENT */
+        ))])]);
+      }), 128
+      /* KEYED_FRAGMENT */
+      ))];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [$data.lectur.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, [$data.lectur.type == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.lectur.question.name), 1
   /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.lectur.question.answers, function (an) {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.lectur.question.answers, function (an) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: an.id
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
       "class": "my-0 mx-2",
       name: "answer",
       id: an.id,
       type: "radio"
     }, null, 8
     /* PROPS */
-    , _hoisted_26), _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(an.name), 1
+    , _hoisted_27), _hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(an.name), 1
     /* TEXT */
-    )]), _hoisted_28])]);
+    )]), _hoisted_29])]);
   }), 128
   /* KEYED_FRAGMENT */
-  )), _hoisted_29])])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.lectur.name), 1
+  )), _hoisted_30])])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.lectur.name), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("iframe", {
     "class": "col-12",
@@ -295,11 +301,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     allowfullscreen: ""
   }, null, 8
   /* PROPS */
-  , _hoisted_32), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [_hoisted_37, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  , _hoisted_33), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [_hoisted_38, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     innerHTML: $data.lectur.description
   }, null, 8
   /* PROPS */
-  , _hoisted_39)])])])])])]))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]), _hoisted_40], 64
+  , _hoisted_40)])])])])])]))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]), _hoisted_41], 64
   /* STABLE_FRAGMENT */
   );
 }

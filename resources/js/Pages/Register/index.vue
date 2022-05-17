@@ -33,12 +33,12 @@
 				<form method="post" id="register-account-form">
 					<div class="input-with-icon-left">
 						<i class="icon-material-baseline-mail-outline"></i>
-						<input type="text" class="input-text with-border" name="emailaddress-register" id="emailaddress-register" placeholder="ايميل" required/>
+						<input type="text" class="input-text with-border" name="emailaddress" id="emailaddress" placeholder="ايميل" required/>
 					</div>
 
 					<div class="input-with-icon-left" title="Should be at least 8 characters long" data-tippy-placement="bottom">
 						<i class="icon-material-outline-lock"></i>
-						<input type="password" class="input-text with-border" name="password-register" id="password-register" placeholder="كلمة المرور" required/>
+						<input type="password" class="input-text with-border" name="password" id="password" placeholder="كلمة المرور" required/>
 					</div>
 
 					<div class="input-with-icon-left">

@@ -5,6 +5,7 @@ namespace App\Nova;
 use App\Models\Section;
 use App\Nova\Section as NovaSection;
 use Epartment\NovaDependencyContainer\NovaDependencyContainer;
+use Farooq\Checkboxes\Checkboxes;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Gravatar;
@@ -17,12 +18,11 @@ use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Vyuldashev\NovaPermission\RoleSelect;
+use Spatie\Permission\Models\Permission;
 use Yassi\NestedForm\NestedForm;
 
 
-
-class Course extends Resource
+class Course extends ResourceForUser
 {
     /**
      * The model the resource corresponds to.
@@ -130,8 +130,14 @@ class Course extends Resource
 
             NestedForm::make('Unit', 'units', Unit::class),
             HasMany::make(__('units'), 'units', unit::class)->nullable(),
-            HasMany::make(__('lectures'), 'lectures', Lecture::class)->nullable(),
-
+            Checkboxes::make(__('Permissions'), 'prepared_permissions')->withGroups()->options(Permission::all()->map(function ($permission, $key) {
+                return [
+                    'group'  => __(ucfirst($permission->group)),
+                    'option' => $permission->name,
+                    'label'  => __($permission->name),
+                ];
+            })->groupBy('group')->toArray())
+            ,
             BelongsTo::make(__('instructor'), 'user', User::class)
             ->withMeta(['placeholder' => trans('contant.sel_instructor')]
             )->searchable()

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Document;
 use App\Models\Section;
 use App\Models\SiteConfig;
 use App\Models\User;
@@ -19,15 +20,17 @@ class HomeController extends Controller
     public function index()
     {
         $settings = SiteConfig::where('key', 'LIKE', 'home%')->get();
+        
 
         $courses = Course::with('user' , 'section')->inRandomOrder()->limit(5)->get();
 
+        $docs = Document::orderBy('downloads' , 'DESC')->with('course')->limit(5)->get();
         $mostSelling = Course::orderBy('subscriber' , 'DESC')->limit(4)->get();
 
         $instructos = User::with('courses')->role('instructor')->get();
 
 
-        return Inertia::render('Home', compact('settings' , 'courses' , 'mostSelling' , 'instructos' ));
+        return Inertia::render('Home', compact('settings' , 'courses' , 'mostSelling' , 'instructos' , 'docs'));
     }
 
     /**

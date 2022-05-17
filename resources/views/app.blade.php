@@ -26,7 +26,7 @@
     <script src="{{asset('assets/js/counterup.min.js')}}" defer ></script>
     <script src="{{asset('assets/js/magnific-popup.min.js')}}" defer ></script>
     <script src="{{asset('assets/js/slick.min.js')}}" defer ></script> {{-- carousel  --}}
-    <script src="{{asset('assets/js/custom.js')}}" ></script>
+    {{-- <script src="{{asset('assets/js/custom.js')}}" ></script> --}}
     <script src="{{ mix('/js/app.js') }}" defer></script>
     <script src="{{ mix('/js/manifest.js') }}" defer></script>
     <script src="{{ mix('/js/vendor.js') }}" defer></script>
