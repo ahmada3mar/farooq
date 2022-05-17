@@ -18,6 +18,13 @@ class AddUserInformationToUserTable extends Migration
             $table->string('city')->after('mobile');
             $table->string('area')->after('city');
             $table->string('avatar')->after('area')->nullable();
+            $table->string('cover')->after('avatar')->nullable();
+            $table->string('title')->after('balance')->nullable();
+            $table->string('experience')->after('title')->nullable();
+            $table->string('facebook')->after('experience')->nullable();
+            $table->string('twitter')->after('facebook')->nullable();
+            $table->string('telegram')->after('twitter')->nullable();
+            $table->longText('description')->after('telegram')->nullable();
 
         });
     }
