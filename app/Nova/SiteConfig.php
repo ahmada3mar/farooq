@@ -38,7 +38,7 @@ class SiteConfig extends Resource
      */
     public static function label()
     {
-        return __('site_config');
+        return __('site config');
     }
 
     /**
@@ -48,8 +48,9 @@ class SiteConfig extends Resource
      */
     public static function singularLabel()
     {
-        return __('site_config');
+        return __('site config');
     }
+
 
     /**
      * The columns that should be searched.

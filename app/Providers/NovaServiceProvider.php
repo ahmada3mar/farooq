@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Nova\Role;
 use App\Policies\PermissionPolicy;
 use App\Policies\RolePolicy;
 use Digitalcloud\MultilingualNova\Http\Middleware\InitializeLanguage;
@@ -84,6 +85,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         return [
             \Vyuldashev\NovaPermission\NovaPermissionTool::make()
+            ->roleResource(Role::class)
             ->rolePolicy(RolePolicy::class)
             ->permissionPolicy(PermissionPolicy::class),
             new NovaLanguageTool()

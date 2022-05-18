@@ -130,14 +130,7 @@ class Course extends ResourceForUser
 
             NestedForm::make('Unit', 'units', Unit::class),
             HasMany::make(__('units'), 'units', unit::class)->nullable(),
-            Checkboxes::make(__('Permissions'), 'prepared_permissions')->withGroups()->options(Permission::all()->map(function ($permission, $key) {
-                return [
-                    'group'  => __(ucfirst($permission->group)),
-                    'option' => $permission->name,
-                    'label'  => __($permission->name),
-                ];
-            })->groupBy('group')->toArray())
-            ,
+
             BelongsTo::make(__('instructor'), 'user', User::class)
             ->withMeta(['placeholder' => trans('contant.sel_instructor')]
             )->searchable()

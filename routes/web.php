@@ -61,7 +61,7 @@ Route::get('/document/download/{id}' , function($id){
 
         return Inertia::render('Test', ['video' => Lecture::first()->url]);
     });
-    
+
     Route::resource('users', UserController::class);
 
 
@@ -88,12 +88,14 @@ Route::get('/document/download/{id}' , function($id){
         }
         return Inertia::render('Login');
     })->name('login');
+
     Route::post('/login', [LoginController::class, 'login']);
 
     Route::get('/Register', function () {
         return Inertia::render('Register');
     })->name('Register');
-    // Route::post('/Register', [RegisterController::class , 'Register']);
+
+    Route::post('/register', [LoginController::class , 'register']);
 
     Route::get('/courses', [CoursesController::class, 'index']);
     Route::get('/documents', [DocumentsController::class, 'index']);
