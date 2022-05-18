@@ -21,7 +21,7 @@ use App\Models\UserInformation;
 
 class RolesAndPermistionSeeder extends Seeder
 {
-/**
+    /**
      * Run the database seeds.
      *
      * @return void
@@ -59,45 +59,61 @@ class RolesAndPermistionSeeder extends Seeder
             $group = $this->getGroupName($item);
             $permission = $this->getPermissionName($item);
 
-              Permission::updateOrCreate([
+            Permission::updateOrCreate([
 
-                    'name' =>  'view ' . $permission ,
-                    ]);
-                    Permission::updateOrCreate([
+                'name' =>  'view ' . $permission,
+                'group' => $permission
+            ]);
+            Permission::updateOrCreate([
 
-                        'name' =>  'create '  . $permission,
-                    ]);
-                    Permission::updateOrCreate([
+                'name' =>  'create '  . $permission,
+                'group' => $permission
 
-                        'name' =>  'update '  . $permission,
-                    ]);
-                    Permission::updateOrCreate([
+            ]);
+            Permission::updateOrCreate([
 
-                        'name' =>  'delete '  . $permission,
-                    ]);
-                    Permission::updateOrCreate([
+                'name' =>  'update '  . $permission,
+                'group' => $permission
 
-                        'name' =>  'destroy '  . $permission,
-                    ]);
-                    Permission::updateOrCreate([
+            ]);
+            Permission::updateOrCreate([
 
-                        'name' =>  'restore '  . $permission,
-                    ]);
+                'name' =>  'delete '  . $permission,
+                'group' => $permission
 
-                    Permission::updateOrCreate([
+            ]);
+            Permission::updateOrCreate([
 
-                        'name' =>  'view own '  . $permission,
-                    ]);
+                'name' =>  'destroy '  . $permission,
+                'group' => $permission
+
+            ]);
+            Permission::updateOrCreate([
+
+                'name' =>  'restore '  . $permission,
+                'group' => $permission
+
+            ]);
+
+            Permission::updateOrCreate([
+
+                'name' =>  'view own '  . $permission,
+                'group' => $permission
+
+            ]);
         });
 
+
         // Create an Admin Role and assign all Permissions
-        Role::updateOrCreate(['name' => 'instructor']);
+        Role::updateOrCreate(['name' => 'instructor'])
+        ->givePermissionTo(Permission::create(['name' => 'access admin panel' , 'group' => 'admin dashboard']));
+        Role::updateOrCreate(['name' => 'user']);
         $role = Role::updateOrCreate(['name' => 'admin']);
         $role->givePermissionTo(Permission::all());
 
-       // Give User Admin Role
-         $user = User::whereEmail($adminEmail)->first(); // Change this to your email.
-         $user->assignRole('admin');
+        // Give User Admin Role
+        $user = User::whereEmail($adminEmail)->first(); // Change this to your email.
+        $user->assignRole('admin');
     }
 
     /**

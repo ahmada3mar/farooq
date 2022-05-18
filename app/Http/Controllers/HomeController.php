@@ -7,7 +7,9 @@ use App\Models\Document;
 use App\Models\Section;
 use App\Models\SiteConfig;
 use App\Models\User;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Inertia\Inertia;
 
 class HomeController extends Controller
@@ -20,7 +22,7 @@ class HomeController extends Controller
     public function index()
     {
         $settings = SiteConfig::where('key', 'LIKE', 'home%')->get();
-        
+
 
         $courses = Course::with('user' , 'section')->inRandomOrder()->limit(5)->get();
 
@@ -98,6 +100,13 @@ class HomeController extends Controller
     {
         //
     }
+
+    // public function test(Request $request)
+    // {
+    //     return \response('server 5raaa' , 500);
+    //     Log::alert($request->getContent());
+    //     return \response('ok');
+    // }
 
     public function ssl()
     {

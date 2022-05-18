@@ -236,6 +236,17 @@ header.fullwidth .container {
 	position: relative;
 }
 
+.left-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.error-msg{
+    color: red;
+    text-decoration:dotted;
+}
+
 .full-width #header .right-side {
 	float: right;
 	text-align: right;
@@ -2119,6 +2130,7 @@ em.mm-counter+a.mm-fullsubopen+span {
 }
 
 @media (max-width: 768px) {
+
 	.header-notifications {
 		position: initial;
 	}
@@ -9554,6 +9566,9 @@ transform: translateY(-18px);
 }
 
 @media (max-width: 767px) {
+    .left-image{
+        display: none;
+    }
 	#not-found h2 {
 		font-size: 110px;
 		line-height: 110px;

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -23,6 +24,27 @@ class LoginController extends Controller
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ]);
+    }
+
+    public function register(){
+       $this->validate(request(), [
+            'name' => 'required',
+            'email' => 'required|unique:users,email',
+            'password' => 'required|confirmed|min:8'
+        ], [
+            'name.required' =>'يرجى تعبة الأسم',
+            'email.required' =>'يرجى تعبة البريد الإلكتروني',
+            'email.unique' =>'البريد الإلكتروني مسجل مسبقاً',
+            'password.required' =>'يرجى اختيار كلمة المرور',
+        ]);
+
+        // dd($ee);
+        $user = User::create(request(['name', 'email', 'password']));
+        $user->assignRole('user');
+
+        auth()->login($user);
+
+        return redirect()->to('/');
     }
 
     public function logout(Request $request){

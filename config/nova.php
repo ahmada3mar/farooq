@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\NovaAdminAuth;
 use Digitalcloud\MultilingualNova\Http\Middleware\InitializeLanguage;
 use Laravel\Nova\Actions\ActionResource;
 use Laravel\Nova\Http\Middleware\Authenticate;
@@ -61,7 +62,7 @@ return [
     |
     */
 
-    'path' =>  '/admin',
+    'path' =>  '/dashboard',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,6 +109,7 @@ return [
         BootTools::class,
         Authorize::class,
         DispatchServingNovaEvent::class,
+        NovaAdminAuth::class
 
 
     ],
