@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AllPagesConfig;
 use App\Models\Document;
+use App\Models\Unit;
 use Inertia\Inertia;
 use Laravel\Nova\Http\Controllers\LoginController as ControllersLoginController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -34,6 +35,13 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/test' , function(){
+    return dd(Unit::all()->pluck('name' , 'id')->toArray());
+});
+
+
+
 Route::get('/.well-known/pki-validation/B4959002757F80C0696D11A55A6748DF.txt' , [HomeController::class , 'ssl']);
 // Route::get('/document/download/{id}', [DocumentsController::class, 'download']);
 Route::get('/download/{path}/{name}/{ext}' , function($path,$name , $ext){
@@ -56,11 +64,11 @@ Route::get('/document/download/{id}' , function($id){
 
     Route::get('/.well-known/pki-validation/A71EDACBF7A28EB9FB2A4AAEBF4B150C.txt', [HomeController::class, 'ssl']);
 
-    Route::get('/test', function () {
-        $rrr = User::with('courses')->role('instructor')->first();
+    // Route::get('/test', function () {
+    //     $rrr = User::with('courses')->role('instructor')->first();
 
-        return Inertia::render('Test', ['video' => Lecture::first()->url]);
-    });
+    //     return Inertia::render('Test', ['video' => Lecture::first()->url]);
+    // });
 
     Route::resource('users', UserController::class);
 

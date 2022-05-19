@@ -26,7 +26,7 @@ class User extends Authenticatable
         'password',
     ];
 
-    protected $with = ['courses.units.lectures.question.answers'];
+    protected $with = ['courses'];
 
     /**
      * The attributes that should be hidden for serialization.

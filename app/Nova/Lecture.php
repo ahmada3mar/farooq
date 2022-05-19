@@ -2,18 +2,25 @@
 
 namespace App\Nova;
 
-use App\Nova\unit as NovaUnit;
+use App\Models\Unit;
+use App\Nova\Unit as NovaUnit;
+use Carbon\Carbon;
+use Emilianotisato\NovaBelongstoDepends\BelongstoDepends;
+// use Emilianotisato\NovaBelongstoDepends\BelongstoDepends;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Code;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use \Epartment\NovaDependencyContainer\NovaDependencyContainer ;
+use Farooq\UnitPicker\UnitPicker;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Trix;
-use SebastianBergmann\CodeCoverage\Report\Xml\Unit;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Yassi\NestedForm\NestedForm;
+// use Emilianotisato\NovaBelongstoDepends\BelongstoDepends;
 
 class Lecture extends Resource
 {
@@ -24,6 +31,7 @@ class Lecture extends Resource
      */
     public static $model = \App\Models\Lecture::class;
 
+    protected $course_id = 5;
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
@@ -75,14 +83,20 @@ class Lecture extends Resource
 
     public function fields(Request $request)
     {
+        // dd(BelongstoDepends::class);
+        // $units = Unit::where('course_id' , $this->course_id)->pluck('name' , 'id')->toArray();
         return [
 
             ID::make()->hideFromIndex(),
-            BelongsTo::make( __('unit') , 'unit'),
 
-            Text::make(__('name'), 'name')
-                ->sortable()
-                ->rules('required', 'max:255'),
+            UnitPicker::make( 'name' ),
+
+
+            // BelongsToDependency::make( __('unit') , 'unit' , NovaUnit::class)->dependsOn('id' , 1 ),
+
+            // Text::make(__('name'), 'name')
+            //     ->sortable()
+            //     ->rules('required', 'max:255'),
 
             Number::make( __('order') , 'order')
                 ->creationRules('required', 'numeric', 'min:1')

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b710bfc7977a8bc22eeff3fdc2a3d76",
+    "content-hash": "2b32077155b491302aea147c6d15768d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -996,6 +996,53 @@
             "time": "2020-12-29T14:50:06+00:00"
         },
         {
+            "name": "emilianotisato/nova-belongsto-depends",
+            "version": "0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/emilianotisato/nova-belongsto-depend.git",
+                "reference": "d4d1e37394cf3394ed479551e7124921c9886afc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/emilianotisato/nova-belongsto-depend/zipball/d4d1e37394cf3394ed479551e7124921c9886afc",
+                "reference": "d4d1e37394cf3394ed479551e7124921c9886afc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "EmilianoTisato\\NovaBelongsToDepends\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "EmilianoTisato\\NovaBelongsToDepends\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field with dependencie on another BelongsTo relationship.",
+            "keywords": [
+                "belongsTo relationship",
+                "fields depend",
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/emilianotisato/nova-belongsto-depend/issues",
+                "source": "https://github.com/emilianotisato/nova-belongsto-depend/tree/master"
+            },
+            "time": "2019-02-06T19:01:15+00:00"
+        },
+        {
             "name": "epartment/nova-dependency-container",
             "version": "1.3.3",
             "source": {
@@ -1062,6 +1109,42 @@
             "autoload": {
                 "psr-4": {
                     "Farooq\\Checkboxes\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "farooq/unit-picker",
+            "version": "dev-ahmad",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/UnitPicker",
+                "reference": "c925ffec7dca89ef1190b29847e0bd8f5de52c92"
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Farooq\\UnitPicker\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Farooq\\UnitPicker\\": "src/"
                 }
             },
             "license": [
@@ -7569,16 +7652,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.14.5",
+            "version": "v1.14.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "1da083e30e6b0d646535c0afc2afeffdccb7181d"
+                "reference": "f00f3a8f83e71436d473cda7700ae7b4b68d26cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/1da083e30e6b0d646535c0afc2afeffdccb7181d",
-                "reference": "1da083e30e6b0d646535c0afc2afeffdccb7181d",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/f00f3a8f83e71436d473cda7700ae7b4b68d26cc",
+                "reference": "f00f3a8f83e71436d473cda7700ae7b4b68d26cc",
                 "shasum": ""
             },
             "require": {
@@ -7625,7 +7708,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2022-05-16T18:13:03+00:00"
+            "time": "2022-05-18T15:56:59+00:00"
         },
         {
             "name": "mockery/mockery",
