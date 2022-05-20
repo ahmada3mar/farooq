@@ -10,7 +10,7 @@ use App\Models\Lecture;
 use App\Models\Question;
 use App\Models\Section;
 use App\Models\SiteConfig;
-use App\Models\unit;
+use App\Models\Unit;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use Spatie\Permission\Models\Role;
@@ -39,7 +39,7 @@ class RolesAndPermistionSeeder extends Seeder
             Answer::class,
             Course::class,
             Lecture::class,
-            unit::class,
+            Unit::class,
             SiteConfig::class,
             Section::class,
             UserInformation::class,
@@ -106,7 +106,7 @@ class RolesAndPermistionSeeder extends Seeder
 
         // Create an Admin Role and assign all Permissions
         Role::updateOrCreate(['name' => 'instructor'])
-        ->givePermissionTo(Permission::create(['name' => 'access admin panel' , 'group' => 'admin dashboard']));
+        ->givePermissionTo(Permission::updateOrCreate(['name' => 'access admin panel' , 'group' => 'admin dashboard']));
         Role::updateOrCreate(['name' => 'user']);
         $role = Role::updateOrCreate(['name' => 'admin']);
         $role->givePermissionTo(Permission::all());

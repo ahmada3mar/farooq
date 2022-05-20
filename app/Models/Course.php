@@ -2,12 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
     use HasFactory;
+
+    protected $with = ['units.lectures.question.answers'];
 
     protected static $class_names = [
         1 => 'الأول',
@@ -30,6 +33,7 @@ class Course extends Model
         static::creating(function ($course) {
             $course->user_id = $course->user_id ?? auth()->user()->id;
         });
+
     }
 
     public function user()

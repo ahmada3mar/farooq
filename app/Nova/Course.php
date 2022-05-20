@@ -129,7 +129,7 @@ class Course extends ResourceForUser
                 ->updateRules('nullable', 'numeric'),
 
             NestedForm::make('Unit', 'units', Unit::class),
-            HasMany::make(__('units'), 'units', unit::class)->nullable(),
+            HasMany::make(__('units'), 'units', Unit::class)->nullable(),
 
             BelongsTo::make(__('instructor'), 'user', User::class)
             ->withMeta(['placeholder' => trans('contant.sel_instructor')]

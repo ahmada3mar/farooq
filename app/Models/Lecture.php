@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -14,13 +15,21 @@ class Lecture extends Model
     protected  $with = ['attachment'];
 
 
+    public static function boot()
+    {
+        parent::boot();
+        static::addGlobalScope('order', function (Builder $builder) {
+            $builder->orderBy('order');
+        });
+    }
+
     public function course() {
 
         return $this->belongsTo(Course::class);
      }
     public function unit() {
 
-        return $this->belongsTo(unit::class);
+        return $this->belongsTo(Unit::class);
      }
 
     public function question(){
@@ -35,10 +44,10 @@ class Lecture extends Model
 
     public function getUrlAttribute($value){
         $parts = parse_url($value);
-        if($value){
-            parse_str($parts['query'], $query);
-            $value = $query['v'];
-        }
+        // if($value){
+        //     parse_str($parts['query'], $query);
+        //     $value = $query['v'];
+        // }
 
         return  $value;
     }
