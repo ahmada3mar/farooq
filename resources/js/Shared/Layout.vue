@@ -143,7 +143,7 @@
 
                     <ul class="user-menu-small-nav">
                       <li>
-                        <a href="/dashboard" target="_blank">
+                        <a href="/dashboard/" target="_blank">
                           لوحة التحكم
                           <i class="icon-material-outline-dashboard"></i>
                         </a>
