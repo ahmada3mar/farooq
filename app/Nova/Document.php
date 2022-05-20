@@ -36,6 +36,8 @@ class Document extends Resource
         'name'
     ];
 
+    public static $group = 'Files';
+
 
     /**
      * Get the fields displayed by the resource.

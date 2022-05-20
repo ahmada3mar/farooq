@@ -33,7 +33,6 @@ class Lecture extends Resource
      */
     public static $model = \App\Models\Lecture::class;
 
-    protected $course_id = 5;
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
@@ -42,7 +41,7 @@ class Lecture extends Resource
     public static $title = 'name';
     // public static $viaRelationship = 'question';
 
-    public static $group = 'courses';
+    public static $group = 'Courses & Lectures';
 
 
     /**
