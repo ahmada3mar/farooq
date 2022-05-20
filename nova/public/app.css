@@ -1521,7 +1521,6 @@ textarea.form-input:read-only,
   border-width: 1px !important;
   border-color: var(--60) !important;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05) !important;
-  font-family: Nunito, system-ui, BlinkMacSystemFont, -apple-system, sans-serif !important;
 }
 
 .chartist-tooltip:before {
@@ -3333,9 +3332,6 @@ trix-editor.disabled {
   clear: both;
 }
 
-.font-sans {
-  font-family: Nunito, system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
-}
 
 .font-mono {
   font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
