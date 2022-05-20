@@ -6,7 +6,6 @@
 ----------------------------------------------------------------- */
 @import url('bootstrap-grid.css');                     /* Default Reset, Responsive Grid*/
 @import url('icons.css');                              /* Default Reset, Responsive Grid*/
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&subset=latin-ext');
 
 
 /* -------------------------------------------------------------- */
@@ -234,6 +233,17 @@ header.fullwidth .container {
 	width: 100%;
 	display: inline-block;
 	position: relative;
+}
+
+.left-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.error-msg{
+    color: red;
+    text-decoration:dotted;
 }
 
 .full-width #header .right-side {
@@ -2119,6 +2129,7 @@ em.mm-counter+a.mm-fullsubopen+span {
 }
 
 @media (max-width: 768px) {
+
 	.header-notifications {
 		position: initial;
 	}
@@ -9554,6 +9565,9 @@ transform: translateY(-18px);
 }
 
 @media (max-width: 767px) {
+    .left-image{
+        display: none;
+    }
 	#not-found h2 {
 		font-size: 110px;
 		line-height: 110px;

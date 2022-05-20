@@ -23,17 +23,21 @@
         "build-checkboxesi": "cd nova-components/Checkboxesi && npm run dev",
         "build-checkboxesi-prod": "cd nova-components/Checkboxesi && npm run prod",
         "build-checkboxi": "cd nova-components/Checkboxi && npm run dev",
-        "build-checkboxi-prod": "cd nova-components/Checkboxi && npm run prod"
+        "build-checkboxi-prod": "cd nova-components/Checkboxi && npm run prod",
+        "build-unit-picker": "cd nova-components/UnitPicker && npm run dev",
+        "build-unit-picker-prod": "cd nova-components/UnitPicker && npm run prod"
     },
     "devDependencies": {
         "@vue/compiler-sfc": "^3.2.29",
+        "autoprefixer": "^10.4.7",
         "axios": "^0.21",
         "laravel-mix": "^6.0.41",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14",
+        "postcss": "^8.4.13",
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.49.0",
         "sass-loader": "^12.1.0",
+        "tailwindcss": "^3.0.24",
         "vue-loader": "^16.2.0",
         "webpack-cli": "^4.9.2"
     },
@@ -43,7 +47,6 @@
         "@inertiajs/progress": "^0.2.7",
         "cross-env": "^7.0.3",
         "font-awesome": "^4.7.0",
-        "tailwindcss": "^3.0.19",
         "vue": "^3.2.29",
         "vue-slick": "^1.1.16",
         "vue-slick-carousel": "^1.0.6",

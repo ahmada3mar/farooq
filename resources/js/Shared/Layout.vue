@@ -52,7 +52,7 @@
 
             <!-- Logo -->
             <div id="logo">
-              <a href="/"><img src="/assets/images/logo.png" alt="" /></a>
+              <Link href="/"><img src="/assets/images/logo.png" alt="" /></Link>
             </div>
             <Slide class="navigation mobile"   right>
               <ul class="responsiveMobile">
@@ -61,7 +61,7 @@
                 </li>
 
                 <li>
-                  <a class="arow" href="#">التوجيهي</a>
+                  <Link class="arow" href="#">التوجيهي</Link>
                   <ul class="dropdown-nav">
                     <li v-for="section in sections" :key="section?.id">
                       <Link :href="`/courses?section=${section?.id}`">{{
@@ -111,25 +111,25 @@
                 <!-- Messages -->
                 <div :class="`header-notifications user-menu ${infoStatus && 'active'}`">
                   <div class="header-notifications-trigger">
-                    <a @click="togleInfo">
+                    <Link @click="togleInfo">
                       <div class="user-avatar ">
                         <div class="navProfileImage">
-                          <img :src="`/storage/${auth.avatar}`" alt="" />
+                          <img :src="auth.avatar ? `/storage/${auth.avatar}` : '/assets/images/user.png'" alt="" />
                         </div>
                         </div
-                    ></a>
+                    ></Link>
                   </div>
 
                   <!-- Dropdown -->
                   <div :class="`header-notifications-dropdown`">
                     <!-- User Status -->
-                    <a :href="`/profile/${auth.id}`" >
+                    <Link :href="`/profile/${auth.id}`" >
                     <div class="user-status">
                       <!-- User Name / Avatar -->
                       <div class="user-details">
                       <div class="user-avatar ">
                         <div class="navProfileImage">
-                          <img :src="`/storage/${auth.avatar}`" alt="" />
+                          <img :src="auth.avatar ? `/storage/${auth.avatar}` : '/assets/images/user.png'" alt="" />
                         </div>
                         </div
                     >
@@ -139,23 +139,19 @@
                         </div>
                       </div>
                     </div>
-                    </a>
+                    </Link>
 
                     <ul class="user-menu-small-nav">
                       <li>
-                        <a href="/admin" target="_blank">
-
+                        <a href="/dashboard/" target="_blank">
                           لوحة التحكم
                           <i class="icon-material-outline-dashboard"></i>
-                          </a
-                        >
+                        </a>
                       </li>
                       <li>
-                        <a href="/logout"
-                          >
+
                            <Link class="logout" href="/logout"> تسجيل خروج </Link>
-                          </a
-                        >
+
                       </li>
                     </ul>
                   </div>

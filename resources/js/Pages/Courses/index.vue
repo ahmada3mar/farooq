@@ -114,8 +114,6 @@ export default {
 
 <style scoped>
 
-
-
 .vid-description {
   border-radius: 0;
 }

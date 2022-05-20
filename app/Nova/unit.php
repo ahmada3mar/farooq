@@ -7,18 +7,20 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\HasMany;
-use Laravel\Nova\Http\Requests\NovaRequest;
 
-class unit extends Resource
+
+class Unit extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\unit::class;
+    public static $model = \App\Models\Unit::class;
+
+    public static $displayInNavigation = false;
+
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -27,7 +29,7 @@ class unit extends Resource
      */
     public static $title = 'name';
 
-    public static $group = 'courses';
+    // public static $group = 'courses';
 
     /**
      * Get the displayable label of the resource.
@@ -87,7 +89,7 @@ class unit extends Resource
 
             HasMany::make( __('lectures') , 'lectures' , Lecture::class)->nullable(),
 
-            BelongsTo::make( __('course') , 'course'),
+            BelongsTo::make( __('course') , 'course' , Course::class),
 
         ];
     }

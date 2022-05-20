@@ -12,7 +12,7 @@
     <div
       class="accordion__item js-accordion-item"
       :key="unit.id"
-      v-for="unit in course.units || []"
+      v-for="unit in units || []"
     >
       <div @click="togle" class="accordion-header js-accordion-header">
         {{ unit?.name }}
@@ -44,7 +44,8 @@ export default {
     },
     data(){
         return {
-            open:false
+            open:false,
+            units : this.course.units.filter(u=>u.lectures.length > 0)
         }
     },
     methods:{

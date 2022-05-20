@@ -45,7 +45,7 @@ class HandleInertiaRequests extends Middleware
             'locale' => $locale,
             'sections' => Section::all(),
             'web_config' => SiteConfig::all(),
-            'language' =>  translations(
+            'language' => \App\Helpers\Translation::translations(
                 resource_path('lang/'. $locale .'.json')
             )
         ]);

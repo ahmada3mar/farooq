@@ -24,7 +24,9 @@ class Attachment extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
+
+    public static $group = 'Files';
 
     /**
      * The columns that should be searched.
@@ -32,7 +34,7 @@ class Attachment extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'name',
     ];
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Nova\Role;
 use App\Policies\PermissionPolicy;
 use App\Policies\RolePolicy;
 use Digitalcloud\MultilingualNova\Http\Middleware\InitializeLanguage;
@@ -47,9 +48,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function gate()
     {
         Gate::define('viewNova', function ($user) {
-            return in_array($user->email, [
-                //
-            ]);
+            return $user->hasPermissionTo('access admin panel');
         });
     }
 
@@ -84,6 +83,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         return [
             \Vyuldashev\NovaPermission\NovaPermissionTool::make()
+            ->roleResource(Role::class)
             ->rolePolicy(RolePolicy::class)
             ->permissionPolicy(PermissionPolicy::class),
             new NovaLanguageTool()
@@ -98,6 +98,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     public function register()
     {
-        //
+        Nova::sortResourcesBy(function ($resource) {
+            return $resource::$order ?? 99999;
+        });
     }
+
+
 }

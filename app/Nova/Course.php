@@ -38,7 +38,7 @@ class Course extends ResourceForUser
      */
     public static $title = 'name';
 
-    public static $group = 'courses';
+    public static $group = 'Courses & Lectures';
 
 
     /**
@@ -48,7 +48,7 @@ class Course extends ResourceForUser
      */
     public static function label()
     {
-        return __('courses');
+        return __('Courses');
     }
 
     /**
@@ -58,7 +58,7 @@ class Course extends ResourceForUser
      */
     public static function singularLabel()
     {
-        return __('course');
+        return __('Course');
     }
 
     /**
@@ -129,15 +129,8 @@ class Course extends ResourceForUser
                 ->updateRules('nullable', 'numeric'),
 
             NestedForm::make('Unit', 'units', Unit::class),
-            HasMany::make(__('units'), 'units', unit::class)->nullable(),
-            Checkboxes::make(__('Permissions'), 'prepared_permissions')->withGroups()->options(Permission::all()->map(function ($permission, $key) {
-                return [
-                    'group'  => __(ucfirst($permission->group)),
-                    'option' => $permission->name,
-                    'label'  => __($permission->name),
-                ];
-            })->groupBy('group')->toArray())
-            ,
+            HasMany::make(__('units'), 'units', Unit::class)->nullable(),
+
             BelongsTo::make(__('instructor'), 'user', User::class)
             ->withMeta(['placeholder' => trans('contant.sel_instructor')]
             )->searchable()
