@@ -19,6 +19,9 @@ class Unit extends Resource
      */
     public static $model = \App\Models\Unit::class;
 
+    public static $displayInNavigation = false;
+
+
     /**
      * The single value that should be used to represent the resource when being displayed.
      *

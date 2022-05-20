@@ -33,7 +33,7 @@ class Section extends Resource
      */
     public static function label()
     {
-        return __('section');
+        return __('Sections');
     }
 
     /**
@@ -43,7 +43,7 @@ class Section extends Resource
      */
     public static function singularLabel()
     {
-        return __('section');
+        return __('Sections');
     }
 
     /**

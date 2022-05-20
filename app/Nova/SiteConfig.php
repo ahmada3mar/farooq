@@ -38,7 +38,7 @@ class SiteConfig extends Resource
      */
     public static function label()
     {
-        return __('site config');
+        return __('Configurations');
     }
 
     /**
@@ -48,7 +48,7 @@ class SiteConfig extends Resource
      */
     public static function singularLabel()
     {
-        return __('site config');
+        return __('Configurations');
     }
 
 

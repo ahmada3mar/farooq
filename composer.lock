@@ -1129,7 +1129,7 @@
             "dist": {
                 "type": "path",
                 "url": "./nova-components/UnitPicker",
-                "reference": "c925ffec7dca89ef1190b29847e0bd8f5de52c92"
+                "reference": "2354ab0400e5e0fd23b82993f617e60ca846ac5b"
             },
             "require": {
                 "php": ">=7.1.0"
@@ -1150,8 +1150,10 @@
             "license": [
                 "MIT"
             ],
-            "description": "A Laravel Nova field.",
+            "description": "A Laravel Nova field with dependencie on another BelongsTo relationship.",
             "keywords": [
+                "belongsTo relationship",
+                "fields depend",
                 "laravel",
                 "nova"
             ],

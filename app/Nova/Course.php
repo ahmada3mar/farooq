@@ -38,7 +38,7 @@ class Course extends ResourceForUser
      */
     public static $title = 'name';
 
-    public static $group = 'courses';
+    public static $group = 'Courses & Lectures';
 
 
     /**
@@ -48,7 +48,7 @@ class Course extends ResourceForUser
      */
     public static function label()
     {
-        return __('courses');
+        return __('Courses');
     }
 
     /**
@@ -58,7 +58,7 @@ class Course extends ResourceForUser
      */
     public static function singularLabel()
     {
-        return __('course');
+        return __('Course');
     }
 
     /**

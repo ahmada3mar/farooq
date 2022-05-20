@@ -26,6 +26,8 @@ class Attachment extends Resource
      */
     public static $title = 'name';
 
+    public static $group = 'Files';
+
     /**
      * The columns that should be searched.
      *

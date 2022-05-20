@@ -31,7 +31,7 @@ class ResourceManager extends Tool
     {
         $request = request();
         $groups = Nova::groups($request);
-        $navigation = Nova::groupedResourcesForNavigation($request);
+        $navigation = Nova::groupedResourcesForNavigation($request)->sortKeysUsing('strnatcasecmp')->all();
 
         return view('nova::resources.navigation', [
             'navigation' => $navigation,
