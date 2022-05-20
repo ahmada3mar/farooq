@@ -36,10 +36,6 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
-Route::get('/test' , function(){
-    return dd(Unit::all()->pluck('name' , 'id')->toArray());
-});
-
 
 
 Route::get('/.well-known/pki-validation/B4959002757F80C0696D11A55A6748DF.txt' , [HomeController::class , 'ssl']);

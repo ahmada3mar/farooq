@@ -11,6 +11,7 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Inertia\Inertia;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
 class HomeController extends Controller
 {
@@ -101,12 +102,16 @@ class HomeController extends Controller
         //
     }
 
-    // public function test(Request $request)
-    // {
-    //     return \response('server 5raaa' , 500);
-    //     Log::alert($request->getContent());
-    //     return \response('ok');
-    // }
+    public function test(NovaRequest $request)
+    {
+
+        $resource = new $request->resourceClass($request->resourceClass::newModel());
+
+
+        return \response('server 5raaa' , 500);
+        Log::alert($request->getContent());
+        return \response('ok');
+    }
 
     public function ssl()
     {

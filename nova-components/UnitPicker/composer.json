@@ -1,9 +1,11 @@
 {
     "name": "farooq/unit-picker",
-    "description": "A Laravel Nova field.",
+    "description": "A Laravel Nova field with dependencie on another BelongsTo relationship.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "belongsTo relationship",
+        "fields depend"
     ],
     "license": "MIT",
     "require": {

@@ -1,9 +1,7 @@
-import IndexField from './components/IndexField.vue'
-import DetailField from './components/IndexField.vue'
-import FormField from './components/IndexField.vue'
 
-Nova.booting((Vue, router, store) => {
-  Vue.component('index-unit-picker',IndexField)
-  Vue.component('detail-unit-picker', DetailField)
-  Vue.component('form-unit-picker', FormField)
-})
+
+Nova.booting((Vue, router) => {
+    Vue.component('index-unit-picker', require('./components/IndexField').default);
+    Vue.component('detail-unit-picker', require('./components/DetailField').default);
+    Vue.component('form-unit-picker', require('./components/FormField').default);
+});

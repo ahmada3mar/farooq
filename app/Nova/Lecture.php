@@ -2,7 +2,9 @@
 
 namespace App\Nova;
 
+use App\Models\Course;
 use App\Models\Unit;
+use App\Nova\Course as NovaCourse;
 use App\Nova\Unit as NovaUnit;
 use Carbon\Carbon;
 use Emilianotisato\NovaBelongstoDepends\BelongstoDepends;
@@ -83,20 +85,31 @@ class Lecture extends Resource
 
     public function fields(Request $request)
     {
+
         // dd(BelongstoDepends::class);
         // $units = Unit::where('course_id' , $this->course_id)->pluck('name' , 'id')->toArray();
         return [
 
             ID::make()->hideFromIndex(),
+        //     Text::make('Uuid')->default(function ($request) {
+        //         $resource = new $request->resourceClass(NovaUnit::newModel());
+        // dd($resource->fields($request));
+        //         // return Str::orderedUuid();
+        //     }),
 
-            UnitPicker::make( 'name' ),
+
 
 
             // BelongsToDependency::make( __('unit') , 'unit' , NovaUnit::class)->dependsOn('id' , 1 ),
 
-            // Text::make(__('name'), 'name')
-            //     ->sortable()
-            //     ->rules('required', 'max:255'),
+            Text::make(__('name'), 'name')
+                ->sortable()
+                ->rules('required', 'max:255'),
+
+                UnitPicker::make('course' )->setReq($request)->options(Course::take(5)->get()),
+
+                UnitPicker::make( 'unit' )->setReq($request)->dependsOn('course'),
+
 
             Number::make( __('order') , 'order')
                 ->creationRules('required', 'numeric', 'min:1')
@@ -120,17 +133,17 @@ class Lecture extends Resource
 
             HasMany::make(__('Attachments'), 'attachment', Attachment::class)->nullable(),
 
-            NestedForm::make('Attachment', 'attachment', Attachment::class),
+            // NestedForm::make('Attachment', 'attachment', Attachment::class),
 
 
-           NestedForm::make('Question' , 'question' , Question::class)
-           ->hideWhenUpdating()
-           ->max(1)
-            ->displayIf(function ($nestedForm, $request) {
-                return [
-                     [ 'attribute' => 'type', 'is' => '1' ]
-                ];
-            }),
+        //    NestedForm::make('Question' , 'question' , Question::class)
+        //    ->hideWhenUpdating()
+        //    ->max(1)
+        //     ->displayIf(function ($nestedForm, $request) {
+        //         return [
+        //              [ 'attribute' => 'type', 'is' => '1' ]
+        //         ];
+        //     }),
 
             Trix::make( __('description'), 'description')
                 ->rules('required'),
