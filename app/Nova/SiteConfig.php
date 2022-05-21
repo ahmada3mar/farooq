@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
-use \Epartment\NovaDependencyContainer\NovaDependencyContainer ;
+use \Epartment\NovaDependencyContainer\NovaDependencyContainer;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Trix;
 use Timothyasp\Color\Color;
@@ -75,7 +75,7 @@ class SiteConfig extends Resource
         return [
             ID::make()->hideFromIndex(),
 
-                Select::make( __('key'), 'key')
+            Select::make(__('key'), 'key')
                 ->options([
                     'home_shadow' => __('home shadow'),
                     'home_cover_image' => __('home cover image'),
@@ -93,7 +93,7 @@ class SiteConfig extends Resource
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-                Select::make( __('type'), 'type')
+            Select::make(__('type'), 'type')
                 ->options([
                     '0' => __('text'),
                     '1' => __('image'),
@@ -105,28 +105,27 @@ class SiteConfig extends Resource
                 ->updateRules('nullable', 'numeric'),
 
             NovaDependencyContainer::make([
-                Trix::make( __('value'), 'value')
-                ->rules('required'),
-            ])->dependsOn('type' , 0),
-
+                Trix::make(__('value'), 'value')
+                    ->rules('required'),
+            ])->dependsOn('type', 0),
 
 
             NovaDependencyContainer::make([
-                Color::make( __('value'), 'value')
-                ->chrome()
-                ])->dependsOn('type' , '2'),
+                Color::make(__('value'), 'value')
+                    ->chrome()
+            ])->dependsOn('type', '2'),
 
-                NovaDependencyContainer::make([
-                    Image::make( __('value'), 'value')
-                    ->maxWidth('100')
-                    ->rules('required'),
-                ])->dependsOn('type' , '1'),
-
-                NovaDependencyContainer::make([
-                    Text::make( __('value'), 'value')
+            NovaDependencyContainer::make([
+                Text::make(__('value'), 'value')
                     ->rules('required')
                     ->help('Includes the full url with https://'),
-                ])->dependsOn('type' , 3),
+            ])->dependsOn('type', '3'),
+
+            NovaDependencyContainer::make([
+                Image::make(__('value'), 'value')
+                    ->maxWidth('100')
+                    ->rules('required'),
+            ])->dependsOn('type', '1'),
 
         ];
     }
