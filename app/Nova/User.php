@@ -2,13 +2,18 @@
 
 namespace App\Nova;
 
+use App\Models\Section;
+use Epartment\NovaDependencyContainer\NovaDependencyContainer;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Avatar;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Place;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -93,7 +98,15 @@ class User extends Resource
                 ->rules('required', 'email', 'max:254')
                 ->creationRules('unique:users,email')
                 ->updateRules('unique:users,email,{{resourceId}}'),
+
+            Number::make('class'),
+
+            NovaDependencyContainer::make([
+                Select::make('section' ,'section_id')->options(Section::pluck('name' , 'id'))->hideFromIndex(),
+            ])->dependsOn('class', '11')->dependsOn('class' ,'12'),
+
             Text::make('Mobile')
+            ->hideFromIndex()
                 ->sortable()
                 ->rules('required', 'max:254')
                 ->creationRules('unique:users,mobile')
@@ -102,11 +115,13 @@ class User extends Resource
                 ->sortable()
                 ->rules('required', 'max:255'),
             Place::make('City')
+            ->hideFromIndex()
                 ->sortable()
                 ->rules( 'max:254'),
 
             Text::make('Area')
                 ->sortable()
+                ->hideFromIndex()
                 ->rules( 'max:254'),
 
             Text::make('experience')
@@ -114,14 +129,18 @@ class User extends Resource
                 ->rules( 'max:255'),
             Text::make('facebook')
                 ->sortable()
+                ->hideFromIndex()
                 ->rules( 'max:255'),
             Text::make('twitter')
                 ->sortable()
+                ->hideFromIndex()
                 ->rules( 'max:255'),
             Text::make('telegram')
                 ->sortable()
+                ->hideFromIndex()
                 ->rules( 'max:255'),
             Trix::make( __('description'), 'description')
+            ->hideFromIndex()
                 ->rules('required'),
 
 
