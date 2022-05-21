@@ -7,8 +7,7 @@ use Laravel\Nova\Http\Middleware\Authenticate;
 use Laravel\Nova\Http\Middleware\Authorize;
 use Laravel\Nova\Http\Middleware\BootTools;
 use Laravel\Nova\Http\Middleware\DispatchServingNovaEvent;
-
-
+use Spatie\LaravelImageOptimizer\Middlewares\OptimizeImages;
 
 return [
 
@@ -109,9 +108,8 @@ return [
         BootTools::class,
         Authorize::class,
         DispatchServingNovaEvent::class,
-        NovaAdminAuth::class
-
-
+        NovaAdminAuth::class,
+        OptimizeImages::class
     ],
 
     /*
