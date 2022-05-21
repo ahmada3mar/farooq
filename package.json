@@ -25,7 +25,9 @@
         "build-checkboxi": "cd nova-components/Checkboxi && npm run dev",
         "build-checkboxi-prod": "cd nova-components/Checkboxi && npm run prod",
         "build-unit-picker": "cd nova-components/UnitPicker && npm run dev",
-        "build-unit-picker-prod": "cd nova-components/UnitPicker && npm run prod"
+        "build-unit-picker-prod": "cd nova-components/UnitPicker && npm run prod",
+        "build-user-counter": "cd nova-components/UserCounter && npm run dev",
+        "build-user-counter-prod": "cd nova-components/UserCounter && npm run prod"
     },
     "devDependencies": {
         "@vue/compiler-sfc": "^3.2.29",

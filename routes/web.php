@@ -36,6 +36,12 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
+Route::get('/test', function(){
+    dd(User::has('courses' , '>=' , 2)->select('id')->setEagerLoads([])
+    ->role('user')
+    ->withCount('courses')->get());
+});
+
 Route::get('/.well-known/pki-validation/B4959002757F80C0696D11A55A6748DF.txt' , [HomeController::class , 'ssl']);
 // Route::get('/document/download/{id}', [DocumentsController::class, 'download']);
 Route::get('/download/{path}/{name}/{ext}' , function($path,$name , $ext){
