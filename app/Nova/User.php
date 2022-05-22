@@ -6,9 +6,7 @@ use App\Models\Section;
 use Epartment\NovaDependencyContainer\NovaDependencyContainer;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Avatar;
-use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Password;
@@ -16,7 +14,6 @@ use Laravel\Nova\Fields\Place;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Vyuldashev\NovaPermission\RoleSelect;
 
 

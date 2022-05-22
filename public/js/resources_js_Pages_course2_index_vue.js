@@ -20,7 +20,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
-    course: Object
+    course: Object,
+    simmilerCourses: Array
   },
   data: function data() {
     var _this$course, _this$course$units$;
@@ -257,9 +258,30 @@ var _hoisted_34 = {
 var _hoisted_35 = {
   "class": "sidebar-container"
 };
+var _hoisted_36 = {
+  key: 0,
+  "class": "section margin-top-65 margin-bottom-65"
+};
+var _hoisted_37 = {
+  "class": "container"
+};
+var _hoisted_38 = {
+  "class": "row"
+};
 
-var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"section margin-top-65 margin-bottom-65 text-right\" data-v-b67a1efe><div class=\"container\" data-v-b67a1efe><div class=\"row\" data-v-b67a1efe><!-- Section Headline --><div class=\"col-xl-12\" data-v-b67a1efe><div class=\"section-headline centered margin-top-0 margin-bottom-45\" data-v-b67a1efe><h3 data-v-b67a1efe>مساقات مشابهة</h3></div></div><div class=\"col-xl-3 col-md-6\" data-v-b67a1efe><!-- Photo Box --><a href=\"jobs-list-layout-1.html\" class=\"photo-box\" data-background-image=\"/storage/erth.jpg\" data-v-b67a1efe><div class=\"photo-box-content\" data-v-b67a1efe><h3 data-v-b67a1efe>علوم ارض</h3><span data-v-b67a1efe>376 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-b67a1efe><!-- Photo Box --><a href=\"jobs-list-layout-full-page-map.html\" class=\"photo-box\" data-background-image=\"/storage/ar.jpg\" data-v-b67a1efe><div class=\"photo-box-content\" data-v-b67a1efe><h3 data-v-b67a1efe>مهارات اتصال</h3><span data-v-b67a1efe>645 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-b67a1efe><!-- Photo Box --><a href=\"jobs-grid-layout-full-page.html\" class=\"photo-box\" data-background-image=\"/storage/math.jpg\" data-v-b67a1efe><div class=\"photo-box-content\" data-v-b67a1efe><h3 data-v-b67a1efe>رياضيات</h3><span data-v-b67a1efe>832 مشترك</span></div></a></div><div class=\"col-xl-3 col-md-6\" data-v-b67a1efe><!-- Photo Box --><a href=\"jobs-list-layout-2.html\" class=\"photo-box\" data-background-image=\"/storage/ph.jpg\" data-v-b67a1efe><div class=\"photo-box-content\" data-v-b67a1efe><h3 data-v-b67a1efe>فيزياء</h3><span data-v-b67a1efe>513 مشترك</span></div></a></div></div></div></div>", 1);
+var _hoisted_39 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "col-xl-12"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "section-headline centered margin-top-0 margin-bottom-45"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, "مساقات مشابهة")])], -1
+  /* HOISTED */
+  );
+});
 
+var _hoisted_40 = {
+  "class": "photo-box-content"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _$props$course, _$data$lectur, _$data$lectur2, _$data$lectur2$questi;
 
@@ -268,6 +290,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_CourseAccordionVue = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("CourseAccordionVue");
 
   var _component_Accordion = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Accordion");
+
+  var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Head, null, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -340,7 +364,33 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     course: $props.course
   }, null, 8
   /* PROPS */
-  , ["changeVid", "course"])])])])]), _hoisted_36], 64
+  , ["changeVid", "course"])])])])]), $props.simmilerCourses.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [_hoisted_39, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.simmilerCourses, function (course) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+      key: course.id,
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)("col-xl-".concat($props.simmilerCourses.length < 5 ? 12 / $props.simmilerCourses.length : '3', " col-md-6"))
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+      href: "/course/".concat(course.id),
+      "class": "photo-box",
+      style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background-image:url(/storage/".concat(course.image, ")"))
+    }, {
+      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+        return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(course.name), 1
+        /* TEXT */
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(course.subscriber) + " مشترك", 1
+        /* TEXT */
+        )])];
+      }),
+      _: 2
+      /* DYNAMIC */
+
+    }, 1032
+    /* PROPS, DYNAMIC_SLOTS */
+    , ["href", "style"])], 2
+    /* CLASS */
+    );
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 64
   /* STABLE_FRAGMENT */
   );
 }
