@@ -127,70 +127,32 @@
     </div>
   </div>
 
-  <div class="section margin-top-65 margin-bottom-65 text-right">
+  <div v-if="simmilerCourses.length > 0" class="section margin-top-65 margin-bottom-65">
     <div class="container">
       <div class="row">
-        <!-- Section Headline -->
         <div class="col-xl-12">
           <div class="section-headline centered margin-top-0 margin-bottom-45">
             <h3>مساقات مشابهة</h3>
           </div>
         </div>
 
-        <div class="col-xl-3 col-md-6">
-          <!-- Photo Box -->
-          <a
-            href="jobs-list-layout-1.html"
+        <div
+          :key="course.id"
+          v-for="course in simmilerCourses"
+          :class="`col-xl-${
+            simmilerCourses.length < 5 ? 12 / simmilerCourses.length : '3'
+          } col-md-6`"
+        >
+        <Link
+            :href="`/course/${course.id}`"
             class="photo-box"
-            data-background-image="/storage/erth.jpg"
+            :style="`background-image:url(/storage/${course.image})`"
           >
             <div class="photo-box-content">
-              <h3>علوم ارض</h3>
-              <span>376 مشترك</span>
+              <h3>{{ course.name }}</h3>
+              <span>{{ course.subscriber }} مشترك</span>
             </div>
-          </a>
-        </div>
-
-        <div class="col-xl-3 col-md-6">
-          <!-- Photo Box -->
-          <a
-            href="jobs-list-layout-full-page-map.html"
-            class="photo-box"
-            data-background-image="/storage/ar.jpg"
-          >
-            <div class="photo-box-content">
-              <h3>مهارات اتصال</h3>
-              <span>645 مشترك</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-xl-3 col-md-6">
-          <!-- Photo Box -->
-          <a
-            href="jobs-grid-layout-full-page.html"
-            class="photo-box"
-            data-background-image="/storage/math.jpg"
-          >
-            <div class="photo-box-content">
-              <h3>رياضيات</h3>
-              <span>832 مشترك</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-xl-3 col-md-6">
-          <!-- Photo Box -->
-          <a
-            href="jobs-list-layout-2.html"
-            class="photo-box"
-            data-background-image="/storage/ph.jpg"
-          >
-            <div class="photo-box-content">
-              <h3>فيزياء</h3>
-              <span>513 مشترك</span>
-            </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -206,7 +168,7 @@ import axios from "axios";
 
 export default {
   props: {
-    course: Object,
+    course: Object, simmilerCourses:Array
   },
   data() {
     return {
@@ -219,6 +181,7 @@ export default {
       fetching: false,
     };
   },
+
   methods: {
     changeVid(lectur) {
       this.lectur = lectur;

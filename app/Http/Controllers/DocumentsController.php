@@ -60,9 +60,11 @@ class DocumentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function download($id)
     {
-        //
+        $document = Document::findOrFail($id);
+        $document->increment('downloads');
+        return response()->download(storage_path("app/public/$document->path"), "$document->name" . '.' . substr(strrchr($document->path, "."), 1));
     }
 
 
