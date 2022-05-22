@@ -53,6 +53,11 @@ class User extends Authenticatable
         return $this->hasMany(Course::class);
     }
 
+    public function userAnswers(){
+
+        return $this->hasMany(UserAnswer::class);
+    }
+
     public function section(){
 
         return $this->belongsTo(Section::class);

@@ -36,92 +36,71 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
-Route::get('/test', function(){
-    dd(User::has('courses' , '>=' , 2)->select('id')->setEagerLoads([])
-    ->role('user')
-    ->withCount('courses')->get());
+Route::get('/test', function () {
+    dd(User::has('courses', '>=', 2)->select('id')->setEagerLoads([])
+        ->role('user')
+        ->withCount('courses')->get());
 });
 
-Route::get('/.well-known/pki-validation/B4959002757F80C0696D11A55A6748DF.txt' , [HomeController::class , 'ssl']);
 // Route::get('/document/download/{id}', [DocumentsController::class, 'download']);
-Route::get('/download/{path}/{name}/{ext}' , function($path,$name , $ext){
+Route::get('/download/{path}/{name}/{ext}', function ($path, $name, $ext) {
 
-
-    return response()->download(storage_path("app/public/$path") , $name . '.' . $ext );
-
+    return response()->download(storage_path("app/public/$path"), $name . '.' . $ext);
 });
+
 Route::resource('documents', DocumentsController::class);
-Route::get('/document/download/{id}' , function($id){
+
+Route::get('/document/download/{id}', function ($id) {
 
     $document = Document::findOrFail($id);
     $document->increment('downloads');
-    return response()->download(storage_path("app/public/$document->path") , "$document->name" . '.' . substr(strrchr($document->path, "."), 1) );
-
+    return response()->download(storage_path("app/public/$document->path"), "$document->name" . '.' . substr(strrchr($document->path, "."), 1));
 });
 
 //footer sittings that will show in all pages
 
+// Route::get('/test', function () {
+//     $rrr = User::with('courses')->role('instructor')->first();
 
-    Route::get('/.well-known/pki-validation/A71EDACBF7A28EB9FB2A4AAEBF4B150C.txt', [HomeController::class, 'ssl']);
+//     return Inertia::render('Test', ['video' => Lecture::first()->url]);
+// });
 
-    // Route::get('/test', function () {
-    //     $rrr = User::with('courses')->role('instructor')->first();
-
-    //     return Inertia::render('Test', ['video' => Lecture::first()->url]);
-    // });
-
-    Route::resource('users', UserController::class);
+Route::resource('users', UserController::class);
 
 
-    Route::get('/', [HomeController::class, 'index']);
-    Route::get('/logout', [LoginController::class, 'logout']);
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/logout', [LoginController::class, 'logout']);
+Route::get('/contact', [ContactController::class, 'index']);
 
-    Route::get('/contact', [ContactController::class, 'index']);
 
-    Route::get('/404', function () {
-        return Inertia::render('404');
-    });
+Route::get('/profile/{user}', function (User $user) {
 
-    Route::get('/profile/{user}', function (User $user) {
-        return Inertia::render('Profile2', compact('user'));
-    });
+    return Inertia::render('Profile2', compact('user'));
+});
 
-    Route::get('/403', function () {
-        return Inertia::render('403');
-    });
+Route::get('/403', function () {
+    return Inertia::render('403');
+});
 
-    Route::get('/login', function () {
-        if (Auth::check()) {
-            return redirect()->intended('/');
-        }
-        return Inertia::render('Login');
-    })->name('login');
+Route::get('/login', [LoginController::class , 'loginIndex']);
 
-    Route::post('/login', [LoginController::class, 'login']);
+Route::post('/login', [LoginController::class, 'login']);
 
-    Route::get('/Register', function () {
-        return Inertia::render('Register');
-    })->name('Register');
+Route::get('/Register', [LoginController::class , 'registerIndex']);
 
-    Route::post('/register', [LoginController::class , 'register']);
+Route::post('/register', [LoginController::class, 'register']);
 
-    Route::get('/courses', [CoursesController::class, 'index']);
-    Route::get('/documents', [DocumentsController::class, 'index']);
+Route::get('/courses', [CoursesController::class, 'index']);
+Route::get('/documents', [DocumentsController::class, 'index']);
 
-    Route::middleware('auth')->group(function () {
-        Route::get('/course/{id}', [CourseController::class, 'index']);
-        // Route::get('/course/{id}', function ($id) {
+Route::middleware('auth')->group(function () {
 
-        //     return Inertia::render('course2', ['course' => Course::with('units.lectures.question.answers')->find($id)]);
-        // });
-        Route::get('/course2/{id}', function ($id) {
+    Route::get('/course/{id}', [CourseController::class, 'index']);
+    Route::post('/check-answer/{answer}', [CourseController::class, 'checkAnswer']);
+    Route::post('/get-answers/{question}', [CourseController::class, 'getUserAnsers']);
 
-            // dd(Course::with('units.lectures.question.answers')->find($id));
-            return Inertia::render('course2', ['course' => Course::with('units.lectures.question.answers')->find($id)]);
-        });
-    });
+});
 
-    Route::fallback(function () {
-        return Inertia::render('404');
-    });
-
+Route::fallback(function () {
+    return Inertia::render('404');
+});

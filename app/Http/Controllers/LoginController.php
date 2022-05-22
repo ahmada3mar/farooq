@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
 
 class LoginController extends Controller
 {
+    public function loginIndex(){
+        if (Auth::check()) {
+            return redirect()->intended('/');
+        }
+        return Inertia::render('Login');
+    }
+
     public function login(Request $request){
 
         $credentials = $request->validate([
@@ -45,6 +53,10 @@ class LoginController extends Controller
         auth()->login($user);
 
         return redirect()->to('/');
+    }
+
+    public function registerIndex(){
+        return Inertia::render('Register');
     }
 
     public function logout(Request $request){
