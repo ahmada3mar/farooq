@@ -48,37 +48,57 @@
       <div class="col-xl-8 col-lg-8 content-right-offset">
         <div class="single-page-section" v-if="lectur?.name">
           <div v-if="lectur.type == 1">
-            <div class="card col-12 padding-0">
+            {{ getUserAnswer() }}
+            <div  class="card col-12 padding-0">
               <h3 class="card-header py-3">
                 {{ lectur?.question?.name }}
               </h3>
-              <div class="card-body">
+              <div v-if="!fetching && userAnserLoding" class="card-body">
                 <div :key="an.id" v-for="an in lectur.question.answers || []">
                   <div
-                    class="
+                    :class="`
                       d-flex
                       flex-row-reverse
                       align-items-center
                       position-relative
-                    "
+                      radio-container
+                      my-1
+                      ${user_answers.length > 0 && (correct_answers.includes(an.id) ? 'correct' : (user_answers.includes(an.id) && 'incorrect') ) }
+                    `"
                   >
                     <label class="radio">
                       <input
+                        :checked="user_answers.includes(an.id)"
+                        v-model="answer_id"
+                        :value="an.id"
                         class="my-0 mx-2"
                         name="answer"
                         :id="an.id"
                         type="radio"
                       />
-                      <span class="checkmark"></span>
-                      {{ an?.name }}
+                      <span  class="checkmark"></span>
+                          {{ an?.name }}
                     </label>
                     <br />
                   </div>
                 </div>
+                <span v-if="submitErr" class="submitErr mt-5"
+                  >الرجاء اختيار اجابة اولا</span
+                >
 
-                <button href="#" class="button ripple-effect mt-5 px-5">
+                <button @click="check" class="button ripple-effect mt-5 px-5">
                   تحقق
                 </button>
+              </div>
+              <div v-else class="spinner">
+                <div class="sk-chase">
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -95,7 +115,6 @@
           </div>
 
           <CourseAccordionVue :lectur="lectur" />
-
         </div>
       </div>
 
@@ -183,6 +202,7 @@
 <script>
 import Accordion from "../../Shared/Accordion.vue";
 import CourseAccordionVue from "../../Shared/CourseAccordion.vue";
+import axios from "axios";
 
 export default {
   props: {
@@ -191,13 +211,38 @@ export default {
   data() {
     return {
       lectur: this.course?.units[0]?.lectures[0],
+      answer_id: null,
+      submitErr: false,
+      correct_answers: [],
+      user_answers: [],
+      userAnserLoding: false,
+      fetching: false,
     };
   },
   methods: {
     changeVid(lectur) {
       this.lectur = lectur;
     },
-
+    check() {
+      if (!this.answer_id) {
+        this.submitErr = true;
+      } else {
+        this.fetching = true;
+        axios.post(`/check-answer/${this.answer_id}`).then((res) => {
+          this.correct_answers = res.data;
+          this.user_answers = [this.answer_id]
+          this.fetching = false;
+        });
+      }
+    },
+    getUserAnswer() {
+      if (this.userAnserLoding == false)
+        axios.post(`/get-answers/${this.lectur.question.id}`).then((res) => {
+          this.user_answers = res.data.userAnswers;
+          this.correct_answers = res.data.correctAnswers;
+          this.userAnserLoding = true;
+        });
+    },
   },
   components: { Accordion, CourseAccordionVue },
 };
@@ -224,5 +269,10 @@ export default {
 }
 .right {
   direction: rtl;
+}
+.submitErr {
+  float: right;
+  color: red;
+  font-weight: bold;
 }
 </style>
