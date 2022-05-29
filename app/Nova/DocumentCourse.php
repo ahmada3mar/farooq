@@ -3,50 +3,27 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Models\Section;
 use Laravel\Nova\Fields\Text;
 
-
-class Section extends Resource
+class DocumentCourse extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Section::class;
+    public static $model = \App\Models\DocumentCourse::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
-
-
-
-
-    /**
-     * Get the displayable label of the resource.
-     *
-     * @return string
-     */
-    public static function label()
-    {
-        return __('Sections');
-    }
-
-    /**
-     * Get the displayable singular label of the resource.
-     *
-     * @return string
-     */
-    public static function singularLabel()
-    {
-        return __('Sections');
-    }
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -54,7 +31,7 @@ class Section extends Resource
      * @var array
      */
     public static $search = [
-        'name', 'order'
+        'id',
     ];
 
     /**
@@ -63,25 +40,16 @@ class Section extends Resource
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
-
-
-
     public function fields(Request $request)
     {
         return [
-            ID::make()->hideFromIndex(),
-
+            ID::make(__('ID'), 'id')->sortable(),
+            Select::make( __('section'), 'section_id')
+            ->options(Section::pluck('name' , 'id')->toArray())
+            ->rules('required', 'numeric'),
             Text::make(__('name'), 'name')
-                ->sortable()
-                ->rules('required', 'max:255'),
-
-            Number::make( __('order') , 'order')
-                ->sortable()
-                ->creationRules('required', 'numeric', 'min:0')
-                ->updateRules('nullable', 'numeric', 'min:0'),
-
-            Boolean::make(__('Documents Only'), 'Documents_Only')
-
+            ->sortable()
+            ->rules('required', 'max:255'),
         ];
     }
 

@@ -46,9 +46,9 @@
                   ><i class="icon-material-outline-arrow-back"></i>سجل
                   الآن</Link
                 >
-                <div class="task-offers">
+                <!-- <div class="task-offers">
                   <b>{{course.price}} JOD</b>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -73,15 +73,7 @@
           <!-- Tags -->
             <h3>الصفوف</h3>
              	<Link href="/courses" class="button gray ripple-effect button-sliding-icon sidebar-button">  الكل <i class="icon-feather-arrow-left"></i></Link>
-             	<Link href="/courses?class=12" class="button gray ripple-effect button-sliding-icon sidebar-button ">  الثاني ثانوي <i class="icon-feather-arrow-left"></i></Link>
-                <ul class="dropdown-nav ">
-                    <li v-for="section in sections" :key="section?.id">
-             	<Link :href="`/courses?section=${section?.id}`" class="button gray ripple-effect button-sliding-icon sidebar-button">  {{section.name}} <i class="icon-feather-arrow-left"></i></Link>
-                    </li>
-                </ul>
-             	<Link href="/courses?category=highschool" class="button gray ripple-effect button-sliding-icon sidebar-button">  الصفوف الثانوية <i class="icon-feather-arrow-left"></i></Link>
-             	<Link href="/courses?category=secondary" class="button gray ripple-effect button-sliding-icon sidebar-button">  الصفوف الأعدادية <i class="icon-feather-arrow-left"></i></Link>
-             	<Link href="courses?category=primary" class="button gray ripple-effect button-sliding-icon sidebar-button">  الصفوف الأساسية <i class="icon-feather-arrow-left"></i></Link>
+             	<Link v-for="section in sections" :key="section?.id" :href="`/courses?section=${section?.id}`" class="button gray ripple-effect button-sliding-icon sidebar-button">  {{section.name}} <i class="icon-feather-arrow-left"></i></Link>
           <div class="clearfix"></div>
 
           <div class="margin-bottom-40"></div>

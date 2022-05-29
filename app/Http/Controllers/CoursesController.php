@@ -17,7 +17,7 @@ class CoursesController extends Controller
     public function index(Request $request)
     {
         $query = Course::query();
-        $sections = Section::all();
+        $sections = Section::where('Documents_Only', 0)->orderBy('Order')->get();
 
         if($request->has('class')){
             $query->where('class' , $request->class);
