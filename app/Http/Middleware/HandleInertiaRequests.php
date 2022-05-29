@@ -43,7 +43,7 @@ class HandleInertiaRequests extends Middleware
         return array_merge(parent::share($request), [
             'auth' => Auth::user() ,
             'locale' => $locale,
-            'sections' => Section::all(),
+            'sections' => Section::where('Documents_Only', 0)->orderBy('Order')->get(),
             'web_config' => SiteConfig::all(),
             'language' => \App\Helpers\Translation::translations(
                 resource_path('lang/'. $locale .'.json')

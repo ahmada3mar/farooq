@@ -97,7 +97,9 @@
     display: grid !important;
     place-items: center;
 }
-
+.self-center {
+    align-self: center;
+  }
 .flexCenter {
     display: flex !important;
     align-items: center;

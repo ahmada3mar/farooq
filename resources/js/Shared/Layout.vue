@@ -19,28 +19,34 @@
                   <Link href="/contact">من نحن</Link>
                 </li>
                 <li>
+                  <Link href="/contact">نقاط البيع</Link>
+                </li>
+                <li>
                   <Link href="/">المعلمين</Link>
                 </li>
 
                 <li>
-                  <Link class="arow" href="/courses?class=12">التوجيهي</Link>
+                  <Link class="arow" href="/courses">الملفات</Link>
+                  <ul class="dropdown-nav">
+                    <li><Link href="/courses?category=primary">أسئلة سنوات</Link></li>
+                    <li>
+                      <Link href="/courses?category=secondary">أوراق عمل</Link>
+                    </li>
+                    <li>
+                      <Link href="/courses?category=highschool">دوسيات</Link>
+                    </li>
+                    <li>
+                      <Link href="/courses?category=highschool">الكتب</Link>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <Link class="arow" href="/courses?class=12">الكورسات</Link>
                   <ul class="dropdown-nav">
                     <li v-for="section in sections" :key="section?.id">
                       <Link :href="`/courses?section=${section?.id}`">{{
                         section.name
                       }}</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <Link class="arow" href="/courses">الكورسات</Link>
-                  <ul class="dropdown-nav">
-                    <li><Link href="/courses?category=primary">الصفوف الأساسية</Link></li>
-                    <li>
-                      <Link href="/courses?category=secondary">الصفوف الأعدادية</Link>
-                    </li>
-                    <li>
-                      <Link href="/courses?category=highschool">الصفوف الثانوية</Link>
                     </li>
                   </ul>
                 </li>

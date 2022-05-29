@@ -48,4 +48,10 @@ class Document extends Model
 
         return $this->belongsTo(Course::class);
      }
+
+     public function section()
+     {
+ 
+         return $this->belongsTo(Section::class);
+     }
 }
