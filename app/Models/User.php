@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -26,7 +25,7 @@ class User extends Authenticatable
         'password',
     ];
 
-    protected $with = ['courses'];
+    protected $with = ['courses' ,'section'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -52,6 +51,17 @@ class User extends Authenticatable
 
         return $this->hasMany(Course::class);
     }
+
+    public function userAnswers(){
+
+        return $this->hasMany(UserAnswer::class);
+    }
+
+    public function section(){
+
+        return $this->belongsTo(Section::class);
+    }
+
     public function isSuperAdmin(){
 
         return Auth::user()->hasRole('admin');

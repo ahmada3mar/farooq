@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Attachment;
+use App\Models\Answer;
 use App\Models\Course;
+use App\Models\Document;
+use App\Models\Question;
+use App\Models\UserAnswer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 class CourseController extends Controller
@@ -17,20 +21,30 @@ class CourseController extends Controller
     public function index(Request $request)
     {
         $course = Course::with('units.lectures.question.answers')->with('units.lectures.attachment')->find($request->id);
-        return Inertia::render('course2', compact('course' ));
+
+        if(!$course){
+           return Inertia::render('404');
+        }
+
+        $simmilerCourses = Course::query();
+
+        if($course->section_id){
+            $simmilerCourses->where('section_id' , $course->section_id);
+        }
+
+        $simmilerCourses = $simmilerCourses->where('class' , $course->class)->where('id', '!=' , $course->id)->limit(4)->get();
+
+        return Inertia::render('course2', compact('course' , 'simmilerCourses' ));
 
 
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function download($path, $name, $ext)
     {
-        //
+        return response()->download(storage_path("app/public/$path"), $name . '.' . $ext);
+
     }
 
     /**
@@ -87,5 +101,33 @@ class CourseController extends Controller
     public function destroy(Course $course)
     {
         //
+    }
+
+    public function checkAnswer(Answer $answer){
+        $user_id =Auth::user()->id ;
+
+        UserAnswer::updateOrCreate(['user_id' => $user_id  , 'question_id' => $answer->question_id] ,[ 'answer_id' => $answer->id]);
+
+        return Answer::select('id')->where('question_id' , $answer->question_id)
+        ->where('is_correct' , 1)->pluck('id');
+    }
+
+    public function getUserAnsers(Question $question){
+
+        $user_id =Auth::user()->id ;
+
+        $userAnswers = UserAnswer::select('answer_id')->where('user_id' , $user_id)
+        ->whereHas('answer' ,function($a) use($question){
+            $a->where('question_id' , $question->id);
+        })->pluck('answer_id');
+
+        $correctAnswers = $question->answers()->where('is_correct' ,1)->pluck('id');
+
+        $res = [
+            'userAnswers' =>$userAnswers,
+            'correctAnswers' =>$correctAnswers,
+        ];
+
+        return $res;
     }
 }

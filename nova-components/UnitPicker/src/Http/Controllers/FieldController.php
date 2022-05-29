@@ -5,7 +5,6 @@ namespace Farooq\UnitPicker\Http\Controllers;
 use App\Models\Course;
 use Illuminate\Routing\Controller;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use EmilianoTisato\NovaBelongstoDepends\BelongstoDepends;
 use Farooq\UnitPicker\UnitPicker;
 
 class FieldController extends Controller

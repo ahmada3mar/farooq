@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Nova\Metrics\NewUsers;
+use App\Nova\Metrics\ParchusedCourses;
+use App\Nova\Metrics\UsersPerDay;
+use App\Nova\Metrics\UsersPerSection;
 use App\Nova\Role;
 use App\Policies\PermissionPolicy;
 use App\Policies\RolePolicy;
@@ -48,9 +52,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function gate()
     {
         Gate::define('viewNova', function ($user) {
-            return in_array($user->email, [
-                //
-            ]);
+            return $user->hasPermissionTo('access admin panel');
         });
     }
 
@@ -62,7 +64,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function cards()
     {
         return [
-            new Help,
+            new NewUsers(),
+            new ParchusedCourses(),
+            new UsersPerSection(),
+            new UsersPerDay(),
         ];
     }
 
