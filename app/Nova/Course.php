@@ -95,10 +95,10 @@ class Course extends ResourceForUser
             Text::make(__('name'), 'name')
                 ->sortable()
                 ->rules('required', 'max:255'),
-                BelongsTo::make(__('instructor'), 'user', User::class)
+            BelongsTo::make(__('instructor'), 'user', User::class)
                 ->withMeta(['placeholder' => trans('contant.sel_instructor')]
                 )->searchable(),
-
+            
 
             Select::make( __('section'), 'section_id')
                 ->options(Section::pluck('name' , 'id')->toArray())

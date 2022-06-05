@@ -204,6 +204,7 @@
                     <div
                         class="listings-container compact-list-layout margin-top-35"
                     >
+                    <template v-if="docs">
                         <Link
                             v-for="document in docs"
                             :key="document.id"
@@ -229,7 +230,7 @@
                                                     class="icon-feather-book-open"
                                                 ></i>
                                                 المادة
-                                                {{ __(document.course.name) }}
+                                                {{ __(document.document_course_id.name) }}
                                             </li>
                                             <li>
                                                 <i
@@ -248,6 +249,8 @@
                                 </div>
                             </div>
                         </Link>
+                        </template>
+
                     </div>
                 </div>
             </div>
@@ -456,7 +459,6 @@ export default {
         };
     },
     mounted() {
-        console.log("docs", this.docs);
         // this.jq()
         // console.log( this.settings.find(s=>s.key == 'home_cover_image')?.value || '/assets/images/banner.jpg' )
         // ready();

@@ -263,6 +263,14 @@
   display: none;
 }
 
+.show {
+  display: block;
+}
+
+.type-button {
+  background-color: #276b7c !important;
+}
+
 .hiddenElement {
   position: absolute;
   opacity: 0;

@@ -25,7 +25,7 @@ class CustomRule implements Rule
      */
     public function passes($attribute, $value)
     {
-        if(str_contains($value , '/') || str_contains($value , '\\')){
+        if(str_contains($value , '/') || str_contains($value , '\\' ) || str_contains($value , '|' ) || str_contains($value , '*' ) || str_contains($value , '?' ) || str_contains($value , '"' ) || str_contains($value , '>' ) || str_contains($value , '<' )){
             return false;
         }
         return true;
@@ -38,6 +38,6 @@ class CustomRule implements Rule
      */
     public function message()
     {
-        return 'file name cannot contain the "/" and "\" characters';
+        return 'file name cannot contain | \ / ? * " < > characters';
     }
 }
