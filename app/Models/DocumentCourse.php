@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class DocumentCourse extends Model
 {
+    use HasFactory;
 
     public function section()
     {
@@ -14,7 +15,12 @@ class DocumentCourse extends Model
         return $this->belongsTo(Section::class);
     }
 
-    use HasFactory;
+    public function documents()
+    {
+
+        return $this->hasMany(Document::class);
+    }
+
 }
 
 

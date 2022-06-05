@@ -33,6 +33,7 @@ class DocumentCourse extends Resource
     public static $search = [
         'id',
     ];
+    public static $group = 'Files';
 
     /**
      * Get the fields displayed by the resource.

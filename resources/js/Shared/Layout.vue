@@ -19,24 +19,24 @@
                   <Link href="/contact">من نحن</Link>
                 </li>
                 <li>
-                  <Link href="/contact">نقاط البيع</Link>
+                  <Link href="/Selling-Points">نقاط البيع</Link>
                 </li>
                 <li>
-                  <Link href="/">المعلمين</Link>
+                  <Link href="/Instructors">المعلمين</Link>
                 </li>
 
                 <li>
-                  <Link class="arow" href="/courses">الملفات</Link>
+                  <Link class="arow" href="/documents">الملفات</Link>
                   <ul class="dropdown-nav">
-                    <li><Link href="/courses?category=primary">أسئلة سنوات</Link></li>
+                    <li><Link href="/documents?type=1">أسئلة سنوات</Link></li>
                     <li>
-                      <Link href="/courses?category=secondary">أوراق عمل</Link>
+                      <Link href="/documents?type=2">أوراق عمل</Link>
                     </li>
                     <li>
-                      <Link href="/courses?category=highschool">دوسيات</Link>
+                      <Link href="/documents?type=3">دوسيات</Link>
                     </li>
                     <li>
-                      <Link href="/courses?category=highschool">الكتب</Link>
+                      <Link href="/documents?type=4">الكتب</Link>
                     </li>
                   </ul>
                 </li>
@@ -63,11 +63,32 @@
             <Slide class="navigation mobile"   right>
               <ul class="responsiveMobile">
                 <li>
-                  <Link href="/">الصفحة الرئيسية</Link>
+                  <Link href="/contact">من نحن</Link>
+                </li>
+                <li>
+                  <Link href="/Selling-Points">نقاط البيع</Link>
+                </li>
+                <li>
+                  <Link href="/Instructors">المعلمين</Link>
                 </li>
 
                 <li>
-                  <Link class="arow" href="#">التوجيهي</Link>
+                  <Link class="arow" href="/documents">الملفات</Link>
+                  <ul class="dropdown-nav">
+                    <li><Link href="/documents?type=1">أسئلة سنوات</Link></li>
+                    <li>
+                      <Link href="/documents?type=2">أوراق عمل</Link>
+                    </li>
+                    <li>
+                      <Link href="/documents?type=3">دوسيات</Link>
+                    </li>
+                    <li>
+                      <Link href="/documents?type=4">الكتب</Link>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <Link class="arow" href="/courses?class=12">الكورسات</Link>
                   <ul class="dropdown-nav">
                     <li v-for="section in sections" :key="section?.id">
                       <Link :href="`/courses?section=${section?.id}`">{{
@@ -77,33 +98,8 @@
                   </ul>
                 </li>
                 <li>
-                  <Link class="arow" href="/courses">الكورسات</Link>
-                  <ul class="dropdown-nav">
-                    <li><Link href="/courses?category=primary">الصفوف الأساسية</Link></li>
-                    <li>
-                      <Link href="/courses?category=secondary">الصفوف الأعدادية</Link>
-                    </li>
-                    <li>
-                      <Link href="/courses?category=highschool">الصفوف الثانوية</Link>
-                    </li>
-                  </ul>
+                  <Link href="/">الصفحة الرئيسية</Link>
                 </li>
-                <li>
-                  <Link href="/">المعلمين</Link>
-                </li>
-                <li>
-                  <Link href="/contact">من نحن</Link>
-                </li>
-                <template  v-if="auth">
-                </template>
-                <template  v-else>
-                  <li>
-                    <Link href="/Register">تسجيل</Link>
-                  </li>
-                  <li>
-                    <Link href="/login">تسجيل الدخول </Link>
-                  </li>
-                </template>
               </ul>
             </Slide>
           </div>

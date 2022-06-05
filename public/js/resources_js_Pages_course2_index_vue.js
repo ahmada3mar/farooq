@@ -164,7 +164,7 @@ var _hoisted_9 = /*#__PURE__*/_withScopeId(function () {
     "class": "salary-box margin-left-0"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "salary-type"
-  }, "عدد المروس"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, "عدد الدروس"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "salary-amount"
   }, "14")])], -1
   /* HOISTED */
@@ -312,7 +312,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)('background:url(/storage/' + +')')
   }, null, 4
   /* STYLE */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Page Content\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(_$data$lectur = $data.lectur) !== null && _$data$lectur !== void 0 && _$data$lectur.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_19, [$data.lectur.type == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.getUserAnswer()) + " ", 1
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Page Content\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(_$data$lectur = $data.lectur) !== null && _$data$lectur !== void 0 && _$data$lectur.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_19, [$data.lectur.type == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.getUserAnswer()) + " ", 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_$data$lectur2 = $data.lectur) === null || _$data$lectur2 === void 0 ? void 0 : (_$data$lectur2$questi = _$data$lectur2.question) === null || _$data$lectur2$questi === void 0 ? void 0 : _$data$lectur2$questi.name), 1
   /* TEXT */
@@ -490,7 +490,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.course-image[data-v-b67a1efe] {\n  position: absolute;\n  right: 5%;\n  top: 30%;\n  z-index: 100;\n}\n.vid-description[data-v-b67a1efe] {\n  border-radius: 0;\n}\n.right-side[data-v-b67a1efe] {\n  display: contents;\n}\n.button[data-v-b67a1efe] {\n  float: left;\n}\n.right[data-v-b67a1efe] {\n  direction: rtl;\n}\n.submitErr[data-v-b67a1efe] {\n  float: right;\n  color: red;\n  font-weight: bold;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.course-image[data-v-b67a1efe] {\r\n  position: absolute;\r\n  right: 5%;\r\n  top: 30%;\r\n  z-index: 100;\n}\n.vid-description[data-v-b67a1efe] {\r\n  border-radius: 0;\n}\n.right-side[data-v-b67a1efe] {\r\n  display: contents;\n}\n.button[data-v-b67a1efe] {\r\n  float: left;\n}\n.right[data-v-b67a1efe] {\r\n  direction: rtl;\n}\n.submitErr[data-v-b67a1efe] {\r\n  float: right;\r\n  color: red;\r\n  font-weight: bold;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

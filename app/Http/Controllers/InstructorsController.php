@@ -2,18 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Course;
-use App\Models\Document;
-use App\Models\Section;
-use App\Models\SiteConfig;
 use App\Models\User;
-use Exception;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use Inertia\Inertia;
-use Laravel\Nova\Http\Requests\NovaRequest;
 
-class HomeController extends Controller
+class InstructorsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,18 +15,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $settings = SiteConfig::where('key', 'LIKE', 'home%')->get();
+        $Instructors = User::all();
+        // $Instructors = User::where('Role', 'LIKE', 'home%')->get();
+        return Inertia::render('Instructors', compact('Instructors'));
 
-
-        $courses = Course::with('user' , 'section')->inRandomOrder()->limit(5)->get();
-
-        $docs = Document::orderBy('downloads' , 'DESC')->limit(5)->get();
-        $mostSelling = Course::orderBy('subscriber' , 'DESC')->limit(4)->get();
-
-        $instructos = User::with('courses')->role('instructor')->get();
-
-
-        return Inertia::render('Home', compact('settings' , 'courses' , 'mostSelling' , 'instructos' , 'docs'));
     }
 
     /**
@@ -100,21 +85,5 @@ class HomeController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function test(NovaRequest $request)
-    {
-
-        $resource = new $request->resourceClass($request->resourceClass::newModel());
-
-
-        return \response('server 5raaa' , 500);
-        Log::alert($request->getContent());
-        return \response('ok');
-    }
-
-    public function ssl()
-    {
-       return response()->download(\public_path('/assets/ssl/B4959002757F80C0696D11A55A6748DF.txt'), 'B4959002757F80C0696D11A55A6748DF.txt');
     }
 }

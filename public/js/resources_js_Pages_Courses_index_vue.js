@@ -205,13 +205,15 @@ var _hoisted_28 = {
   "class": "sidebar-container arabic"
 };
 
-var _hoisted_29 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, "الصفوف", -1
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" الكل ");
+
+var _hoisted_30 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "icon-feather-arrow-left"
+  }, null, -1
   /* HOISTED */
   );
 });
-
-var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" الكل ");
 
 var _hoisted_31 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
@@ -222,14 +224,6 @@ var _hoisted_31 = /*#__PURE__*/_withScopeId(function () {
 });
 
 var _hoisted_32 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-    "class": "icon-feather-arrow-left"
-  }, null, -1
-  /* HOISTED */
-  );
-});
-
-var _hoisted_33 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "clearfix"
   }, null, -1
@@ -237,7 +231,7 @@ var _hoisted_33 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_34 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_33 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "margin-bottom-40"
   }, null, -1
@@ -296,12 +290,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     links: $props.courses.links
   }, null, 8
   /* PROPS */
-  , ["links"])]), _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Pagination / End ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Tags "), _hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  , ["links"])]), _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Pagination / End ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Tags "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     href: "/courses",
     "class": "button gray ripple-effect button-sliding-icon sidebar-button"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_30, _hoisted_31];
+      return [_hoisted_29, _hoisted_30];
     }),
     _: 1
     /* STABLE */
@@ -315,7 +309,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
         return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(section.name) + " ", 1
         /* TEXT */
-        ), _hoisted_32];
+        ), _hoisted_31];
       }),
       _: 2
       /* DYNAMIC */
@@ -325,7 +319,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     , ["href"]);
   }), 128
   /* KEYED_FRAGMENT */
-  )), _hoisted_33, _hoisted_34]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar Container / End ")])])])], 64
+  )), _hoisted_32, _hoisted_33]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar Container / End ")])])])], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -413,7 +407,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.vid-description[data-v-5d989362] {\r\n  border-radius: 0;\n}\n.right-side[data-v-5d989362] {\r\n  display: contents;\n}\n.button[data-v-5d989362] {\r\n  float: left;\n}\n.sidebar-container a.headline-link[data-v-5d989362] {\r\n      position: unset;\r\n    left: unset;\r\n    bottom: unset;\n}\na.headline-link[data-v-5d989362]::after {\r\n    content: \"\\27F5\";\r\n    font-family: \"Material-Icons\";\r\n    font-size: 21px;\r\n    line-height: 0;\r\n    position: relative;\r\n    top: 0px;\r\n    margin-right: 5px;\n}\na.headline-link[data-v-5d989362]::before {\r\n    content: unset;\r\n    font-family: unset;\n}\n.sidebar-container[data-v-5d989362]{\r\n  display:flex;\r\n  flex-direction:column;\r\n  direction: rtl;\n}\n.sidebar-button[data-v-5d989362]{\r\n    float: unset;\r\n    width: 90%;\r\n    font-size: 1.5rem;\r\n    margin: 5px 0;\r\n    text-align: right;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.vid-description[data-v-5d989362] {\r\n  border-radius: 0;\n}\n.right-side[data-v-5d989362] {\r\n  display: contents;\n}\n.button[data-v-5d989362] {\r\n  float: left;\n}\n.sidebar-container a.headline-link[data-v-5d989362] {\r\n      position: unset;\r\n    left: unset;\r\n    bottom: unset;\n}\na.headline-link[data-v-5d989362]::after {\r\n    content: \"\\27F5\";\r\n    font-family: \"Material-Icons\";\r\n    font-size: 21px;\r\n    line-height: 0;\r\n    position: relative;\r\n    top: 0px;\r\n    margin-right: 5px;\n}\na.headline-link[data-v-5d989362]::before {\r\n    content: unset;\r\n    font-family: unset;\n}\n.sidebar-container[data-v-5d989362]{\r\n  display:flex;\r\n  flex-direction:column;\r\n  direction: rtl;\n}\n.sidebar-button[data-v-5d989362]{\r\n    float: unset;\r\n    width: 90%;\r\n    font-size: 1.5rem;\r\n    margin: 5px 0;\r\n    text-align: center;\n}\n.full-page-container[data-v-5d989362]{\r\n  min-height: 70% ;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -2,33 +2,28 @@
 
 namespace App\Nova;
 
-use App\Rules\CustomRule;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\File;
+use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use App\Models\Section;
-use App\Models\DocumentCourse;
-use Farooq\UnitPicker\UnitPicker;
 
-class Document extends Resource
+class SellPoint extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Document::class;
+    public static $model = \App\Models\SellPoint::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -36,11 +31,9 @@ class Document extends Resource
      * @var array
      */
     public static $search = [
-        'name'
+        'id',
     ];
-
-    public static $group = 'Files';
-
+    public static $group = 'settings';
 
     /**
      * Get the fields displayed by the resource.
@@ -52,33 +45,46 @@ class Document extends Resource
     {
         return [
             ID::make()->hideFromIndex(),
+
+            Avatar::make('image' , 'image')->maxWidth(50),
+
+
             Text::make('name')
             ->sortable()
             ->creationRules('required', 'max:255')
-            ->updateRules('required', 'max:255')
-            ->rules(new CustomRule()),
+            ->updateRules('required', 'max:255'),
             
-            Select::make(__('Type'), 'Type')
-                ->options([
-                    1 => 'اسئلة سنوات',
-                    2 => ' أوراق عمل',
-                    3 => 'دوسيات',
-                    4 => 'الكتب',
+            Select::make(__('city'), 'city')
+            ->options([
+                'Irbid' => 'إربد',
+                'Mafraq' => 'المفرق',
+                'Ajlun' => 'عجلون',
+                'Jerash' => 'جرش',
+                'Amman' => 'عمان',
+                'Zarqa' => 'الزرقاء',
+                'As-Salt' => 'السلط',
+                'Madaba' => 'مأدبا',
+                'Tafilah' => 'الطفيلة',
+                'Karak' => 'الكرك',
+                'Ma\'an' => 'معان',
+                'Aqaba' => 'العقبة',
+                
                 ])
-                ->creationRules('required', 'numeric', 'min:1', 'max:12')
+                ->creationRules('required')
                 ->sortable()
-                ->updateRules('nullable', 'numeric', 'min:1', 'max:12'),
+                ->updateRules('required'),
+                
+                Text::make('Address')
+                ->creationRules('nullable', 'max:255')
+                ->updateRules('nullable', 'max:255'),
 
-                Select::make( __('section'), 'section_id')
-                ->options(Section::pluck('name' , 'id')->toArray())
-                ->rules('required', 'numeric'),
+                Text::make(__('location'), 'url')
+                ->creationRules('nullable', 'max:255')
+                ->updateRules('nullable', 'max:255'),
 
-                Select::make( __('course'), 'document_course_id')
-                ->options(DocumentCourse::pluck('name' , 'id')->toArray())
-                ->rules('required', 'numeric'),
-
-
-            File::make('path')->rules('file' , 'max:80000'),
+                Text::make('mobile')
+                ->creationRules('nullable', 'max:255')
+                ->updateRules('nullable', 'max:255'),
 
         ];
     }

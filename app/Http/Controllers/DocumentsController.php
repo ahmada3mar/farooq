@@ -3,8 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Document;
+use App\Models\Section;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\File as FacadesFile;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Response as FacadesResponse;
 use Inertia\Inertia;
+use Laravel\Nova\Fields\File;
 
 class DocumentsController extends Controller
 {
@@ -15,43 +21,36 @@ class DocumentsController extends Controller
      */
     public function index(Request $request)
     {
-        $docs = Document::orderBy('downloads' , 'DESC')->with('course')->limit(5)->get();
+        $docs = Document::orderBy('downloads' , 'DESC')->limit(5)->get();
+        $sections = Section::with('documentCourses')->orderBy('Order')->get();
 
-    //     $query = Document::query();
+        $query = Document::query();
 
-    //     if($request->has('class')){
-    //         $query->where('class' , $request->class);
-    //     }
+        if($request->has('course')){
+            $query->where('document_course_id' , $request->course);
+        }
+        if($request->has('section')){
+            $query->where('section_id' , $request->section);
+        }
+        if($request->has('type')){
+            $query->where('type' , $request->type);
+        }
+        if($request->has('top')){
+            $query->orderBy('downloads' , 'DESC')->limit(5);
+        }
 
-    //     if($request->has('section')){
-    //         $query->whereHas('section' , function($q) use ($request){
-    //            return $q->where('id',  $request->section);
-    //         });
-    //     }
 
-    //     if($request->has('category')){
-    //         switch ($request->category) {
-    //             case 'primary':
-    //                 $query->where('class' , '<=' , 6);
-    //                 break;
+       $docs =  $query->with('documentCourse')->with('section')->get();
+       
+       $types = [
+        [ 'key' => 1, 'value' => 'اسئلة سنوات'],
+        [ 'key' => 2, 'value' => ' أوراق عمل'],
+        [ 'key' =>3, 'value' => 'دوسيات'],
+        [ 'key' =>4, 'value' => 'الكتب'],
+       ];
 
-    //             case 'secondary':
-    //                 $query->where('class' , '>=' , 7)->where('class' , '<=' , 10);
-    //                 break;
 
-    //             case 'highschool':
-    //                 $query->where('class' , '>' , 10);
-    //                 break;
-    //         }
-    //     }
-
-    //     if($request->has('name')){
-    //         $query->where('name' , 'LIKE %' , "{$request->class}%");
-    //     }
-
-    //    $courses =  $query->with('user')->withCount('lectures')->latest()->paginate(20);
-
-        return Inertia::render('Documents' , compact('docs' ));
+        return Inertia::render('Documents' , compact('docs', 'sections' , 'types'));
 
     }
 
@@ -60,11 +59,19 @@ class DocumentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function download($id)
+    public function pre_download(Document $document)
     {
-        $document = Document::findOrFail($id);
         $document->increment('downloads');
+
+        return redirect(env('APP_URL') .'/document/download_file/'.$document->path.'/'.$document->name);
+
         return response()->download(storage_path("app/public/$document->path"), "$document->name" . '.' . substr(strrchr($document->path, "."), 1));
+    }
+    public function download( $path, $name)
+    {
+      
+
+        return response()->download(storage_path("app/public/$path"), $name . '.' . substr(strrchr($path, "."), 1));
     }
 
 

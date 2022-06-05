@@ -64,6 +64,7 @@ class Section extends Resource
      * @return array
      */
 
+    public static $group = 'settings';
 
 
     public function fields(Request $request)

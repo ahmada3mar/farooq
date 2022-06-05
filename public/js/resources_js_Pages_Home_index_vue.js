@@ -48,8 +48,7 @@ var __default__ = {
       })) === null || _this$settings$find4 === void 0 ? void 0 : _this$settings$find4.value) || "#777"
     };
   },
-  mounted: function mounted() {
-    console.log("docs", this.docs); // this.jq()
+  mounted: function mounted() {// this.jq()
     // console.log( this.settings.find(s=>s.key == 'home_cover_image')?.value || '/assets/images/banner.jpg' )
     // ready();
   }
@@ -654,7 +653,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  }), _hoisted_45]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Jobs Container "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.docs, function (document) {
+  }), _hoisted_45]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Jobs Container "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [$props.docs ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    key: 0
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.docs, function (document) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Link, {
       key: document.id,
       href: "/document/download/".concat(document.id),
@@ -665,7 +666,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         /* TEXT */
         ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_51, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(document.downloads) + " تنزيل ", 1
         /* TEXT */
-        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [_hoisted_52, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" المادة " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.__(document.course.name)), 1
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [_hoisted_52, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" المادة " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.__(document.document_course_id.name)), 1
         /* TEXT */
         )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [_hoisted_53, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" الصف " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.__(document["class"])), 1
         /* TEXT */
@@ -679,7 +680,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     , ["href"]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Highest Rated Freelancers "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Carousel"], {
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Highest Rated Freelancers "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Carousel"], {
     snapAlign: "center",
     breakpoints: {
       1200: {
