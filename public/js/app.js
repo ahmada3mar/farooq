@@ -1616,6 +1616,22 @@ var map = {
 		"./resources/js/Pages/Test/index.vue",
 		"resources_js_Pages_Test_index_vue"
 	],
+	"./checkout": [
+		"./resources/js/Pages/checkout/index.vue",
+		"resources_js_Pages_checkout_index_vue"
+	],
+	"./checkout/": [
+		"./resources/js/Pages/checkout/index.vue",
+		"resources_js_Pages_checkout_index_vue"
+	],
+	"./checkout/index": [
+		"./resources/js/Pages/checkout/index.vue",
+		"resources_js_Pages_checkout_index_vue"
+	],
+	"./checkout/index.vue": [
+		"./resources/js/Pages/checkout/index.vue",
+		"resources_js_Pages_checkout_index_vue"
+	],
 	"./course": [
 		"./resources/js/Pages/course/index.vue",
 		"resources_js_Pages_course_index_vue"

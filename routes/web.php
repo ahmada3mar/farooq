@@ -8,6 +8,7 @@ use App\Http\Controllers\DocumentsController;
 use App\Http\Controllers\InstructorsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
+
 use App\Http\Controllers\SellPointsController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -16,7 +17,6 @@ use App\Models\Section;
 use Inertia\Inertia;
 
 
-// use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 
 /*
@@ -55,7 +55,7 @@ Route::get('/profile/{user}', [UserController::class, 'profile']);
 
 
 
-Route::get('/login', [LoginController::class, 'loginIndex']);
+Route::get('/login', [LoginController::class, 'loginIndex'])->name('login');
 Route::get('/Register', [LoginController::class, 'registerIndex']);
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/register', [LoginController::class, 'register']);

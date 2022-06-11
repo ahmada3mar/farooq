@@ -2,8 +2,7 @@
 
 namespace App\Nova\Metrics;
 
-use App\Models\Course;
-use App\Models\User;
+use App\Models\UserCourse;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Metrics\Value;
 
@@ -20,36 +19,37 @@ class ParchusedCourses extends Value
     public function calculate(NovaRequest $request)
     {
 
+        return $this->count($request , UserCourse::class )->suffix('courses');
 
-        $value = User::has('courses' , '>=' , 1)
-        ->role('user')
-        ->select('id')
-        ->setEagerLoads([])
-        ->withCount('courses')
-        ->get()
-        ->sum('courses_count');
+        // $value = User::has('courses' , '>=' , 1)
+        // ->role('user')
+        // ->select('id')
+        // ->setEagerLoads([])
+        // ->withCount('courses')
+        // ->get()
+        // ->sum('courses_count');
 
 
-        return [
-            'value' => $value,
-            'previous' => 3,
-            'previousLabel' => 'previousLabel',
-            'prefix' => null,
-            'suffix' => 'course',
-            'suffixInflection' =>null,
-            'format' => '0',
-            'zeroResult' =>0,
-        ];
+        // return [
+        //     'value' => $value,
+        //     'previous' => 3,
+        //     'previousLabel' => 'previousLabel',
+        //     'prefix' => null,
+        //     'suffix' => 'course',
+        //     'suffixInflection' =>null,
+        //     'format' => '0',
+        //     'zeroResult' =>0,
+        // ];
 
-        $courses = User::withCount('courses')->get();
+        // $courses = User::withCount('courses')->get();
 
-        return  $this->result(
-            $courses->flatMap(function ($course) {
-                return [
-                    $course->name => $course->users_count
-                ];
-            })->toArray()
-        );
+        // return  $this->result(
+        //     $courses->flatMap(function ($course) {
+        //         return [
+        //             $course->name => $course->users_count
+        //         ];
+        //     })->toArray()
+        // );
     }
 
     /**
