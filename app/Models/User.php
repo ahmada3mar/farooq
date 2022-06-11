@@ -25,7 +25,7 @@ class User extends Authenticatable
         'password',
     ];
 
-    protected $with = ['courses' ,'section'];
+    protected $with = ['courses', 'registerdCourses' ,'section'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -35,6 +35,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'balance'
     ];
 
     /**
@@ -50,6 +51,16 @@ class User extends Authenticatable
     public function courses(){
 
         return $this->hasMany(Course::class);
+    }
+
+    public function registerdCourses(){
+
+        return $this->hasManyThrough(Course::class ,UserCourse::class , 'user_id' , 'id' , null ,'course_id');
+    }
+
+    public function userCourses(){
+
+        return $this->hasMany(UserCourse::class);
     }
 
     public function userAnswers(){

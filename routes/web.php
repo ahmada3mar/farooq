@@ -7,13 +7,12 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DocumentsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
-use App\Models\User;
+use App\Models\Course;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Models\Document;
 use Inertia\Inertia;
 
 
-// use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 
 /*
@@ -26,6 +25,18 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/test' , function(){
+    return "<a href='http://127.0.0.1:8000/test2'>here</a>" ; // redirect('http://127.0.0.1:8000/test2');
+});
+
+Route::get('/checkout' , function(){
+    // $user = Auth::user();
+    // // $user->userCourses()->create(['course_id' => 5]);
+    // dd($user->registerdCourses);
+    $course = Course::withCount('lectures')->with('user')->find(5);
+    return Inertia::render('checkout' , compact('course'));
+});
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
@@ -42,7 +53,7 @@ Route::get('/profile/{user}', [UserController::class, 'profile']);
 
 
 
-Route::get('/login', [LoginController::class, 'loginIndex']);
+Route::get('/login', [LoginController::class, 'loginIndex'])->name('login');
 Route::get('/Register', [LoginController::class, 'registerIndex']);
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/register', [LoginController::class, 'register']);

@@ -11,6 +11,7 @@ use App\Policies\PermissionPolicy;
 use App\Policies\RolePolicy;
 use Digitalcloud\MultilingualNova\Http\Middleware\InitializeLanguage;
 use Digitalcloud\MultilingualNova\NovaLanguageTool;
+use Farooq\GenerateCards\GenerateCards;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Cards\Help;
 use Laravel\Nova\Nova;
@@ -93,7 +94,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             ->roleResource(Role::class)
             ->rolePolicy(RolePolicy::class)
             ->permissionPolicy(PermissionPolicy::class),
-            new NovaLanguageTool()
+            new NovaLanguageTool(),
+            new GenerateCards()
 
         ];
     }

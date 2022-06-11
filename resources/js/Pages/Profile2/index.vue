@@ -1,283 +1,262 @@
 <template>
-    <Head>
-        <title>course</title>
-        <meta name="description" content="404" head-key="description" />
-        <meta name="keywords" content="404" />
-    </Head>
-    <div
-        class="single-page-header freelancer-header"
-        :style="
-        'background-image: url(' +
-        (user.cover ? '/storage/' + user.cover : '/assets/images/banner.jpg') +
-        ')'
-      "
-    >
-        <div class="container arabic">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="single-page-header-inner flexRight">
-                        <div class="right-side">
-                            <div class="header-details flexCenter">
-                                <h3 class="text-capitalize">
-                                    {{ user.name }} <span> {{ user.title }}</span>
-                                </h3>
-                                <!-- <ul>
+  <Head>
+    <title>course</title>
+    <meta name="description" content="404" head-key="description" />
+    <meta name="keywords" content="404" />
+  </Head>
+  <div
+    class="single-page-header freelancer-header"
+    :style="
+      'background-image: url(' +
+      (user.cover ? '/storage/' + user.cover : '/assets/images/banner.jpg') +
+      ')'
+    "
+  >
+    <div class="container arabic">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="single-page-header-inner flexRight">
+            <div class="right-side">
+              <div class="header-details flexCenter">
+                <h3 class="text-capitalize">
+                  {{ user.name }} <span> {{ user.title }}</span>
+                </h3>
+                <!-- <ul>
                   <li>
                     <div class="verified-badge-with-title">تم التحقق</div>
                   </li>
                 </ul> -->
-                            </div>
-                            <div class="header-image freelancer-avatar">
-                                <img :src="`/storage/${user.avatar}`" :alt="`${ user.name }`" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <div class="header-image freelancer-avatar">
+                <img :src="`/storage/${user.avatar}`" :alt="`${user.name}`" />
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
-    <div class="container">
-        <div class="row">
-            <!-- Content -->
-            <div class="col-xl-8 col-lg-8 content-right-offset">
-                <!-- Page Content -->
-                <div class="single-page-section arabic">
-                    <h2 class="margin-bottom-25">حول</h2>
-                   
-                        <div v-html="user.description"></div>
-                   
-                </div>
+  <div class="container">
+    <div class="row">
+      <!-- Content -->
+      <div class="col-xl-8 col-lg-8 content-right-offset">
+        <!-- Page Content -->
+        <div class="single-page-section arabic">
+          <h2 class="margin-bottom-25">حول</h2>
 
-                <!-- Boxed List -->
-                <div class="boxed-list margin-bottom-60 arabic">
-                    <div class="boxed-list-headline">
-                        <h3>
-                            المساقات المسجلة
-                            <i class="icon-feather-video mx-2"></i>
-                        </h3>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div
-                        class="pagination-container margin-top-40 margin-bottom-10"
-                    >
-                        <div class="single-page-section">
-                            <!-- Listings Container -->
-                            <div class="listings-container grid-layout">
-                                <Link
-                                    v-for="course in user.courses"
-                                    :key="course.id"
-                                    :href="`/course/${course.id}`"
-                                    class="job-listing"
-                                >
-                                    <div class="job-listing-details">
-                                        <div class="job-listing-company-logo">
-                                            <img
-                                                :src="`/storage/${course.image}`"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div class="job-listing-description">
-                                            <h4 class="job-listing-company">
-                                                الصف {{ __(course.class) }}
-                                            </h4>
-                                            <h3 class="job-listing-title">
-                                                {{ course.name }}
-                                            </h3>
-                                        </div>
-                                    </div>
-
-                                    <!-- Job Listing Footer -->
-                                    <div class="job-listing-footer">
-                                        <ul>
-                                            <li>
-                                                <i
-                                                    class="icon-line-awesome-graduation-cap"
-                                                >
-                                                </i>
-                                                الصف
-                                                {{ __(course.class) }}
-                                            </li>
-                                            <li>
-                                                <i
-                                                    class="icon-material-outline-access-time"
-                                                >
-                                                </i>
-                                                عدد الدروس
-                                                {{
-                                                    course.units.reduce(
-                                                        (
-                                                            previousValue,
-                                                            currentValue
-                                                        ) =>
-                                                            previousValue +
-                                                            currentValue
-                                                                .lectures
-                                                                .length,
-                                                        0
-                                                    )
-                                                }}
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-
-            <!-- Sidebar -->
-            <div class="col-xl-4 col-lg-4">
-                <div class="sidebar-container">
-                    <!-- <a href="#small-dialog" class="apply-now-button popup-with-zoom-anim">تحديل <i class="icon-material-outline-arrow-right-alt"></i></a> -->
-
-                    <!-- Sidebar Widget -->
-                    <div class="sidebar-widget arabic">
-                        <div class="job-overview">
-                            <div class="job-overview-headline">ملخص</div>
-                            <div class="job-overview-inner">
-                                <ul>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-business-center"
-                                        ></i>
-                                        <div class="margin-right-30">
-                                        <span>الوضيفة</span>
-                                        <h5>{{ user.title }}</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-location-on"
-                                        ></i>
-                                        <div class="margin-right-30">
-                                        <span>الموقع</span>
-                                        <h5>{{ user.city }} {{ user.area }}</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="icon-feather-book"></i>
-                                        <div class="margin-right-30">
-                                        <span>الكورسات</span>
-                                        <h5>{{ user.courses.length }}</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-access-time"
-                                        ></i>
-                                        <div class="margin-right-30">
-                                        <span>الخبرة</span>
-                                        <h5>{{ user.experience }}</h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Widget -->
-                    <div class="sidebar-widget arabic">
-                        <h3>التواصل</h3>
-                        <div class="freelancer-socials margin-top-25">
-                            <ul>
-                                <li>
-                                    <a
-                                        :href="`${ user.facebook }`"
-                                        title="icon-brand-facebook"
-                                        data-tippy-placement="top"
-                                        target="_blank"
-                                        ><i class="icon-brand-facebook"></i
-                                    ></a>
-                                </li>
-                                <li>
-                                    <a
-                                        :href="`${ user.twitter }`"
-                                        title="Twitter"
-                                        data-tippy-placement="top"
-                                        target="_blank"
-                                        ><i class="icon-brand-twitter"></i
-                                    ></a>
-                                </li>
-                                <li>
-                                    <a
-                                        :href="`${ user.telegram }`"
-                                        title="Telegram"
-                                        data-tippy-placement="top"
-                                        target="_blank"
-                                        ><i class="icon-brand-telegram"></i
-                                    ></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+          <div v-html="user.description"></div>
         </div>
+
+        <!-- Boxed List -->
+        <div class="boxed-list margin-bottom-60 arabic">
+          <div class="boxed-list-headline">
+            <h3>
+              المساقات المسجلة
+              <i class="icon-feather-video mx-2"></i>
+            </h3>
+          </div>
+          <div class="clearfix"></div>
+          <div class="pagination-container margin-top-40 margin-bottom-10">
+            <div class="single-page-section">
+              <!-- Listings Container -->
+              <div class="listings-container grid-layout">
+                <Link
+                  v-for="course in user.registerd_courses"
+                  :key="course.id"
+                  :href="`/course/${course.id}`"
+                  class="job-listing"
+                >
+                  <div class="job-listing-details">
+                    <div class="job-listing-company-logo">
+                      <img :src="`/storage/${course.image}`" alt="" />
+                    </div>
+                    <div class="job-listing-description">
+                      <h4 class="job-listing-company">
+                        الصف {{ __(course.class) }}
+                      </h4>
+                      <h3 class="job-listing-title">
+                        {{ course.name }}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <!-- Job Listing Footer -->
+                  <div class="job-listing-footer">
+                    <ul>
+                      <li>
+                        <i class="icon-line-awesome-graduation-cap"> </i>
+                        الصف
+                        {{ __(course.class) }}
+                      </li>
+                      <li>
+                        <i class="icon-material-outline-access-time"> </i>
+                        عدد الدروس
+                        {{
+                          course.lectures_count
+                        }}
+                      </li>
+                    </ul>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-xl-4 col-lg-4">
+        <div class="sidebar-container">
+          <!-- <a href="#small-dialog" class="apply-now-button popup-with-zoom-anim">تحديل <i class="icon-material-outline-arrow-right-alt"></i></a> -->
+
+          <!-- Sidebar Widget -->
+          <div class="sidebar-widget arabic">
+            <div class="job-overview">
+              <div class="job-overview-headline">ملخص</div>
+              <div class="job-overview-inner">
+                <ul>
+                  <li class="d-flex" v-if="user.balance != null">
+                    <i class="icon-line-awesome-money"></i>
+                    <div class="margin-right-30">
+                      <span> الرصيد</span>
+                      <h5>{{ user.balance }} JOD</h5>
+                    </div>
+                      <div title="اضافة رصيد" class="add-balance mx-2">
+                        <i class="icon-line-awesome-plus-circle"></i>
+                      </div>
+                  </li>
+                  <li v-if="user.title">
+                    <i class="icon-material-outline-business-center"></i>
+                    <div class="margin-right-30">
+                      <span>الوضيفة</span>
+                      <h5>{{ user.title || "طالب" }}</h5>
+                    </div>
+                  </li>
+                  <li v-if="user.city || user.area">
+                    <i class="icon-material-outline-location-on"></i>
+                    <div class="margin-right-30">
+                      <span>الموقع</span>
+                      <h5>{{ user.city }} {{ user.area }}</h5>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="icon-feather-book"></i>
+                    <div class="margin-right-30">
+                      <span>الكورسات</span>
+                      <h5>{{ user.courses.length }}</h5>
+                    </div>
+                  </li>
+                  <li v-if="user.experience">
+                    <i class="icon-material-outline-access-time"></i>
+                    <div class="margin-right-30">
+                      <span>الخبرة</span>
+                      <h5>{{ user.experience }}</h5>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Widget -->
+          <div v-if="user.facebook || user.twitter || user.telegram" class="sidebar-widget arabic">
+            <h3>التواصل</h3>
+            <div class="freelancer-socials margin-top-25">
+              <ul>
+                <li v-if="user.facebook">
+                  <a
+                    :href="`${user.facebook}`"
+                    title="icon-brand-facebook"
+                    data-tippy-placement="top"
+                    target="_blank"
+                    ><i class="icon-brand-facebook"></i
+                  ></a>
+                </li>
+                <li v-if="user.twitter">
+                  <a
+                    :href="`${user.twitter}`"
+                    title="Twitter"
+                    data-tippy-placement="top"
+                    target="_blank"
+                    ><i class="icon-brand-twitter"></i
+                  ></a>
+                </li>
+                <li v-if="user.telegram">
+                  <a
+                    :href="`${user.telegram}`"
+                    title="Telegram"
+                    data-tippy-placement="top"
+                    target="_blank"
+                    ><i class="icon-brand-telegram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    props: {
-        course: Object,
-        user: Object,
+  props: {
+    course: Object,
+    user: Object,
+  },
+  mounted(){
+      console.log(this.user)
+  },
+  data() {
+    return {
+      lectur: this.course?.units[0]?.lectures[0],
+    };
+  },
+  methods: {
+    changeVid(lectur) {
+      this.lectur = lectur;
     },
-    data() {
-        return {
-            lectur: this.course?.units[0]?.lectures[0],
-        };
-    },
-    methods: {
-        changeVid(lectur) {
-            this.lectur = lectur;
-        },
-    },
-    mounted() {
-        accordion().init({
-            speed: 300,
-            oneOpen: true,
-        });
-
-    },
-    updated() {
-        /*----------------------------------------------------*/
-        /*	Accordion @Lewis Briffa
-        /*----------------------------------------------------*/
-    },
+  },
 };
 </script>
 
 <style scoped>
 .single-page-header {
-    background: url(/assets/images/home-background-02.jpg);
-    background-size: cover;
-    background-position: center;
+  background: url(/assets/images/home-background-02.jpg);
+  background-size: cover;
+  background-position: center;
 }
 .job-listing-details {
-    background: var(--img);
-    background-size: cover;
-    background-position: center;
+  background: var(--img);
+  background-size: cover;
+  background-position: center;
 }
 .single-page-header.freelancer-header .header-details h3 {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 .single-page-header.freelancer-header .header-image {
-    justify-content: center;
+  justify-content: center;
 }
 .single-page-header .header-image {
-    margin-right: 0;
-    display: flex;
-    justify-content: center;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
 }
-.job-overview .job-overview-inner ul li i{
+.job-overview .job-overview-inner ul li i {
   left: unset;
   right: 0;
 }
 .single-page-section {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+.add-balance{
+    cursor: pointer;
+}
+.add-balance i{
+    right: unset !important;
 }
 </style>

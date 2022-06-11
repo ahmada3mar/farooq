@@ -10,7 +10,9 @@ class Course extends Model
 {
     use HasFactory;
 
-    protected $with = ['units.lectures.question.answers'];
+
+    protected $withCount = ['lectures'];
+
 
     protected static $class_names = [
         1 => 'الأول',
@@ -34,6 +36,7 @@ class Course extends Model
             $course->user_id = $course->user_id ?? auth()->user()->id;
         });
 
+
     }
 
     public function user()
@@ -51,7 +54,6 @@ class Course extends Model
 
     public function lectures()
     {
-
         return $this->hasMany(Lecture::class);
     }
 
