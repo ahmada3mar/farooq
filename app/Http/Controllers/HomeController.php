@@ -27,7 +27,7 @@ class HomeController extends Controller
 
         $courses = Course::with('user' , 'section')->inRandomOrder()->limit(5)->get();
 
-        $docs = Document::orderBy('downloads' , 'DESC')->with('course')->limit(5)->get();
+        $docs = Document::orderBy('downloads' , 'DESC')->limit(5)->get();
         $mostSelling = Course::orderBy('subscriber' , 'DESC')->limit(4)->get();
 
         $instructos = User::with('courses')->role('instructor')->get();
