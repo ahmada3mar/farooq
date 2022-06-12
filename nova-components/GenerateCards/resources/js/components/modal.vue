@@ -4,7 +4,7 @@
       @submit.prevent="handleConfirm"
       slot-scope="props"
       class="bg-white rounded-lg shadow-lg overflow-hidden p-5 mt-8"
-      style="width: 500px; padding: 25px; position: relative; top:70%"
+      style="width: 500px; padding: 25px; position: relative; top: 70%"
     >
       <div v-if="!isLoading">
         <h3 class="m-1">Creating Cards</h3>
@@ -26,33 +26,33 @@
 
         <p class="m-1">You can download it as Excel sheet</p>
         <div class="flex items-center justify-end mt-8">
-          <button
-            @click="download"
-            type="submit"
-            class="
-              btn btn-default btn-primary
-              inline-flex
-              items-center
-              relative
-              mt-5
-            "
-            dusk="create-button"
+          <a
+            class="m-1"
+            :href="url"
+            :download="`cards-${new Date().toISOString().slice(0, 10)}.xlsx`"
           >
-            <a
-              class="m-1"
-              :href="url"
-              :download="`cards-${new Date().toISOString().slice(0, 10)}.xlsx`"
+            <div
+              @click="download"
+              type="submit"
+              class="
+                btn btn-default btn-primary
+                inline-flex
+                items-center
+                relative
+                mt-5
+              "
+              dusk="create-button"
             >
               Download
               <icon
-                class="mr-2"
+                class="ml-2"
                 type="download"
                 view-box="0 0 24 24"
                 width="16"
                 height="16"
               />
-            </a>
-          </button>
+            </div>
+          </a>
         </div>
       </div>
     </form>
@@ -62,7 +62,7 @@
 <script>
 export default {
   name: "GeneralModal",
-  props: ["isLoading", "url" , "num"],
+  props: ["isLoading", "url", "num"],
   methods: {
     handleClose() {
       this.$emit("close");
@@ -75,10 +75,9 @@ export default {
 </script>
 
 <style scoped>
-
-a{
-    text-decoration: none;
-    color: white;
+a {
+  text-decoration: none;
+  color: white;
 }
 .spinner {
   display: flex;

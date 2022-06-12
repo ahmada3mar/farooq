@@ -4775,7 +4775,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\na[data-v-478d961c]{\n    text-decoration: none;\n    color: white;\n}\n.spinner[data-v-478d961c] {\n  display: flex;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  padding: 15;\n}\n.sk-chase[data-v-478d961c] {\n  width: 40px;\n  height: 40px;\n  position: relative;\n  -webkit-animation: sk-chase-data-v-478d961c 2.5s infinite linear both;\n          animation: sk-chase-data-v-478d961c 2.5s infinite linear both;\n}\n.sk-chase-dot[data-v-478d961c] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  left: 0;\n  top: 0;\n  -webkit-animation: sk-chase-dot-data-v-478d961c 2s infinite ease-in-out both;\n          animation: sk-chase-dot-data-v-478d961c 2s infinite ease-in-out both;\n}\n.sk-chase-dot[data-v-478d961c]:before {\n  content: \"\";\n  display: block;\n  width: 25%;\n  height: 25%;\n  background-color: teal;\n  border-radius: 100%;\n  -webkit-animation: sk-chase-dot-before-data-v-478d961c 2s infinite ease-in-out both;\n          animation: sk-chase-dot-before-data-v-478d961c 2s infinite ease-in-out both;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(1) {\n  -webkit-animation-delay: -1.1s;\n          animation-delay: -1.1s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(2) {\n  -webkit-animation-delay: -1s;\n          animation-delay: -1s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(3) {\n  -webkit-animation-delay: -0.9s;\n          animation-delay: -0.9s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(4) {\n  -webkit-animation-delay: -0.8s;\n          animation-delay: -0.8s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(5) {\n  -webkit-animation-delay: -0.7s;\n          animation-delay: -0.7s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(6) {\n  -webkit-animation-delay: -0.6s;\n          animation-delay: -0.6s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(1):before {\n  -webkit-animation-delay: -1.1s;\n          animation-delay: -1.1s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(2):before {\n  -webkit-animation-delay: -1s;\n          animation-delay: -1s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(3):before {\n  -webkit-animation-delay: -0.9s;\n          animation-delay: -0.9s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(4):before {\n  -webkit-animation-delay: -0.8s;\n          animation-delay: -0.8s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(5):before {\n  -webkit-animation-delay: -0.7s;\n          animation-delay: -0.7s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(6):before {\n  -webkit-animation-delay: -0.6s;\n          animation-delay: -0.6s;\n}\nmodal[data-v-478d961c] {\n  top: 25%;\n}\n@-webkit-keyframes sk-chase-data-v-478d961c {\n100% {\n    transform: rotate(360deg);\n}\n}\n@keyframes sk-chase-data-v-478d961c {\n100% {\n    transform: rotate(360deg);\n}\n}\n@-webkit-keyframes sk-chase-dot-data-v-478d961c {\n80%,\n  100% {\n    transform: rotate(360deg);\n}\n}\n@keyframes sk-chase-dot-data-v-478d961c {\n80%,\n  100% {\n    transform: rotate(360deg);\n}\n}\n@-webkit-keyframes sk-chase-dot-before-data-v-478d961c {\n50% {\n    transform: scale(0.4);\n}\n100%,\n  0% {\n    transform: scale(1);\n}\n}\n@keyframes sk-chase-dot-before-data-v-478d961c {\n50% {\n    transform: scale(0.4);\n}\n100%,\n  0% {\n    transform: scale(1);\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\na[data-v-478d961c] {\n  text-decoration: none;\n  color: white;\n}\n.spinner[data-v-478d961c] {\n  display: flex;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  padding: 15;\n}\n.sk-chase[data-v-478d961c] {\n  width: 40px;\n  height: 40px;\n  position: relative;\n  -webkit-animation: sk-chase-data-v-478d961c 2.5s infinite linear both;\n          animation: sk-chase-data-v-478d961c 2.5s infinite linear both;\n}\n.sk-chase-dot[data-v-478d961c] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  left: 0;\n  top: 0;\n  -webkit-animation: sk-chase-dot-data-v-478d961c 2s infinite ease-in-out both;\n          animation: sk-chase-dot-data-v-478d961c 2s infinite ease-in-out both;\n}\n.sk-chase-dot[data-v-478d961c]:before {\n  content: \"\";\n  display: block;\n  width: 25%;\n  height: 25%;\n  background-color: teal;\n  border-radius: 100%;\n  -webkit-animation: sk-chase-dot-before-data-v-478d961c 2s infinite ease-in-out both;\n          animation: sk-chase-dot-before-data-v-478d961c 2s infinite ease-in-out both;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(1) {\n  -webkit-animation-delay: -1.1s;\n          animation-delay: -1.1s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(2) {\n  -webkit-animation-delay: -1s;\n          animation-delay: -1s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(3) {\n  -webkit-animation-delay: -0.9s;\n          animation-delay: -0.9s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(4) {\n  -webkit-animation-delay: -0.8s;\n          animation-delay: -0.8s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(5) {\n  -webkit-animation-delay: -0.7s;\n          animation-delay: -0.7s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(6) {\n  -webkit-animation-delay: -0.6s;\n          animation-delay: -0.6s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(1):before {\n  -webkit-animation-delay: -1.1s;\n          animation-delay: -1.1s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(2):before {\n  -webkit-animation-delay: -1s;\n          animation-delay: -1s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(3):before {\n  -webkit-animation-delay: -0.9s;\n          animation-delay: -0.9s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(4):before {\n  -webkit-animation-delay: -0.8s;\n          animation-delay: -0.8s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(5):before {\n  -webkit-animation-delay: -0.7s;\n          animation-delay: -0.7s;\n}\n.sk-chase-dot[data-v-478d961c]:nth-child(6):before {\n  -webkit-animation-delay: -0.6s;\n          animation-delay: -0.6s;\n}\nmodal[data-v-478d961c] {\n  top: 25%;\n}\n@-webkit-keyframes sk-chase-data-v-478d961c {\n100% {\n    transform: rotate(360deg);\n}\n}\n@keyframes sk-chase-data-v-478d961c {\n100% {\n    transform: rotate(360deg);\n}\n}\n@-webkit-keyframes sk-chase-dot-data-v-478d961c {\n80%,\n  100% {\n    transform: rotate(360deg);\n}\n}\n@keyframes sk-chase-dot-data-v-478d961c {\n80%,\n  100% {\n    transform: rotate(360deg);\n}\n}\n@-webkit-keyframes sk-chase-dot-before-data-v-478d961c {\n50% {\n    transform: scale(0.4);\n}\n100%,\n  0% {\n    transform: scale(1);\n}\n}\n@keyframes sk-chase-dot-before-data-v-478d961c {\n50% {\n    transform: scale(0.4);\n}\n100%,\n  0% {\n    transform: scale(1);\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5974,30 +5974,33 @@ var render = function () {
                       { staticClass: "flex items-center justify-end mt-8" },
                       [
                         _c(
-                          "button",
+                          "a",
                           {
-                            staticClass:
-                              "\n            btn btn-default btn-primary\n            inline-flex\n            items-center\n            relative\n            mt-5\n          ",
-                            attrs: { type: "submit", dusk: "create-button" },
-                            on: { click: _vm.download },
+                            staticClass: "m-1",
+                            attrs: {
+                              href: _vm.url,
+                              download:
+                                "cards-" +
+                                new Date().toISOString().slice(0, 10) +
+                                ".xlsx",
+                            },
                           },
                           [
                             _c(
-                              "a",
+                              "div",
                               {
-                                staticClass: "m-1",
+                                staticClass:
+                                  "\n              btn btn-default btn-primary\n              inline-flex\n              items-center\n              relative\n              mt-5\n            ",
                                 attrs: {
-                                  href: _vm.url,
-                                  download:
-                                    "cards-" +
-                                    new Date().toISOString().slice(0, 10) +
-                                    ".xlsx",
+                                  type: "submit",
+                                  dusk: "create-button",
                                 },
+                                on: { click: _vm.download },
                               },
                               [
                                 _vm._v("\n            Download\n            "),
                                 _c("icon", {
-                                  staticClass: "mr-2",
+                                  staticClass: "ml-2",
                                   attrs: {
                                     type: "download",
                                     "view-box": "0 0 24 24",
