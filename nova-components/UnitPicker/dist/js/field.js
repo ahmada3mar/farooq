@@ -285,12 +285,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
+                console.log(_this4.field.attribute.toLowerCase());
                 Nova.$emit("unit-picker-" + _this4.field.attribute.toLowerCase(), {
                   value: value,
                   field: _this4.field
                 });
 
-              case 1:
+              case 2:
               case "end":
                 return _context4.stop();
             }

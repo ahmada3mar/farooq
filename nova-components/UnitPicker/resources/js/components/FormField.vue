@@ -168,6 +168,7 @@ export default {
     },
 
     async onChange(value) {
+        console.log(this.field.attribute.toLowerCase())
       Nova.$emit("unit-picker-" + this.field.attribute.toLowerCase(), {
         value,
         field: this.field,

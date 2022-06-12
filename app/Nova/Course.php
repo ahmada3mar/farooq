@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use App\Models\Section;
+use App\Nova\Actions\GenerateCards;
 use App\Nova\Section as NovaSection;
 use Epartment\NovaDependencyContainer\NovaDependencyContainer;
 use Farooq\Checkboxes\Checkboxes;
@@ -156,6 +157,8 @@ class Course extends ResourceForUser
      */
     public function actions(Request $request)
     {
-        return [];
+        return [
+            new GenerateCards()
+        ];
     }
 }
