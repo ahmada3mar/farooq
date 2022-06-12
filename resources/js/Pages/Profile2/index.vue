@@ -1,27 +1,28 @@
 <template>
-    <Head>
-        <title>course</title>
-        <meta name="description" content="404" head-key="description" />
-        <meta name="keywords" content="404" />
-    </Head>
-    <div
-        class="single-page-header freelancer-header"
-        :style="
-        'background-image: url(' +
-        (user.cover ? '/storage/' + user.cover : '/assets/images/banner.jpg') +
-        ')'
-      "
-    >
-        <div class="container arabic">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="single-page-header-inner flexRight">
-                        <div class="right-side">
-                            <div class="header-details flexCenter">
-                                <h3 class="text-capitalize">
-                                    {{ user.name }} <span class="profile-title" > {{ user.title }}</span>
-                                </h3>
-                                <!-- <ul>
+  <Head>
+    <title>course</title>
+    <meta name="description" content="404" head-key="description" />
+    <meta name="keywords" content="404" />
+  </Head>
+  <div
+    class="single-page-header freelancer-header"
+    :style="
+      'background-image: url(' +
+      (user.cover ? '/storage/' + user.cover : '/assets/images/banner.jpg') +
+      ')'
+    "
+  >
+    <div class="container arabic">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="single-page-header-inner flexRight">
+            <div class="right-side">
+              <div class="header-details flexCenter">
+                <h3 class="text-capitalize">
+                  {{ user?.name }}
+                  <span class="profile-title"> {{ user.title }}</span>
+                </h3>
+                <!-- <ul>
 
                   <li>
                     <div class="verified-badge-with-title">تم التحقق</div>
@@ -29,7 +30,7 @@
                 </ul> -->
               </div>
               <div class="header-image freelancer-avatar">
-                <img :src="`/storage/${user.avatar}`" :alt="`${user.name}`" />
+                <img :src="`/storage/${user.avatar}`" :alt="`${user?.name}`" />
               </div>
             </div>
           </div>
@@ -77,7 +78,7 @@
                         الصف {{ __(course.class) }}
                       </h4>
                       <h3 class="job-listing-title">
-                        {{ course.name }}
+                        {{ course?.name }}
                       </h3>
                     </div>
                   </div>
@@ -93,9 +94,7 @@
                       <li>
                         <i class="icon-material-outline-access-time"> </i>
                         عدد الدروس
-                        {{
-                          course.lectures_count
-                        }}
+                        {{ course.lectures_count }}
                       </li>
                     </ul>
                   </div>
@@ -112,67 +111,45 @@
         <div class="sidebar-container">
           <!-- <a href="#small-dialog" class="apply-now-button popup-with-zoom-anim">تحديل <i class="icon-material-outline-arrow-right-alt"></i></a> -->
 
-                    <!-- Sidebar Widget -->
-                    <div class="sidebar-widget arabic">
-                        <div class="job-overview">
-                            <div class="job-overview-headline">ملخص</div>
-                            <div class="job-overview-inner">
-                                <ul>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-business-center"
-                                        ></i>
-                                        <div class="margin-right-30">
-                                        <span>الوضيفة</span>
-                                        <h5>{{ user.title }}</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-location-on"
-                                        ></i>
-                                        <div class="margin-right-30">
-                                        <span>الموقع</span>
-                                        <h5>{{ user.city }} {{ user.area }}</h5>
-                                        </div>
-                                    </li>
-                                    <!-- <li>
+          <!-- Sidebar Widget -->
+          <div class="sidebar-widget arabic">
+            <div class="job-overview">
+              <div class="job-overview-headline">ملخص</div>
+              <div class="job-overview-inner">
+                <ul>
+                  <li>
+                    <i class="icon-material-outline-business-center"></i>
+                    <div class="margin-right-30">
+                      <span>الوضيفة</span>
+                      <h5>{{ user.title }}</h5>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="icon-material-outline-location-on"></i>
+                    <div class="margin-right-30">
+                      <span>الموقع</span>
+                      <h5>{{ user.city }} {{ user.area }}</h5>
+                    </div>
+                  </li>
+                  <!-- <li>
                                         <i class="icon-feather-book"></i>
                                         <div class="margin-right-30">
                                         <span>الكورسات</span>
                                         <h5>{{ user.courses.length }}</h5>
                                         </div>
                                     </li> -->
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-access-time"
-                                        ></i>
-                                        <div class="margin-right-30">
-                                        <span>الخبرة</span>
-                                        <h5>{{ user.experience }}</h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
+                  <li>
+                    <i class="icon-material-outline-access-time"></i>
+                    <div class="margin-right-30">
+                      <span>الخبرة</span>
+                      <h5>{{ user.experience }}</h5>
                     </div>
-                      <div title="اضافة رصيد" class="add-balance mx-2">
-                        <i class="icon-line-awesome-plus-circle"></i>
-                      </div>
                   </li>
                   <li v-if="user.title">
                     <i class="icon-material-outline-business-center"></i>
                     <div class="margin-right-30">
                       <span>الوضيفة</span>
                       <h5>{{ user.title || "طالب" }}</h5>
-                    </div>
-                  </li>
-                  <li v-if="user.city || user.area">
-                    <i class="icon-material-outline-location-on"></i>
-                    <div class="margin-right-30">
-                      <span>الموقع</span>
-                      <h5>{{ user.city }} {{ user.area }}</h5>
                     </div>
                   </li>
                   <li>
@@ -195,7 +172,10 @@
           </div>
 
           <!-- Widget -->
-          <div v-if="user.facebook || user.twitter || user.telegram" class="sidebar-widget arabic">
+          <div
+            v-if="user.facebook || user.twitter || user.telegram"
+            class="sidebar-widget arabic"
+          >
             <h3>التواصل</h3>
             <div class="freelancer-socials margin-top-25">
               <ul>
@@ -241,8 +221,8 @@ export default {
     course: Object,
     user: Object,
   },
-  mounted(){
-      console.log(this.user)
+  mounted() {
+    console.log(this.user);
   },
   data() {
     return {
@@ -287,13 +267,13 @@ export default {
   overflow: hidden;
 }
 
-.add-balance{
-    cursor: pointer;
+.add-balance {
+  cursor: pointer;
 }
-.add-balance i{
-    right: unset !important;
+.add-balance i {
+  right: unset !important;
 }
 .profile-title {
-    color: aliceblue !important;
+  color: aliceblue !important;
 }
 </style>

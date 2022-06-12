@@ -70,7 +70,7 @@
                                 <i class="icon-line-awesome-graduation-cap"></i>
                             </div>
                             <div class="category-box-counter">
-                                {{ section.name }}
+                                {{ section?.name }}
                             </div>
                             <div class="category-box-content">
                                 <!-- <h3>الثاني ثانوي</h3> -->
@@ -87,7 +87,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    
+
                     <div
                         class="section-headline centered margin-top-0 margin-bottom-45"
                     >
@@ -111,7 +111,7 @@
                         :style="`background-image:url(/storage/${course.image})`"
                     >
                         <div class="photo-box-content">
-                            <h3>{{ course.name }}</h3>
+                            <h3>{{ course?.name }}</h3>
                             <!-- <span>{{ course.subscriber }} مشترك</span> -->
                         </div>
                     </Link>
@@ -152,7 +152,7 @@
                                 >
                                 <div class="job-listing-description arabic">
                                     <h3 class="job-listing-title">
-                                        {{ document.name }}
+                                        {{ document?.name }}
                                     </h3>
                                     <div class="job-listing-footer">
                                         <ul>
@@ -165,7 +165,7 @@
                                                     class="icon-feather-book-open"
                                                 ></i>
                                                 المادة
-                                                {{ __(document.document_course_id.name) }}
+                                                {{ __(document.document_course_id?.name) }}
                                             </li>
                                             <li>
                                                 <i
@@ -216,13 +216,13 @@
                         <div class="freelancer-name">
                             <h4>
                                 <Link :href="`/profile/${user.id}`"
-                                    >{{ user.name }}
+                                    >{{ user?.name }}
                                 </Link>
                             </h4>
                             <!-- <span class="text-primary">{{
                                 [
                                     ...new Set(
-                                        user.courses.map((item) => item.name)
+                                        user.courses.map((item) => item?.name)
                                     ),
                                 ].reduce(
                                     (previousValue, currentValue) =>
