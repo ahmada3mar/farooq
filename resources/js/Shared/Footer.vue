@@ -66,6 +66,16 @@
                           <i class="icon-brand-linkedin-in"> Linkedin</i>
                         </a>
                       </li>
+                      <li v-if="web_TikTok">
+                        <a
+                          :href="web_TikTok"
+                          title="TikTok"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-brand-TikTok"> TikTok</i>
+                        </a>
+                      </li>
                     </ul>
               </div>
             </div>

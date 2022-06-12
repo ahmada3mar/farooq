@@ -19,7 +19,7 @@
                         <div class="right-side">
                             <div class="header-details flexCenter">
                                 <h3 class="text-capitalize">
-                                    {{ user.name }} <span> {{ user.title }}</span>
+                                    {{ user.name }} <span class="profile-title" > {{ user.title }}</span>
                                 </h3>
                                 <!-- <ul>
                   <li>
@@ -157,13 +157,13 @@
                                         <h5>{{ user.city }} {{ user.area }}</h5>
                                         </div>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <i class="icon-feather-book"></i>
                                         <div class="margin-right-30">
                                         <span>الكورسات</span>
                                         <h5>{{ user.courses.length }}</h5>
                                         </div>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <i
                                             class="icon-material-outline-access-time"
@@ -279,5 +279,8 @@ export default {
 }
 .single-page-section {
     overflow: hidden;
+}
+.profile-title {
+    color: aliceblue !important;
 }
 </style>
