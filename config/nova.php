@@ -7,7 +7,7 @@ use Laravel\Nova\Http\Middleware\Authenticate;
 use Laravel\Nova\Http\Middleware\Authorize;
 use Laravel\Nova\Http\Middleware\BootTools;
 use Laravel\Nova\Http\Middleware\DispatchServingNovaEvent;
-use Spatie\LaravelImageOptimizer\Middlewares\OptimizeImages;
+// use Spatie\LaravelImageOptimizer\Middlewares\OptimizeImages;
 
 return [
 
@@ -109,7 +109,7 @@ return [
         Authorize::class,
         DispatchServingNovaEvent::class,
         NovaAdminAuth::class,
-        OptimizeImages::class
+        // OptimizeImages::class
     ],
 
     /*

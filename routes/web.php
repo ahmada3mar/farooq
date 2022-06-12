@@ -5,11 +5,15 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DocumentsController;
+use App\Http\Controllers\InstructorsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
-use App\Models\Course;
-use Illuminate\Support\Facades\Auth;
+
+use App\Http\Controllers\SellPointsController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Models\Document;
+use App\Models\Section;
 use Inertia\Inertia;
 
 
@@ -26,16 +30,11 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/test' , function(){
-    return "<a href='http://127.0.0.1:8000/test2'>here</a>" ; // redirect('http://127.0.0.1:8000/test2');
-});
+Route::get('/test' , function () {
+    // $sections = Section::with('documentCourses')->orderBy('Order')->get();
 
-Route::get('/checkout' , function(){
-    // $user = Auth::user();
-    // // $user->userCourses()->create(['course_id' => 5]);
-    // dd($user->registerdCourses);
-    $course = Course::withCount('lectures')->with('user')->find(5);
-    return Inertia::render('checkout' , compact('course'));
+    dd(Section::with('documentCourses.documents')->orderBy('Order')->get());
+    // return Inertia::render('Home');
 });
 
 Route::get('/', [HomeController::class, 'index']);
@@ -44,10 +43,13 @@ Route::get('/contact', [ContactController::class, 'index']);
 
 Route::resource('documents', DocumentsController::class);
 Route::get('/documents', [DocumentsController::class, 'index']);
-Route::get('/document/download/{id}', [DocumentsController::class, 'download']);
+Route::get('/document/download/{document}', [DocumentsController::class, 'pre_download']);
+Route::get('/document/download_file/{path}/{name}', [DocumentsController::class, 'download']);
 Route::get('/download/{path}/{name}/{ext}', [CourseController::class, 'download']);
 
 Route::get('/courses', [CoursesController::class, 'index']);
+Route::get('/Instructors', [InstructorsController::class, 'index']);
+Route::get('/Selling-Points', [SellPointsController::class, 'index']);
 Route::resource('users', UserController::class);
 Route::get('/profile/{user}', [UserController::class, 'profile']);
 

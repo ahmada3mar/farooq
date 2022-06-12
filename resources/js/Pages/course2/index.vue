@@ -14,7 +14,7 @@
           <div class="single-page-header-inner">
             <div class="left-side">
               <div class="salary-box margin-left-0">
-                <div class="salary-type">عدد المروس</div>
+                <div class="salary-type">عدد الدروس</div>
                 <div class="salary-amount">14</div>
               </div>
             </div>

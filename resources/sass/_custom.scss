@@ -97,7 +97,9 @@
     display: grid !important;
     place-items: center;
 }
-
+.self-center {
+    align-self: center;
+  }
 .flexCenter {
     display: flex !important;
     align-items: center;
@@ -283,7 +285,12 @@
 .hidden {
     display: none;
 }
-
+.show {
+    display: block;
+}
+.type-button{
+    background-color: #276b7c !important;
+  }
 .hiddenElement {
     position: absolute;
     opacity: 0;

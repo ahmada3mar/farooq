@@ -16,12 +16,12 @@
         <div class="col-xl-12">
           <!-- Section Headline -->
           <div class="section-headline margin-top-0 margin-bottom-35">
-            <h3 class="arabic">أسئلة سنوات</h3>
+            <h3 class="arabic">الملفات</h3>
           </div>
 
           <!-- Jobs Container -->
           <div class="listings-container compact-list-layout margin-top-35">
-            <Link
+            <a
               v-for="document in docs"
               :key="document.id"
               :href="`/document/download/${document.id}`"
@@ -39,12 +39,16 @@
                       </li>
                       <li>
                         <i class="icon-feather-book-open"></i>
-                        المادة {{ __(document.course.name) }}
+                        المادة {{ __(document.document_course.name) }}
 
                       </li>
                       <li>
                         <i class="icon-material-outline-school"></i>
-                        الصف {{ __(document.class) }}
+                         {{ __(document.section.name) }}
+                      </li>
+                      <li>
+                        <i class="icon-line-awesome-file-text"></i>
+                         {{ __(`Type${document.Type}`) }}
                       </li>
 
                     </ul>
@@ -55,7 +59,7 @@
                   <i class="icon-material-outline-attach-file font3rem"></i>
                 </div>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -75,23 +79,7 @@
     </div>
 
     <div class="full-page-sidebar arabic">
-      <div class="full-page-sidebar-inner" data-simplebar>
-        <div class="sidebar-container arabic">
-
-
-          <!-- Tags -->
-            <h3>الصفوف</h3>
-             	<Link href="/courses" class="button gray ripple-effect button-sliding-icon sidebar-button">  الكل <i class="icon-feather-arrow-left"></i></Link>
-             	<Link href="/courses?class=12" class="button gray ripple-effect button-sliding-icon sidebar-button ">  الثاني ثانوي <i class="icon-feather-arrow-left"></i></Link>
-             	<Link href="/courses?category=highschool" class="button gray ripple-effect button-sliding-icon sidebar-button">  الصفوف الثانوية <i class="icon-feather-arrow-left"></i></Link>
-             	<Link href="/courses?category=secondary" class="button gray ripple-effect button-sliding-icon sidebar-button">  الصفوف الأعدادية <i class="icon-feather-arrow-left"></i></Link>
-             	<Link href="courses?category=primary" class="button gray ripple-effect button-sliding-icon sidebar-button">  الصفوف الأساسية <i class="icon-feather-arrow-left"></i></Link>
-          <div class="clearfix"></div>
-
-          <div class="margin-bottom-40"></div>
-        </div>
-        <!-- Sidebar Container / End -->
-      </div>
+      <Sidebar :sections="sections" :types="types" />
     </div>
   </div>
 </template>
@@ -101,15 +89,27 @@
 
 <script>
 import pagination from "../../Shared/Pagination.vue";
+import Sidebar from "./SideBar.vue";
+
 
 export default {
   props: {
     docs: Object,
+    sections: Object,
+    types: Object,
 
   },
   components: {
     pagination,
+    Sidebar,
   },
+    methods:{
+        
+    },
+        mounted() {
+              console.log('this.docs', this.docs);
+              console.log('this.docType', this.docType);
+    },
 };
 </script>
 
@@ -161,5 +161,8 @@ a.headline-link::before {
   }
   .font3rem{
     font-size: 3rem;
+}
+.full-page-container{
+  height: 70% ;
 }
 </style>

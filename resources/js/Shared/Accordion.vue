@@ -1,4 +1,4 @@
-         <template>
+  <template>
   <div class="accordion js-accordion margin-bottom-30">
     <div class="accordion__item js-accordion-item ">
       <div @click="togle" class="accordion-header js-accordion-header">الوصف</div>

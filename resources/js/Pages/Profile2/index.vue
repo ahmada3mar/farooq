@@ -1,27 +1,28 @@
 <template>
-  <Head>
-    <title>course</title>
-    <meta name="description" content="404" head-key="description" />
-    <meta name="keywords" content="404" />
-  </Head>
-  <div
-    class="single-page-header freelancer-header"
-    :style="
-      'background-image: url(' +
-      (user.cover ? '/storage/' + user.cover : '/assets/images/banner.jpg') +
-      ')'
-    "
-  >
-    <div class="container arabic">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="single-page-header-inner flexRight">
-            <div class="right-side">
-              <div class="header-details flexCenter">
-                <h3 class="text-capitalize">
-                  {{ user.name }} <span> {{ user.title }}</span>
-                </h3>
-                <!-- <ul>
+    <Head>
+        <title>course</title>
+        <meta name="description" content="404" head-key="description" />
+        <meta name="keywords" content="404" />
+    </Head>
+    <div
+        class="single-page-header freelancer-header"
+        :style="
+        'background-image: url(' +
+        (user.cover ? '/storage/' + user.cover : '/assets/images/banner.jpg') +
+        ')'
+      "
+    >
+        <div class="container arabic">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="single-page-header-inner flexRight">
+                        <div class="right-side">
+                            <div class="header-details flexCenter">
+                                <h3 class="text-capitalize">
+                                    {{ user.name }} <span class="profile-title" > {{ user.title }}</span>
+                                </h3>
+                                <!-- <ul>
+
                   <li>
                     <div class="verified-badge-with-title">تم التحقق</div>
                   </li>
@@ -111,17 +112,50 @@
         <div class="sidebar-container">
           <!-- <a href="#small-dialog" class="apply-now-button popup-with-zoom-anim">تحديل <i class="icon-material-outline-arrow-right-alt"></i></a> -->
 
-          <!-- Sidebar Widget -->
-          <div class="sidebar-widget arabic">
-            <div class="job-overview">
-              <div class="job-overview-headline">ملخص</div>
-              <div class="job-overview-inner">
-                <ul>
-                  <li class="d-flex" v-if="user.balance != null">
-                    <i class="icon-line-awesome-money"></i>
-                    <div class="margin-right-30">
-                      <span> الرصيد</span>
-                      <h5>{{ user.balance }} JOD</h5>
+                    <!-- Sidebar Widget -->
+                    <div class="sidebar-widget arabic">
+                        <div class="job-overview">
+                            <div class="job-overview-headline">ملخص</div>
+                            <div class="job-overview-inner">
+                                <ul>
+                                    <li>
+                                        <i
+                                            class="icon-material-outline-business-center"
+                                        ></i>
+                                        <div class="margin-right-30">
+                                        <span>الوضيفة</span>
+                                        <h5>{{ user.title }}</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i
+                                            class="icon-material-outline-location-on"
+                                        ></i>
+                                        <div class="margin-right-30">
+                                        <span>الموقع</span>
+                                        <h5>{{ user.city }} {{ user.area }}</h5>
+                                        </div>
+                                    </li>
+                                    <!-- <li>
+                                        <i class="icon-feather-book"></i>
+                                        <div class="margin-right-30">
+                                        <span>الكورسات</span>
+                                        <h5>{{ user.courses.length }}</h5>
+                                        </div>
+                                    </li> -->
+                                    <li>
+                                        <i
+                                            class="icon-material-outline-access-time"
+                                        ></i>
+                                        <div class="margin-right-30">
+                                        <span>الخبرة</span>
+                                        <h5>{{ user.experience }}</h5>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                       <div title="اضافة رصيد" class="add-balance mx-2">
                         <i class="icon-line-awesome-plus-circle"></i>
@@ -258,5 +292,8 @@ export default {
 }
 .add-balance i{
     right: unset !important;
+}
+.profile-title {
+    color: aliceblue !important;
 }
 </style>

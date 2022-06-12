@@ -3,7 +3,9 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 
 
@@ -52,7 +54,7 @@ class Section extends Resource
      * @var array
      */
     public static $search = [
-        'name'
+        'name', 'order'
     ];
 
     /**
@@ -62,6 +64,7 @@ class Section extends Resource
      * @return array
      */
 
+    public static $group = 'settings';
 
 
     public function fields(Request $request)
@@ -72,6 +75,14 @@ class Section extends Resource
             Text::make(__('name'), 'name')
                 ->sortable()
                 ->rules('required', 'max:255'),
+
+            Number::make( __('order') , 'order')
+                ->sortable()
+                ->creationRules('required', 'numeric', 'min:0')
+                ->updateRules('nullable', 'numeric', 'min:0'),
+
+            Boolean::make(__('Documents Only'), 'Documents_Only')
+
         ];
     }
 
