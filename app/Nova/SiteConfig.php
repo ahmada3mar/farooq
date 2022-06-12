@@ -89,6 +89,7 @@ class SiteConfig extends Resource
                     'web_twitter' => __('twitter'),
                     'web_linkedin' => __('linkedin'),
                     'web_instagram' => __('instagram'),
+                    'web_TikTok' => __('TikTok'),
                 ])
                 ->sortable()
                 ->rules('required', 'max:255'),

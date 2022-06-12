@@ -82,84 +82,19 @@
         </div>
     </div>
 
-    <!-- courses -->
-    <div class="section gray margin-top-45 padding-top-65 padding-bottom-75">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <!-- Section Headline -->
-                    <div class="section-headline margin-top-0 margin-bottom-35">
-                        <Link href="/courses" class="headline-link"
-                            >عرض الكل</Link
-                        >
-                        <h3 class="arabic">كورسات مقترحة</h3>
-                    </div>
-
-                    <!-- Jobs Container -->
-                    <div
-                        class="listings-container compact-list-layout margin-top-35"
-                    >
-                        <Link
-                            v-for="course in courses"
-                            :key="course.id"
-                            :href="`/course/${course.id}`"
-                            class="job-listing with-apply-button"
-                        >
-                            <div class="job-listing-details">
-                                <span class="list-apply-button ripple-effect"
-                                    >عرض الكورس</span
-                                >
-
-                                <div class="job-listing-description arabic">
-                                    <h3 class="job-listing-title">
-                                        {{ course.name }}
-                                    </h3>
-                                    <div class="job-listing-footer">
-                                        <ul>
-                                            <li>
-                                                <i
-                                                    class="icon-material-outline-school"
-                                                ></i>
-                                                الصف {{ __(course.class) }}
-                                                <b>{{
-                                                    course.section?.name
-                                                }}</b>
-                                            </li>
-                                            <li>
-                                                <i
-                                                    class="icon-feather-user px-1"
-                                                ></i>
-                                                {{ course.user.name }}
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="job-listing-company-logo">
-                                    <img
-                                        width="50"
-                                        height="50"
-                                        :src="`/storage/${course.image}`"
-                                        alt=""
-                                    />
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- most sellers -->
     <div class="section margin-top-65 margin-bottom-65">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
+                    
                     <div
                         class="section-headline centered margin-top-0 margin-bottom-45"
                     >
-                        <h3>كورسات مميزة</h3>
+                        <Link href="/courses" class="headline-link"
+                            >عرض الكل</Link
+                        >
+                        <h3>كورسات مقترحة</h3>
                     </div>
                 </div>
 
@@ -284,7 +219,7 @@
                                     >{{ user.name }}
                                 </Link>
                             </h4>
-                            <span class="text-primary">{{
+                            <!-- <span class="text-primary">{{
                                 [
                                     ...new Set(
                                         user.courses.map((item) => item.name)
@@ -294,13 +229,9 @@
                                         previousValue + " " + currentValue,
                                     ""
                                 )
-                            }}</span>
+                            }}</span> -->
                         </div>
 
-                        <!-- Rating -->
-                        <div class="freelancer-rating">
-                            <div class="star-rating" data-rating="5.0"></div>
-                        </div>
                     </div>
                 </div>
 
