@@ -10,6 +10,9 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Models\Section;
+use App\Models\DocumentCourse;
+use Farooq\UnitPicker\UnitPicker;
 
 class Document extends Resource
 {
@@ -51,52 +54,30 @@ class Document extends Resource
             ID::make()->hideFromIndex(),
             Text::make('name')
             ->sortable()
-            ->rules('required', 'max:255')
+            ->creationRules('required', 'max:255')
+            ->updateRules('required', 'max:255')
             ->rules(new CustomRule()),
-            Select::make(__('class'), 'class')
+            
+            Select::make(__('Type'), 'Type')
                 ->options([
-                    1 => 'الأول',
-                    2 => 'الثاني',
-                    3 => 'الثالث',
-                    4 => 'الرابع',
-                    5 => 'الخامس',
-                    6 => 'السادس',
-                    7 => 'السابع',
-                    8 => 'الثامن',
-                    19 => 'التاسع',
-                    10 => 'العاشر',
-                    11 => 'الأول ثانوي',
-                    12 => 'الثاني ثانوي',
+                    1 => 'اسئلة سنوات',
+                    2 => ' أوراق عمل',
+                    3 => 'دوسيات',
+                    4 => 'الكتب',
                 ])
                 ->creationRules('required', 'numeric', 'min:1', 'max:12')
                 ->sortable()
                 ->updateRules('nullable', 'numeric', 'min:1', 'max:12'),
-                BelongsTo::make( __('course') , 'course'),
-            // Select::make(__('course'), 'course')
-            //     ->options([
-            //         1 => 'التربية الإسلامية',
-            //         2 => 'اللغة العربية',
-            //         3 => 'تاريخ الأردن',
-            //         4 => 'علوم الحاسوب',
-            //         5 => 'اللغة الانجليزية',
-            //         6 => 'الرياضيات العلمي',
-            //         7 => 'الرياضيات الادبي',
-            //         8 => 'العلوم الحياتية',
-            //         19 => 'الفيزياء',
-            //         10 => 'الكيمياء',
-            //         11 => 'علوم الارض والبيئة',
-            //         12 => 'الثقافة المالية',
-            //         13 => 'العلوم الإسلامية',
-            //         14 => 'تاريخ العرب والعالم',
-            //         15 => 'البلاغة والنقد',
-            //         16 => 'قضايا أدبية',
-            //         17 => 'النحو والصرف',
-            //         18 => 'الجغرافيا',
 
-            //     ])
-            //     ->creationRules('required', 'numeric', 'min:1', 'max:12')
-            //     ->sortable()
-            //     ->updateRules('nullable', 'numeric', 'min:1', 'max:12'),
+                Select::make( __('section'), 'section_id')
+                ->options(Section::pluck('name' , 'id')->toArray())
+                ->rules('required', 'numeric'),
+
+                Select::make( __('course'), 'document_course_id')
+                ->options(DocumentCourse::pluck('name' , 'id')->toArray())
+                ->rules('required', 'numeric'),
+
+
             File::make('path')->rules('file' , 'max:80000'),
 
         ];
