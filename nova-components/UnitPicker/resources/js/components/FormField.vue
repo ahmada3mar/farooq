@@ -38,7 +38,11 @@ export default {
 
   props: ["resourceName", "resourceId", "field" ],
   mounted() {
-    this.value = this.field.valueObject || null
+    this.value = this.field.valueObject || null;
+        if(this.field[this.field['attribute']]){
+        this.isDisabled = true
+        this.value =this.field[this.field['attribute']]
+    }
   },
 
   data() {
@@ -96,11 +100,6 @@ export default {
           }
         }
       );
-    }
-
-    if(this.field[this.field['attribute']]){
-        this.isDisabled = true
-        this.value =this.field[this.field['attribute']]
     }
   },
 

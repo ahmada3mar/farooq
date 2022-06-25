@@ -104,6 +104,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   props: ["resourceName", "resourceId", "field"],
   mounted: function mounted() {
     this.value = this.field.valueObject || null;
+
+    if (this.field[this.field['attribute']]) {
+      this.isDisabled = true;
+      this.value = this.field[this.field['attribute']];
+    }
   },
   data: function data() {
     return {
@@ -178,11 +183,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           return _ref.apply(this, arguments);
         };
       }());
-    }
-
-    if (this.field[this.field['attribute']]) {
-      this.isDisabled = true;
-      this.value = this.field[this.field['attribute']];
     }
   },
   methods: {
@@ -373,7 +373,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.multiselect {\n  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);\n  min-height: 36px !important;\n  border-radius: 0.5rem;\n}\n.multiselect__tags {\n  min-height: 36px !important;\n  border: 1px solid var(--60) !important;\n  color: var(--80);\n  border-radius: 0.5rem !important;\n}\n.multiselect__select {\n  background-repeat: no-repeat;\n  background-size: 10px 6px;\n  background-position: center right 0.75rem;\n  background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 10 6\"><path fill=\"#35393C\" fill-rule=\"nonzero\" d=\"M8.293.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4A1 1 0 0 1 1.707.293L5 3.586 8.293.293z\"/></svg>');\n}\n.multiselect__select:before {\n  content: none !important;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.multiselect {\r\n  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);\r\n  min-height: 36px !important;\r\n  border-radius: 0.5rem;\n}\n.multiselect__tags {\r\n  min-height: 36px !important;\r\n  border: 1px solid var(--60) !important;\r\n  color: var(--80);\r\n  border-radius: 0.5rem !important;\n}\n.multiselect__select {\r\n  background-repeat: no-repeat;\r\n  background-size: 10px 6px;\r\n  background-position: center right 0.75rem;\r\n  background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 10 6\"><path fill=\"#35393C\" fill-rule=\"nonzero\" d=\"M8.293.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4A1 1 0 0 1 1.707.293L5 3.586 8.293.293z\"/></svg>');\n}\n.multiselect__select:before {\r\n  content: none !important;\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
