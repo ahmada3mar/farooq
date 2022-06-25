@@ -11,7 +11,7 @@ class Course extends Model
     use HasFactory;
 
 
-    protected $withCount = ['lectures'];
+   // protected $withCount = ['lectures'];
 
 
     protected static $class_names = [

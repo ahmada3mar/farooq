@@ -83,12 +83,13 @@ class CourseCard extends Resource
 
             Boolean::make('Printed', 'is_printed')
                 ->hideWhenCreating()
-                ->trueValue(1),
+                ->falseValue('0')
+                ->trueValue('1'),
 
             Boolean::make('Active', 'is_active')
                 ->hideWhenCreating()
-                ->trueValue(1),
-
+                ->falseValue('0')
+                ->trueValue('1'),
             BelongsTo::make('Course', 'course', Course::class)->nullable()
 
         ];

@@ -14,7 +14,7 @@
 
         <!-- Tasks Container -->
         <div class="tasks-list-container tasks-grid-layout margin-top-35">
-          <div  v-for="course in courses.data" :key="course.id" class="task-listing arabic">
+          <Link :href="`/course/${ course.id }`" v-for="course in courses.data" :key="course.id" class="task-listing arabic">
             <!-- Job Listing Details -->
             <div class="task-listing-details">
               <div class="course-image">
@@ -41,17 +41,13 @@
             <div class="task-listing-bid">
               <div class="task-listing-bid-inner">
                 <Link
-                  :href="`/course/${ course.id }`"
+                  :href="`/${registerd_courses_ids.includes(course.id)?'course':'purchase'}/${ course.id }`"
                   class="button button-sliding-icon ripple-effect"
-                  ><i class="icon-material-outline-arrow-back"></i>سجل
-                  الآن</Link
+                  ><i class="icon-material-outline-arrow-back"></i>{{ registerd_courses_ids.includes(course.id) ? 'عرض' : " سجل الآن " }}</Link
                 >
-                <!-- <div class="task-offers">
-                  <b>{{course.price}} JOD</b>
-                </div> -->
               </div>
             </div>
-          </div>
+          </Link>
         </div>
 
         <!-- Pagination -->
@@ -83,8 +79,6 @@
   </div>
 </template>
 
-<script setup>
-</script>
 
 <script>
 import pagination from "../../Shared/Pagination.vue";
@@ -92,14 +86,21 @@ import pagination from "../../Shared/Pagination.vue";
 export default {
   props: {
     courses: Object,
+    auth: Object,
     sections: Array,
-     isCoursesPage : Boolean,
-
-
+    isCoursesPage : Boolean,
   },
   components: {
     pagination,
   },
+  data(){
+    return{
+        registerd_courses_ids : this.auth.registerd_courses.map(i=>i.id)
+    }
+  },
+  mounted() {
+    console.log("co" ,this.registerd_courses_ids)
+  }
 };
 </script>
 
