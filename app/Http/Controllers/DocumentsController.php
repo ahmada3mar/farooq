@@ -41,7 +41,7 @@ class DocumentsController extends Controller
 
 
        $docs =  $query->with('documentCourse')->with('section')->get();
-       
+
        $types = [
         [ 'key' => 1, 'value' => 'اسئلة سنوات'],
         [ 'key' => 2, 'value' => ' أوراق عمل'],
@@ -63,13 +63,13 @@ class DocumentsController extends Controller
     {
         $document->increment('downloads');
 
-        return redirect(env('APP_URL') .'/document/download_file/'.$document->path.'/'.$document->name);
+        return redirect(env('APP_URL') .'document/download_file/'.$document->path.'/'.$document->name);
 
         return response()->download(storage_path("app/public/$document->path"), "$document->name" . '.' . substr(strrchr($document->path, "."), 1));
     }
     public function download( $path, $name)
     {
-      
+
 
         return response()->download(storage_path("app/public/$path"), $name . '.' . substr(strrchr($path, "."), 1));
     }

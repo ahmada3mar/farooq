@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <title>course</title>
+    <title>تسجيل الدخول</title>
     <meta name="description" content="login" head-key="description" />
     <meta name="keywords" content="login" />
   </Head>
@@ -69,7 +69,7 @@
             type="submit"
             form="login-form"
           >
-            Log In <i class="icon-material-outline-arrow-right-alt"></i>
+            تسجيل الدخول <i class="icon-material-outline-arrow-right-alt"></i>
           </button>
         </div>
       </div>

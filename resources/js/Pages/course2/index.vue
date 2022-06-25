@@ -1,8 +1,8 @@
 <template>
   <Head>
-    <title>course</title>
-    <meta name="description" content="404" head-key="description" />
-    <meta name="keywords" content="404" />
+    <title>{{ course?.name }}</title>
+    <meta name="description" content="course" head-key="description" />
+    <meta name="keywords" content="course" />
   </Head>
 
   <!-- Titlebar
@@ -15,13 +15,13 @@
             <div class="left-side">
               <div class="salary-box margin-left-0">
                 <div class="salary-type">عدد الدروس</div>
-                <div class="salary-amount">14</div>
+                <div class="salary-amount">{{ course?.lectures_count }}</div>
               </div>
             </div>
 
             <div class="header-details flexcolumn">
               <h3>{{ course?.name }}</h3>
-              <h5>المدرس فلان العلنتاني</h5>
+              <h5>{{ course?.user?.name }}</h5>
             </div>
             <div class="right-side">
               <div class="header-image margin-left-20">
@@ -112,6 +112,15 @@
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+            <!-- <div style=" height: 480px; position: relative;">
+           <iframe
+           :src="'https://drive.google.com/file/d/' + lectur.url + '/preview'"
+            class="col-12 padding-right-0 padding-left-0"
+             height="480"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            scrolling="no" seamless="" allowfullscreen frameborder="0"  ></iframe>
+            <div style="width: 80px; height: 80px; position: absolute; opacity:0; right:0; top: 0;"></div>
+            </div> -->
           </div>
         <div v-else>
             <div class="private">
@@ -161,7 +170,6 @@
           >
             <div class="photo-box-content">
               <h3>{{ course.name }}</h3>
-              <span>{{ course.subscriber }} مشترك</span>
             </div>
           </Link>
         </div>
@@ -176,7 +184,6 @@
 import Accordion from "../../Shared/Accordion.vue";
 import CourseAccordionVue from "../../Shared/CourseAccordion.vue";
 import axios from "axios";
-
 export default {
   props: {
     course: Object, simmilerCourses:Array
@@ -192,6 +199,9 @@ export default {
       fetching: false,
     };
   },
+      mounted() {
+        console.log('course: ' , this.course);
+    },
 
   methods: {
     changeVid(lectur) {
@@ -217,6 +227,7 @@ export default {
           this.userAnserLoding = true;
         });
     },
+
   },
   components: { Accordion, CourseAccordionVue },
 };
