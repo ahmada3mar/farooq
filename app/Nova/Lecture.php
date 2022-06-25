@@ -8,8 +8,9 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
-use \Epartment\NovaDependencyContainer\NovaDependencyContainer ;
+use \Epartment\NovaDependencyContainer\NovaDependencyContainer;
 use Farooq\UnitPicker\UnitPicker;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Trix;
 
@@ -83,16 +84,16 @@ class Lecture extends Resource
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-                UnitPicker::make('course' )->setReq($request)->options(Course::take(5)->get()),
+            UnitPicker::make('course')->setReq($request)->value($this->course)->options(Course::take(5)->get()),
 
-                UnitPicker::make( 'unit' )->setReq($request)->dependsOn('course'),
+            UnitPicker::make('unit')->setReq($request)->value($this->unit)->dependsOn('course'),
 
 
-            Number::make( __('order') , 'order')
+            Number::make(__('order'), 'order')
                 ->creationRules('required', 'numeric', 'min:1')
                 ->updateRules('nullable', 'numeric', 'min:1'),
 
-            Select::make( __('type'), 'type')
+            Select::make(__('type'), 'type')
                 ->options([
                     '0' => __('video'),
                     '1' => __('question'),
@@ -102,15 +103,21 @@ class Lecture extends Resource
                 ->updateRules('nullable', 'numeric'),
 
             NovaDependencyContainer::make([
-                Text::make( __('url'), 'url')
-                ->rules('required'),
-            ])->dependsOn('type' , 0),
+                Text::make(__('url') , 'url', function () {
+                    return $this->getRawOriginal('url');
+                })
+                    ->rules('required'),
+            ])->dependsOn('type', 0),
 
-            HasMany::make( 'question', 'question' , Question::class),
+            HasMany::make('question', 'question', Question::class),
+
+            Boolean::make('Private', 'is_private')
+                ->trueValue('1')
+                ->falseValue('0'),
 
             HasMany::make(__('Attachments'), 'attachment', Attachment::class)->nullable(),
 
-            Trix::make( __('description'), 'description')
+            Trix::make(__('description'), 'description')
                 ->rules('required'),
 
         ];

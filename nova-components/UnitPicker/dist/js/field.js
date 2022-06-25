@@ -102,9 +102,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   mixins: [laravel_nova__WEBPACK_IMPORTED_MODULE_0__.FormField, laravel_nova__WEBPACK_IMPORTED_MODULE_0__.HandlesValidationErrors],
   props: ["resourceName", "resourceId", "field"],
-  //   mounted() {
-  //     console.log(this.options);
-  //   },
+  mounted: function mounted() {
+    this.value = this.field.valueObject || null;
+  },
   data: function data() {
     return {
       options: [],

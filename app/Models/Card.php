@@ -11,6 +11,14 @@ class Card extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'is_active',
+        "is_printed",
+        "serial_number",
+        "password",
+        "course_id"
+    ];
+
     public static function boot()
     {
         parent::boot();

@@ -7,7 +7,7 @@
 
   <!-- Titlebar
 ================================================== -->
-  <div class="container single-page-header">
+  <div :style="`background-image:url(/storage/${course.cover})`" class="container single-page-header">
     <div class="container arabic">
       <div class="row">
         <div class="col-md-12">
@@ -102,7 +102,7 @@
               </div>
             </div>
           </div>
-          <div v-else>
+          <div v-else-if="lectur.url">
             <iframe
               class="col-12 padding-right-0 padding-left-0"
               height="350"
@@ -113,6 +113,17 @@
               allowfullscreen
             ></iframe>
           </div>
+        <div v-else>
+            <div class="private">
+                <div>
+                    <h4>هذا الفيديو خاص</h4>
+                    <p>يرجى شراء الكورس لتتمكن من مشاهدة الفيديو</p>
+                        <Link :href="`/purchase/${course.id}`">
+                            <button class="button ripple-effect mt-5 px-5" data-v-b67a1efe=""> شراء </button>
+                        </Link>
+                    </div>
+            </div>
+        </div>
 
           <CourseAccordionVue :lectur="lectur" />
         </div>
@@ -237,5 +248,26 @@ export default {
   float: right;
   color: red;
   font-weight: bold;
+}
+.private{
+    height: 350px;
+    background-image: url(/assets/images/403.svg);
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    justify-content: right;
+    background-color: #f9f9f9;
+    padding: 15;
+}
+
+.private div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.private button{
+    float: none;
 }
 </style>

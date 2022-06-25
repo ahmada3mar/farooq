@@ -36,10 +36,10 @@ export default {
   components: { Multiselect },
   mixins: [FormField, HandlesValidationErrors],
 
-  props: ["resourceName", "resourceId", "field"],
-//   mounted() {
-//     console.log(this.options);
-//   },
+  props: ["resourceName", "resourceId", "field" ],
+  mounted() {
+    this.value = this.field.valueObject || null
+  },
 
   data() {
     return {
@@ -47,7 +47,7 @@ export default {
       isLoading: false,
       calledFromClass: null,
       timer: null,
-      isDisabled:false
+      isDisabled:false,
     };
   },
   created() {

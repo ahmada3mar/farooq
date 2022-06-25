@@ -34,6 +34,7 @@ class UnitPicker extends BelongsTo
     public $viaRelationship;
     public $course;
     public $unit;
+    public $valueObject;
 
 
     public $optionResolveCallback = null;
@@ -63,6 +64,12 @@ class UnitPicker extends BelongsTo
     public function options($options)
     {
         $this->options = collect($options);
+        return $this;
+    }
+
+    public function value($value)
+    {
+        $this->valueObject = $value;
         return $this;
     }
 
@@ -125,9 +132,10 @@ class UnitPicker extends BelongsTo
 
     public function meta()
     {
+
         $this->meta = parent::meta();
         return array_merge([
-            'options' => $this->options,
+            'options' => $this->foreignKeyName == "unit_id" ? ModelsUnit::where("course_id" , $this->valueObject->course_id ?? null )->get() : $this->options,
             'valueKey' => $this->valueKey,
             'dependKey' => $this->dependKey,
             'dependsOn' => $this->dependsOn,
@@ -144,6 +152,7 @@ class UnitPicker extends BelongsTo
             'viaRelationship' =>         $this->viaRelationship,
             'course' =>         $this->course,
             'unit' =>         $this->unit,
+            "valueObject" => $this->valueObject
 
 
         ], $this->meta);
