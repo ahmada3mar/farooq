@@ -95,7 +95,7 @@ export default {
   },
   data(){
     return{
-        registerd_courses_ids : this.auth.registerd_courses.map(i=>i.id)
+        registerd_courses_ids : this.auth ? this.auth.registerd_courses.map(i=>i.id) : []
     }
   },
   mounted() {
