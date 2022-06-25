@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <title>Register</title>
+    <title>سجل</title>
     <meta name="description" content="Register" head-key="description" />
     <meta name="keywords" content="Register" />
   </Head>
@@ -50,7 +50,7 @@
                 type="text"
                 class="input-text with-border"
                 v-model="form.name"
-                placeholder="الأسم الكامل"
+                placeholder="الأسم الرباعي"
                 required
               />
             </div>

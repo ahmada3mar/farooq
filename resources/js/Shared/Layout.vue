@@ -41,7 +41,7 @@
                   </ul>
                 </li>
                 <li>
-                  <Link class="arow" href="/courses?class=12">الكورسات</Link>
+                  <Link class="arow" href="/courses">الكورسات</Link>
                   <ul class="dropdown-nav">
                     <li v-for="section in sections" :key="section?.id">
                       <Link :href="`/courses?section=${section?.id}`">{{
@@ -88,7 +88,7 @@
                   </ul>
                 </li>
                 <li>
-                  <Link class="arow" href="/courses?class=12">الكورسات</Link>
+                  <Link class="arow" href="/courses">الكورسات</Link>
                   <ul class="dropdown-nav">
                     <li v-for="section in sections" :key="section?.id">
                       <Link :href="`/courses?section=${section?.id}`">{{

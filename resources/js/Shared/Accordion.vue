@@ -3,9 +3,7 @@
     <div class="accordion__item js-accordion-item ">
       <div @click="togle" class="accordion-header js-accordion-header">الوصف</div>
       <div class="accordion-body js-accordion-body ">
-        <div class="accordion-body__description">
-          {{ course.description }}
-        </div>
+        <div class="accordion-body__description" v-html="course.description"> </div>
       </div>
     </div>
 

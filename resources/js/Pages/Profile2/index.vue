@@ -1,8 +1,8 @@
 <template>
   <Head>
-    <title>course</title>
-    <meta name="description" content="404" head-key="description" />
-    <meta name="keywords" content="404" />
+    <title>الحساب الشخصي</title>
+    <meta name="description" content="profile" head-key="description" />
+    <meta name="keywords" content="profile" />
   </Head>
   <div
     class="single-page-header freelancer-header"
@@ -152,13 +152,7 @@
                       <h5>{{ user.title || "طالب" }}</h5>
                     </div>
                   </li>
-                  <li>
-                    <i class="icon-feather-book"></i>
-                    <div class="margin-right-30">
-                      <span>الكورسات</span>
-                      <h5>{{ user.courses.length }}</h5>
-                    </div>
-                  </li>
+
                   <li v-if="user.experience">
                     <i class="icon-material-outline-access-time"></i>
                     <div class="margin-right-30">
@@ -275,5 +269,6 @@ export default {
 }
 .profile-title {
   color: aliceblue !important;
+  text-shadow: 0 0 3px #444;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <Head>
     <title>courses</title>
-    <meta name="description" content="404" head-key="description" />
-    <meta name="keywords" content="404" />
+    <meta name="description" content="courses" head-key="description" />
+    <meta name="keywords" content="courses" />
   </Head>
 
   <div class="full-page-container">
@@ -23,8 +23,6 @@
               <!-- Details -->
               <div class="task-listing-description">
                 <h3 class="task-listing-title">{{course.name}}</h3>
-                                  <span>الصف {{ __(course.class) }}</span>
-
                 <ul class="task-icons">
                   <li class="m-0 padding-left-5">
                     <i class="icon-material-outline-access-time"></i>
@@ -99,7 +97,7 @@ export default {
     }
   },
   mounted() {
-    console.log("co" ,this.registerd_courses_ids)
+    console.log("co" ,this.courses)
   }
 };
 </script>

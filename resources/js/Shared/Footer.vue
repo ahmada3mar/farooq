@@ -33,7 +33,17 @@
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
                         >
-                          <i class="icon-brand-facebook-f"> Facebook</i>
+                          <i class="icon-brand-facebook-f arabicCenter"> Facebook</i>
+                        </a>
+                      </li>
+                      <li v-if="web_youtube">
+                        <a
+                          :href="web_youtube"
+                          title="youtube"
+                          data-tippy-placement="bottom"
+                          data-tippy-theme="light"
+                        >
+                          <i class="icon-brand-youtube arabicCenter"> Youtube</i>
                         </a>
                       </li>
                       <li v-if="web_twitter">
@@ -43,7 +53,7 @@
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
                         >
-                          <i class="icon-brand-twitter"> Twitter</i>
+                          <i class="icon-brand-twitter arabicCenter"> Twitter</i>
                         </a>
                       </li>
                       <li v-if="web_instagram">
@@ -53,7 +63,7 @@
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
                         >
-                          <i class="icon-feather-instagram"> Instagram</i>
+                          <i class="icon-feather-instagram arabicCenter"> Instagram</i>
                         </a>
                       </li>
                       <li v-if="web_linkedin">
@@ -63,17 +73,20 @@
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
                         >
-                          <i class="icon-brand-linkedin-in"> Linkedin</i>
+                          <i class="icon-brand-linkedin-in arabicCenter"> Linkedin</i>
                         </a>
                       </li>
-                      <li v-if="web_TikTok">
+                      <li >
                         <a
-                          :href="web_TikTok"
+                          href="web_TikTok"
                           title="TikTok"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
                         >
-                          <i class="icon-brand-TikTok"> TikTok</i>
+                            <i class="fa-brands footer-icon arabicCenter">
+                                TikTok
+                        <img class="TikTok-img" src="/assets/images/tiktok.svg" />
+                            </i>
                         </a>
                       </li>
                     </ul>
@@ -135,7 +148,7 @@
         <div class="container">
           <div class="row">
             <div class="col-xl-12 all-right-footer" >
-                جميع الحقوق محفوظة. © <strong>الفاروق</strong> {{new Date().getFullYear()}}
+                جميع الحقوق محفوظة © <strong>الفاروق</strong> {{new Date().getFullYear()}}
             </div>
           </div>
         </div>
@@ -169,3 +182,19 @@ export default {
 
 }
 </script>
+<style scoped>
+.footer-icon {
+    font-family: 'Brand-Icons' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    color: #c0c0c0 !important;
+}
+.TikTok-img {
+    width: 18px;
+    height: 18px;
+}
+</style>
