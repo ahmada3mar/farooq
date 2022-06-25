@@ -1,5 +1,6 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-  <head>
+
+<head>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -7,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{asset('assets/css/colors/blue.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/colors/blue.css') }}" type="text/css">
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
 
     <!-- Scripts -->
@@ -21,12 +22,20 @@
     <script src="{{ mix('/js/app.js') }}" defer></script>
     <script src="{{ mix('/js/manifest.js') }}" defer></script>
     <script src="{{ mix('/js/vendor.js') }}" defer></script>
-    @inertiaHead
-  </head>
-  <body>
-  @if (env('APP_ENV') != 'production')
-    <div class="fullwidth dev-header">You'r on devlopment mode | Staging &#128187; &#128295; &#128296; </div>
-  @endif
-    @inertia
-  </body>
+    @if (isset($page))
+        @inertiaHead
+    @endif
+</head>
+
+<body>
+    @if (env('APP_ENV') != 'production')
+        <div class="fullwidth dev-header">You'r on devlopment mode | Staging &#128187; &#128295; &#128296; </div>
+    @endif
+    @if (isset($page))
+        @inertia
+    @endif
+
+    @yield('purchase')
+</body>
+
 </html>

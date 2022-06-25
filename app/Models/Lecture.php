@@ -44,10 +44,10 @@ class Lecture extends Model
 
     public function getUrlAttribute($value){
         $parts = parse_url($value);
-        // if($value){
-        //     parse_str($parts['query'], $query);
-        //     $value = $query['v'];
-        // }
+        if($value){
+            parse_str($parts['query'] ?? '', $query);
+            $value = $query['v'] ?? '';
+        }
 
         return  $value;
     }

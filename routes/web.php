@@ -10,6 +10,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\SellPointsController;
+use App\Models\Course;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Models\Document;
@@ -30,13 +31,11 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/test' , function () {
-    // $sections = Section::with('documentCourses')->orderBy('Order')->get();
-
-    dd(Section::with('documentCourses.documents')->orderBy('Order')->get());
-    // return Inertia::render('Home');
+Route::get("/test" , function(){
+    dd(Course::with(['units.lectures' => function($q){
+        return $q->select('unit_id', 'name');;
+    }])->find(5));
 });
-
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
 
@@ -62,6 +61,8 @@ Route::post('/register', [LoginController::class, 'register']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/course/{id}', [CourseController::class, 'index']);
+    Route::get('/purchase/{course}', [CourseController::class, 'purchase']);
+    Route::post('/confirm/{course}', [CourseController::class, 'confirm']);
     Route::post('/check-answer/{answer}', [CourseController::class, 'checkAnswer']);
     Route::post('/get-answers/{question}', [CourseController::class, 'getUserAnsers']);
     Route::get('/logout', [LoginController::class, 'logout']);
