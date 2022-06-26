@@ -1,4 +1,11 @@
 <template>
+
+<Head>
+	<title>الفاروق</title>
+	<meta name="description" content="الفاروق" head-key="description">
+	<meta name="keywords" content="الفاروق">
+</Head>
+
 <!-- Titlebar
 ================================================== -->
   <div class="intro-banner">

@@ -24,7 +24,7 @@ class CourseController extends Controller
      */
     public function index(Request $request)
     {
-        $course = Course::with('units.lectures.question.answers')->with('units.lectures.attachment')->find($request->id);
+        $course = Course::with('units.lectures.question.answers')->with('units.lectures.attachment')->with('user')->withCount('lectures')->find($request->id);
 
         $regestered_courses = Auth::user()->registerdCourses->pluck('id')->toArray();
 

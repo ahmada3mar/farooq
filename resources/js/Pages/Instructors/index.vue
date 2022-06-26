@@ -1,8 +1,8 @@
 <template>
   <Head>
     <title>المدرسين</title>
-    <meta name="description" content="404" head-key="description" />
-    <meta name="keywords" content="404" />
+    <meta name="description" content="المدرسين" head-key="description" />
+    <meta name="keywords" content="المدرسين" />
   </Head>
 
   <div class="full-page-container">

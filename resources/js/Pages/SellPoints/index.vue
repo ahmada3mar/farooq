@@ -1,8 +1,8 @@
 <template>
   <Head>
     <title>اماكن البيع</title>
-    <meta name="description" content="404" head-key="description" />
-    <meta name="keywords" content="404" />
+    <meta name="description" content="selling points" head-key="description" />
+    <meta name="keywords" content="selling points" />
   </Head>
 
   <div class="full-page-container">

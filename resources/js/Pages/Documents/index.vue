@@ -1,8 +1,8 @@
 <template>
   <Head>
-    <title>courses</title>
-    <meta name="description" content="404" head-key="description" />
-    <meta name="keywords" content="404" />
+    <title>الملفات</title>
+    <meta name="description" content="الملفات" head-key="description" />
+    <meta name="keywords" content="الملفات" />
   </Head>
 
   <div class="full-page-container">
@@ -104,7 +104,7 @@ export default {
     Sidebar,
   },
     methods:{
-        
+
     },
         mounted() {
               console.log('this.docs', this.docs);

@@ -248,10 +248,6 @@
                                     {{ user.city }}</strong
                                 >
                             </li>
-                            <li class="mx-4">
-                                عدد الكورسات
-                                <strong>{{ user.courses.length }}</strong>
-                            </li>
                         </ul>
                     </div>
                     <Link
@@ -272,85 +268,6 @@
 
     <!-- Highest Rated Freelancers / End-->
 
-    <!-- Membership Plans -->
-    <div class="section padding-top-60 padding-bottom-75">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <!-- Section Headline -->
-                    <div
-                        class="section-headline centered margin-top-0 margin-bottom-35"
-                    >
-                        <h3>البطاقات</h3>
-                    </div>
-                </div>
-
-                <div class="col-xl-12 py-5">
-                    <!-- Pricing Plans Container -->
-                    <div class="pricing-plans-container">
-                        <!-- Plan -->
-                        <div class="pricing-plan arabic">
-                            <h3>رصيد بقيمة 35 دينار</h3>
-                            <p class="margin-top-10">
-                                تدفع لمرة واحد تمكنك من شراء المساقات ذات قمة 35
-                                دنانير
-                            </p>
-                            <div
-                                class="pricing-plan-label billed-monthly-label"
-                            >
-                                <strong>35 JOD</strong>
-                            </div>
-                            <Link
-                                href="pages-checkout-page.html"
-                                class="button full-width margin-top-20"
-                                >شراء الآن</Link
-                            >
-                        </div>
-
-                        <!-- Plan -->
-                        <div class="pricing-plan recommended arabic">
-                            <div class="recommended-badge"></div>
-                            <h3>رصيد بقيمة 50 دينار</h3>
-                            <p class="margin-top-10">
-                                تدفع لمرة واحد تمكنك من شراء المساقات ذات قمة 50
-                                دنانير
-                            </p>
-                            <div
-                                class="pricing-plan-label billed-monthly-label"
-                            >
-                                <strong>50 JOD</strong>
-                            </div>
-                            <Link
-                                href="pages-checkout-page.html"
-                                class="button full-width margin-top-20"
-                                >شراء الآن</Link
-                            >
-                        </div>
-
-                        <!-- Plan -->
-                        <div class="pricing-plan arabic">
-                            <h3>رصيد بقيمة 20 دنانير</h3>
-                            <p class="margin-top-10">
-                                تدفع لمرة واحد تمكنك من شراء المساقات ذات قمة 20
-                                دنانير
-                            </p>
-                            <div
-                                class="pricing-plan-label billed-monthly-label"
-                            >
-                                <strong>20 JOD</strong>
-                            </div>
-                            <Link
-                                href="pages-checkout-page.html"
-                                class="button full-width bottom-0"
-                                >شراء الآن</Link
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Membership Plans / End-->
 </template>
 
 <script setup>
