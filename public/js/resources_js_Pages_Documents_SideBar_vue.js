@@ -22,19 +22,21 @@ __webpack_require__.r(__webpack_exports__);
       var parent = e.target.parentElement;
       var target = parent.querySelector(".sidebar-dropdown"); // let rest = document.querySelectorAll(`.show`);
       // rest.forEach(element => {
-      //   element.classList.remove("show"); 
+      //   element.classList.remove("show");
       // });
 
       target.classList.toggle("show");
+      this.$forceUpdate();
     },
     togleType: function togleType(e) {
       var parent = e.target.parentElement;
       var target = parent.querySelector(".Type-List"); // let rest = parentElement.querySelectorAll(`.show`);
       // rest.forEach(element => {
-      //   element.classList.remove("show"); 
+      //   element.classList.remove("show");
       // });
 
       target.classList.toggle("show");
+      this.$forceUpdate();
     }
   },
   mounted: function mounted() {// console.log('this.sections', this.sections);
@@ -185,7 +187,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.vid-description[data-v-44a039ec] {\r\n  border-radius: 0;\n}\n.right-side[data-v-44a039ec] {\r\n  display: contents;\n}\n.button[data-v-44a039ec] {\r\n  float: left;\n}\n.sidebar-container a.headline-link[data-v-44a039ec] {\r\n      position: unset;\r\n    left: unset;\r\n    bottom: unset;\n}\na.headline-link[data-v-44a039ec]::after {\r\n    content: \"\\27F5\";\r\n    font-family: \"Material-Icons\";\r\n    font-size: 21px;\r\n    line-height: 0;\r\n    position: relative;\r\n    top: 0px;\r\n    margin-right: 5px;\n}\na.headline-link[data-v-44a039ec]::before {\r\n    content: unset;\r\n    font-family: unset;\n}\n.sidebar-container[data-v-44a039ec]{\r\n  display:flex;\r\n  flex-direction:column;\r\n  direction: rtl;\r\n  padding-left: 10px !important;\n}\n.sidebar-button[data-v-44a039ec]{\r\n    float: unset;\r\n    width: 90%;\r\n    font-size: 1.5rem;\r\n    margin: 5px 0;\r\n    text-align: center;\n}\n.font3rem[data-v-44a039ec]{\r\n    font-size: 3rem;\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.vid-description[data-v-44a039ec] {\n  border-radius: 0;\n}\n.right-side[data-v-44a039ec] {\n  display: contents;\n}\n.button[data-v-44a039ec] {\n  float: left;\n}\n.sidebar-container a.headline-link[data-v-44a039ec] {\n      position: unset;\n    left: unset;\n    bottom: unset;\n}\na.headline-link[data-v-44a039ec]::after {\n    content: \"\\27F5\";\n    font-family: \"Material-Icons\";\n    font-size: 21px;\n    line-height: 0;\n    position: relative;\n    top: 0px;\n    margin-right: 5px;\n}\na.headline-link[data-v-44a039ec]::before {\n    content: unset;\n    font-family: unset;\n}\n.sidebar-container[data-v-44a039ec]{\n  display:flex;\n  flex-direction:column;\n  direction: rtl;\n  padding-left: 10px !important;\n  height: 100%;\n  overflow: auto;\n  -ms-overflow-style: none;  /* IE and Edge */\n  scrollbar-width: none;  /* Firefox */\n}\n.sidebar-button[data-v-44a039ec]{\n    float: unset;\n    width: 90%;\n    font-size: 1.5rem;\n    margin: 5px 0;\n    text-align: center;\n}\n.font3rem[data-v-44a039ec]{\n    font-size: 3rem;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

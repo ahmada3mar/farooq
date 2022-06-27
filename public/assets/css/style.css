@@ -11384,9 +11384,7 @@ input.default-slider { display: none; }
 /* Bootstrap-select
 ------------------------------------- */
 select.bs-select-hidden,
-select.selectpicker {
-	display: none !important;
-}
+
 
 .bootstrap-select .btn {
   -webkit-user-select: none;

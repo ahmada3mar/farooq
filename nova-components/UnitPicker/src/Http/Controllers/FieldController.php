@@ -3,6 +3,8 @@
 namespace Farooq\UnitPicker\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\DocumentCourse;
+use App\Models\Section;
 use Illuminate\Routing\Controller;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Farooq\UnitPicker\UnitPicker;
@@ -24,10 +26,10 @@ class FieldController extends Controller
         }
 
         // dd($request->all());
-        $request['resourceName'] = 'course';
-        $request['viaRelationship'] = 'course';
-        $request['viaResource'] = 'viaResource';
-        $request['keyName'] = 'id';
+        // $request['resourceName'] = 'course';
+        // $request['viaRelationship'] = 'course';
+        // $request['viaResource'] = 'viaResource';
+        // $request['keyName'] = 'id';
         // dd($request->all());
         $resource = new $request->resourceClass($request->resourceClass::newModel());
         // dd($resource->fields($request));
@@ -48,13 +50,20 @@ class FieldController extends Controller
             abort(500, 'Can not find the Field "' . $request->attribute . '" in the Model "' . $request->resourceClass . '"');
         }
 
-        $model = Course::find($request->viaResourceId);
+        $modelClass = $request->modelClass ;
+
+        $model = $modelClass::find($request->viaResourceId);
 
         if (is_null($model)) {
             abort(500, 'Can not find the Model "' . $request->modelClass . '::find(' . $request->viaResourceId . ')');
         }
 
+        if($request->resourceClass ==  "App\Nova\Lecture"){
 
-        return $model->units()->get(['id','name']);
+            return $model->units()->get(['id','name']);
+        }else{
+            return $model->documentCourses()->get(['id','name']);
+
+        }
     }
 }
