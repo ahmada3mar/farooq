@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Models\Course;
 use App\Rules\CustomRule;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
@@ -12,6 +13,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use App\Models\Section;
 use App\Models\DocumentCourse;
+use App\Nova\Section as NovaSection;
 use Farooq\UnitPicker\UnitPicker;
 
 class Document extends Resource
@@ -57,7 +59,7 @@ class Document extends Resource
             ->creationRules('required', 'max:255')
             ->updateRules('required', 'max:255')
             ->rules(new CustomRule()),
-            
+
             Select::make(__('Type'), 'Type')
                 ->options([
                     1 => 'اسئلة سنوات',
@@ -69,14 +71,16 @@ class Document extends Resource
                 ->sortable()
                 ->updateRules('nullable', 'numeric', 'min:1', 'max:12'),
 
-                Select::make( __('section'), 'section_id')
-                ->options(Section::pluck('name' , 'id')->toArray())
-                ->rules('required', 'numeric'),
+                // BelongsTo::make( __('section'), 'section',NovaSection::class)
+                // ->rules('required', 'numeric'),
 
-                Select::make( __('course'), 'document_course_id')
-                ->options(DocumentCourse::pluck('name' , 'id')->toArray())
-                ->rules('required', 'numeric'),
+                // Select::make( __('course'), 'document_course_id')
+                // ->options(DocumentCourse::pluck('name' , 'id')->toArray())
+                // ->rules('required', 'numeric'),
 
+                UnitPicker::make('section')->setReq($request)->value($this->section)->options(Section::all()),
+
+                UnitPicker::make('Document Course' , 'documentCourse')->setReq($request)->value($this->documentCourse)->dependsOn('section'),
 
             File::make('path')->rules('file' , 'max:80000'),
 

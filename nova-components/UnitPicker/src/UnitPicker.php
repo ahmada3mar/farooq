@@ -76,6 +76,7 @@ class UnitPicker extends BelongsTo
     public function optionsResolve($callback)
     {
         // dd($callback);
+        dd('This: ' , $this);
         $this->optionResolveCallback = function ($course) {
             // Reduce the amount of unnecessary data sent
             return $course->units()->get(['id','name']);

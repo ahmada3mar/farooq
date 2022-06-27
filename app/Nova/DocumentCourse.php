@@ -7,6 +7,8 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use App\Models\Section;
+use App\Nova\Section as NovaSection;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Text;
 
 class DocumentCourse extends Resource
@@ -45,8 +47,7 @@ class DocumentCourse extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            Select::make( __('section'), 'section_id')
-            ->options(Section::pluck('name' , 'id')->toArray())
+            BelongsTo::make( __('section'), 'section',NovaSection::class)
             ->rules('required', 'numeric'),
             Text::make(__('name'), 'name')
             ->sortable()

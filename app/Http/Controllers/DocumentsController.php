@@ -65,11 +65,10 @@ class DocumentsController extends Controller
 
         return redirect(env('APP_URL') .'document/download_file/'.$document->path.'/'.$document->name);
 
-        return response()->download(storage_path("app/public/$document->path"), "$document->name" . '.' . substr(strrchr($document->path, "."), 1));
+        // return response()->download(storage_path("app/public/$document->path"), "$document->name" . '.' . substr(strrchr($document->path, "."), 1));
     }
     public function download( $path, $name)
     {
-
 
         return response()->download(storage_path("app/public/$path"), $name . '.' . substr(strrchr($path, "."), 1));
     }

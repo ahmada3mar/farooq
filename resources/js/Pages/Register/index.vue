@@ -43,18 +43,23 @@
           </div>
 
           <!-- Form -->
-          <form @submit.prevent="submit">
-            <div class="input-with-icon-left">
+          <form @submit.prevent="submit" >
+            <div class="container ">
+                <div class="row arabicRow">
+
+            <div class="input-with-icon-left col-6">
               <i class="icon-material-outline-account-circle"></i>
               <input
                 type="text"
                 class="input-text with-border"
                 v-model="form.name"
+                id="FullName"
+
                 placeholder="الأسم الرباعي"
                 required
               />
             </div>
-            <div class="input-with-icon-left">
+            <div class="input-with-icon-left col-6">
               <i class="icon-material-baseline-mail-outline"></i>
               <input
                 type="text"
@@ -66,8 +71,53 @@
                 required
               />
             </div>
-            <div
-              class="input-with-icon-left"
+            <div class="input-with-icon-left col-6">
+              <i class="icon-material-baseline-mail-outline"></i>
+              <input
+                type="text"
+                class="input-text with-border"
+                v-model="form.mobile"
+                name="mobile"
+                id="mobile"
+                placeholder="رقم الهاتف"
+                required
+              />
+            </div>
+            <div class="input-with-icon-left col-6 select">
+              <i class="icon-material-baseline-mail-outline"></i>
+
+            <select class="select arabic" v-model="form.title" name="title" id="title" required>
+                <option selected  >التخصص</option>
+				<option v-for="section in sections" :key="section.id" :value="section.id">{{section.name}}</option>
+			</select>
+
+
+            </div>
+            <div class="input-with-icon-left col-6">
+              <i class="icon-material-baseline-mail-outline"></i>
+              <input
+                type="text"
+                class="input-text with-border"
+                v-model="form.city"
+                name="city"
+                id="city"
+                placeholder="المدينة"
+                required
+              />
+            </div>
+            <div class="input-with-icon-left col-6">
+              <i class="icon-material-baseline-mail-outline"></i>
+              <input
+                type="text"
+                class="input-text with-border"
+                v-model="form.area"
+                name="area"
+                id="area"
+                placeholder="المنطقة"
+                required
+              />
+            </div>
+            <div class="input-with-icon-left col-6"
               title="Should be at least 8 characters long"
               data-tippy-placement="bottom"
             >
@@ -82,7 +132,7 @@
                 required
               />
             </div>
-            <div class="input-with-icon-left">
+            <div class="input-with-icon-left col-6">
               <i class="icon-material-outline-lock"></i>
               <input
                 type="password"
@@ -93,6 +143,9 @@
                 placeholder=" تأكيد كلمة المرور"
                 required
               />
+            </div>
+                </div>
+
             </div>
             <button
               class="
@@ -124,6 +177,7 @@ import { reactive } from "vue";
 export default {
   props: {
     errors: Object,
+    sections: Object,
   },
 
   data() {
@@ -147,4 +201,8 @@ ul {
 li {
   text-align: right;
 }
+.arabicRow{
+    flex-direction: row-reverse;
+}
+
 </style>

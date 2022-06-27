@@ -60,7 +60,7 @@
             <div id="logo">
               <Link href="/"><img src="/assets/images/logo.png" alt="" /></Link>
             </div>
-            <Slide class="navigation mobile"   right>
+            <Slide class="navigation mobile rightLists"   right>
               <ul class="responsiveMobile">
                 <li>
                   <Link href="/contact">من نحن</Link>
@@ -101,6 +101,14 @@
                   <Link href="/">الصفحة الرئيسية</Link>
                 </li>
               </ul>
+                <ul class="loginList">
+                  <li>
+                    <Link class="colorWhite" href="/Register">تسجيل</Link>
+                  </li>
+                  <li>
+                    <Link class="colorWhite" href="/login">تسجيل الدخول </Link>
+                  </li>
+                </ul>
             </Slide>
           </div>
           <!-- Left Side Content / End -->
@@ -247,6 +255,22 @@ export default {
  }
  .all-right-footer{
    text-decoration: rtl !important;
+ }
+ .rightLists{
+position: relative;
+ }
+ .loginList{
+ position: absolute;
+ bottom: 25px;
+ display: flex;
+ flex-direction: column;
+     list-style: none;
+    font-size: 1.5rem;
+    gap: 5px;
+ }
+ .colorWhite{
+     color: rgb(181, 179, 179) !important;
+
  }
 
 </style>
