@@ -32,6 +32,8 @@
                           title="Facebook"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
+                          target="_blank"
+
                         >
                           <i class="icon-brand-facebook-f arabicCenter"> Facebook</i>
                         </a>
@@ -42,6 +44,8 @@
                           title="youtube"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
+                          target="_blank"
+
                         >
                           <i class="icon-brand-youtube arabicCenter"> Youtube</i>
                         </a>
@@ -52,6 +56,8 @@
                           title="Twitter"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
+                          target="_blank"
+
                         >
                           <i class="icon-brand-twitter arabicCenter"> Twitter</i>
                         </a>
@@ -62,6 +68,8 @@
                           title="Instagram"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
+                          target="_blank"
+
                         >
                           <i class="icon-feather-instagram arabicCenter"> Instagram</i>
                         </a>
@@ -72,16 +80,19 @@
                           title="LinkedIn"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
+                          target="_blank"
                         >
                           <i class="icon-brand-linkedin-in arabicCenter"> Linkedin</i>
                         </a>
                       </li>
-                      <li >
+                      <li v-if="web_TikTok" >
                         <a
-                          href="web_TikTok"
+                          :href="web_TikTok"
                           title="TikTok"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
+                          target="_blank"
+
                         >
                             <i class="fa-brands footer-icon arabicCenter">
                                 TikTok
@@ -148,7 +159,7 @@
         <div class="container">
           <div class="row">
             <div class="col-xl-12 all-right-footer" >
-                جميع الحقوق محفوظة © <strong>الفاروق</strong> {{new Date().getFullYear()}}
+                جميع الحقوق محفوظة © <strong>مجموعة الفاروق التعليمية</strong> {{new Date().getFullYear()}}
             </div>
           </div>
         </div>
@@ -175,6 +186,8 @@ export default {
                 web_twitter: conf.find((s) => s.key == "web_twitter")?.value || "",
                 web_linkedin: conf.find((s) => s.key == "web_linkedin")?.value || "",
                 web_instagram: conf.find((s) => s.key == "web_instagram")?.value || "",
+                web_youtube: conf.find((s) => s.key == "web_youtube")?.value || "",
+                web_TikTok: conf.find((s) => s.key == "web_TikTok")?.value || "",
             }
         }
         return new Object

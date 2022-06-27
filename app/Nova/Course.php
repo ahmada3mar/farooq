@@ -101,8 +101,7 @@ class Course extends ResourceForUser
                 )->searchable(),
 
 
-            Select::make( __('section'), 'section_id')
-                ->options(Section::pluck('name' , 'id')->toArray())
+                BelongsTo::make( __('section'), 'section',NovaSection::class)
                 ->rules('required', 'numeric'),
 
             NestedForm::make('Unit', 'units', Unit::class),

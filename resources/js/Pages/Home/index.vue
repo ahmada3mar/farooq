@@ -1,4 +1,11 @@
 <template>
+
+  <Head>
+    <title>الرئيسية</title>
+    <meta name="description" content="الرئيسية" head-key="description" />
+    <meta name="keywords" content="الرئيسية" />
+  </Head>
+
     <div :style="{ '--shadow': shadow }" class="intro-banner">
         <div
             class="background-image-container"

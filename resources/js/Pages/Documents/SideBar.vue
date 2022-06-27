@@ -3,13 +3,13 @@
         <div class="sidebar-container arabic">
 
 
-          <!-- Tags -->            
+          <!-- Tags -->
             <div
               v-for="type in types"
               :key="type.key"
             >
               <button class="button ripple-effect button-sliding-icon sidebar-button type-button"
-              
+
                 @click="togleType"
                 >
                    {{ type.value }}
@@ -20,7 +20,7 @@
                 :key="section.id"
               >
               <button
-              
+
                 class="button gray ripple-effect button-sliding-icon sidebar-button"
                 @click="togleSection"
                 >
@@ -30,18 +30,18 @@
                 <div
                   v-for="course in section.document_courses"
                   :key="course.id"
-                  
+
                 >
                 <Link
                           :href="`/documents?type=${type.key}&section=${section.id}&course=${course.id}`"
                           class="button ripple-effect button-sliding-icon sidebar-button"
-                          
+
                       >
                       {{ course.name }} <i class="icon-feather-arrow-left"></i>
                   </Link>
                 </div>
-                </div>              
-              
+                </div>
+
               </div>
               <div class="margin-bottom-10"></div>
 
@@ -73,9 +73,10 @@ export default {
             let target = parent.querySelector(`.sidebar-dropdown`);
             // let rest = document.querySelectorAll(`.show`);
             // rest.forEach(element => {
-            //   element.classList.remove("show"); 
+            //   element.classList.remove("show");
             // });
              target.classList.toggle("show");
+            this.$forceUpdate();
 
         },
         togleType(e){
@@ -83,9 +84,10 @@ export default {
             let target = parent.querySelector(`.Type-List`);
             // let rest = parentElement.querySelectorAll(`.show`);
             // rest.forEach(element => {
-            //   element.classList.remove("show"); 
+            //   element.classList.remove("show");
             // });
              target.classList.toggle("show");
+             this.$forceUpdate();
 
         }
     },
@@ -134,6 +136,10 @@ a.headline-link::before {
   flex-direction:column;
   direction: rtl;
   padding-left: 10px !important;
+  height: 100%;
+  overflow: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
   .sidebar-button{
     float: unset;

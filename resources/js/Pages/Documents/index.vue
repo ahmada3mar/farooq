@@ -165,4 +165,9 @@ a.headline-link::before {
 .full-page-container{
   height: 70% ;
 }
+.full-page-content-inner{
+      overflow: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 </style>

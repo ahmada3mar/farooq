@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Section;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -30,24 +31,31 @@ class LoginController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
+            'email' => 'اسم المستخدم أو كلمة المرور غير متطابقة',
         ]);
     }
 
     public function register(){
        $this->validate(request(), [
             'name' => 'required',
+            'mobile' => 'required',
+            'city' => 'required',
+            'area' => 'required',
+            'title' => 'required',
             'email' => 'required|unique:users,email',
             'password' => 'required|confirmed|min:8'
         ], [
             'name.required' =>'يرجى تعبة الأسم',
             'email.required' =>'يرجى تعبة البريد الإلكتروني',
             'email.unique' =>'البريد الإلكتروني مسجل مسبقاً',
-            'password.required' =>'يرجى اختيار كلمة المرور',
+            'mobile.required' =>'يرجى تعبة رقم الهاتف',
+            'city.required' =>'يرجى تعبة المدينة',
+            'area.required' =>'يرجى تعبة المنطقة',
+            'title.required' =>'يرجى تعبة التخصص',
         ]);
 
         // dd($ee);
-        $user = User::create(request(['name', 'email', 'password']));
+        $user = User::create(request(['name', 'email', 'password', 'mobile', 'city', 'area', 'title']));
         $user->assignRole('user');
 
         auth()->login($user);
@@ -56,7 +64,9 @@ class LoginController extends Controller
     }
 
     public function registerIndex(){
-        return Inertia::render('Register');
+        $sections = Section::orderBy('Order')->get();
+
+        return Inertia::render('Register' , compact('sections'));
     }
 
     public function logout(Request $request){

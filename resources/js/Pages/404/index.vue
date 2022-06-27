@@ -13,13 +13,12 @@
 		<div class="row">
 			<div class="col-md-12">
 
-				<h2>404 Not Found</h2>
+				<h2>404 غير موجود</h2>
 
 				<!-- Breadcrumbs -->
-				<nav id="breadcrumbs" class="dark">
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li>404 Not Found</li>
+				<nav id="breadcrumbs" class="dark ">
+					<ul class="arabic">
+						<li><a href="/">الرئيسية</a></li>
 					</ul>
 				</nav>
 
@@ -38,7 +37,7 @@
 
 			<section id="not-found" class="center margin-bottom-25">
 				<h2>404 <i class="icon-line-awesome-question-circle"	></i></h2>
-				<p>We're sorry, but the page you were looking for doesn't exist</p>
+				<p>معذرة ، الصفحة التي تبحث عنها غير موجودة</p>
 			</section>
 
 			<div class="row">
@@ -47,8 +46,8 @@
 
 							<!-- Button -->
 							<div class="intro-search-button">
-								<a href="/"><button class="button full-width ripple-effect">Home</button></a>
-								
+								<a href="/"><button class="button full-width ripple-effect">الرئيسية</button></a>
+
 							</div>
 						</div>
 				</div>
@@ -65,7 +64,7 @@
 <div class="margin-top-70"></div>
 <!-- Spacer / End-->
 
-   
+
 
 </template>
 
