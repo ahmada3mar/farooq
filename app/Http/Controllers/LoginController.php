@@ -52,6 +52,7 @@ class LoginController extends Controller
             'city.required' =>'يرجى تعبة المدينة',
             'area.required' =>'يرجى تعبة المنطقة',
             'title.required' =>'يرجى تعبة التخصص',
+            'password.min' =>'يجب أن تتكون كلمة المرور من 8 أحرف على الأقل',
         ]);
 
         // dd($ee);

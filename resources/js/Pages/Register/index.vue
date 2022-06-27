@@ -85,7 +85,7 @@
             <div class="input-with-icon-left col-6 select">
               <i class="icon-material-baseline-mail-outline"></i>
 
-            <select class="select arabic" v-model="form.section" name="section" id="section" required>
+            <select class="select arabic" v-model="form.title" name="title" id="title" required>
                 <option selected  >التخصص</option>
 				<option v-for="section in sections" :key="section.id" :value="section.id">{{section.name}}</option>
 			</select>
