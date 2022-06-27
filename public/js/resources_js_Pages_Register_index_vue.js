@@ -291,6 +291,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $data.form.name = $event;
     }),
     id: "FullName",
+
     placeholder: "الأسم الرباعي",
     required: ""
   }, null, 512

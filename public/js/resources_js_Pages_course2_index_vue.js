@@ -272,18 +272,21 @@ var _hoisted_37 = {
 };
 
 var _hoisted_38 = /*#__PURE__*/_withScopeId(function () {
+
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, "هذا الفيديو خاص", -1
   /* HOISTED */
   );
 });
 
 var _hoisted_39 = /*#__PURE__*/_withScopeId(function () {
+
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "يرجى شراء الكورس لتتمكن من مشاهدة الفيديو", -1
   /* HOISTED */
   );
 });
 
 var _hoisted_40 = /*#__PURE__*/_withScopeId(function () {
+
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "button ripple-effect mt-5 px-5",
     "data-v-b67a1efe": ""
@@ -310,6 +313,7 @@ var _hoisted_45 = {
 };
 
 var _hoisted_46 = /*#__PURE__*/_withScopeId(function () {
+
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-xl-12"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -320,6 +324,7 @@ var _hoisted_46 = /*#__PURE__*/_withScopeId(function () {
 });
 
 var _hoisted_47 = {
+
   "class": "photo-box-content"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -400,6 +405,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "button ripple-effect mt-5 px-5"
   }, " تحقق ")])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_29, _hoisted_31))])])) : $data.lectur.url ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <iframe\n              class=\"col-12 padding-right-0 padding-left-0\"\n              height=\"350\"\n              :src=\"'https://www.youtube.com/embed/' + lectur.url\"\n              title=\"YouTube video player\"\n              frameborder=\"0\"\n              allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n              allowfullscreen\n            ></iframe> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("iframe", {
     src: 'https://drive.google.com/file/d/' + $data.lectur.url + '/preview',
+
     "class": "col-12 padding-right-0 padding-left-0",
     height: "480",
     allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
@@ -414,6 +420,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_40];
+
     }),
     _: 1
     /* STABLE */
@@ -425,11 +432,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 8
   /* PROPS */
   , ["lectur"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Accordion, {
+
     changeVid: $options.changeVid,
     course: $props.course
   }, null, 8
   /* PROPS */
   , ["changeVid", "course"])])])])]), $props.simmilerCourses.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_43, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [_hoisted_46, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.simmilerCourses, function (course) {
+
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: course.id,
       "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)("col-xl-".concat($props.simmilerCourses.length < 5 ? 12 / $props.simmilerCourses.length : '3', " col-md-6"))
@@ -440,6 +449,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
         return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(course.name), 1
+
         /* TEXT */
         )])];
       }),

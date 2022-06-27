@@ -113,6 +113,7 @@
               allowfullscreen
             ></iframe> -->
             <div style=" height: 480px; position: relative;">
+
            <iframe
            :src="'https://drive.google.com/file/d/' + lectur.url + '/preview'"
             class="col-12 padding-right-0 padding-left-0"
@@ -121,6 +122,7 @@
             scrolling="no" seamless="" allowfullscreen frameborder="0"  ></iframe>
             <div style="width: 80px; height: 80px; position: absolute; opacity:0; right:0; top: 0;"></div>
             </div>
+
           </div>
         <div v-else>
             <div class="private">

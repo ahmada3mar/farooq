@@ -516,6 +516,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.vid-description[data-v-2b56cabc] {\n  border-radius: 0;\n}\n.right-side[data-v-2b56cabc] {\n  display: contents;\n}\n.button[data-v-2b56cabc] {\n  float: left;\n}\n.sidebar-container a.headline-link[data-v-2b56cabc] {\n      position: unset;\n    left: unset;\n    bottom: unset;\n}\na.headline-link[data-v-2b56cabc]::after {\n    content: \"\\27F5\";\n    font-family: \"Material-Icons\";\n    font-size: 21px;\n    line-height: 0;\n    position: relative;\n    top: 0px;\n    margin-right: 5px;\n}\na.headline-link[data-v-2b56cabc]::before {\n    content: unset;\n    font-family: unset;\n}\n.sidebar-container[data-v-2b56cabc]{\n  display:flex;\n  flex-direction:column;\n  direction: rtl;\n}\n.sidebar-button[data-v-2b56cabc]{\n    float: unset;\n    width: 90%;\n    font-size: 1.5rem;\n    margin: 5px 0;\n    text-align: right;\n}\n.font3rem[data-v-2b56cabc]{\n    font-size: 3rem;\n}\n.full-page-container[data-v-2b56cabc]{\n  height: 70% ;\n}\n.full-page-content-inner[data-v-2b56cabc]{\n      overflow: auto;\n  -ms-overflow-style: none;  /* IE and Edge */\n  scrollbar-width: none;  /* Firefox */\n}\n", ""]);
+
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -16,8 +16,8 @@ class InstructorsController extends Controller
     public function index()
     {
         $Instructors = User::with('courses')->role('instructor')->get();
-        // $Instructors = User::where('Role', 'LIKE', 'home%')->get();
-        return Inertia::render('Instructors', compact('Instructors'));
+        $instructos = User::with('courses')->role('instructor')->get();
+        return Inertia::render('Instructors', compact('instructos'));
 
     }
 

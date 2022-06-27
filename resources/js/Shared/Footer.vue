@@ -46,6 +46,7 @@
                           data-tippy-theme="light"
                           target="_blank"
 
+
                         >
                           <i class="icon-brand-youtube arabicCenter"> Youtube</i>
                         </a>
@@ -86,8 +87,9 @@
                         </a>
                       </li>
                       <li v-if="web_TikTok" >
+
                         <a
-                          :href="web_TikTok"
+                          href="web_TikTok"
                           title="TikTok"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
@@ -160,6 +162,7 @@
           <div class="row">
             <div class="col-xl-12 all-right-footer" >
                 جميع الحقوق محفوظة © <strong>مجموعة الفاروق التعليمية</strong> {{new Date().getFullYear()}}
+
             </div>
           </div>
         </div>

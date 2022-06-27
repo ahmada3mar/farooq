@@ -54,6 +54,7 @@
                 class="input-text with-border"
                 v-model="form.name"
                 id="FullName"
+
                 placeholder="الأسم الرباعي"
                 required
               />
