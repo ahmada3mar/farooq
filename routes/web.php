@@ -15,6 +15,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Models\Document;
 use App\Models\Section;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Inertia\Inertia;
 
 
@@ -31,12 +33,14 @@ use Inertia\Inertia;
 |
 */
 
-Route::get("/test" , function(){
-    dd(Course::with(['units.lectures' => function($q){
-        return $q->select('unit_id', 'name');;
-    }])->find(5));
+Route::get("/test" , function(Request $req){
+    dd(null != 'vvv');
+    $response = new Response('Set Cookie');
+
+    $response->withCookie(cookie('name', 'MyValue', 0));
+    return $response;
 });
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/contact', [ContactController::class, 'index']);
 
 
