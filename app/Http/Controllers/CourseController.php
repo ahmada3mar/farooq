@@ -110,7 +110,7 @@ class CourseController extends Controller
 
         if (isset($card->course_id) && $card->course_id != $id) {
             $name = $card->course->name;
-            Session::flash("errors", "\n $name هذه البطاقة صالحة فقط لشراء");
+            Session::flash("errors", " هذه البطاقة صالحة فقط لشراء  \n $name");
              return redirect("/purchase/$id");
         }
 

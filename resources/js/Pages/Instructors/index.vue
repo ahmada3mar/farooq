@@ -15,6 +15,7 @@
         <!-- Tasks Container -->
         <div class="tasks-list-container tasks-grid-layout margin-top-35">
           <div  v-for="Instructor in Instructors" :key="Instructor.id" class="task-listing arabic">
+            <a :href="`/profile/${Instructor.id}`">
             <!-- Job Listing Details -->
             <div class="task-listing-details">
               <div class="course-image">
@@ -63,7 +64,9 @@
                 </div> -->
               </div>
             </div>
+            </a>
           </div>
+
         </div>
 
       </div>
@@ -85,7 +88,7 @@ export default {
     pagination,
   },
   mounted() {
-    console.log('this.Instructors', this.Instructors);
+    // console.log('this.Instructors', this.Instructors);
   },
 };
 </script>
