@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "82c3e1bcb1590151415c3023e0ba0a21",
+    "content-hash": "6ff9ed1cb8c230d707c7a8d2c422f9de",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -319,7 +319,7 @@
         },
         {
             "name": "digitalcloud/multilingual-nova",
-            "version": "dev-bdour",
+            "version": "dev-ahmad",
             "dist": {
                 "type": "path",
                 "url": "./lang",
@@ -1134,7 +1134,7 @@
         },
         {
             "name": "farooq/checkboxes",
-            "version": "dev-bdour",
+            "version": "dev-ahmad",
             "dist": {
                 "type": "path",
                 "url": "./nova-components/Checkboxes",
@@ -1242,11 +1242,11 @@
         },
         {
             "name": "farooq/unit-picker",
-            "version": "dev-bdour",
+            "version": "dev-ahmad",
             "dist": {
                 "type": "path",
                 "url": "./nova-components/UnitPicker",
-                "reference": "a1d9cb85821aa9eeb0a07a4917332fb869fea7c8"
+                "reference": "2354ab0400e5e0fd23b82993f617e60ca846ac5b"
             },
             "require": {
                 "php": ">=7.1.0"
@@ -4090,6 +4090,51 @@
             "time": "2022-04-04T05:15:45+00:00"
         },
         {
+            "name": "pragmarx/nova-boolean-datetime-field",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/antonioribeiro/nova-boolean-datetime-field.git",
+                "reference": "b95cf7e9a68482783e27890bc3f4acfb8685c18e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/antonioribeiro/nova-boolean-datetime-field/zipball/b95cf7e9a68482783e27890bc3f4acfb8685c18e",
+                "reference": "b95cf7e9a68482783e27890bc3f4acfb8685c18e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "PragmaRX\\BooleanDatetime\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PragmaRX\\BooleanDatetime\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova Boolean DateTime field.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/antonioribeiro/nova-boolean-datetime-field/issues",
+                "source": "https://github.com/antonioribeiro/nova-boolean-datetime-field/tree/master"
+            },
+            "time": "2019-01-20T21:04:53+00:00"
+        },
+        {
             "name": "psr/container",
             "version": "1.1.2",
             "source": {
@@ -5471,7 +5516,6 @@
         },
         {
             "name": "symfony/event-dispatcher",
-
             "version": "v5.4.3",
             "source": {
                 "type": "git",
@@ -5537,7 +5581,6 @@
             "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
             "homepage": "https://symfony.com",
             "support": {
-
                 "source": "https://github.com/symfony/event-dispatcher/tree/v5.4.3"
             },
             "funding": [
@@ -5554,7 +5597,6 @@
                     "type": "tidelift"
                 }
             ],
-
             "time": "2022-01-02T09:53:40+00:00"
         },
         {
@@ -7109,7 +7151,6 @@
         },
         {
             "name": "symfony/string",
-
             "version": "v5.4.8",
             "source": {
                 "type": "git",
@@ -7176,7 +7217,6 @@
                 "utf8"
             ],
             "support": {
-
                 "source": "https://github.com/symfony/string/tree/v5.4.8"
             },
             "funding": [
@@ -7274,7 +7314,6 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-
                 "source": "https://github.com/symfony/translation/tree/v5.4.8"
             },
             "funding": [
@@ -7291,7 +7330,6 @@
                     "type": "tidelift"
                 }
             ],
-
             "time": "2022-04-22T08:14:12+00:00"
         },
         {
@@ -10392,5 +10430,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }

@@ -3,9 +3,11 @@
 namespace App\Nova;
 
 use App\Models\Section;
+use Carbon\Carbon;
 use Epartment\NovaDependencyContainer\NovaDependencyContainer;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Avatar;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
@@ -14,6 +16,7 @@ use Laravel\Nova\Fields\Place;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Vyuldashev\NovaPermission\RoleSelect;
 
 
@@ -83,7 +86,7 @@ class User extends Resource
         return [
             ID::make()->sortable(),
 
-            Avatar::make('Pictur' , 'avatar')->maxWidth(50),
+            Avatar::make('Pictur', 'avatar')->maxWidth(50),
             Image::make(__('cover'), 'cover')->maxWidth(50)->hideFromIndex(),
 
 
@@ -99,11 +102,11 @@ class User extends Resource
             Number::make('class'),
 
             NovaDependencyContainer::make([
-                Select::make('section' ,'section_id')->options(Section::pluck('name' , 'id'))->hideFromIndex(),
-            ])->dependsOn('class', '11')->dependsOn('class' ,'12'),
+                Select::make('section', 'section_id')->options(Section::pluck('name', 'id'))->hideFromIndex(),
+            ])->dependsOn('class', '11')->dependsOn('class', '12'),
 
             Text::make('Mobile')
-            ->hideFromIndex()
+                ->hideFromIndex()
                 ->sortable()
                 ->rules('required', 'max:254')
                 ->creationRules('unique:users,mobile')
@@ -112,32 +115,32 @@ class User extends Resource
                 ->sortable()
                 ->rules('required', 'max:255'),
             Place::make('City')
-            ->hideFromIndex()
+                ->hideFromIndex()
                 ->sortable()
-                ->rules( 'max:254'),
+                ->rules('max:254'),
 
             Text::make('Area')
                 ->sortable()
                 ->hideFromIndex()
-                ->rules( 'max:254'),
+                ->rules('max:254'),
 
             Text::make('experience')
                 ->sortable()
-                ->rules( 'max:255'),
+                ->rules('max:255'),
             Text::make('facebook')
                 ->sortable()
                 ->hideFromIndex()
-                ->rules( 'max:255'),
+                ->rules('max:255'),
             Text::make('twitter')
                 ->sortable()
                 ->hideFromIndex()
-                ->rules( 'max:255'),
+                ->rules('max:255'),
             Text::make('telegram')
                 ->sortable()
                 ->hideFromIndex()
-                ->rules( 'max:255'),
-            Trix::make( __('description'), 'description')
-            ->hideFromIndex()
+                ->rules('max:255'),
+            Trix::make(__('description'), 'description')
+                ->hideFromIndex()
                 ->rules('required'),
 
 
@@ -147,8 +150,31 @@ class User extends Resource
                 ->updateRules('nullable', 'string', 'min:8'),
             RoleSelect::make('Role', 'roles'),
 
+            Boolean::make('Active', 'active'),
 
         ];
+    }
+
+    protected static function fillFields(NovaRequest $request, $model, $fields)
+    {
+        $active = $request->active;
+
+        $request->request->remove('active');
+
+        $result = parent::fillFields($request, $model, $fields);
+
+        if($active && !$model->active){
+            $result[1][] = function () use ( $model) {
+                $model->devices->delete();
+            };
+        }
+
+        if(!$active && $model->active){
+            $result[1][] = function () use ( $model) {
+                $model->devices()->updateOrCreate([],['uuid'=>'expired' ,'expire_at' => Carbon::now()->subDays('10')->toDateString()]);
+            };
+        }
+        return  $result;
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -53,6 +54,12 @@ class User extends Authenticatable
         return $this->hasMany(Course::class);
     }
 
+    public function devices(){
+
+        return $this->hasOne(Device::class);
+    }
+
+
     public function registerdCourses(){
 
         return $this->hasManyThrough(Course::class ,UserCourse::class , 'user_id' , 'id' , null ,'course_id');
@@ -76,6 +83,14 @@ class User extends Authenticatable
     public function isSuperAdmin(){
 
         return Auth::user()->hasRole('admin');
+    }
+
+    public function getActiveAttribute(){
+
+        if($this->devices && $this->devices->expire_at <= Carbon::now()->toDateString()){
+            return 0;
+        }
+        return 1;
     }
 
 }
