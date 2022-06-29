@@ -15,6 +15,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
+var sectionSelected, citySelected;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     errors: Object,
@@ -22,12 +23,22 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      form: (0,vue__WEBPACK_IMPORTED_MODULE_1__.reactive)({})
+      form: (0,vue__WEBPACK_IMPORTED_MODULE_1__.reactive)({}),
+      citySelected: "",
+      sectionSelected: ""
     };
   },
   methods: {
     submit: function submit() {
+      this.form.title = this.sectionSelected;
+      this.form.city = this.citySelected;
       _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.post("register", this.form);
+    },
+    SelectCity: function SelectCity() {
+      this.citySelected = this.value;
+    },
+    SelectSection: function SelectSection() {
+      this.sectionSelected = this.value;
     }
   }
 });
@@ -77,7 +88,7 @@ var _hoisted_3 = /*#__PURE__*/_withScopeId(function () {
 });
 
 var _hoisted_4 = {
-  "class": "container py-5 my-5"
+  "class": "container-xl py-5 my-5"
 };
 var _hoisted_5 = {
   "class": "row"
@@ -85,7 +96,7 @@ var _hoisted_5 = {
 
 var _hoisted_6 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "col-md-5 mx-2 left-image"
+    "class": "col-md-4 mx-2 left-image"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     src: "/assets/images/register.jpg"
   })], -1
@@ -94,7 +105,7 @@ var _hoisted_6 = /*#__PURE__*/_withScopeId(function () {
 });
 
 var _hoisted_7 = {
-  "class": "col-md-5"
+  "class": "col-md-7 register"
 };
 var _hoisted_8 = {
   "class": "login-register-page"
@@ -139,7 +150,7 @@ var _hoisted_11 = /*#__PURE__*/_withScopeId(function () {
 });
 
 var _hoisted_12 = {
-  "class": "container"
+  "class": "container-xl"
 };
 var _hoisted_13 = {
   "class": "row arabicRow"
@@ -181,31 +192,46 @@ var _hoisted_19 = /*#__PURE__*/_withScopeId(function () {
 });
 
 var _hoisted_20 = {
-  "class": "input-with-icon-left col-6 select"
+  "class": "input-with-icon-left col-6"
 };
 
 var _hoisted_21 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-    "class": "icon-material-baseline-mail-outline"
-  }, null, -1
-  /* HOISTED */
-  );
-});
-
-var _hoisted_22 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-    selected: ""
+    disabled: "",
+    sectionSelected: "",
+    hidden: "",
+    value: ""
   }, "التخصص", -1
   /* HOISTED */
   );
 });
 
-var _hoisted_23 = ["value"];
+var _hoisted_22 = ["value"];
+
+var _hoisted_23 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "icon-material-baseline-mail-outline"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
 var _hoisted_24 = {
   "class": "input-with-icon-left col-6"
 };
 
 var _hoisted_25 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    disabled: "",
+    citySelected: "",
+    hidden: "",
+    value: ""
+  }, "المدينة", -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_26 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
     "class": "icon-material-baseline-mail-outline"
   }, null, -1
@@ -213,11 +239,11 @@ var _hoisted_25 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_26 = {
+var _hoisted_27 = {
   "class": "input-with-icon-left col-6"
 };
 
-var _hoisted_27 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_28 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
     "class": "icon-material-baseline-mail-outline"
   }, null, -1
@@ -225,13 +251,13 @@ var _hoisted_27 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_28 = {
+var _hoisted_29 = {
   "class": "input-with-icon-left col-6",
   title: "Should be at least 8 characters long",
   "data-tippy-placement": "bottom"
 };
 
-var _hoisted_29 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_30 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
     "class": "icon-material-outline-lock"
   }, null, -1
@@ -239,11 +265,11 @@ var _hoisted_29 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_30 = {
+var _hoisted_31 = {
   "class": "input-with-icon-left col-6"
 };
 
-var _hoisted_31 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_32 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
     "class": "icon-material-outline-lock"
   }, null, -1
@@ -251,7 +277,7 @@ var _hoisted_31 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_32 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_33 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "button full-width button-sliding-icon ripple-effect margin-top-10",
     type: "submit"
@@ -281,7 +307,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }), 128
   /* KEYED_FRAGMENT */
   ))])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Form "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
-    onSubmit: _cache[8] || (_cache[8] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+    onSubmit: _cache[21] || (_cache[21] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.submit && $options.submit.apply($options, arguments);
     }, ["prevent"]))
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
@@ -291,7 +317,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $data.form.name = $event;
     }),
     id: "FullName",
-
     placeholder: "الأسم الرباعي",
     required: ""
   }, null, 512
@@ -320,41 +345,115 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     required: ""
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.mobile]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-    "class": "select arabic",
-    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
-      return $data.form.title = $event;
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.mobile]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "class": "custom-select arabic",
+    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
+      return $data.sectionSelected = $event;
     }),
     name: "title",
     id: "title",
     required: ""
-  }, [_hoisted_22, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.sections, function (section) {
+  }, [_hoisted_21, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.sections, function (section) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
+      onClick: _cache[3] || (_cache[3] = function () {
+        return $options.SelectSection && $options.SelectSection.apply($options, arguments);
+      }),
       key: section.id,
-      value: section.id
+      value: section.id,
+      "class": "select-option"
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(section.name), 9
     /* TEXT, PROPS */
-    , _hoisted_23);
+    , _hoisted_22);
   }), 128
   /* KEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.form.title]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [_hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    "class": "input-text with-border",
-    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
-      return $data.form.city = $event;
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.sectionSelected]]), _hoisted_23]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "class": "custom-select arabic",
+    "onUpdate:modelValue": _cache[17] || (_cache[17] = function ($event) {
+      return $data.citySelected = $event;
     }),
     name: "city",
     id: "city",
-    placeholder: "المدينة",
     required: ""
-  }, null, 512
+  }, [_hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    onClick: _cache[5] || (_cache[5] = function () {
+      return $options.SelectCity && $options.SelectCity.apply($options, arguments);
+    }),
+    "class": "select-option",
+    value: "إربد"
+  }, "إربد"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    onClick: _cache[6] || (_cache[6] = function () {
+      return $options.SelectCity && $options.SelectCity.apply($options, arguments);
+    }),
+    "class": "select-option",
+    value: "المفرق"
+  }, "المفرق"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    onClick: _cache[7] || (_cache[7] = function () {
+      return $options.SelectCity && $options.SelectCity.apply($options, arguments);
+    }),
+    "class": "select-option",
+    value: "عجلون"
+  }, "عجلون"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    onClick: _cache[8] || (_cache[8] = function () {
+      return $options.SelectCity && $options.SelectCity.apply($options, arguments);
+    }),
+    "class": "select-option",
+    value: "جرش"
+  }, "جرش"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    onClick: _cache[9] || (_cache[9] = function () {
+      return $options.SelectCity && $options.SelectCity.apply($options, arguments);
+    }),
+    "class": "select-option",
+    value: "عمان"
+  }, "عمان"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    onClick: _cache[10] || (_cache[10] = function () {
+      return $options.SelectCity && $options.SelectCity.apply($options, arguments);
+    }),
+    "class": "select-option",
+    value: "الزرقاء"
+  }, "الزرقاء"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    onClick: _cache[11] || (_cache[11] = function () {
+      return $options.SelectCity && $options.SelectCity.apply($options, arguments);
+    }),
+    "class": "select-option",
+    value: "السلط"
+  }, "السلط"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    onClick: _cache[12] || (_cache[12] = function () {
+      return $options.SelectCity && $options.SelectCity.apply($options, arguments);
+    }),
+    "class": "select-option",
+    value: "مأدبا"
+  }, "مأدبا"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    onClick: _cache[13] || (_cache[13] = function () {
+      return $options.SelectCity && $options.SelectCity.apply($options, arguments);
+    }),
+    "class": "select-option",
+    value: "الطفيلة"
+  }, "الطفيلة"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    onClick: _cache[14] || (_cache[14] = function () {
+      return $options.SelectCity && $options.SelectCity.apply($options, arguments);
+    }),
+    "class": "select-option",
+    value: "الكرك"
+  }, "الكرك"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    onClick: _cache[15] || (_cache[15] = function () {
+      return $options.SelectCity && $options.SelectCity.apply($options, arguments);
+    }),
+    "class": "select-option",
+    value: "معان"
+  }, "معان"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    onClick: _cache[16] || (_cache[16] = function () {
+      return $options.SelectCity && $options.SelectCity.apply($options, arguments);
+    }),
+    "class": "select-option",
+    value: "العقبة"
+  }, "العقبة")], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.city]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [_hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.citySelected]]), _hoisted_26]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [_hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     "class": "input-text with-border",
-    "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
+    "onUpdate:modelValue": _cache[18] || (_cache[18] = function ($event) {
       return $data.form.area = $event;
     }),
     name: "area",
@@ -363,10 +462,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     required: ""
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.area]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [_hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.area]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [_hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "password",
     "class": "input-text with-border",
-    "onUpdate:modelValue": _cache[6] || (_cache[6] = function ($event) {
+    "onUpdate:modelValue": _cache[19] || (_cache[19] = function ($event) {
       return $data.form.password = $event;
     }),
     name: "password",
@@ -375,10 +474,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     required: ""
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [_hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [_hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "password",
     "class": "input-text with-border",
-    "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
+    "onUpdate:modelValue": _cache[20] || (_cache[20] = function ($event) {
       return $data.form.password_confirmation = $event;
     }),
     name: "password-repeat-register",
@@ -387,7 +486,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     required: ""
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password_confirmation]])])])]), _hoisted_32], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password_confirmation]])])])]), _hoisted_33], 32
   /* HYDRATE_EVENTS */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Button "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Social Login ")])])])])], 64
   /* STABLE_FRAGMENT */
@@ -412,7 +511,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nul[data-v-39f5694f] {\n  padding: 0;\n  padding-right: 20;\n}\nli[data-v-39f5694f] {\n  text-align: right;\n}\n.arabicRow[data-v-39f5694f]{\n    flex-direction: row-reverse;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nul[data-v-39f5694f] {\n  padding: 0;\n  padding-right: 20;\n}\nli[data-v-39f5694f] {\n  text-align: right;\n}\n.arabicRow[data-v-39f5694f]{\n    flex-direction: row-reverse;\n}\n\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
