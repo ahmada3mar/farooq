@@ -91,16 +91,18 @@ class SiteConfig extends Resource
                     'web_instagram' => __('instagram'),
                     'web_TikTok' => __('TikTok'),
                     'web_youtube' => __('youtube'),
+                    'support_mobile' => __('Support Mobile'),
                 ])
                 ->sortable()
                 ->rules('required', 'max:255'),
 
             Select::make(__('type'), 'type')
                 ->options([
-                    '0' => __('text'),
+                    '0' => __('description'),
                     '1' => __('image'),
                     '2' => __('color'),
-                    '3' => __('link'),
+                    '3' => __('Text'),
+                    '4' => __('link'),
                 ])
                 ->displayUsingLabels()
                 ->creationRules('required', 'numeric')
@@ -121,6 +123,11 @@ class SiteConfig extends Resource
                 Text::make(__('value'), 'value')
                     ->rules('required')
                     ->help('Includes the full url with https://'),
+            ])->dependsOn('type', '4'),
+
+            NovaDependencyContainer::make([
+                Text::make(__('value'), 'value')
+                    ->rules('required')
             ])->dependsOn('type', '3'),
 
             NovaDependencyContainer::make([
