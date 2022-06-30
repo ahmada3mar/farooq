@@ -26,28 +26,28 @@
               </div>
               <!-- Details -->
               <div class="task-listing-description">
-                <h3 class="task-listing-title">{{Instructor.name}}</h3>
-                <ul class="task-icons">
+                <h3 class="task-listing-title">{{Instructor.name}}  </h3><span>{{Instructor.title}} </span>
+                <ul class="task-icons arabic">
                   <template v-if="Instructor.	title">
 
-                  <li class="m-0 padding-left-5">
+                  <!-- <li class="m-0 padding-left-5 arabic">
                     <i class="icon-material-outline-location-on"></i>
                       {{ Instructor.Address }}
                   </li>
                   </template>
                   <template v-if="Instructor.city">
 
-                  <li class="m-0 padding-left-5">
+                  <li class="m-0 padding-left-5 arabic">
                     <i class="icon-material-outline-home"></i>
                       {{Instructor.city}}
                   </li>
                   </template>
                   <template v-if="Instructor.mobile">
 
-                  <li class="m-0 padding-left-5">
+                  <li class="m-0 padding-left-5 arabic">
                     <i class="icon-feather-phone"></i>
                       {{Instructor.mobile}}
-                  </li>
+                  </li> -->
                   </template>
                 </ul>
               </div>
