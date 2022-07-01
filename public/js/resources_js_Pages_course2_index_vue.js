@@ -272,21 +272,18 @@ var _hoisted_37 = {
 };
 
 var _hoisted_38 = /*#__PURE__*/_withScopeId(function () {
-
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, "هذا الفيديو خاص", -1
   /* HOISTED */
   );
 });
 
 var _hoisted_39 = /*#__PURE__*/_withScopeId(function () {
-
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "يرجى شراء الكورس لتتمكن من مشاهدة الفيديو", -1
   /* HOISTED */
   );
 });
 
 var _hoisted_40 = /*#__PURE__*/_withScopeId(function () {
-
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "button ripple-effect mt-5 px-5",
     "data-v-b67a1efe": ""
@@ -313,7 +310,6 @@ var _hoisted_45 = {
 };
 
 var _hoisted_46 = /*#__PURE__*/_withScopeId(function () {
-
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "col-xl-12"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -324,7 +320,6 @@ var _hoisted_46 = /*#__PURE__*/_withScopeId(function () {
 });
 
 var _hoisted_47 = {
-
   "class": "photo-box-content"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -349,7 +344,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Titlebar\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Titlebar\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background-image:url(/storage/".concat($props.course.cover, ")")),
     "class": "container single-page-header"
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_$props$course2 = $props.course) === null || _$props$course2 === void 0 ? void 0 : _$props$course2.lectures_count), 1
@@ -370,7 +365,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* STYLE */
   )], 4
   /* STYLE */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Page Content\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(_$data$lectur = $data.lectur) !== null && _$data$lectur !== void 0 && _$data$lectur.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_19, [$data.lectur.type == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.getUserAnswer()) + " ", 1
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Page Content\r\n================================================== "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(_$data$lectur = $data.lectur) !== null && _$data$lectur !== void 0 && _$data$lectur.name ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_19, [$data.lectur.type == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.getUserAnswer()) + " ", 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_$data$lectur2 = $data.lectur) === null || _$data$lectur2 === void 0 ? void 0 : (_$data$lectur2$questi = _$data$lectur2.question) === null || _$data$lectur2$questi === void 0 ? void 0 : _$data$lectur2$questi.name), 1
   /* TEXT */
@@ -403,9 +398,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $options.check && $options.check.apply($options, arguments);
     }),
     "class": "button ripple-effect mt-5 px-5"
-  }, " تحقق ")])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_29, _hoisted_31))])])) : $data.lectur.url ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <iframe\n              class=\"col-12 padding-right-0 padding-left-0\"\n              height=\"350\"\n              :src=\"'https://www.youtube.com/embed/' + lectur.url\"\n              title=\"YouTube video player\"\n              frameborder=\"0\"\n              allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n              allowfullscreen\n            ></iframe> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("iframe", {
+  }, " تحقق ")])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_29, _hoisted_31))])])) : $data.lectur.url ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <iframe\r\n              class=\"col-12 padding-right-0 padding-left-0\"\r\n              height=\"350\"\r\n              :src=\"'https://www.youtube.com/embed/' + lectur.url\"\r\n              title=\"YouTube video player\"\r\n              frameborder=\"0\"\r\n              allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\r\n              allowfullscreen\r\n            ></iframe> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("iframe", {
     src: 'https://drive.google.com/file/d/' + $data.lectur.url + '/preview',
-
     "class": "col-12 padding-right-0 padding-left-0",
     height: "480",
     allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
@@ -420,7 +414,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_40];
-
     }),
     _: 1
     /* STABLE */
@@ -432,13 +425,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 8
   /* PROPS */
   , ["lectur"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Accordion, {
-
     changeVid: $options.changeVid,
     course: $props.course
   }, null, 8
   /* PROPS */
   , ["changeVid", "course"])])])])]), $props.simmilerCourses.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_43, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [_hoisted_46, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.simmilerCourses, function (course) {
-
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: course.id,
       "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)("col-xl-".concat($props.simmilerCourses.length < 5 ? 12 / $props.simmilerCourses.length : '3', " col-md-6"))
@@ -449,7 +440,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
         return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(course.name), 1
-
         /* TEXT */
         )])];
       }),
@@ -563,7 +553,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.course-image[data-v-b67a1efe] {\n  position: absolute;\n  right: 5%;\n  top: 30%;\n  z-index: 100;\n}\n.vid-description[data-v-b67a1efe] {\n  border-radius: 0;\n}\n.right-side[data-v-b67a1efe] {\n  display: contents;\n}\n.button[data-v-b67a1efe] {\n  float: left;\n}\n.right[data-v-b67a1efe] {\n  direction: rtl;\n}\n.submitErr[data-v-b67a1efe] {\n  float: right;\n  color: red;\n  font-weight: bold;\n}\n.private[data-v-b67a1efe]{\n    height: 350px;\n    background-image: url(/assets/images/403.svg);\n    display: flex;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: left;\n    justify-content: right;\n    background-color: #f9f9f9;\n    padding: 15;\n}\n.private div[data-v-b67a1efe] {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n}\n.private button[data-v-b67a1efe]{\n    float: none;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.course-image[data-v-b67a1efe] {\r\n  position: absolute;\r\n  right: 5%;\r\n  top: 30%;\r\n  z-index: 100;\n}\n.vid-description[data-v-b67a1efe] {\r\n  border-radius: 0;\n}\n.right-side[data-v-b67a1efe] {\r\n  display: contents;\n}\n.button[data-v-b67a1efe] {\r\n  float: left;\n}\n.right[data-v-b67a1efe] {\r\n  direction: rtl;\n}\n.submitErr[data-v-b67a1efe] {\r\n  float: right;\r\n  color: red;\r\n  font-weight: bold;\n}\n.private[data-v-b67a1efe]{\r\n    height: 350px;\r\n    background-image: url(/assets/images/403.svg);\r\n    display: flex;\r\n    background-size: contain;\r\n    background-repeat: no-repeat;\r\n    background-position: left;\r\n    justify-content: right;\r\n    background-color: #f9f9f9;\r\n    padding: 15;\n}\n.private div[data-v-b67a1efe] {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\n}\n.private button[data-v-b67a1efe]{\r\n    float: none;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -664,7 +654,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_vue_vue_type_template_id_b67a1efe_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=b67a1efe&scoped=true */ "./resources/js/Pages/course2/index.vue?vue&type=template&id=b67a1efe&scoped=true");
 /* harmony import */ var _index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js */ "./resources/js/Pages/course2/index.vue?vue&type=script&lang=js");
 /* harmony import */ var _index_vue_vue_type_style_index_0_id_b67a1efe_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.vue?vue&type=style&index=0&id=b67a1efe&scoped=true&lang=css */ "./resources/js/Pages/course2/index.vue?vue&type=style&index=0&id=b67a1efe&scoped=true&lang=css");
-/* harmony import */ var D_moath_h_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -672,7 +662,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,D_moath_h_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_b67a1efe_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-b67a1efe"],['__file',"resources/js/Pages/course2/index.vue"]])
+const __exports__ = /*#__PURE__*/(0,D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_b67a1efe_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-b67a1efe"],['__file',"resources/js/Pages/course2/index.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -694,7 +684,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CourseAccordion_vue_vue_type_template_id_6ff3ac41_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CourseAccordion.vue?vue&type=template&id=6ff3ac41&scoped=true */ "./resources/js/Shared/CourseAccordion.vue?vue&type=template&id=6ff3ac41&scoped=true");
 /* harmony import */ var _CourseAccordion_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CourseAccordion.vue?vue&type=script&lang=js */ "./resources/js/Shared/CourseAccordion.vue?vue&type=script&lang=js");
 /* harmony import */ var _CourseAccordion_vue_vue_type_style_index_0_id_6ff3ac41_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CourseAccordion.vue?vue&type=style&index=0&id=6ff3ac41&scoped=true&lang=css */ "./resources/js/Shared/CourseAccordion.vue?vue&type=style&index=0&id=6ff3ac41&scoped=true&lang=css");
-/* harmony import */ var D_moath_h_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -702,7 +692,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,D_moath_h_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_CourseAccordion_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_CourseAccordion_vue_vue_type_template_id_6ff3ac41_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-6ff3ac41"],['__file',"resources/js/Shared/CourseAccordion.vue"]])
+const __exports__ = /*#__PURE__*/(0,D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_CourseAccordion_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_CourseAccordion_vue_vue_type_template_id_6ff3ac41_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-6ff3ac41"],['__file',"resources/js/Shared/CourseAccordion.vue"]])
 /* hot reload */
 if (false) {}
 
