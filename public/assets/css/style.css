@@ -9641,17 +9641,34 @@ transform: translateY(-18px);
 	.not-found-search.intro-banner-search-form {
 		background: #fff;
 	}
-}
-
-@media (max-width: 767px) {
     .left-image{
         display: none;
     }
+    .row {
+        justify-content: center;
+    }
+    .register {
+        max-width: 80% !important;
+        width: 60% !important;
+        flex: auto !important;
+    }
+}
+
+@media (max-width: 767px) {
 	#not-found h2 {
 		font-size: 110px;
 		line-height: 110px;
 	}
-
+    .register {
+        max-width: 95% !important;
+        width: 95% !important;
+        flex: auto !important;
+    }
+    .register .arabicRow .col-6{
+        flex: unset;
+        max-width: 100%;
+        width: 100%;
+    }
 	#not-found p {
 		font-size: 20px;
 		line-height: 32px;

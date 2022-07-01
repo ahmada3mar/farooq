@@ -1,277 +1,274 @@
 <template>
-    <Head>
-        <title>Profile | Name</title>
-        <meta name="description" content="Profile" head-key="description" />
-        <meta name="keywords" content="Profile" />
-    </Head>
+  <Head>
+    <title>الحساب الشخصي</title>
+    <meta name="description" content="profile" head-key="description" />
+    <meta name="keywords" content="profile" />
+  </Head>
+  <div
+    class="single-page-header freelancer-header"
+    :style="
+      'background-image: url(' +
+      (user.cover ? '/storage/' + user.cover : '/assets/images/banner.jpg') +
+      ')'
+    "
+  >
+    <div class="container arabic">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="single-page-header-inner flexRight">
+            <div class="right-side">
+              <div class="header-details flexCenter">
+                <h3 class="text-capitalize">
+                  {{ user?.name }}
+                  <span class="profile-title"> {{ user.title }}</span>
+                </h3>
+                <!-- <ul>
 
-    <!-- Titlebar
-================================================== -->
-    <div
-        class="single-page-header"
-        data-background-image="images/single-job.jpg"
-    >
-        <div class="container arabic">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="single-page-header-inner">
-                        <div class="left-side">
-                            <div class="salary-box margin-left-0">
-                                <div class="salary-type">عدد المروس</div>
-                                <div class="salary-amount">14</div>
-                            </div>
-                        </div>
-
-                        <div class="header-details flexcolumn">
-                            <h3>اسم المدرس</h3>
-                            <h5>مجال المدرس</h5>
-                            <!-- <ul>
-								<li><a href="single-company-profile.html"><i class="icon-material-outline-business"></i> King</a></li>
-								<li><div class="star-rating" data-rating="4.9"></div></li>
-								<li><img class="flag" src="images/flags/gb.svg" alt=""> United Kingdom</li>
-								<li><div class="verified-badge-with-title">Verified</div></li>
-							</ul> -->
-                        </div>
-                        <div class="right-side">
-                            <div class="header-image margin-left-20">
-                                <a href="single-company-profile.html"
-                                    ><img
-                                        src="images/company-logo-03a.png"
-                                        alt=""
-                                /></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                  <li>
+                    <div class="verified-badge-with-title">تم التحقق</div>
+                  </li>
+                </ul> -->
+              </div>
+              <div class="header-image freelancer-avatar">
+                <img :src="`/storage/${user.avatar}`" :alt="`${user?.name}`" />
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Page Content
-================================================== -->
-    <div class="container py-5 my-5 arabic">
-        <div class="row">
-            <!-- Content -->
-            <div class="col-xl-8 col-lg-8 content-right-offset">
-                <div class="single-page-section">
-                    <h3 class="margin-bottom-25">حول المدرس</h3>
-                    <p>
-                        "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج
-                        أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات
-                        دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس
-                        نوستريد أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس
-                        أيا كوممودو كونسيكيوات . ديواس أيوتي أريري دولار إن
-                        ريبريهينديرأيت فوليوبتاتي فيلايت أيسسي كايلليوم دولار
-                        أيو فيجايت نيولا باراياتيور. أيكسسيبتيور ساينت أوككايكات
-                        كيوبايداتات نون بروايدينت ,سيونت ان كيولبا كيو أوفيسيا
-                        ديسيريونتموليت انيم أيدي ايست لابوريوم."
-                    </p>
+  <div class="container">
+    <div class="row">
+      <!-- Content -->
+      <div class="col-xl-8 col-lg-8 content-right-offset">
+        <!-- Page Content -->
+        <div class="single-page-section arabic">
+          <h2 class="margin-bottom-25">حول</h2>
 
-                    <p>
-                        سيت يتبيرسبايكياتيس يوندي أومنيس أستي ناتيس أيررور سيت
-                        فوليبتاتيم أكيسأنتييوم دولاريمكيو لايودانتيوم,توتام ريم
-                        أبيرأم,أيكيو أبسا كيواي أب أللو أنفينتوري فيرأتاتيس ايت
-                        كياسي أرشيتيكتو بيتاي فيتاي ديكاتا سيونت أكسبليكابو.
-                        نيمو أنيم أبسام فوليوباتاتيم كيواي فوليوبتاس سايت
-                        أسبيرناتشر أيوت أودايت أيوت فيوجايت, سيد كيواي
-                        كونسيكيونتشر ماجناي دولارس أيوس كيواي راتاشن فوليوبتاتيم
-                        سيكيواي نيسكايونت. نيكيو بوررو كيوايسكيوم ايست,كيواي
-                        دولوريم ايبسيوم كيوا دولار سايت أميت,
-                        كونسيكتيتيور,أديبايسكاي فيلايت, سيد كيواي نون نيومكيوام
-                        ايايوس موداي تيمبورا انكايديونت يوت لابوري أيت دولار
-                        ماجنام ألايكيوام كيوايرات فوليوبتاتيم. يوت اينايم أد
-                        مينيما فينيام, كيواس نوستريوم أكسيركايتاشيم يلامكوربوريس
-                        سيوسكايبيت لابورايوسام, نايساي يوت ألايكيوايد أكس أيا
-                        كوموداي كونسيكيواتشر؟ كيوايس أيوتيم فيل أيوم أيوري
-                        ريبريهينديرايت كيواي ان إيا فوليوبتاتي فيلايت ايسسي كيوم
-                        نايهايل موليستايا كونسيكيواتيو,فيلايليوم كيواي دولوريم
-                        أيوم فيوجايات كيو فوليوبتاس نيولا باراياتيور؟"
-                    </p>
-                </div>
-
-
-                <div class="single-page-section">
-                    <h3 class="margin-bottom-25"> المساقات</h3>
-
-                    <!-- Listings Container -->
-                    <div class="listings-container grid-layout">
-                        <!-- Job Listing -->
-                        <a href="#" class="job-listing">
-                            <!-- Job Listing Details -->
-                            <div class="job-listing-details">
-                                <!-- Logo -->
-                                <div class="job-listing-company-logo">
-                                    <img
-                                        src="images/company-logo-02.png"
-                                        alt=""
-                                    />
-                                </div>
-
-                                <!-- Details -->
-                                <div class="job-listing-description">
-                                    <h4 class="job-listing-company">Coffee</h4>
-                                    <h3 class="job-listing-title">
-                                        Barista and Cashier
-                                    </h3>
-                                </div>
-                            </div>
-
-                            <!-- Job Listing Footer -->
-                            <div class="job-listing-footer">
-                                <ul>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-location-on"
-                                        ></i>
-                                        San Francisco
-                                    </li>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-business-center"
-                                        ></i>
-                                        Full Time
-                                    </li>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-account-balance-wallet"
-                                        ></i>
-                                        $35000-$38000
-                                    </li>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-access-time"
-                                        ></i>
-                                        2 days ago
-                                    </li>
-                                </ul>
-                            </div>
-                        </a>
-
-                        <!-- Job Listing -->
-                        <a href="#" class="job-listing">
-                            <!-- Job Listing Details -->
-                            <div class="job-listing-details">
-                                <!-- Logo -->
-                                <div class="job-listing-company-logo">
-                                    <img
-                                        src="images/company-logo-03.png"
-                                        alt=""
-                                    />
-                                </div>
-
-                                <!-- Details -->
-                                <div class="job-listing-description">
-                                    <h4 class="job-listing-company">
-                                        King
-                                        <span
-                                            class="verified-badge"
-                                            title="Verified Employer"
-                                            data-tippy-placement="top"
-                                        ></span>
-                                    </h4>
-                                    <h3 class="job-listing-title">
-                                        Restaurant Manager
-                                    </h3>
-                                </div>
-                            </div>
-
-                            <!-- Job Listing Footer -->
-                            <div class="job-listing-footer">
-                                <ul>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-location-on"
-                                        ></i>
-                                        San Francisco
-                                    </li>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-business-center"
-                                        ></i>
-                                        Full Time
-                                    </li>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-account-balance-wallet"
-                                        ></i>
-                                        $35000-$38000
-                                    </li>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-access-time"
-                                        ></i>
-                                        2 days ago
-                                    </li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Listings Container / End -->
-                </div>
-            </div>
-
-            <!-- Sidebar -->
-            <div class="col-xl-4 col-lg-4">
-                <div class="sidebar-container">
-
-                    <!-- Sidebar Widget -->
-                    <div class="sidebar-widget arabic">
-                        <div class="job-overview">
-                            <div class="job-overview-headline">ملخص</div>
-                            <div class="job-overview-inner">
-                                <ul>
-
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-business-center"
-                                        ></i>
-                                        <span>الوظيفة</span>
-                                        <h5>مدرس عربي</h5>
-                                    </li>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-school"
-                                        ></i>
-                                        <span>المستوى الدراسي</span>
-                                        <h5>باكالوروس هندسة مدنية</h5>
-                                    </li>
-                                    <li>
-                                        <i
-                                            class="icon-material-outline-access-time"
-                                        ></i>
-                                        <span>الخبرة</span>
-                                        <h5>5 سنوات</h5>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sidebar Widget -->
-                    <div class="sidebar-widget">
-
-      
-                        <!-- Copy URL -->
-                        <div class="copy-url">
-                            <input
-                                id="copy-url"
-                                type="text"
-                                value=""
-                                class="with-border"
-                            />
-                            <button
-                                class="copy-url-button ripple-effect"
-                                data-clipboard-target="#copy-url"
-                                title="Copy to Clipboard"
-                                data-tippy-placement="top"
-                            >
-                                <i class="icon-material-outline-file-copy"></i>
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+          <div v-html="user.description"></div>
         </div>
+
+        <!-- Boxed List -->
+        <div class="boxed-list margin-bottom-60 arabic">
+          <div class="boxed-list-headline">
+            <h3>
+              المساقات المسجلة
+              <i class="icon-feather-video mx-2"></i>
+            </h3>
+          </div>
+          <div class="clearfix"></div>
+          <div class="pagination-container margin-top-40 margin-bottom-10">
+            <div class="single-page-section">
+              <!-- Listings Container -->
+              <div class="listings-container grid-layout">
+                <Link
+                  v-for="course in user.registerd_courses"
+                  :key="course.id"
+                  :href="`/course/${course.id}`"
+                  class="job-listing"
+                >
+                  <div class="job-listing-details">
+                    <div class="job-listing-company-logo">
+                      <img :src="`/storage/${course.image}`" alt="" />
+                    </div>
+                    <div class="job-listing-description">
+                      <h4 class="job-listing-company">
+                        الصف {{ __(course.class) }}
+                      </h4>
+                      <h3 class="job-listing-title">
+                        {{ course?.name }}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <!-- Job Listing Footer -->
+                  <div class="job-listing-footer">
+                    <ul>
+                      <li>
+                        <i class="icon-line-awesome-graduation-cap"> </i>
+                        الصف
+                        {{ __(course.class) }}
+                      </li>
+                      <li>
+                        <i class="icon-material-outline-access-time"> </i>
+                        عدد الدروس
+                        {{ course.lectures_count }}
+                      </li>
+                    </ul>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-xl-4 col-lg-4">
+        <div class="sidebar-container">
+          <!-- <a href="#small-dialog" class="apply-now-button popup-with-zoom-anim">تحديل <i class="icon-material-outline-arrow-right-alt"></i></a> -->
+
+          <!-- Sidebar Widget -->
+          <div class="sidebar-widget arabic">
+            <div class="job-overview">
+              <div class="job-overview-headline">ملخص</div>
+              <div class="job-overview-inner">
+                <ul>
+                  <li>
+                    <i class="icon-material-outline-business-center"></i>
+                    <div class="margin-right-30">
+                      <span>الوضيفة</span>
+                      <h5>{{ user.title }}</h5>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="icon-material-outline-location-on"></i>
+                    <div class="margin-right-30">
+                      <span>الموقع</span>
+                      <h5>{{ user.city }} {{ user.area }}</h5>
+                    </div>
+                  </li>
+                  <!-- <li>
+                                        <i class="icon-feather-book"></i>
+                                        <div class="margin-right-30">
+                                        <span>الكورسات</span>
+                                        <h5>{{ user.courses.length }}</h5>
+                                        </div>
+                                    </li> -->
+                  <li>
+                    <i class="icon-material-outline-access-time"></i>
+                    <div class="margin-right-30">
+                      <span>الخبرة</span>
+                      <h5>{{ user.experience }}</h5>
+                    </div>
+                  </li>
+                  <li v-if="user.title">
+                    <i class="icon-material-outline-business-center"></i>
+                    <div class="margin-right-30">
+                      <span>الوضيفة</span>
+                      <h5>{{ user.title || "طالب" }}</h5>
+                    </div>
+                  </li>
+
+                  <li v-if="user.experience">
+                    <i class="icon-material-outline-access-time"></i>
+                    <div class="margin-right-30">
+                      <span>الخبرة</span>
+                      <h5>{{ user.experience }}</h5>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Widget -->
+          <div
+            v-if="user.facebook || user.twitter || user.telegram"
+            class="sidebar-widget arabic"
+          >
+            <h3>التواصل</h3>
+            <div class="freelancer-socials margin-top-25">
+              <ul>
+                <li v-if="user.facebook">
+                  <a
+                    :href="`${user.facebook}`"
+                    title="icon-brand-facebook"
+                    data-tippy-placement="top"
+                    target="_blank"
+                    ><i class="icon-brand-facebook"></i
+                  ></a>
+                </li>
+                <li v-if="user.twitter">
+                  <a
+                    :href="`${user.twitter}`"
+                    title="Twitter"
+                    data-tippy-placement="top"
+                    target="_blank"
+                    ><i class="icon-brand-twitter"></i
+                  ></a>
+                </li>
+                <li v-if="user.telegram">
+                  <a
+                    :href="`${user.telegram}`"
+                    title="Telegram"
+                    data-tippy-placement="top"
+                    target="_blank"
+                    ><i class="icon-brand-telegram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
+
+<script>
+export default {
+  props: {
+    course: Object,
+    user: Object,
+  },
+  mounted() {
+    console.log(this.user);
+  },
+  data() {
+    return {
+      lectur: this.course?.units[0]?.lectures[0],
+    };
+  },
+  methods: {
+    changeVid(lectur) {
+      this.lectur = lectur;
+    },
+  },
+};
+</script>
+
+<style scoped>
+.single-page-header {
+  background: url(/assets/images/home-background-02.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.job-listing-details {
+  background: var(--img);
+  background-size: cover;
+  background-position: center;
+}
+.single-page-header.freelancer-header .header-details h3 {
+  margin-left: 0px;
+}
+.single-page-header.freelancer-header .header-image {
+  justify-content: center;
+}
+.single-page-header .header-image {
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+}
+.job-overview .job-overview-inner ul li i {
+  left: unset;
+  right: 0;
+}
+.single-page-section {
+  overflow: hidden;
+}
+
+.add-balance {
+  cursor: pointer;
+}
+.add-balance i {
+  right: unset !important;
+}
+.profile-title {
+  color: aliceblue !important;
+  text-shadow: 0 0 3px #444;
+}
+</style>

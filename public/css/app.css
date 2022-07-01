@@ -65,6 +65,17 @@
   border-right: 1px solid #484848;
 }
 
+.custom-select {
+  outline: none;
+  padding-right: 50px;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.custom-select .select-option {
+  font-size: 1.2rem;
+  text-align: right;
+}
+
 .arabic {
   -webkit-text-decoration: rtl !important;
           text-decoration: rtl !important;

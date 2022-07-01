@@ -14,7 +14,8 @@ return [
     */
 
     'contact' => 'Contact',
-    'sel_instructor'=>'Select Instructor ...'
+    'sel_instructor'=>'Select Instructor ...',
+    'sel_Student'=>'Select Student ...',
 
 
 ];
