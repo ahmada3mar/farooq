@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Notifications\ResetPasswordNotification;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -13,7 +14,7 @@ use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable , HasRoles;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -27,7 +28,7 @@ class User extends Authenticatable
         'email_verified_at',
     ];
 
-    protected $with = ['courses', 'registerdCourses' ,'section' ];
+    protected $with = ['courses', 'registerdCourses', 'section'];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -50,53 +51,66 @@ class User extends Authenticatable
     ];
 
 
-    public function courses(){
+    public function courses()
+    {
 
         return $this->hasMany(Course::class);
     }
 
-    public function devices(){
+    public function devices()
+    {
 
         return $this->hasOne(Device::class);
     }
 
-    public function otp(){
+    public function otp()
+    {
 
         return $this->hasOne(UserOtp::class);
     }
 
 
-    public function registerdCourses(){
+    public function registerdCourses()
+    {
 
-        return $this->hasManyThrough(Course::class ,UserCourse::class , 'user_id' , 'id' , null ,'course_id');
+        return $this->hasManyThrough(Course::class, UserCourse::class, 'user_id', 'id', null, 'course_id');
     }
 
-    public function userCourses(){
+    public function userCourses()
+    {
 
         return $this->hasMany(UserCourse::class);
     }
 
-    public function userAnswers(){
+    public function userAnswers()
+    {
 
         return $this->hasMany(UserAnswer::class);
     }
 
-    public function section(){
+    public function section()
+    {
 
         return $this->belongsTo(Section::class);
     }
 
-    public function isSuperAdmin(){
+    public function isSuperAdmin()
+    {
 
         return Auth::user()->hasRole('admin');
     }
 
-    public function getActiveAttribute(){
+    public function getActiveAttribute()
+    {
 
-        if($this->devices && $this->devices->expire_at <= Carbon::now()->toDateString()){
+        if ($this->devices && $this->devices->expire_at <= Carbon::now()->toDateString()) {
             return 0;
         }
         return 1;
     }
 
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token));
+    }
 }
