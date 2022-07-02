@@ -126,14 +126,15 @@ __webpack_require__.r(__webpack_exports__);
     // Register your component
     Footer: _Shared_Footer_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
+  updated: function updated() {
+    console.log(this.verifed);
+  },
   data: function data() {
-    var _this$auth;
-
     return {
       infoStatus: false,
       modal: false,
       otp: null,
-      verifed: (_this$auth = this.auth) === null || _this$auth === void 0 ? void 0 : _this$auth.email_verified_at,
+      verifed: this.auth ? this.auth.email_verified_at : true,
       verify_msg: null
     };
   },
@@ -163,7 +164,7 @@ __webpack_require__.r(__webpack_exports__);
           accept: "application/json"
         }
       }).then(function (rees) {
-        return _this2.verifed = true;
+        return _this2.auth.email_verified_at = true;
       })["catch"](function (err) {
         return _this2.verify_msg = err.response.data;
       });
@@ -847,7 +848,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $data.modal = false;
     }),
     "class": "shadow"
-  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.modal ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [!$data.verifed ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_2, [$data.verify_msg ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.verify_msg) + " ", 1
+  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.modal ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [!$props.auth.email_verified_at ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_2, [$data.verify_msg ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.verify_msg) + " ", 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     onClick: _cache[1] || (_cache[1] = function () {
@@ -867,12 +868,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.otp]])])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_6, _hoisted_9)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[3] || (_cache[3] = function ($event) {
-      return $data.verifed ? $data.modal = false : $options.verify();
+      return $props.auth.email_verified_at ? $data.modal = false : $options.verify();
     }),
     "class": "button ripple-effect px-5"
-  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.verifed ? "اغلاق" : "تحقق"), 1
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.auth.email_verified_at ? "اغلاق" : "تحقق"), 1
   /* TEXT */
-  )])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Wrapper "), $props.auth && !$data.verifed ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  )])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Wrapper "), $props.auth && !$props.auth.email_verified_at ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     onClick: _cache[4] || (_cache[4] = function () {
       return $options.togleModal && $options.togleModal.apply($options, arguments);
     })

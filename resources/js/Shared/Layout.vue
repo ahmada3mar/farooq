@@ -1,7 +1,7 @@
 <template>
   <div v-if="modal" @click="modal = false" class="shadow"></div>
   <div v-if="modal" class="modal-otp">
-    <div v-if="!verifed">
+    <div v-if="!auth.email_verified_at ">
       <p style="color: red" class="m-0" v-if="verify_msg">
         {{ verify_msg }} <a @click="sendEmail" class="link">اعادة الإرسال </a>
       </p>
@@ -16,14 +16,14 @@
       <p style="text-align: center">🎊🎉</p>
     </div>
     <button
-      @click="verifed ? (modal = false) : verify()"
+      @click="auth.email_verified_at ? (modal = false) : verify()"
       class="button ripple-effect px-5"
     >
-      {{ verifed ? "اغلاق" : "تحقق" }}
+      {{auth.email_verified_at ? "اغلاق" : "تحقق" }}
     </button>
   </div>
   <!-- Wrapper -->
-  <div v-if="auth && !verifed" class="note">
+  <div v-if="auth && !auth.email_verified_at" class="note">
     <p>
       .لم تقم بتأكيد بريدك الإلكتروني يرجى تأكيده لتتمكن من الأستمرار بأستخدام
       كامل الميزات <a @click="togleModal">تأكيد الآن</a>
@@ -259,12 +259,15 @@ export default {
     Slide, // Register your component
     Footer,
   },
+  updated(){
+    console.log(this.verifed)
+  },
   data() {
     return {
       infoStatus: false,
       modal: false,
       otp: null,
-      verifed:  this.auth?.email_verified_at,
+      verifed: this.auth ? this.auth.email_verified_at : true ,
       verify_msg: null,
     };
   },
@@ -289,7 +292,7 @@ export default {
           {},
           { headers: { accept: "application/json" } }
         )
-        .then((rees) => (this.verifed = true))
+        .then((rees) => (this.auth.email_verified_at = true))
         .catch((err) => (this.verify_msg = err.response.data));
     },
     // Dropdown().init({ });
