@@ -67,7 +67,6 @@ class LoginController extends Controller
         ]);
 
         $data['password'] = bcrypt($data['password']);
-        dd($data);
 
         $user = User::create($data);
         $user->assignRole('user');
