@@ -1,26 +1,29 @@
 <template>
   <div v-if="modal" @click="modal = false" class="shadow"></div>
   <div v-if="modal" class="modal-otp">
-  <div v-if="!verifed">
-    <p style="color: red" class="m-0" v-if="verify_msg">
-      {{ verify_msg }} <a class="link">اعادة الإرسال </a>
-    </p>
-    <p v-else class="email_sent">
-      ✅ {{ auth.email }} : تم ارسال رمز التحقق الى بريدك الإلكتروني
-    </p>
-    <p>ادخل رمز التحقق</p>
-    <input v-model="otp" type="text" pattern="\d*" maxlength="6" />
-  </div>
-  <div v-else>
-    <p style="text-align: center;">تم التحقق بنجاح</p>
-    <p style="text-align: center;">🎊🎉</p>
-
-  </div>
-    <button @click="verifed ?  modal =false : verify()" class="button ripple-effect px-5">{{verifed ? "اغلاق" : "تحقق"}}</button>
-
+    <div v-if="!verifed">
+      <p style="color: red" class="m-0" v-if="verify_msg">
+        {{ verify_msg }} <a @click="sendEmail" class="link">اعادة الإرسال </a>
+      </p>
+      <p v-else class="email_sent">
+        ✅ {{ auth.email }} : تم ارسال رمز التحقق الى بريدك الإلكتروني
+      </p>
+      <p>ادخل رمز التحقق</p>
+      <input v-model="otp" type="text" pattern="\d*" maxlength="6" />
+    </div>
+    <div v-else>
+      <p style="text-align: center">تم التحقق بنجاح</p>
+      <p style="text-align: center">🎊🎉</p>
+    </div>
+    <button
+      @click="verifed ? (modal = false) : verify()"
+      class="button ripple-effect px-5"
+    >
+      {{ verifed ? "اغلاق" : "تحقق" }}
+    </button>
   </div>
   <!-- Wrapper -->
-  <div v-if="!verifed" class="note">
+  <div v-if="auth && !verifed" class="note">
     <p>
       .لم تقم بتأكيد بريدك الإلكتروني يرجى تأكيده لتتمكن من الأستمرار بأستخدام
       كامل الميزات <a @click="togleModal">تأكيد الآن</a>
@@ -261,7 +264,7 @@ export default {
       infoStatus: false,
       modal: false,
       otp: null,
-      verifed: this.auth.email_verified_at,
+      verifed:  this.auth?.email_verified_at,
       verify_msg: null,
     };
   },
@@ -270,13 +273,13 @@ export default {
       this.infoStatus = !this.infoStatus;
     },
     sendEmail() {
-      axios.get("/test").catch((err) => (this.verify_msg = err.response.data));
+      this.verify_msg = null;
+      axios.get("/send-email").catch((err) => (this.verify_msg = err.response.data));
     },
     togleModal(e) {
       this.otp = null;
-      this.verify_msg = null;
       this.modal = true;
-      this.sendEmail()
+      this.sendEmail();
     },
     verify(e) {
       // window.location.href = "/verification/" +Buffer.from((this.otp , "base64") )

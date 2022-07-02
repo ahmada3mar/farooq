@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <title>تسجيل الدخول</title>
+    <title> استعادة الحساب</title>
     <meta name="description" content="login" head-key="description" />
     <meta name="keywords" content="login" />
   </Head>
@@ -15,17 +15,14 @@
         <div class="login-register-page">
           <!-- Welcome Text -->
           <div class="welcome-text">
-            <h3>مرحبا بك مجددا</h3>
-            <span>ليس لديك حساب ؟ <Link href="Register">قم بالتسجيل</Link></span>
+            <h3> استعادة كلمة المرور </h3>
+            <span> بدل من ذلك  <a href="login">قم بتسجيل الدخول</a></span>
           </div>
 
           <!-- Form -->
           <form @submit.prevent="submit" method="post" id="login-form">
             <span v-if="errors.email" class="error-msg">{{
               errors.email
-            }}</span>
-            <span v-if="errors.status" style="color: green">{{
-              errors.status
             }}</span>
 
             <div class="input-with-icon-left">
@@ -41,7 +38,7 @@
               />
             </div>
 
-            <span v-if="errors.password" class="error-msg">{{
+             <span v-if="errors.password" class="error-msg">{{
               errors.password
             }}</span>
 
@@ -53,11 +50,23 @@
                 class="input-text with-border"
                 name="password"
                 id="password"
-                placeholder="كلمة السر"
+                placeholder="كلمة السر الجديدة"
                 required
               />
             </div>
-            <Link href="/forgot-password" class="forgot-password">هل نسيت كلمة السر ؟</Link>
+
+            <div class="input-with-icon-left">
+              <i class="icon-material-outline-lock"></i>
+              <input
+                v-model="form.password_confirmation"
+                type="password"
+                class="input-text with-border"
+                name="password_confirmation"
+                id="password"
+                placeholder="تاكيد كلمة السر"
+                required
+              />
+            </div>
           </form>
 
           <!-- Button -->
@@ -72,7 +81,7 @@
             type="submit"
             form="login-form"
           >
-            تسجيل الدخول <i class="icon-material-outline-arrow-right-alt"></i>
+             ارسال <i class="icon-material-outline-arrow-right-alt"></i>
           </button>
         </div>
       </div>
@@ -87,19 +96,23 @@ import { reactive } from "vue";
 export default {
   props: {
     errors: Object,
+    token: String,
+    email:String
   },
 
   data() {
     return {
       form: reactive({
-        email: "",
+        email: this.email || "",
         password: "",
+        password_confirmation: "",
+        token: this.token,
       }),
     };
   },
   methods: {
     submit() {
-      Inertia.post("login", this.form);
+      Inertia.post("/reset-password", this.form);
     },
   },
 };

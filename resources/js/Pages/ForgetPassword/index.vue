@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <title>تسجيل الدخول</title>
+    <title> استعادة الحساب</title>
     <meta name="description" content="login" head-key="description" />
     <meta name="keywords" content="login" />
   </Head>
@@ -8,15 +8,15 @@
   <div class="container py-5 my-5">
     <div class="row">
       <div class="col-md-5 mx-2 left-image">
-        <img src="/assets/images/login.jpg" />
+        <img src="/assets/images/fail.svg" />
       </div>
 
       <div class="col-md-5">
         <div class="login-register-page">
           <!-- Welcome Text -->
           <div class="welcome-text">
-            <h3>مرحبا بك مجددا</h3>
-            <span>ليس لديك حساب ؟ <Link href="Register">قم بالتسجيل</Link></span>
+            <h3> استعادة كلمة المرور </h3>
+            <span> بدل من ذلك  <Link href="login">قم بتسجيل الدخول</Link></span>
           </div>
 
           <!-- Form -->
@@ -24,7 +24,8 @@
             <span v-if="errors.email" class="error-msg">{{
               errors.email
             }}</span>
-            <span v-if="errors.status" style="color: green">{{
+
+            <span v-if="errors.status" style="color:green">{{
               errors.status
             }}</span>
 
@@ -40,24 +41,6 @@
                 required
               />
             </div>
-
-            <span v-if="errors.password" class="error-msg">{{
-              errors.password
-            }}</span>
-
-            <div class="input-with-icon-left">
-              <i class="icon-material-outline-lock"></i>
-              <input
-                v-model="form.password"
-                type="password"
-                class="input-text with-border"
-                name="password"
-                id="password"
-                placeholder="كلمة السر"
-                required
-              />
-            </div>
-            <Link href="/forgot-password" class="forgot-password">هل نسيت كلمة السر ؟</Link>
           </form>
 
           <!-- Button -->
@@ -72,7 +55,7 @@
             type="submit"
             form="login-form"
           >
-            تسجيل الدخول <i class="icon-material-outline-arrow-right-alt"></i>
+             ارسال <i class="icon-material-outline-arrow-right-alt"></i>
           </button>
         </div>
       </div>
@@ -89,17 +72,20 @@ export default {
     errors: Object,
   },
 
+  updated(){
+console.log(this.status)
+  },
+
   data() {
     return {
       form: reactive({
         email: "",
-        password: "",
       }),
     };
   },
   methods: {
     submit() {
-      Inertia.post("login", this.form);
+      Inertia.post("/forgot-password", this.form);
     },
   },
 };
