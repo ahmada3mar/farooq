@@ -402,7 +402,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.user.title), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul>\n\n                  <li>\n                    <div class=\"verified-badge-with-title\">تم التحقق</div>\n                  </li>\n                </ul> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul>\r\n\r\n                  <li>\r\n                    <div class=\"verified-badge-with-title\">تم التحقق</div>\r\n                  </li>\r\n                </ul> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     src: "/storage/".concat($props.user.avatar),
     alt: "".concat((_$props$user2 = $props.user) === null || _$props$user2 === void 0 ? void 0 : _$props$user2.name)
   }, null, 8
@@ -447,7 +447,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [_hoisted_45, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [_hoisted_47, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.user.city) + " " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.user.area), 1
   /* TEXT */
-  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li>\n                                        <i class=\"icon-feather-book\"></i>\n                                        <div class=\"margin-right-30\">\n                                        <span>الكورسات</span>\n                                        <h5>{{ user.courses.length }}</h5>\n                                        </div>\n                                    </li> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [_hoisted_48, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_49, [_hoisted_50, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.user.experience), 1
+  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li>\r\n                                        <i class=\"icon-feather-book\"></i>\r\n                                        <div class=\"margin-right-30\">\r\n                                        <span>الكورسات</span>\r\n                                        <h5>{{ user.courses.length }}</h5>\r\n                                        </div>\r\n                                    </li> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [_hoisted_48, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_49, [_hoisted_50, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.user.experience), 1
   /* TEXT */
   )])]), $props.user.title ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_51, [_hoisted_52, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_53, [_hoisted_54, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h5", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.user.title || "طالب"), 1
   /* TEXT */
@@ -497,7 +497,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.single-page-header[data-v-29a00013] {\n  background: url(/assets/images/home-background-02.jpg);\n  background-size: cover;\n  background-position: center;\n}\n.job-listing-details[data-v-29a00013] {\n  background: var(--img);\n  background-size: cover;\n  background-position: center;\n}\n.single-page-header.freelancer-header .header-details h3[data-v-29a00013] {\n  margin-left: 0px;\n}\n.single-page-header.freelancer-header .header-image[data-v-29a00013] {\n  justify-content: center;\n}\n.single-page-header .header-image[data-v-29a00013] {\n  margin-right: 0;\n  display: flex;\n  justify-content: center;\n}\n.job-overview .job-overview-inner ul li i[data-v-29a00013] {\n  left: unset;\n  right: 0;\n}\n.single-page-section[data-v-29a00013] {\n  overflow: hidden;\n}\n.add-balance[data-v-29a00013] {\n  cursor: pointer;\n}\n.add-balance i[data-v-29a00013] {\n  right: unset !important;\n}\n.profile-title[data-v-29a00013] {\n  color: aliceblue !important;\n  text-shadow: 0 0 3px #444;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.single-page-header[data-v-29a00013] {\r\n  background: url(/assets/images/home-background-02.jpg);\r\n  background-size: cover;\r\n  background-position: center;\n}\n.job-listing-details[data-v-29a00013] {\r\n  background: var(--img);\r\n  background-size: cover;\r\n  background-position: center;\n}\n.single-page-header.freelancer-header .header-details h3[data-v-29a00013] {\r\n  margin-left: 0px;\n}\n.single-page-header.freelancer-header .header-image[data-v-29a00013] {\r\n  justify-content: center;\n}\n.single-page-header .header-image[data-v-29a00013] {\r\n  margin-right: 0;\r\n  display: flex;\r\n  justify-content: center;\n}\n.job-overview .job-overview-inner ul li i[data-v-29a00013] {\r\n  left: unset;\r\n  right: 0;\n}\n.single-page-section[data-v-29a00013] {\r\n  overflow: hidden;\n}\n.add-balance[data-v-29a00013] {\r\n  cursor: pointer;\n}\n.add-balance i[data-v-29a00013] {\r\n  right: unset !important;\n}\n.profile-title[data-v-29a00013] {\r\n  color: aliceblue !important;\r\n  text-shadow: 0 0 3px #444;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -546,7 +546,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_vue_vue_type_template_id_29a00013_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=29a00013&scoped=true */ "./resources/js/Pages/Profile/index.vue?vue&type=template&id=29a00013&scoped=true");
 /* harmony import */ var _index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js */ "./resources/js/Pages/Profile/index.vue?vue&type=script&lang=js");
 /* harmony import */ var _index_vue_vue_type_style_index_0_id_29a00013_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.vue?vue&type=style&index=0&id=29a00013&scoped=true&lang=css */ "./resources/js/Pages/Profile/index.vue?vue&type=style&index=0&id=29a00013&scoped=true&lang=css");
-/* harmony import */ var D_moath_h_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -554,7 +554,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,D_moath_h_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_29a00013_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-29a00013"],['__file',"resources/js/Pages/Profile/index.vue"]])
+const __exports__ = /*#__PURE__*/(0,D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_index_vue_vue_type_template_id_29a00013_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-29a00013"],['__file',"resources/js/Pages/Profile/index.vue"]])
 /* hot reload */
 if (false) {}
 

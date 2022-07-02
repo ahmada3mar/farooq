@@ -10,13 +10,17 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\SellPointsController;
+use App\Mail\Customers;
 use App\Models\Course;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Models\Document;
 use App\Models\Section;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Inertia\Inertia;
 
 
@@ -33,16 +37,29 @@ use Inertia\Inertia;
 |
 */
 
-Route::get("/test" , function(Request $req){
-    dd(null != 'vvv');
-    $response = new Response('Set Cookie');
+Route::get("/test", function (Request $req) {
 
-    $response->withCookie(cookie('name', 'MyValue', 0));
-    return $response;
+    $user = Auth::user();
+    $otp = random_int(100000 , 999999);
+
+    $user_otp = $user->otp()->updateOrCreate([] ,['otp'=>$otp , 'expire_at' => Carbon::now()->addMinutes(30)]);
+
+    $data = [
+        'name' => "احمداعمر",
+        'email' => "ahmad@a3mar.dev",
+        'OTP' => $user_otp->otp,
+        'link' => base64_encode($user_otp->otp)
+    ];
+
+    Mail::to('ahmada3mar@gmail.com')->send(new Customers($data));
 });
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/verification/{data}', [UserController::class, 'verification']);
 Route::get('/contact', [ContactController::class, 'index']);
 
+Route::get("/verification-failed", function () {
+    return "aaaa";
+})->name('verification_failed');
 
 Route::resource('documents', DocumentsController::class);
 Route::get('/documents', [DocumentsController::class, 'index']);
@@ -54,7 +71,7 @@ Route::get('/courses', [CoursesController::class, 'index']);
 Route::get('/Instructors', [InstructorsController::class, 'index']);
 Route::get('/Selling-Points', [SellPointsController::class, 'index']);
 Route::resource('users', UserController::class);
-Route::get('/profile/{user}', [UserController::class, 'profile']);
+Route::get('/profile/{user}', [UserController::class, 'profile'])->name('profile');
 
 
 

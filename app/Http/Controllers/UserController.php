@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
@@ -26,6 +27,21 @@ class UserController extends Controller
         return User::all();
     }
 
+    public function verification(Request $request ,$data)
+    {
+        $data = base64_decode($data);
+        $user = Auth::user();
+        $otp = $user->otp;
+
+
+        if (Carbon::now() < $otp->expire_at && $data == $otp->otp && !$user->email_verified_at) {
+            $user->update(['email_verified_at' => Carbon::now()]);
+            return redirect(\route('profile', $user->id));
+        }
+
+        return $request->expectsJson() ? response('الرمز المدخل غير صالح' ,403) : redirect(route('verification_failed'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -34,12 +50,11 @@ class UserController extends Controller
     public function profile(User $user)
     {
 
-        if($user->id == Auth::user()->id){
+        if ($user->id == Auth::user()->id) {
             $user->makeVisible('balance');
         }
 
         return Inertia::render('Profile2', compact('user'));
-
     }
 
     /**
@@ -62,7 +77,6 @@ class UserController extends Controller
     public function show(User $user)
     {
         return User::all();
-
     }
 
     /**

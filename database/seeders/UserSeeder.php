@@ -29,7 +29,7 @@ class UserSeeder extends Seeder
             ]
         );
 
-        SiteConfig::updateOrCreate(
+        SiteConfig::firstOrCreate(
             [
             'key' => 'home_shadow',
 
@@ -39,7 +39,7 @@ class UserSeeder extends Seeder
             'type' => '2'
         ]
     );
-        SiteConfig::updateOrCreate(
+        SiteConfig::firstOrCreate(
             [
             'key' => 'home_cover_image',
 
@@ -49,7 +49,7 @@ class UserSeeder extends Seeder
             'type' => '1'
         ]
     );
-        SiteConfig::updateOrCreate(
+        SiteConfig::firstOrCreate(
             [
             'key' => 'home_description',
 
@@ -60,13 +60,13 @@ class UserSeeder extends Seeder
         ]
     );
 
-    Section::updateOrCreate([
+    Section::firstOrCreate([
         'name'=> 'علمي'
     ]);
-    Section::updateOrCreate([
+    Section::firstOrCreate([
         'name'=> 'أدبي'
     ]);
-    Section::updateOrCreate([
+    Section::firstOrCreate([
         'name'=> 'مهني'
     ]);
 

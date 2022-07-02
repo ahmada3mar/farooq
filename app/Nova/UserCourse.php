@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use App\Models\Course;
+use App\Nova\Course as NovaCourse;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
@@ -45,18 +46,18 @@ class UserCourse extends ResourceForUser
      * @return array
      */
 
-    public static function relatableUsers(NovaRequest $request, $query)
-    {
-        return $query->Role('user');
-    }
+
+
+
     public function fields(Request $request)
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
+
             BelongsTo::make(__('Student'), 'user', User::class)
-                ->withMeta(['placeholder' => trans('contant.sel_Student')]
-                )->searchable(),
-            BelongsTo::make( __('Course'), 'course',Course::class)
+                ->searchable(),
+
+            BelongsTo::make( __('Course'), 'course',NovaCourse::class)
                 ->rules('required', 'numeric')
                 ->searchable(),
         ];
