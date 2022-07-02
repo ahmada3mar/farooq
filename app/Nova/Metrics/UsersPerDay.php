@@ -9,7 +9,7 @@ use Laravel\Nova\Metrics\Trend;
 class UsersPerDay extends Trend
 {
 
-    public $width = 'full';
+    public $width = '1/2';
 
     /**
      * Calculate the value of the metric.

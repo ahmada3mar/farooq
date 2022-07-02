@@ -29,7 +29,9 @@
         "build-generate-cards": "cd nova-components/GenerateCards && npm run dev",
         "build-generate-cards-prod": "cd nova-components/GenerateCards && npm run prod",
         "build-course-card": "cd nova-components/CourseCard && npm run dev",
-        "build-course-card-prod": "cd nova-components/CourseCard && npm run prod"
+        "build-course-card-prod": "cd nova-components/CourseCard && npm run prod",
+        "build-storage": "cd nova-components/Storage && npm run dev",
+        "build-storage-prod": "cd nova-components/Storage && npm run prod"
     },
     "devDependencies": {
         "@vue/compiler-sfc": "^3.2.29",
