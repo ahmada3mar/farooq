@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Customers;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Inertia\Inertia;
 
 class UserController extends Controller
@@ -26,6 +29,38 @@ class UserController extends Controller
         return User::all();
     }
 
+    public function sendEmail()
+    {
+        $user = Auth::user();
+        $otp = random_int(100000, 999999);
+
+        $user_otp = $user->otp()->updateOrCreate([], ['otp' => $otp, 'expire_at' => Carbon::now()->addMinutes(30)]);
+
+        $data = [
+            'name' => $user->name,
+            'email' => $user->email,
+            'OTP' => $user_otp->otp,
+            'link' => base64_encode($user_otp->otp)
+        ];
+
+        Mail::to($user->email)->send(new Customers($data));
+    }
+
+    public function verification(Request $request, $data)
+    {
+        $data = base64_decode($data);
+        $user = Auth::user();
+        $otp = $user->otp;
+
+
+        if (Carbon::now() < $otp->expire_at && $data == $otp->otp && !$user->email_verified_at) {
+            $user->update(['email_verified_at' => Carbon::now()]);
+            return redirect(\route('profile', $user->id));
+        }
+
+        return $request->expectsJson() ? response('الرمز المدخل غير صالح', 403) : redirect(route('verification_failed'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -34,12 +69,11 @@ class UserController extends Controller
     public function profile(User $user)
     {
 
-        if($user->id == Auth::user()->id){
+        if ($user->id == Auth::user()->id) {
             $user->makeVisible('balance');
         }
 
         return Inertia::render('Profile2', compact('user'));
-
     }
 
     /**
@@ -62,7 +96,6 @@ class UserController extends Controller
     public function show(User $user)
     {
         return User::all();
-
     }
 
     /**

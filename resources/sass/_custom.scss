@@ -57,8 +57,6 @@
     }
 }
 
-
-
 #logo {
     border-right: none;
     border-left: 1px solid #e0e0e0;
@@ -74,6 +72,17 @@
 .borderRight {
     border-right: 1px solid #484848;
 
+}
+
+.custom-select {
+    outline: none;
+    padding-right: 50px;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    .select-option {
+        font-size: 1.2rem;
+        text-align: right;
+    }
 }
 
 
@@ -319,7 +328,7 @@
     flex-direction: row !important;
   }
   .course-image {
-  
+
     height: 120px;
     max-height: 100%;
     max-width: 50%;
@@ -334,7 +343,7 @@
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, .2);
   }
-  
+
 
 .popupForm {
     max-width: 820px !important;
@@ -369,7 +378,7 @@
             border-radius: 0;
             cursor: pointer;
         }
-    } 
+    }
 }
 .bm-menu{
     white-space: nowrap !important;
@@ -493,12 +502,12 @@ input[type=number] {
     }
 
       .course-image {
-      
+
         height: unset;
         max-height: unset;
         max-width: unset;
         margin-bottom: 10px;
-    
+
       }
 
 }

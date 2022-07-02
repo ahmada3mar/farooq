@@ -15,6 +15,7 @@
         <!-- Tasks Container -->
         <div class="tasks-list-container tasks-grid-layout margin-top-35">
           <div  v-for="Instructor in Instructors" :key="Instructor.id" class="task-listing arabic">
+            <a :href="`/profile/${Instructor.id}`">
             <!-- Job Listing Details -->
             <div class="task-listing-details">
               <div class="course-image">
@@ -25,28 +26,28 @@
               </div>
               <!-- Details -->
               <div class="task-listing-description">
-                <h3 class="task-listing-title">{{Instructor.name}}</h3>
-                <ul class="task-icons">
+                <h3 class="task-listing-title">{{Instructor.name}}  </h3><span>{{Instructor.title}} </span>
+                <ul class="task-icons arabic">
                   <template v-if="Instructor.	title">
 
-                  <li class="m-0 padding-left-5">
+                  <!-- <li class="m-0 padding-left-5 arabic">
                     <i class="icon-material-outline-location-on"></i>
                       {{ Instructor.Address }}
                   </li>
                   </template>
                   <template v-if="Instructor.city">
 
-                  <li class="m-0 padding-left-5">
+                  <li class="m-0 padding-left-5 arabic">
                     <i class="icon-material-outline-home"></i>
                       {{Instructor.city}}
                   </li>
                   </template>
                   <template v-if="Instructor.mobile">
 
-                  <li class="m-0 padding-left-5">
+                  <li class="m-0 padding-left-5 arabic">
                     <i class="icon-feather-phone"></i>
                       {{Instructor.mobile}}
-                  </li>
+                  </li> -->
                   </template>
                 </ul>
               </div>
@@ -63,7 +64,9 @@
                 </div> -->
               </div>
             </div>
+            </a>
           </div>
+
         </div>
 
       </div>
@@ -85,7 +88,7 @@ export default {
     pagination,
   },
   mounted() {
-    console.log('this.Instructors', this.Instructors);
+    // console.log('this.Instructors', this.Instructors);
   },
 };
 </script>

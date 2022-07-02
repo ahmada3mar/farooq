@@ -4,8 +4,10 @@ namespace Database\Seeders;
 
 use App\Models\Answer;
 use App\Models\Attachment;
+use App\Models\Card;
 use App\Models\Course;
 use App\Models\Document;
+use App\Models\DocumentCourse;
 use App\Models\Lecture;
 use App\Models\Question;
 use App\Models\Section;
@@ -17,6 +19,8 @@ use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\PermissionRegistrar;
 use App\Models\User;
+use App\Models\UserAnswer;
+use App\Models\UserCourse;
 use App\Models\UserInformation;
 
 class RolesAndPermistionSeeder extends Seeder
@@ -45,6 +49,11 @@ class RolesAndPermistionSeeder extends Seeder
             UserInformation::class,
             Attachment::class,
             Document::class,
+            UserCourse::class,
+            Card::class,
+            UserAnswer::class,
+            DocumentCourse::class
+
             // ... // List all your Models you want to have Permissions for.
         ]);
 

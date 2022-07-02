@@ -16,13 +16,16 @@
           <!-- Welcome Text -->
           <div class="welcome-text">
             <h3>مرحبا بك مجددا</h3>
-            <span>ليس لديك حساب ؟ <a href="Register">قم بالتسجيل</a></span>
+            <span>ليس لديك حساب ؟ <Link href="Register">قم بالتسجيل</Link></span>
           </div>
 
           <!-- Form -->
           <form @submit.prevent="submit" method="post" id="login-form">
             <span v-if="errors.email" class="error-msg">{{
               errors.email
+            }}</span>
+            <span v-if="errors.status" style="color: green">{{
+              errors.status
             }}</span>
 
             <div class="input-with-icon-left">
@@ -54,7 +57,7 @@
                 required
               />
             </div>
-            <a href="#" class="forgot-password">هل نسيت كلمة السر ؟</a>
+            <Link href="/forgot-password" class="forgot-password">هل نسيت كلمة السر ؟</Link>
           </form>
 
           <!-- Button -->
