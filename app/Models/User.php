@@ -24,9 +24,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'email_verified_at',
     ];
 
-    protected $with = ['courses', 'registerdCourses' ,'section'];
+    protected $with = ['courses', 'registerdCourses' ,'section' ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -57,6 +58,11 @@ class User extends Authenticatable
     public function devices(){
 
         return $this->hasOne(Device::class);
+    }
+
+    public function otp(){
+
+        return $this->hasOne(UserOtp::class);
     }
 
 

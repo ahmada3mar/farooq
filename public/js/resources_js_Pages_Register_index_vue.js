@@ -511,11 +511,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-<<<<<<< HEAD
-___CSS_LOADER_EXPORT___.push([module.id, "\nul[data-v-39f5694f] {\r\n  padding: 0;\r\n  padding-right: 20;\n}\nli[data-v-39f5694f] {\r\n  text-align: right;\n}\n.arabicRow[data-v-39f5694f]{\r\n    flex-direction: row-reverse;\n}\r\n\r\n", ""]);
-=======
-___CSS_LOADER_EXPORT___.push([module.id, "\nul[data-v-39f5694f] {\n  padding: 0;\n  padding-right: 20;\n}\nli[data-v-39f5694f] {\n  text-align: right;\n}\n.arabicRow[data-v-39f5694f]{\n    flex-direction: row-reverse;\n}\n\n\n", ""]);
->>>>>>> fa758b24e970ecdfe7631bc75d3fc51a3f807607
+___CSS_LOADER_EXPORT___.push([module.id, "\nul[data-v-39f5694f] {\r\n  padding: 0;\r\n  padding-right: 20;\n}\nli[data-v-39f5694f] {\r\n  text-align: right;\n}\n.arabicRow[data-v-39f5694f]{\r\n    flex-direction: row-reverse;\n}\r\n\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

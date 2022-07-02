@@ -182,7 +182,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_15, [Instructor.title ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
       key: 0
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"m-0 padding-left-5 arabic\">\n                    <i class=\"icon-material-outline-location-on\"></i>\n                      {{ Instructor.Address }}\n                  </li>\n                  </template>\n                  <template v-if=\"Instructor.city\">\n\n                  <li class=\"m-0 padding-left-5 arabic\">\n                    <i class=\"icon-material-outline-home\"></i>\n                      {{Instructor.city}}\n                  </li>\n                  </template>\n                  <template v-if=\"Instructor.mobile\">\n\n                  <li class=\"m-0 padding-left-5 arabic\">\n                    <i class=\"icon-feather-phone\"></i>\n                      {{Instructor.mobile}}\n                  </li> ")], 64
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <li class=\"m-0 padding-left-5 arabic\">\r\n                    <i class=\"icon-material-outline-location-on\"></i>\r\n                      {{ Instructor.Address }}\r\n                  </li>\r\n                  </template>\r\n                  <template v-if=\"Instructor.city\">\r\n\r\n                  <li class=\"m-0 padding-left-5 arabic\">\r\n                    <i class=\"icon-material-outline-home\"></i>\r\n                      {{Instructor.city}}\r\n                  </li>\r\n                  </template>\r\n                  <template v-if=\"Instructor.mobile\">\r\n\r\n                  <li class=\"m-0 padding-left-5 arabic\">\r\n                    <i class=\"icon-feather-phone\"></i>\r\n                      {{Instructor.mobile}}\r\n                  </li> ")], 64
     /* STABLE_FRAGMENT */
     )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
       href: "/profile/".concat(Instructor.id),
@@ -196,13 +196,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
     }, 1032
     /* PROPS, DYNAMIC_SLOTS */
-<<<<<<< HEAD
-    , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"task-offers\">\r\n                  <b>{{course.price}} JOD</b>\r\n                </div> ")])])]);
-=======
-    , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"task-offers\">\n                  <b>{{course.price}} JOD</b>\n                </div> ")])])], 8
+    , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"task-offers\">\r\n                  <b>{{course.price}} JOD</b>\r\n                </div> ")])])], 8
     /* PROPS */
     , _hoisted_9)]);
->>>>>>> fa758b24e970ecdfe7631bc75d3fc51a3f807607
   }), 128
   /* KEYED_FRAGMENT */
   ))])])])])], 64
