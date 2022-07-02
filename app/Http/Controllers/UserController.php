@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Customers;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Inertia\Inertia;
 
 class UserController extends Controller
@@ -27,7 +29,24 @@ class UserController extends Controller
         return User::all();
     }
 
-    public function verification(Request $request ,$data)
+    public function sendEmail()
+    {
+        $user = Auth::user();
+        $otp = random_int(100000, 999999);
+
+        $user_otp = $user->otp()->updateOrCreate([], ['otp' => $otp, 'expire_at' => Carbon::now()->addMinutes(30)]);
+
+        $data = [
+            'name' => $user->name,
+            'email' => $user->email,
+            'OTP' => $user_otp->otp,
+            'link' => base64_encode($user_otp->otp)
+        ];
+
+        Mail::to($user->email)->send(new Customers($data));
+    }
+
+    public function verification(Request $request, $data)
     {
         $data = base64_decode($data);
         $user = Auth::user();
@@ -39,7 +58,7 @@ class UserController extends Controller
             return redirect(\route('profile', $user->id));
         }
 
-        return $request->expectsJson() ? response('الرمز المدخل غير صالح' ,403) : redirect(route('verification_failed'));
+        return $request->expectsJson() ? response('الرمز المدخل غير صالح', 403) : redirect(route('verification_failed'));
     }
 
     /**

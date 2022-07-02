@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Email Confirmation</title>
+    <title>اعادة تعيين كلمة المرور</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
         /**
@@ -147,7 +147,7 @@
                             style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
                             <h1
                                 style="text-align:center;margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">
-                                تأكيد عنوان البريد الإلكتروني</h1>
+                                اعادة تعيين كلمة مرور حسابك</h1>
                         </td>
                     </tr>
                 </table>
@@ -163,28 +163,16 @@
                     <tr>
                         <td align="left" bgcolor="#ffffff"
                             style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                            <h4 style="margin: 0; text-align:end;"><span>،مرحبا {{ $name }} </h4>
+                            <h2 style="margin: 0; text-align:end;"><span>،مرحبا </h2>
                         </td>
                     </tr>
 
                     <tr>
                         <td align="left" bgcolor="#ffffff"
                             style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                            <p style="margin: 0; text-align:end;">يرجى ادخال الرمز
-                                التالي في صفحة التأكيد
-                                لتأكيد عنوان بريدك الإلكتروني </p>
-                            <h5 style="text-align:end;margin:0px;">{{ $email }}</h5>
-                            <div class="otp">
-                                <h3 style="text-align:center;">{{ $OTP }}</h3>
-                            </div>
-
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td align="left" bgcolor="#ffffff"
-                            style="padding: 15px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                            <p style="margin:0px;text-align:end;">او يمكنك الضغط على الزر ادناه </p>
+                            <p style="margin: 0; text-align:end;">أنت تتلقى هذا البريد الإلكتروني لأننا تلقينا طلب إعادة
+                                تعيين كلمة المرور لحسابك.
+                            </p>
                         </td>
                     </tr>
 
@@ -196,11 +184,22 @@
                                         <table border="0" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td align="center" bgcolor="#1d5361" style="border-radius: 6px;">
-                                                    <a href="{{ env("APP_URL") }}/verification/{{ $link }}" target="_blank"
+                                                    <a href="{{ $url }}" target="_blank"
                                                         style="display: inline-block; padding: 10px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">تأكيد</a>
                                                 </td>
                                             </tr>
                                         </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" bgcolor="#ffffff"
+                                        style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
+                                        <p style="margin: 0; text-align:end;">
+                                            هذا الرابط صالح لمدة
+                                            {{ config('auth.passwords.' . config('auth.defaults.passwords') . '.expire') }}
+                                            دقيقة فقط
+
+                                        </p>
                                     </td>
                                 </tr>
                             </table>
@@ -225,8 +224,7 @@
                     <tr>
                         <td align="center" bgcolor="#e9ecef"
                             style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
-                            <p style="margin: 0;">لقد تلقيت هذا البريد الإلكتروني لأننا تلقينا طلبًا بشأن تأكيد حسابك.
-                                إذا لم تطلب التسجيل ، يمكنك حذف هذا البريد الإلكتروني بأمان.
+                            <p style="margin: 0;">في حال لم تقم بطلب اعادة تعيين كلمة مرور حسابك ، فيرجى حذف هذا البريد
                             </p>
                         </td>
                     </tr>
