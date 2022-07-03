@@ -10,7 +10,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\HasMany;
 use Yassi\NestedForm\NestedForm;
 
-class Question extends Resource
+class Question extends ResourceForUser
 {
     /**
      * The model the resource corresponds to.
@@ -66,6 +66,16 @@ class Question extends Resource
      * @return array
      */
 
+    public static function relation($query  , $request){
+        // dd($query)
+        $user = $request->user();
+
+        return $query->whereHas('lecutre',function($l) use($user){
+            return $l -> whereHas('course', function($c) use($user){
+                return $c->where("user_id" , $user->id);
+            });
+        } );
+    }
 
 
     public function fields(Request $request)

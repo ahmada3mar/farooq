@@ -15,7 +15,7 @@ use \Epartment\NovaDependencyContainer\NovaDependencyContainer ;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\HasMany;
 
-class Answer extends Resource
+class Answer extends ResourceForUser
 {
     /**
      * The model the resource corresponds to.
@@ -71,6 +71,19 @@ class Answer extends Resource
      * @return array
      */
 
+
+    public static function relation($query  , $request){
+        // dd($query)
+        $user = $request->user();
+
+        return $query->whereHas('question',function($qa) use($user){
+        return $qa->whereHas('lecutre',function($l) use($user){
+            return $l -> whereHas('course', function($c) use($user){
+                return $c->where("user_id" , $user->id);
+            });
+        } );
+        } );
+    }
 
 
     public function fields(Request $request)

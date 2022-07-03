@@ -11,6 +11,7 @@ use App\Models\DocumentCourse;
 use App\Models\Lecture;
 use App\Models\Question;
 use App\Models\Section;
+use App\Models\SellPoint;
 use App\Models\SiteConfig;
 use App\Models\Unit;
 use Illuminate\Database\Seeder;
@@ -52,7 +53,8 @@ class RolesAndPermistionSeeder extends Seeder
             UserCourse::class,
             Card::class,
             UserAnswer::class,
-            DocumentCourse::class
+            DocumentCourse::class,
+            SellPoint::class
 
             // ... // List all your Models you want to have Permissions for.
         ]);

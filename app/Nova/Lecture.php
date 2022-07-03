@@ -13,8 +13,9 @@ use Farooq\UnitPicker\UnitPicker;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Lecture extends Resource
+class Lecture extends ResourceForUser
 {
     /**
      * The model the resource corresponds to.
@@ -69,8 +70,34 @@ class Lecture extends Resource
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
+    public static function relation($query  , $request){
+        // dd($query)
+        $user = $request->user();
+
+        return $query->whereHas('course',function($q) use($user){
+            return $q -> where('user_id', $user->id);
+        } );
+
+    }
 
 
+    public static function relatableUsers(NovaRequest $request, $query)
+    {
+        // dd($query);
+        return $query->Role('instructor');
+    }
+
+    public function getCourses($request){
+        $user = $request->user();
+
+        if($user->isSuperAdmin()){
+            return Course::take(5)->get();
+        }
+
+
+        return Course::where('user_id', $user->id)->take(5)->get();
+
+    }
 
     public function fields(Request $request)
     {
@@ -84,7 +111,7 @@ class Lecture extends Resource
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-            UnitPicker::make('course')->setReq($request)->value($this->course)->options(Course::take(5)->get()),
+            UnitPicker::make('course')->setReq($request)->value($this->course)->options($this->getCourses($request)),
 
             UnitPicker::make('unit')->setReq($request)->value($this->unit)->dependsOn('course'),
 
