@@ -27,7 +27,7 @@ abstract class ResourceForUser extends NovaResource
             return $query;
         }
 
-        return parent::detailQuery($request, $query->where('user_id', $user->id));
+        return parent::detailQuery($request, static::relation($query , $request));
     }
 
     /**
@@ -46,10 +46,9 @@ abstract class ResourceForUser extends NovaResource
             return $query;
         }
 
-
         // If the User has only Permission to view his own Entries, we scope the query.
         if ($user->hasPermissionTo('view own ' . parent::uriKey())) {
-            return $query->where('user_id', $user->id);
+            return static::relation($query , $request);
         }
 
         return $query;
@@ -78,7 +77,7 @@ abstract class ResourceForUser extends NovaResource
             return parent::relatableQuery($request, $query);
         }
 
-        return parent::relatableQuery($request, $query->where('user_id', $user->id));
+        return parent::relatableQuery($request, static::relation($query , $request) );
     }
 
     /**
@@ -101,6 +100,13 @@ abstract class ResourceForUser extends NovaResource
         if (!$user->hasPermissionTo('view own ' . parent::uriKey()) && $user->hasPermissionTo('view ' . parent::uriKey())) {
             return $query;
         }
+
+        return static::relation($query , $request);
+    }
+
+
+    public static function relation($query  , $request){
+        $user = $request->user();
 
         return $query->where('user_id', $user->id);
     }

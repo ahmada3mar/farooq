@@ -97,7 +97,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             ->rolePolicy(RolePolicy::class)
             ->permissionPolicy(PermissionPolicy::class),
             new NovaLanguageTool(),
-            new GenerateCards()
+            (new GenerateCards())->canSee(function($request){
+               $user = $request->user();
+                return $user->hasRole('admin');
+            })
 
         ];
     }

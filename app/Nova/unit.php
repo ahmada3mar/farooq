@@ -10,7 +10,7 @@ use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\HasMany;
 
 
-class Unit extends Resource
+class Unit extends ResourceForUser
 {
     /**
      * The model the resource corresponds to.
@@ -66,6 +66,17 @@ class Unit extends Resource
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
+
+    public static function relation($query  , $request){
+        // dd($query)
+        $user = $request->user();
+
+        return $query->whereHas('course',function($q) use($user){
+            return $q -> where('user_id', $user->id);
+        } );
+
+    }
+
 
     public function fields(Request $request)
     {
