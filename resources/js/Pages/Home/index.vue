@@ -96,7 +96,7 @@
                 <div class="col-xl-12">
 
                     <div
-                        class="section-headline centered margin-top-0 margin-bottom-45"
+                        class="section-headline centered margin-top-20 margin-bottom-45"
                     >
                         <Link href="/courses" class="headline-link"
                             >عرض الكل</Link
@@ -132,23 +132,205 @@
         class="section gray margin-top-45 margin-bottom-65 padding-top-65 padding-bottom-75"
     >
         <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <!-- Section Headline -->
-                    <div class="section-headline margin-top-0 margin-bottom-35">
-                        <Link href="/documents" class="headline-link"
+                        <Link href="/documents" class=""
                             >عرض الكل</Link
                         >
+            <div class="row margin-bottom-65">
+                <div class="col-xl-6">
+                    <!-- Section Headline -->
+                    <div class="section-headline margin-top-20 margin-bottom-20">
                         <h3 class="arabic">أسئلة سنوات</h3>
                     </div>
 
                     <!-- Jobs Container -->
                     <div
-                        class="listings-container compact-list-layout margin-top-35"
+                        class="listings-container compact-list-layout margin-top-20"
                     >
-                    <template v-if="docs">
+                    <template v-if="QA">
                         <Link
-                            v-for="document in docs"
+                            v-for="document in QA"
+                            :key="document.id"
+                            :href="`/document/download/${document.id}`"
+                            class="job-listing with-apply-button"
+                        >
+                            <div class="job-listing-details">
+                                <span class="list-apply-button ripple-effect"
+                                    >تنزيل</span
+                                >
+                                <div class="job-listing-description arabic">
+                                    <h3 class="job-listing-title">
+                                        {{ document?.name }}
+                                    </h3>
+                                    <div class="job-listing-footer">
+                                        <ul>
+                                            <li>
+                                                {{ document.downloads }}
+                                                تنزيل
+                                            </li>
+                                            <li>
+                                                <i
+                                                    class="icon-feather-book-open"
+                                                ></i>
+                                                المادة
+                                                {{ __(document.document_course_id?.name) }}
+                                            </li>
+                                            <li>
+                                                <i
+                                                    class="icon-material-outline-school"
+                                                ></i>
+                                                الصف {{ __(document.class) }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="job-listing-company-logo">
+                                    <i
+                                        class="icon-material-outline-attach-file font3rem"
+                                    ></i>
+                                </div>
+                            </div>
+                        </Link>
+                        </template>
+
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <!-- Section Headline -->
+                    <div class="section-headline margin-top-20 margin-bottom-20">
+
+                        <h3 class="arabic">أوراق العمل</h3>
+                    </div>
+
+                    <!-- Jobs Container -->
+                    <div
+                        class="listings-container compact-list-layout margin-top-20"
+                    >
+                    <template v-if="workPapers">
+                        <Link
+                            v-for="document in workPapers"
+                            :key="document.id"
+                            :href="`/document/download/${document.id}`"
+                            class="job-listing with-apply-button"
+                        >
+                            <div class="job-listing-details">
+                                <span class="list-apply-button ripple-effect"
+                                    >تنزيل</span
+                                >
+                                <div class="job-listing-description arabic">
+                                    <h3 class="job-listing-title">
+                                        {{ document?.name }}
+                                    </h3>
+                                    <div class="job-listing-footer">
+                                        <ul>
+                                            <li>
+                                                {{ document.downloads }}
+                                                تنزيل
+                                            </li>
+                                            <li>
+                                                <i
+                                                    class="icon-feather-book-open"
+                                                ></i>
+                                                المادة
+                                                {{ __(document.document_course_id?.name) }}
+                                            </li>
+                                            <li>
+                                                <i
+                                                    class="icon-material-outline-school"
+                                                ></i>
+                                                الصف {{ __(document.class) }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="job-listing-company-logo">
+                                    <i
+                                        class="icon-material-outline-attach-file font3rem"
+                                    ></i>
+                                </div>
+                            </div>
+                        </Link>
+                        </template>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6">
+                    <!-- Section Headline -->
+                    <div class="section-headline margin-top-20 margin-bottom-20">
+
+                        <h3 class="arabic">كتب</h3>
+                    </div>
+
+                    <!-- Jobs Container -->
+                    <div
+                        class="listings-container compact-list-layout margin-top-20"
+                    >
+                    <template v-if="books">
+                        <Link
+                            v-for="document in books"
+                            :key="document.id"
+                            :href="`/document/download/${document.id}`"
+                            class="job-listing with-apply-button"
+                        >
+                            <div class="job-listing-details">
+                                <span class="list-apply-button ripple-effect"
+                                    >تنزيل</span
+                                >
+                                <div class="job-listing-description arabic">
+                                    <h3 class="job-listing-title">
+                                        {{ document?.name }}
+                                    </h3>
+                                    <div class="job-listing-footer">
+                                        <ul>
+                                            <li>
+                                                {{ document.downloads }}
+                                                تنزيل
+                                            </li>
+                                            <li>
+                                                <i
+                                                    class="icon-feather-book-open"
+                                                ></i>
+                                                المادة
+                                                {{ __(document.document_course_id?.name) }}
+                                            </li>
+                                            <li>
+                                                <i
+                                                    class="icon-material-outline-school"
+                                                ></i>
+                                                الصف {{ __(document.class) }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="job-listing-company-logo">
+                                    <i
+                                        class="icon-material-outline-attach-file font3rem"
+                                    ></i>
+                                </div>
+                            </div>
+                        </Link>
+                        </template>
+
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <!-- Section Headline -->
+                    <div class="section-headline margin-top-20 margin-bottom-20">
+
+                        <h3 class="arabic">دوسيات</h3>
+                    </div>
+
+                    <!-- Jobs Container -->
+                    <div
+                        class="listings-container compact-list-layout margin-top-20"
+                    >
+                    <template v-if="dosis">
+                        <Link
+                            v-for="document in dosis"
                             :key="document.id"
                             :href="`/document/download/${document.id}`"
                             class="job-listing with-apply-button"
@@ -296,7 +478,10 @@ export default {
         settings: Object,
         courses: Array,
         mostSelling: Array,
-        docs: Array,
+        QA: Array,
+        workPapers: Array,
+        dosis: Array,
+        books: Array,
         instructos: Array,
         sections: Array,
     },

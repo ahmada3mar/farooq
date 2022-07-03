@@ -25,15 +25,20 @@ class HomeController extends Controller
         $settings = SiteConfig::where('key', 'LIKE', 'home%')->get();
 
 
-        $courses = Course::with('user' , 'section')->inRandomOrder()->limit(5)->get();
+        $courses = Course::with('user' , 'section')->inRandomOrder()->limit(4)->get();
 
-        $docs = Document::orderBy('downloads' , 'DESC')->limit(5)->get();
+        $QA = Document::where('Type', 1)->orderBy('downloads' , 'DESC')->limit(4)->get();
+        $workPapers = Document::where('Type', 2)->orderBy('downloads' , 'DESC')->limit(4)->get();
+        $dosis = Document::where('Type', 3)->orderBy('downloads' , 'DESC')->limit(4)->get();
+        $books = Document::where('Type', 4)->orderBy('downloads' , 'DESC')->limit(4)->get();
+
+
         $mostSelling = Course::orderBy('subscriber' , 'DESC')->limit(4)->get();
 
         $instructos = User::with('courses')->role('instructor')->get();
 
 
-        return Inertia::render('Home', compact('settings' , 'courses' , 'mostSelling' , 'instructos' , 'docs'));
+        return Inertia::render('Home', compact('settings' , 'courses' , 'mostSelling' , 'instructos' , 'QA', 'workPapers', 'dosis', 'books'));
     }
 
     /**
