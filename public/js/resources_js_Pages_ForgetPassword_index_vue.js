@@ -19,8 +19,7 @@ __webpack_require__.r(__webpack_exports__);
   props: {
     errors: Object
   },
-  updated: function updated() {
-    console.log(this.status);
+  updated: function updated() {// console.log(this.status)
   },
   data: function data() {
     return {

@@ -16,8 +16,7 @@ __webpack_require__.r(__webpack_exports__);
     course: Object,
     user: Object
   },
-  mounted: function mounted() {
-    console.log(this.user);
+  mounted: function mounted() {// console.log(this.user);
   },
   data: function data() {
     var _this$course, _this$course$units$;
@@ -417,7 +416,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.user.title), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul>\n\n                  <li>\n                    <div class=\"verified-badge-with-title\">تم التحقق</div>\n                  </li>\n                </ul> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ul>\r\n\r\n                  <li>\r\n                    <div class=\"verified-badge-with-title\">تم التحقق</div>\r\n                  </li>\r\n                </ul> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     src: "/storage/".concat($props.user.avatar),
     alt: "".concat((_$props$user2 = $props.user) === null || _$props$user2 === void 0 ? void 0 : _$props$user2.name)
   }, null, 8
@@ -510,7 +509,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.single-page-header[data-v-487fd6d5] {\n  background: url(/assets/images/home-background-02.jpg);\n  background-size: cover;\n  background-position: center;\n}\n.job-listing-details[data-v-487fd6d5] {\n  background: var(--img);\n  background-size: cover;\n  background-position: center;\n}\n.single-page-header.freelancer-header .header-details h3[data-v-487fd6d5] {\n  margin-left: 0px;\n}\n.single-page-header.freelancer-header .header-image[data-v-487fd6d5] {\n  justify-content: center;\n}\n.single-page-header .header-image[data-v-487fd6d5] {\n  margin-right: 0;\n  display: flex;\n  justify-content: center;\n}\n.job-overview .job-overview-inner ul li i[data-v-487fd6d5] {\n  left: unset;\n  right: 0;\n}\n.single-page-section[data-v-487fd6d5] {\n  overflow: hidden;\n}\n.add-balance[data-v-487fd6d5] {\n  cursor: pointer;\n}\n.add-balance i[data-v-487fd6d5] {\n  right: unset !important;\n}\n.profile-title[data-v-487fd6d5] {\n  color: aliceblue !important;\n  text-shadow: 0 0 3px #444;\n}\n.no-data[data-v-487fd6d5]{\n    font-weight: 500;\n    color: #666;\n    font-size: 30px;\n    margin: 0;\n    padding: 0;\n    line-height: 20px;\n    flex:1 ;\n     text-align: center;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.single-page-header[data-v-487fd6d5] {\r\n  background: url(/assets/images/home-background-02.jpg);\r\n  background-size: cover;\r\n  background-position: center;\n}\n.job-listing-details[data-v-487fd6d5] {\r\n  background: var(--img);\r\n  background-size: cover;\r\n  background-position: center;\n}\n.single-page-header.freelancer-header .header-details h3[data-v-487fd6d5] {\r\n  margin-left: 0px;\n}\n.single-page-header.freelancer-header .header-image[data-v-487fd6d5] {\r\n  justify-content: center;\n}\n.single-page-header .header-image[data-v-487fd6d5] {\r\n  margin-right: 0;\r\n  display: flex;\r\n  justify-content: center;\n}\n.job-overview .job-overview-inner ul li i[data-v-487fd6d5] {\r\n  left: unset;\r\n  right: 0;\n}\n.single-page-section[data-v-487fd6d5] {\r\n  overflow: hidden;\n}\n.add-balance[data-v-487fd6d5] {\r\n  cursor: pointer;\n}\n.add-balance i[data-v-487fd6d5] {\r\n  right: unset !important;\n}\n.profile-title[data-v-487fd6d5] {\r\n  color: aliceblue !important;\r\n  text-shadow: 0 0 3px #444;\n}\n.no-data[data-v-487fd6d5]{\r\n    font-weight: 500;\r\n    color: #666;\r\n    font-size: 30px;\r\n    margin: 0;\r\n    padding: 0;\r\n    line-height: 20px;\r\n    flex:1 ;\r\n     text-align: center;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

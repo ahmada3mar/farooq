@@ -73,7 +73,7 @@ export default {
   },
 
   updated(){
-console.log(this.status)
+// console.log(this.status)
   },
 
   data() {

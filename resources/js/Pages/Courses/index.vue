@@ -97,7 +97,7 @@ export default {
     }
   },
   mounted() {
-    console.log("co" ,this.courses)
+    // console.log("co" ,this.courses)
   }
 };
 </script>

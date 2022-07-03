@@ -115,8 +115,8 @@ export default {
     pagination,
   },
   mounted() {
-    console.log('this.sellPoints', this.sellPoints);
-    console.log('this.cities', this.cities);
+    // console.log('this.sellPoints', this.sellPoints);
+    // console.log('this.cities', this.cities);
   },
 };
 </script>

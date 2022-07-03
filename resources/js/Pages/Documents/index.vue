@@ -115,11 +115,13 @@ export default {
     pagination,
     Sidebar,
   },
-  methods: {},
-  mounted() {
-    console.log("this.docs", this.docs);
-    console.log("this.docType", this.docType);
-  },
+    methods:{
+
+    },
+        mounted() {
+            //   console.log('this.docs', this.docs);
+            //   console.log('this.docType', this.docType);
+    },
 };
 </script>
 

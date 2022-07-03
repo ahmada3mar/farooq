@@ -36,8 +36,7 @@ __webpack_require__.r(__webpack_exports__);
       fetching: false
     };
   },
-  mounted: function mounted() {
-    console.log('course: ', this.course);
+  mounted: function mounted() {// console.log('course: ' , this.course);
   },
   methods: {
     changeVid: function changeVid(lectur) {
