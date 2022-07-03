@@ -132,11 +132,11 @@
         class="section gray margin-top-45 margin-bottom-65 padding-top-65 padding-bottom-75"
     >
         <div class="container">
-                        <Link href="/documents" class=""
+                        <Link href="/documents?type=top" class=""
                             >عرض الكل</Link
                         >
             <div class="row margin-bottom-65">
-                <div class="col-xl-6">
+                <div v-if="QA.length > 0" v-bind:class="workPapers.length > 0 ? 'document-item50' : 'document-item100'">
                     <!-- Section Headline -->
                     <div class="section-headline margin-top-20 margin-bottom-20">
                         <h3 class="arabic">أسئلة سنوات</h3>
@@ -146,7 +146,7 @@
                     <div
                         class="listings-container compact-list-layout margin-top-20"
                     >
-                    <template v-if="QA">
+                    <template v-if="QA.length > 0">
                         <Link
                             v-for="document in QA"
                             :key="document.id"
@@ -195,7 +195,7 @@
 
                     </div>
                 </div>
-                <div class="col-xl-6">
+                <div v-if="workPapers.length > 0" v-bind:class="QA.length > 0 ? 'document-item50' : 'document-item100'">
                     <!-- Section Headline -->
                     <div class="section-headline margin-top-20 margin-bottom-20">
 
@@ -206,7 +206,7 @@
                     <div
                         class="listings-container compact-list-layout margin-top-20"
                     >
-                    <template v-if="workPapers">
+                    <template v-if="workPapers.length > 0">
                         <Link
                             v-for="document in workPapers"
                             :key="document.id"
@@ -255,9 +255,7 @@
 
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-6">
+                <div v-if="books.length > 0" v-bind:class="dosis.length > 0 ? 'document-item50' : 'document-item100'">
                     <!-- Section Headline -->
                     <div class="section-headline margin-top-20 margin-bottom-20">
 
@@ -268,7 +266,7 @@
                     <div
                         class="listings-container compact-list-layout margin-top-20"
                     >
-                    <template v-if="books">
+                    <template v-if="books.length > 0">
                         <Link
                             v-for="document in books"
                             :key="document.id"
@@ -317,7 +315,7 @@
 
                     </div>
                 </div>
-                <div class="col-xl-6">
+                <div v-if="dosis.length > 0" v-bind:class="books.length > 0 ? 'document-item50' : 'document-item100'">
                     <!-- Section Headline -->
                     <div class="section-headline margin-top-20 margin-bottom-20">
 
@@ -328,7 +326,7 @@
                     <div
                         class="listings-container compact-list-layout margin-top-20"
                     >
-                    <template v-if="dosis">
+                    <template v-if="dosis.length > 0">
                         <Link
                             v-for="document in dosis"
                             :key="document.id"
@@ -557,5 +555,11 @@ export default {
 	flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+.document-item50{
+    width: 50%;
+}
+.document-item100{
+    width: 100%;
 }
 </style>

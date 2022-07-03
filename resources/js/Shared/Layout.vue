@@ -260,7 +260,7 @@ export default {
     Footer,
   },
   updated(){
-    console.log(this.verifed)
+    // console.log(this.verifed)
   },
   data() {
     return {

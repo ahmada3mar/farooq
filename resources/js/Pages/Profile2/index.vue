@@ -99,6 +99,16 @@
                     </ul>
                   </div>
                 </Link>
+                <div class="listings-container grid-layout" v-if="user.registerd_courses.length == 0">
+                  <div style="background:#f9f9f9" class="job-listing-details">
+                    <div style="padding:50" class="job-listing-company-logo">
+                      <img width="150" src="/assets/images/no-course.svg" alt="" />
+                    </div>
+                      <h3 class="no-data">
+                        لا توجد مساقات مسجلة بعد
+                      </h3>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -121,30 +131,17 @@
                     <i class="icon-material-outline-business-center"></i>
                     <div class="margin-right-30">
                       <span>الوضيفة</span>
-                      <h5>{{ user.title }}</h5>
+                      <h5>{{ user.title || "طالب" }}</h5>
                     </div>
                   </li>
-                  <li>
+                  <li v-if="user.city || user.area">
                     <i class="icon-material-outline-location-on"></i>
                     <div class="margin-right-30">
                       <span>الموقع</span>
-                      <h5>{{ user.city }} {{ user.area }}</h5>
+                      <h5>{{ user?.city }} {{ user?.area }}</h5>
                     </div>
                   </li>
-                  <!-- <li>
-                                        <i class="icon-feather-book"></i>
-                                        <div class="margin-right-30">
-                                        <span>الكورسات</span>
-                                        <h5>{{ user.courses.length }}</h5>
-                                        </div>
-                                    </li> -->
-                  <li>
-                    <i class="icon-material-outline-access-time"></i>
-                    <div class="margin-right-30">
-                      <span>الخبرة</span>
-                      <h5>{{ user.experience }}</h5>
-                    </div>
-                  </li>
+
                   <li v-if="user.title">
                     <i class="icon-material-outline-business-center"></i>
                     <div class="margin-right-30">
@@ -216,7 +213,7 @@ export default {
     user: Object,
   },
   mounted() {
-    console.log(this.user);
+    // console.log(this.user);
   },
   data() {
     return {
@@ -270,5 +267,17 @@ export default {
 .profile-title {
   color: aliceblue !important;
   text-shadow: 0 0 3px #444;
+}
+
+
+.no-data{
+    font-weight: 500;
+    color: #666;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+    flex:1 ;
+     text-align: center;
 }
 </style>
