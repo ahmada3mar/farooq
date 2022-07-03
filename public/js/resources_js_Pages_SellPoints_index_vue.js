@@ -21,9 +21,8 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     pagination: _Shared_Pagination_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  mounted: function mounted() {
-    console.log('this.sellPoints', this.sellPoints);
-    console.log('this.cities', this.cities);
+  mounted: function mounted() {// console.log('this.sellPoints', this.sellPoints);
+    // console.log('this.cities', this.cities);
   }
 });
 

@@ -16,8 +16,7 @@ __webpack_require__.r(__webpack_exports__);
     course: Object,
     user: Object
   },
-  mounted: function mounted() {
-    console.log(this.user);
+  mounted: function mounted() {// console.log(this.user);
   },
   data: function data() {
     var _this$course, _this$course$units$;

@@ -216,7 +216,7 @@ export default {
     user: Object,
   },
   mounted() {
-    console.log(this.user);
+    // console.log(this.user);
   },
   data() {
     return {

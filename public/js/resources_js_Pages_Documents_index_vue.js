@@ -70,9 +70,8 @@ __webpack_require__.r(__webpack_exports__);
     Sidebar: _SideBar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   methods: {},
-  mounted: function mounted() {
-    console.log('this.docs', this.docs);
-    console.log('this.docType', this.docType);
+  mounted: function mounted() {//   console.log('this.docs', this.docs);
+    //   console.log('this.docType', this.docType);
   }
 });
 
