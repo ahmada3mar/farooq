@@ -55,7 +55,7 @@
                 </li>
 
                 <li>
-                  <Link class="arow" href="/documents">الملفات</Link>
+                  <Link class="arow" href="/documents?type=top">الملفات</Link>
                   <ul class="dropdown-nav">
                     <li><Link href="/documents?type=1">أسئلة سنوات</Link></li>
                     <li>
@@ -102,7 +102,7 @@
                 </li>
 
                 <li>
-                  <Link class="arow" href="/documents">الملفات</Link>
+                  <Link class="arow" href="/documents?type=top">الملفات</Link>
                   <ul class="dropdown-nav">
                     <li><Link href="/documents?type=1">أسئلة سنوات</Link></li>
                     <li>
@@ -260,7 +260,7 @@ export default {
     Footer,
   },
   updated(){
-    console.log(this.verifed)
+    // console.log(this.verifed)
   },
   data() {
     return {

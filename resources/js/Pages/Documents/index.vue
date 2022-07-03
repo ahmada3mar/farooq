@@ -107,8 +107,8 @@ export default {
 
     },
         mounted() {
-              console.log('this.docs', this.docs);
-              console.log('this.docType', this.docType);
+            //   console.log('this.docs', this.docs);
+            //   console.log('this.docType', this.docType);
     },
 };
 </script>

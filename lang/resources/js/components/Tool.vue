@@ -46,13 +46,13 @@ export default {
             fd.append('locale', this.currentLocal);
             axios.post('/nova-vendor/multilingual-nova/current-local', fd )
                 .then(({ data }) => {
-                    console.log(data);
+                    // console.log(data);
                     // TODO display a successful message
                     location.reload();
                 })
                 .catch(error => {
                     //TODO display an error message
-                    console.log(error)
+                    // console.log(error)
                 });
 
         },

@@ -132,7 +132,7 @@
         class="section gray margin-top-45 margin-bottom-65 padding-top-65 padding-bottom-75"
     >
         <div class="container">
-                        <Link href="/documents" class=""
+                        <Link href="/documents?type=top" class=""
                             >عرض الكل</Link
                         >
             <div class="row margin-bottom-65">

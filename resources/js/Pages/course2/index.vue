@@ -202,7 +202,7 @@ export default {
     };
   },
       mounted() {
-        console.log('course: ' , this.course);
+        // console.log('course: ' , this.course);
     },
 
   methods: {
