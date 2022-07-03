@@ -7,24 +7,11 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DocumentsController;
 use App\Http\Controllers\InstructorsController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\UserController;
-use Illuminate\Support\Str;
-
 use App\Http\Controllers\SellPointsController;
-use App\Mail\Customers;
-use App\Models\Course;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
-use App\Models\Document;
-use App\Models\Section;
-use Carbon\Carbon;
-use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Password;
 use Inertia\Inertia;
 
 
@@ -47,8 +34,6 @@ Route::get("/test", function (Request $req) {
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/contact', [ContactController::class, 'index']);
 
-
-
 Route::resource('documents', DocumentsController::class);
 Route::get('/documents', [DocumentsController::class, 'index']);
 Route::get('/document/download/{document}', [DocumentsController::class, 'pre_download']);
@@ -61,59 +46,18 @@ Route::get('/Selling-Points', [SellPointsController::class, 'index']);
 Route::resource('users', UserController::class);
 Route::get('/profile/{user}', [UserController::class, 'profile'])->name('profile');
 
-Route::get('/forgot-password', function () {
-    return Inertia::render('ForgetPassword');
-})->middleware('guest')->name('password.request');
-
-Route::post('/forgot-password', function (Request $request) {
-    $request->validate(['email' => 'required|email']);
-
-    $status = Password::sendResetLink(
-        $request->only('email')
-    );
-
-    return $status === Password::RESET_LINK_SENT
-                ? back()->withErrors(['status' => __($status, [] , "ar")])
-                : back()->withErrors(['email' => __($status , [] , 'ar')]);
-})->middleware('guest')->name('password.email');
-
-Route::get('/reset-password/{token}', function (Request $request,$token) {
-    $email = $request->get('email') ?? "";
-    return Inertia::render('ResetPassword' , compact('token' , 'email'));
-})->middleware('guest')->name('password.reset');
-
-
-Route::post('/reset-password', function (Request $request) {
-    $request->validate([
-        'token' => 'required',
-        'email' => 'required|email',
-        'password' => 'required|min:8|confirmed',
-    ]);
-
-    $status = Password::reset(
-        $request->only('email', 'password', 'password_confirmation', 'token'),
-        function ($user, $password) {
-            $user->forceFill([
-                'password' => Hash::make($password)
-            ])->setRememberToken(Str::random(60));
-
-            $user->save();
-
-            event(new PasswordReset($user));
-        }
-    );
-
-    return $status === Password::PASSWORD_RESET
-                ? redirect()->route('login')->withErrors(['status' => __($status, [] , "ar")])
-                : back()->withErrors(['email' => [__($status , [] , "ar")]]);
-})->middleware('guest')->name('password.update');
-
-
 
 Route::get('/login', [LoginController::class, 'loginIndex'])->name('login');
 Route::get('/Register', [LoginController::class, 'registerIndex']);
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/register', [LoginController::class, 'register']);
+
+Route::middleware('guest')->group(function(){
+    Route::get('/forgot-password', [PasswordController::class , "forgot"])->name('password.request');
+    Route::post('/forgot-password', [PasswordController::class , "reset"])->name('password.email');
+    Route::get('/reset-password/{token}', [PasswordController::class , "token"])->name('password.reset');
+    Route::post('/reset-password' ,[PasswordController::class , "update"])->name('password.update');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/verification/{data}', [UserController::class, 'verification']);

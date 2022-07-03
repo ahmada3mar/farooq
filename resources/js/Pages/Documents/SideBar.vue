@@ -24,7 +24,7 @@
                 class="button gray ripple-effect button-sliding-icon sidebar-button"
                 @click="togleSection"
                 >
-                    {{ section.name }} <i class="icon-feather-arrow-left"></i>
+                    {{ section?.name }} <i class="icon-feather-arrow-left"></i>
                 </button>
                 <div class="sidebar-dropdown hidden">
                 <div
@@ -37,7 +37,7 @@
                           class="button ripple-effect button-sliding-icon sidebar-button"
 
                       >
-                      {{ course.name }} <i class="icon-feather-arrow-left"></i>
+                      {{ course?.name }} <i class="icon-feather-arrow-left"></i>
                   </Link>
                 </div>
                 </div>

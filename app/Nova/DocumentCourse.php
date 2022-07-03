@@ -4,9 +4,6 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Select;
-use Laravel\Nova\Http\Requests\NovaRequest;
-use App\Models\Section;
 use App\Nova\Section as NovaSection;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Text;
@@ -25,7 +22,7 @@ class DocumentCourse extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.

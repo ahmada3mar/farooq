@@ -26,6 +26,10 @@ class CourseController extends Controller
     {
         $course = Course::with('units.lectures.question.answers')->with('units.lectures.attachment')->with('user')->withCount('lectures')->find($request->id);
 
+        if (!$course) {
+            return Inertia::render('404');
+        }
+
         $regestered_courses = Auth::user()->registerdCourses->pluck('id')->toArray();
 
         if (!in_array($course->id, $regestered_courses)) {
@@ -37,9 +41,7 @@ class CourseController extends Controller
             }
         }
 
-        if (!$course) {
-            return Inertia::render('404');
-        }
+
 
         $simmilerCourses = Course::query();
 

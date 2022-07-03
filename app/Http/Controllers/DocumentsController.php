@@ -63,7 +63,7 @@ class DocumentsController extends Controller
     {
         $document->increment('downloads');
 
-        return redirect(env('APP_URL') .'document/download_file/'.$document->path.'/'.$document->name);
+        return redirect(env('APP_URL') .'/document/download_file/'.$document->path.'/'.$document->name);
 
         // return response()->download(storage_path("app/public/$document->path"), "$document->name" . '.' . substr(strrchr($document->path, "."), 1));
     }

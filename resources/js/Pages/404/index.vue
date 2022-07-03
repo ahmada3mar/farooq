@@ -13,15 +13,6 @@
 		<div class="row">
 			<div class="col-md-12">
 
-				<h2>404 غير موجود</h2>
-
-				<!-- Breadcrumbs -->
-				<nav id="breadcrumbs" class="dark ">
-					<ul class="arabic">
-						<li><a href="/">الرئيسية</a></li>
-					</ul>
-				</nav>
-
 			</div>
 		</div>
 	</div>
