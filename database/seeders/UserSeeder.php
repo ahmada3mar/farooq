@@ -29,46 +29,56 @@ class UserSeeder extends Seeder
             ]
         );
 
-        SiteConfig::firstOrCreate(
-            [
-            'key' => 'home_shadow',
+        $config = SiteConfig::all();
 
-            ],
-            [
-            'value' => '#fff',
-            'type' => '2'
-        ]
-    );
-        SiteConfig::firstOrCreate(
-            [
-            'key' => 'home_cover_image',
+        if(count($config) == 0 ) {
 
-            ],
-            [
-            'value' => '',
-            'type' => '1'
-        ]
-    );
-        SiteConfig::firstOrCreate(
-            [
-            'key' => 'home_description',
+            SiteConfig::firstOrCreate(
+                [
+                'key' => 'home_shadow',
 
-            ],
-            [
-            'value' => "المنصة الأولى للتعليم الإلكتروني في المملكة <br> لجميع الصفوف و المراحل الدراسية",
-            'type' => '0'
-        ]
-    );
+                ],
+                [
+                'value' => '#fff',
+                'type' => '2'
+            ]
+        );
+            SiteConfig::firstOrCreate(
+                [
+                'key' => 'home_cover_image',
 
-    Section::firstOrCreate([
-        'name'=> 'علمي'
-    ]);
-    Section::firstOrCreate([
-        'name'=> 'أدبي'
-    ]);
-    Section::firstOrCreate([
-        'name'=> 'مهني'
-    ]);
+                ],
+                [
+                'value' => '',
+                'type' => '1'
+            ]
+        );
+            SiteConfig::firstOrCreate(
+                [
+                'key' => 'home_description',
+
+                ],
+                [
+                'value' => "المنصة الأولى للتعليم الإلكتروني في المملكة <br> لجميع الصفوف و المراحل الدراسية",
+                'type' => '0'
+            ]
+        );
+    }
+
+    $sections = Section::orderBy('Order')->get();
+    if(count($sections) == 0) {
+
+        Section::firstOrCreate([
+            'name'=> 'علمي'
+        ]);
+        Section::firstOrCreate([
+            'name'=> 'أدبي'
+        ]);
+        Section::firstOrCreate([
+            'name'=> 'مهني'
+        ]);
+    }
+
 
     }
 }
