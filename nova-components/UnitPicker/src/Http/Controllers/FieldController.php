@@ -5,6 +5,7 @@ namespace Farooq\UnitPicker\Http\Controllers;
 use App\Models\Course;
 use App\Models\DocumentCourse;
 use App\Models\Section;
+use App\Models\Unit;
 use Illuminate\Routing\Controller;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Farooq\UnitPicker\UnitPicker;
@@ -13,7 +14,14 @@ class FieldController extends Controller
 {
 
     public function course(NovaRequest $request){
-        return Course::where('name' ,'like', '%' . $request['name'] . '%')->get();
+        $query =  Course::query();
+        $user = $request->user();
+
+        if ($user->hasPermissionTo('view own courses')) {
+            $query->where("user_id" , $user->id);
+        }
+
+        return $query->where('name' ,'like', '%' . $request['name'] . '%')->get();
 
     }
     public function index(NovaRequest $request)
@@ -58,12 +66,19 @@ class FieldController extends Controller
             abort(500, 'Can not find the Model "' . $request->modelClass . '::find(' . $request->viaResourceId . ')');
         }
 
+        $user = $request->user();
         if($request->resourceClass ==  "App\Nova\Lecture"){
 
-            return $model->units()->get(['id','name']);
+            $query =  Unit::query();
+
+            if ($user->hasPermissionTo('view own lectures')) {
+                $query->whereHas("course" , function($c) use($user) {
+                    return $c->where("user_id" , $user->id);
+                });
+            }
+            return $query->where("course_id" , $model->id)->get(['id','name']);
         }else{
             return $model->documentCourses()->get(['id','name']);
-
         }
     }
 }
