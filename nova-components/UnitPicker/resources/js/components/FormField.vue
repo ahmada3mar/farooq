@@ -43,6 +43,7 @@ export default {
         this.isDisabled = true
         this.value =this.field[this.field['attribute']]
     }
+
   },
 
   data() {
@@ -136,6 +137,8 @@ export default {
         );
       }
     },
+
+
 
     /**
      * Update the field's internal value.

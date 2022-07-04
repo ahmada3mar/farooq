@@ -2,6 +2,5 @@ let mix = require('laravel-mix')
 
 mix
 .vue(3)
-  .setPublicPath('dist')
-  .js('resources/js/tool.js', 'js')
-  .sass('resources/sass/tool.scss', 'css')
+  .js('resources/js/tool.js', 'dist/js')
+  .sass('resources/sass/tool.scss', 'dist/css')
