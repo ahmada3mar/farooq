@@ -149,4 +149,11 @@ a.headline-link::before {
     .full-page-container{
   min-height: 70% ;
 }
+.task-listing:hover {
+	box-shadow: 0 0px 25px rgba(0,0,0,0.3);
+	transform: translateY(-4px);
+}
+.task-listing-bid .button{
+    width: 100% !important;
+}
 </style>

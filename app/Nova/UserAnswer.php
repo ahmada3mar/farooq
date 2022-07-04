@@ -10,14 +10,14 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\HasMany;
 use Yassi\NestedForm\NestedForm;
 
-class Question extends ResourceForUser
+class UserAnswar extends ResourceForUser
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Question::class;
+    public static $model = \App\Models\UserAnswer::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -37,7 +37,7 @@ class Question extends ResourceForUser
      */
     public static function label()
     {
-        return __('Question');
+        return __('Students Answars');
     }
 
     /**
@@ -47,7 +47,7 @@ class Question extends ResourceForUser
      */
     public static function singularLabel()
     {
-        return __('Question');
+        return __('Student Answar');
     }
 
     /**
@@ -66,44 +66,23 @@ class Question extends ResourceForUser
      * @return array
      */
 
-    public static function relation($query  , $request){
-        // dd($query)
-        $user = $request->user();
-
-        return $query->whereHas('lecutre',function($l) use($user){
-            return $l -> whereHas('course', function($c) use($user){
-                return $c->where("user_id" , $user->id);
-            });
-        } );
-    }
-
-
     public function fields(Request $request)
     {
         return [
             ID::make()->hideFromIndex(),
 
-            BelongsTo::make( __('lecture') , 'lecture' , Lecture::class),
-            // Text::make( __('course') , 'getCourse')
-            // ->hideWhenUpdating()
-            // ->hideFromIndex()
-            // ->hideWhenCreating()
-            // ->asHtml()
-            // ->displayUsing(function($a){
-            //     return "<a class='no-underline font-bold dim text-primary' href='/admin/resources/courses/$a->admin'>$a->name</a>" ;
-            // }),
-
+            BelongsTo::make( __('question') , 'question' , Question::class),
 
             Text::make('name')
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-            HasMany::make(__('answer'), 'answers' , Answer::class),
-            // HasMany::make(__('UserAnswar'), 'UserAnswar' , UserAnswar::class),
-            // NestedForm::make('UserAnswar' , 'UserAnswar' , UserAnswar::class),
-            NestedForm::make('answer' , 'answers' , Answer::class),
-
-
+            BelongsTo::make( __('Student'), 'user',User::class)
+                ->rules('required', 'numeric'),
+            BelongsTo::make( __('Answer'), 'answer',Answer::class)
+                ->rules('required', 'numeric'),
+            BelongsTo::make( __('Question'), 'Question',Question::class)
+                ->rules('required', 'numeric'),
 
         ];
     }
