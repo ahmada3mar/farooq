@@ -69,10 +69,7 @@ class UserController extends Controller
     public function profile(User $user)
     {
 
-        // dd($user);
-        if ($user->id == Auth::user()->id) {
-            $user->makeVisible('balance');
-        }
+
         return Inertia::render('Profile2', compact('user'));
     }
 
