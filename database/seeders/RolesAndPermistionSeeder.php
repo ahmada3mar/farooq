@@ -54,7 +54,7 @@ class RolesAndPermistionSeeder extends Seeder
             Card::class,
             UserAnswer::class,
             DocumentCourse::class,
-            SellPoint::class
+            SellPoint::class,
 
             // ... // List all your Models you want to have Permissions for.
         ]);
@@ -117,10 +117,10 @@ class RolesAndPermistionSeeder extends Seeder
 
         // Create an Admin Role and assign all Permissions
         Role::updateOrCreate(['name' => 'instructor'])
-        ->givePermissionTo(Permission::updateOrCreate(['name' => 'access admin panel' , 'group' => 'admin dashboard']));
+        ->syncPermissions(Permission::updateOrCreate(['name' => 'access admin panel' , 'group' => 'admin dashboard']));
         Role::updateOrCreate(['name' => 'user']);
         $role = Role::updateOrCreate(['name' => 'admin']);
-        $role->givePermissionTo(Permission::all());
+        $role->syncPermissions(Permission::where("name" , "not LIKE" , "%view own %" )->get());
 
         // Give User Admin Role
         $user = User::whereEmail($adminEmail)->first(); // Change this to your email.

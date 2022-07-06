@@ -31,16 +31,6 @@ class UserSeeder extends Seeder
 
         SiteConfig::firstOrCreate(
             [
-            'key' => 'home_shadow',
-
-            ],
-            [
-            'value' => '#fff',
-            'type' => '2'
-        ]
-    );
-        SiteConfig::firstOrCreate(
-            [
             'key' => 'home_cover_image',
 
             ],
