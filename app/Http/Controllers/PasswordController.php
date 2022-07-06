@@ -16,7 +16,7 @@ class PasswordController extends Controller
 
     public function forgot()
     {
-        Inertia::render('ForgetPassword');
+        return Inertia::render('ForgetPassword');
     }
 
 
