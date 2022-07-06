@@ -69,6 +69,7 @@ class UserController extends Controller
     public function profile(User $user)
     {
 
+
         return Inertia::render('Profile2', compact('user'));
     }
 
