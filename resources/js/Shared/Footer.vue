@@ -89,7 +89,7 @@
                       <li v-if="web_TikTok" >
 
                         <a
-                          href="web_TikTok"
+                          :href="web_TikTok"
                           title="TikTok"
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
