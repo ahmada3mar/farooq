@@ -10,7 +10,6 @@ import Accordion from './Shared/Accordion.vue'
 createInertiaApp({
   resolve: async name => {
     let page = (await import(`./Pages/${name}`)).default;
-
     page.layout ??= Layout;
 
     return page;
