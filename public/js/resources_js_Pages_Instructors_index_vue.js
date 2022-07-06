@@ -290,6 +290,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.vid-description[data-v-ad1b03c0] {\r\n  border-radius: 0;\n}\n.right-side[data-v-ad1b03c0] {\r\n  display: contents;\n}\n.button[data-v-ad1b03c0] {\r\n  float: left;\n}\n.sidebar-container a.headline-link[data-v-ad1b03c0] {\r\n      position: unset;\r\n    left: unset;\r\n    bottom: unset;\n}\na.headline-link[data-v-ad1b03c0]::after {\r\n    content: \"\\27F5\";\r\n    font-family: \"Material-Icons\";\r\n    font-size: 21px;\r\n    line-height: 0;\r\n    position: relative;\r\n    top: 0px;\r\n    margin-right: 5px;\n}\na.headline-link[data-v-ad1b03c0]::before {\r\n    content: unset;\r\n    font-family: unset;\n}\n.sidebar-container[data-v-ad1b03c0]{\r\n  display:flex;\r\n  flex-direction:column;\r\n  direction: rtl;\n}\n.sidebar-button[data-v-ad1b03c0]{\r\n    float: unset;\r\n    width: 90%;\r\n    font-size: 1.5rem;\r\n    margin: 5px 0;\r\n    text-align: center;\n}\n.full-page-container[data-v-ad1b03c0]{\r\n  min-height: 70% ;\n}\r\n", ""]);
+
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
