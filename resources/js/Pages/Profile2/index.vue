@@ -64,7 +64,7 @@
               <!-- Listings Container -->
               <div class="listings-container grid-layout">
                 <Link
-                  v-for="course in user.registerd_courses"
+                  v-for="course in (user?.courses.length > 0 ?  user?.courses : user.registerd_courses)"
                   :key="course.id"
                   :href="`/course/${course.id}`"
                   class="job-listing"
@@ -99,7 +99,7 @@
                     </ul>
                   </div>
                 </Link>
-                <div class="listings-container grid-layout" v-if="user.registerd_courses.length == 0">
+                <div class="listings-container grid-layout" v-if="user.courses.length == 0 && user.registerd_courses.length == 0">
                   <div style="background:#f9f9f9" class="job-listing-details">
                     <div style="padding:5" class="job-listing-company-logo">
                       <img width="150" src="/assets/images/no-course.svg" alt="" />

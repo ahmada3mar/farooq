@@ -17,7 +17,7 @@ class FieldController extends Controller
         $query =  Course::query();
         $user = $request->user();
 
-        if ($user->hasPermissionTo('view own courses')) {
+        if (!$user->isSuperAdmin() && $user->hasPermissionTo('view own courses')) {
             $query->where("user_id" , $user->id);
         }
 
@@ -71,7 +71,7 @@ class FieldController extends Controller
 
             $query =  Unit::query();
 
-            if ($user->hasPermissionTo('view own lectures')) {
+            if (!$user->isSuperAdmin() && $user->hasPermissionTo('view own lectures')) {
                 $query->whereHas("course" , function($c) use($user) {
                     return $c->where("user_id" , $user->id);
                 });

@@ -147,7 +147,7 @@
                         class="listings-container compact-list-layout margin-top-20"
                     >
                     <template v-if="QA.length > 0">
-                        <Link
+                        <a
                             v-for="document in QA"
                             :key="document.id"
                             :href="`/document/download/${document.id}`"
@@ -190,7 +190,7 @@
                                     ></i>
                                 </div>
                             </div>
-                        </Link>
+                        </a>
                         </template>
 
                     </div>
@@ -207,7 +207,7 @@
                         class="listings-container compact-list-layout margin-top-20"
                     >
                     <template v-if="workPapers.length > 0">
-                        <Link
+                        <a
                             v-for="document in workPapers"
                             :key="document.id"
                             :href="`/document/download/${document.id}`"
@@ -250,7 +250,7 @@
                                     ></i>
                                 </div>
                             </div>
-                        </Link>
+                        </a>
                         </template>
 
                     </div>
@@ -267,7 +267,7 @@
                         class="listings-container compact-list-layout margin-top-20"
                     >
                     <template v-if="books.length > 0">
-                        <Link
+                        <a
                             v-for="document in books"
                             :key="document.id"
                             :href="`/document/download/${document.id}`"
@@ -310,7 +310,7 @@
                                     ></i>
                                 </div>
                             </div>
-                        </Link>
+                        </a>
                         </template>
 
                     </div>
@@ -327,7 +327,7 @@
                         class="listings-container compact-list-layout margin-top-20"
                     >
                     <template v-if="dosis.length > 0">
-                        <Link
+                        <a
                             v-for="document in dosis"
                             :key="document.id"
                             :href="`/document/download/${document.id}`"
@@ -370,7 +370,7 @@
                                     ></i>
                                 </div>
                             </div>
-                        </Link>
+                        </a>
                         </template>
 
                     </div>
@@ -460,6 +460,7 @@
 <script setup>
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import { Inertia } from '@inertiajs/inertia';
 </script>
 
 <script>
@@ -495,6 +496,11 @@ export default {
                 this.settings.find((s) => s.key == "home_description_color")
                     ?.value || "#777",
         };
+    },
+    methods:{
+        download(link){
+            Inertia.get(link)
+        }
     },
     mounted() {
         // this.jq()
