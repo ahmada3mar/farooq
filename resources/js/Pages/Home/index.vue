@@ -70,7 +70,7 @@
                         <Link
                             v-for="section in sections"
                             :key="section.id"
-                            :href="`/courses?class=12&sections=${section.id}`"
+                            :href="`/courses?section=${section.id}`"
                             class="category-box"
                         >
                             <div class="category-box-icon">

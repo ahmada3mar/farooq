@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Mail\Customers;
+use App\Models\Section;
+use App\Models\SiteConfig;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -68,9 +70,8 @@ class UserController extends Controller
      */
     public function profile(User $user)
     {
-
-
-        return Inertia::render('Profile2', compact('user'));
+        $settings = SiteConfig::where('key', 'LIKE', 'user%')->get();
+        return Inertia::render('Profile2', compact('user' , 'settings' ));
     }
 
     /**
