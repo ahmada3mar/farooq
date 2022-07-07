@@ -8,7 +8,7 @@
     class="single-page-header freelancer-header"
     :style="
       'background-image: url(' +
-      (user.cover ? '/storage/' + user.cover : '/assets/images/banner.jpg') +
+      (user.cover ? '/storage/' + user.cover : settings?.User_Defualt_Cover) +
       ')'
     "
   >
@@ -20,7 +20,7 @@
               <div class="header-details flexCenter">
                 <h3 class="text-capitalize">
                   {{ user?.name }}
-                  <span class="profile-title"> {{ user.title }}</span>
+                  <span class="profile-title"> {{ user.section?.name || user.title }}</span>
                 </h3>
                 <!-- <ul>
 
@@ -30,7 +30,7 @@
                 </ul> -->
               </div>
               <div class="header-image freelancer-avatar">
-                <img :src="`/storage/${user.avatar}`" :alt="`${user?.name}`" />
+                <img :src="user.avatar? `/storage/${user.avatar}` : settings?.User_Defualt_Image" :alt="`${user?.name}`" />
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@
       <!-- Content -->
       <div class="col-xl-8 col-lg-8 content-right-offset">
         <!-- Page Content -->
-        <div class="single-page-section arabic">
+        <div v-if="user.description" class="single-page-section arabic">
           <h2 class="margin-bottom-25">حول</h2>
 
           <div v-html="user.description"></div>
@@ -59,7 +59,7 @@
             </h3>
           </div>
           <div class="clearfix"></div>
-          <div class="pagination-container margin-top-40 margin-bottom-10">
+          <div class="pagination-container margin-top-5 margin-bottom-10">
             <div class="single-page-section">
               <!-- Listings Container -->
               <div class="listings-container grid-layout">
@@ -101,7 +101,7 @@
                 </Link>
                 <div class="listings-container grid-layout" v-if="user.courses.length == 0 && user.registerd_courses.length == 0">
                   <div style="background:#f9f9f9" class="job-listing-details">
-                    <div style="padding:50" class="job-listing-company-logo">
+                    <div style="padding:5" class="job-listing-company-logo">
                       <img width="150" src="/assets/images/no-course.svg" alt="" />
                     </div>
                       <h3 class="no-data">
@@ -124,16 +124,16 @@
           <!-- Sidebar Widget -->
           <div class="sidebar-widget arabic">
             <div class="job-overview">
-              <div class="job-overview-headline">ملخص</div>
+              <!-- <div v-if="user.description" class="job-overview-headline">ملخص</div> -->
               <div class="job-overview-inner">
                 <ul>
-                  <li>
+                  <!-- <li>
                     <i class="icon-material-outline-business-center"></i>
                     <div class="margin-right-30">
                       <span>الوضيفة</span>
                       <h5>{{ user.title || "طالب" }}</h5>
                     </div>
-                  </li>
+                  </li> -->
                   <li v-if="user.city || user.area">
                     <i class="icon-material-outline-location-on"></i>
                     <div class="margin-right-30">
@@ -155,6 +155,20 @@
                     <div class="margin-right-30">
                       <span>الخبرة</span>
                       <h5>{{ user.experience }}</h5>
+                    </div>
+                  </li>
+                  <li v-if="user.mobile">
+                    <i class="icon-brand-whatsapp"></i>
+                    <div class="margin-right-30">
+                      <span>رقم الهاتف</span>
+                      <h5>{{ user.mobile }}</h5>
+                    </div>
+                  </li>
+                  <li v-if="user.email">
+                    <i class="icon-material-outline-email"></i>
+                    <div class="margin-right-30">
+                      <span>الإيميل </span>
+                      <h5>{{ user.email }}</h5>
                     </div>
                   </li>
                 </ul>
@@ -211,9 +225,11 @@ export default {
   props: {
     course: Object,
     user: Object,
+    settings: Object,
   },
   mounted() {
     // console.log(this.user);
+    // console.log(this.section.name);
   },
   data() {
     return {

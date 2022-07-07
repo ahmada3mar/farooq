@@ -52,7 +52,7 @@ class LoginController extends Controller
             'mobile' => 'required',
             'city' => 'required',
             'area' => 'required',
-            'title' => 'required',
+            'section' => 'required',
             'email' => 'required|unique:users,email',
             'password' => 'required|confirmed|min:8'
         ], [
@@ -62,7 +62,7 @@ class LoginController extends Controller
             'mobile.required' => 'يرجى تعبة رقم الهاتف',
             'city.required' => 'يرجى تعبة المدينة',
             'area.required' => 'يرجى تعبة المنطقة',
-            'title.required' => 'يرجى تعبة التخصص',
+            'section.required' => 'يرجى تعبة التخصص',
             'password.min' => 'يجب أن تتكون كلمة المرور من 8 أحرف على الأقل',
         ]);
 

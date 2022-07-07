@@ -49,8 +49,8 @@
             <!-- Content -->
             <div class="content">
                 <div class="flex items-center relative shadow h-header bg-white z-20 px-view">
-                    <a v-if="@json(\Laravel\Nova\Nova::name() !== null)" href="{{ \Illuminate\Support\Facades\Config::get('nova.url') }}" class="no-underline dim font-bold text-90 mr-6">
-                        {{ \Laravel\Nova\Nova::name() }}
+                    <a href="https://{{ env('APP_URL') }}" class="no-underline dim font-bold text-90 mr-6" target="_blank">
+                        Al Farouq
                     </a>
 
                     @if (count(\Laravel\Nova\Nova::globallySearchableResources(request())) > 0)
