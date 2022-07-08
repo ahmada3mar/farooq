@@ -74,9 +74,6 @@
                       <img :src="`/storage/${course.image}`" alt="" />
                     </div>
                     <div class="job-listing-description">
-                      <h4 class="job-listing-company">
-                        الصف {{ __(course.class) }}
-                      </h4>
                       <h3 class="job-listing-title">
                         {{ course?.name }}
                       </h3>
@@ -86,10 +83,10 @@
                   <!-- Job Listing Footer -->
                   <div class="job-listing-footer">
                     <ul>
-                      <li>
+                      <li v-if="course.section">
                         <i class="icon-line-awesome-graduation-cap"> </i>
-                        الصف
-                        {{ __(course.class) }}
+                        الفرع {{ course.section.name }}
+
                       </li>
                       <li>
                         <i class="icon-material-outline-access-time"> </i>
@@ -213,7 +210,7 @@ export default {
     user: Object,
   },
   mounted() {
-    // console.log(this.user);
+    // console.log(this.user?.courses);
   },
   data() {
     return {
