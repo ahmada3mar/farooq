@@ -70,7 +70,7 @@ class UserController extends Controller
      */
     public function profile(User $user)
     {
-        $settings = SiteConfig::where('key', 'LIKE', 'user%')->get();
+        $settings = SiteConfig::where('key', 'LIKE', 'user%')->pluck('value' , 'key');
         return Inertia::render('Profile2', compact('user' , 'settings' ));
     }
 

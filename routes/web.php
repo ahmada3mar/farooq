@@ -12,6 +12,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\SellPointsController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 
@@ -71,6 +72,24 @@ Route::middleware('auth')->group(function () {
     Route::post('/confirm/{course}', [CourseController::class, 'confirm']);
     Route::post('/check-answer/{answer}', [CourseController::class, 'checkAnswer']);
     Route::post('/get-answers/{question}', [CourseController::class, 'getUserAnsers']);
+
+    Route::post("/edit-profile" , function(Request $request){
+
+        $user = Auth::user();
+        if($user->email != $request->email){
+            $user->email_verified_at = null;
+            $user->email = $request->email;
+        }
+
+        $user->mobile = $request->mobile;
+        $user->city = $request->city;
+        $user->area = $request->area;
+        $user->section_id = $request->section_id;
+        $user->save();
+
+        sleep(4);
+        return $user;
+    });
     Route::get('/logout', [LoginController::class, 'logout']);
 });
 
