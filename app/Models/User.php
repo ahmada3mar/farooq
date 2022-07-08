@@ -29,6 +29,7 @@ class User extends Authenticatable
         'city',
         'area',
         'mobile',
+        "section_id",
         'email_verified_at',
     ];
 
