@@ -26,18 +26,10 @@
               </li>
             </ul>
           </div>
-          <div class="account-type">
+          <div class="account-type arabic  ">
             <div>
-              <input
-                type="radio"
-                name="account-type-radio"
-                id="freelancer-radio"
-                class="account-type-radio"
-                disabled
-              />
-              <label for="freelancer-radio" class="ripple-effect-dark">
-                معلومات الحساب
-                <i class="icon-material-outline-account-circle"></i>
+              <label for="freelancer-radio " class="ripple-effect-dark">
+                عند التسجيل لأول مرة، يرتبط الحساب المسجل مع الجهاز المسجل عليه، ولا يمكنك استخدام معلومات التسجيل الا على هذا الجهاز .. يمكنك انشاء حسابات مختلفة على الأجهزة الأخرى
               </label>
             </div>
           </div>
@@ -84,7 +76,7 @@
               />
             </div>
             <div class="input-with-icon-left  col-6">
-            <select class="custom-select arabic  "  v-model="sectionSelected" name="title" id="title" required>
+            <select class="custom-select arabic  "  v-model="sectionSelected" name="section" id="section" required>
                 <option disabled sectionSelected hidden value=""  >التخصص</option>
 				<option @click="SelectSection" v-for="section in sections" :key="section.id" :value="section.id" class="select-option">{{section.name}}</option>
 			</select>
@@ -197,7 +189,7 @@ export default {
   },
   methods: {
     submit() {
-        this.form.title = this.sectionSelected;
+        this.form.section = this.sectionSelected;
         this.form.city = this.citySelected;
       Inertia.post("register", this.form);
     },

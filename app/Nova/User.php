@@ -3,10 +3,12 @@
 namespace App\Nova;
 
 use App\Models\Section;
+use App\Nova\Section as NovaSection;
 use Carbon\Carbon;
 use Epartment\NovaDependencyContainer\NovaDependencyContainer;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Avatar;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\ID;
@@ -101,19 +103,20 @@ class User extends Resource
 
             Number::make('class'),
 
-            NovaDependencyContainer::make([
-                Select::make('section', 'section_id')->options(Section::pluck('name', 'id'))->hideFromIndex(),
-            ])->dependsOn('class', '11')->dependsOn('class', '12'),
+            BelongsTo::make( __('section'), 'section',NovaSection::class)
+                ->rules('nullable')
+                ->creationRules('nullable')
+                ->updateRules('nullable'),
 
             Text::make('Mobile')
                 ->hideFromIndex()
                 ->sortable()
-                ->rules('required', 'max:254')
-                ->creationRules('unique:users,mobile')
-                ->updateRules('unique:users,mobile,{{resourceId}}'),
+                ->rules('nullable', 'max:254')
+                ->creationRules('nullable')
+                ->updateRules('nullable'),
             Text::make('title')
                 ->sortable()
-                ->rules('required', 'max:255'),
+                ->rules('nullable', 'max:255'),
             Place::make('City')
                 ->hideFromIndex()
                 ->sortable()
@@ -141,14 +144,17 @@ class User extends Resource
                 ->rules('max:255'),
             Trix::make(__('description'), 'description')
                 ->hideFromIndex()
-                ->rules('required'),
+                ->creationRules('nullable', 'string')
+                ->updateRules('nullable', 'string')
+                ->rules('nullable'),
 
 
             Password::make('Password')
                 ->onlyOnForms()
                 ->creationRules('required', 'string', 'min:8')
-                ->updateRules('nullable', 'string', 'min:8'),
-            RoleSelect::make('Role', 'roles'),
+                ->updateRules('required', 'string', 'min:8'),
+            RoleSelect::make('Role', 'roles')
+            ->sortable(),
 
             Boolean::make('Active', 'active'),
 

@@ -92,6 +92,8 @@ class SiteConfig extends Resource
                     'web_TikTok' => __('TikTok'),
                     'web_youtube' => __('youtube'),
                     'support_mobile' => __('Support Mobile'),
+                    'User_Defualt_Image' => __('User Defualt Image'),
+                    'User_Defualt_Cover' => __('User Defualt Cover'),
                 ])
                 ->sortable()
                 ->rules('required', 'max:255'),
