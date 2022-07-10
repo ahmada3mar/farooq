@@ -187,7 +187,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.vid-description[data-v-44a039ec] {\n  border-radius: 0;\n}\n.right-side[data-v-44a039ec] {\n  display: contents;\n}\n.button[data-v-44a039ec] {\n  float: left;\n}\n.sidebar-container a.headline-link[data-v-44a039ec] {\n      position: unset;\n    left: unset;\n    bottom: unset;\n}\na.headline-link[data-v-44a039ec]::after {\n    content: \"\\27F5\";\n    font-family: \"Material-Icons\";\n    font-size: 21px;\n    line-height: 0;\n    position: relative;\n    top: 0px;\n    margin-right: 5px;\n}\na.headline-link[data-v-44a039ec]::before {\n    content: unset;\n    font-family: unset;\n}\n.sidebar-container[data-v-44a039ec]{\n  display:flex;\n  flex-direction:column;\n  direction: rtl;\n  padding-left: 10px !important;\n  height: 100%;\n  overflow: auto;\n  -ms-overflow-style: none;  /* IE and Edge */\n  scrollbar-width: none;  /* Firefox */\n}\n.sidebar-button[data-v-44a039ec]{\n    float: unset;\n    width: 90%;\n    font-size: 1.5rem;\n    margin: 5px 0;\n    text-align: center;\n}\n.font3rem[data-v-44a039ec]{\n    font-size: 3rem;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.vid-description[data-v-44a039ec] {\r\n  border-radius: 0;\n}\n.right-side[data-v-44a039ec] {\r\n  display: contents;\n}\n.button[data-v-44a039ec] {\r\n  float: left;\n}\n.sidebar-container a.headline-link[data-v-44a039ec] {\r\n      position: unset;\r\n    left: unset;\r\n    bottom: unset;\n}\na.headline-link[data-v-44a039ec]::after {\r\n    content: \"\\27F5\";\r\n    font-family: \"Material-Icons\";\r\n    font-size: 21px;\r\n    line-height: 0;\r\n    position: relative;\r\n    top: 0px;\r\n    margin-right: 5px;\n}\na.headline-link[data-v-44a039ec]::before {\r\n    content: unset;\r\n    font-family: unset;\n}\n.sidebar-container[data-v-44a039ec]{\r\n  display:flex;\r\n  flex-direction:column;\r\n  direction: rtl;\r\n  padding-left: 10px !important;\r\n  height: 100%;\r\n  overflow: auto;\r\n  -ms-overflow-style: none;  /* IE and Edge */\r\n  scrollbar-width: none;  /* Firefox */\n}\n.sidebar-button[data-v-44a039ec]{\r\n    float: unset;\r\n    width: 90%;\r\n    font-size: 1.5rem;\r\n    margin: 5px 0;\r\n    text-align: center;\n}\n.font3rem[data-v-44a039ec]{\r\n    font-size: 3rem;\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -236,7 +236,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SideBar_vue_vue_type_template_id_44a039ec_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SideBar.vue?vue&type=template&id=44a039ec&scoped=true */ "./resources/js/Pages/Documents/SideBar.vue?vue&type=template&id=44a039ec&scoped=true");
 /* harmony import */ var _SideBar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SideBar.vue?vue&type=script&lang=js */ "./resources/js/Pages/Documents/SideBar.vue?vue&type=script&lang=js");
 /* harmony import */ var _SideBar_vue_vue_type_style_index_0_id_44a039ec_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SideBar.vue?vue&type=style&index=0&id=44a039ec&scoped=true&lang=css */ "./resources/js/Pages/Documents/SideBar.vue?vue&type=style&index=0&id=44a039ec&scoped=true&lang=css");
-/* harmony import */ var D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var D_moath_h_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -244,7 +244,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,D_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_SideBar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_SideBar_vue_vue_type_template_id_44a039ec_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-44a039ec"],['__file',"resources/js/Pages/Documents/SideBar.vue"]])
+const __exports__ = /*#__PURE__*/(0,D_moath_h_Mhmd_farooq_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_SideBar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_SideBar_vue_vue_type_template_id_44a039ec_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-44a039ec"],['__file',"resources/js/Pages/Documents/SideBar.vue"]])
 /* hot reload */
 if (false) {}
 

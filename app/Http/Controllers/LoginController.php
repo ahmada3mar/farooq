@@ -52,7 +52,7 @@ class LoginController extends Controller
             'mobile' => 'required',
             'city' => 'required',
             'area' => 'required',
-            'section' => 'required',
+            'section_id' => 'required',
             'email' => 'required|unique:users,email',
             'password' => 'required|confirmed|min:8'
         ], [
@@ -62,7 +62,7 @@ class LoginController extends Controller
             'mobile.required' => 'يرجى تعبة رقم الهاتف',
             'city.required' => 'يرجى تعبة المدينة',
             'area.required' => 'يرجى تعبة المنطقة',
-            'section.required' => 'يرجى تعبة التخصص',
+            'section_id.required' => 'يرجى تعبة التخصص',
             'password.min' => 'يجب أن تتكون كلمة المرور من 8 أحرف على الأقل',
         ]);
 
@@ -83,9 +83,8 @@ class LoginController extends Controller
 
     public function registerIndex()
     {
-        $sections = Section::orderBy('Order')->get();
 
-        return Inertia::render('Register', compact('sections'));
+        return Inertia::render('Register');
     }
 
     public function logout(Request $request)

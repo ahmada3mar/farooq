@@ -76,8 +76,8 @@
               />
             </div>
             <div class="input-with-icon-left  col-6">
-            <select class="custom-select arabic  "  v-model="sectionSelected" name="section" id="section" required>
-                <option disabled sectionSelected hidden value=""  >التخصص</option>
+            <select class="custom-select arabic "  v-model="sectionSelected" name="section_id" id="section_id" required>
+                <option disabled hidden value=""  >التخصص</option>
 				<option @click="SelectSection" v-for="section in sections" :key="section.id" :value="section.id" class="select-option">{{section.name}}</option>
 			</select>
               <i class="icon-material-baseline-mail-outline"></i>
@@ -189,6 +189,7 @@ export default {
   },
   methods: {
     submit() {
+        this.form.section_id = this.sectionSelected;
         this.form.section = this.sectionSelected;
         this.form.city = this.citySelected;
       Inertia.post("register", this.form);
