@@ -22,7 +22,7 @@
                 <h3 class="text-capitalize">
                   {{ mutable_user?.name }}
                   <span class="profile-title">
-                    {{ mutable_user?.title || mutable_user.section?.name }}</span
+                    {{ mutable_user.title ||  sections.filter(item=>item.id == mutable_user?.section_id )[0].name }}</span
                   >
                 </h3>
                 <!-- <ul>
@@ -418,6 +418,7 @@ export default {
 }
 .single-page-header.freelancer-header .header-image {
   justify-content: center;
+  box-shadow: 0 0 10px gray;
 }
 .single-page-header .header-image {
   margin-right: 0;
