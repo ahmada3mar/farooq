@@ -154,6 +154,21 @@
               <!-- <div v-if="mutable_user.description" class="job-overview-headline">ملخص</div> -->
               <div class="job-overview-inner">
                 <ul :style="'visibility:' + (isSaving ? 'hidden' : 'visibile')">
+
+                  <li v-if="isEditing">
+                    <i class="icon-feather-user"></i>
+                    <div class="margin-right-30">
+                      <span>الاسم </span>
+                      <input
+                        v-if="isEditing"
+                        type="text"
+                        name="name"
+                        v-model="form.name"
+                        :placeholder="mutable_user.name"
+                      />
+                    </div>
+                  </li>
+
                   <li v-if="mutable_user.title || mutable_user?.section">
                     <i class="icon-material-outline-business-center"></i>
                     <div class="margin-right-30">
@@ -353,6 +368,7 @@ export default {
         mobile: this.user.mobile,
         city: this.user?.city,
         area: this.user?.area,
+        name: this.user?.name,
       }),
       cites: [
         "إربد",
