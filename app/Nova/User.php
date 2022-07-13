@@ -151,8 +151,7 @@ class User extends Resource
 
             Password::make('Password')
                 ->onlyOnForms()
-                ->creationRules('required', 'string', 'min:8')
-                ->updateRules('required', 'string', 'min:8'),
+                ->creationRules('required', 'string', 'min:8'),
             RoleSelect::make('Role', 'roles')
             ->sortable(),
 

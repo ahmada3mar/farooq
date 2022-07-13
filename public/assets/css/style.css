@@ -3252,7 +3252,7 @@ body #backtotop a {
     .single-page-header .left-side,
     .single-page-header .right-side,
     .single-page-header-inner {
-        display: block;
+        /* display: block; */
         max-width: 100%;
     }
     .single-page-header .header-image {
