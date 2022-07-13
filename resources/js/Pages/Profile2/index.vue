@@ -13,10 +13,10 @@
       ')'
     "
   >
-  <div @click="() => UploadImage('UploadCover')" class="cover_edit">
-    <!-- <i class="icon-material-outline-add-photo-alternate"> تغير الغلاف </i> -->
+  <!-- <div @click="() => UploadImage('UploadCover')" class="cover_edit">
+    <i class="icon-material-outline-add-photo-alternate"> تغير الغلاف </i>
     <input type="file" id="UploadCover" name="profile" class="UploadCover" @change="() => ChangeCover(UploadCover)" hidden accept=".jpg, .jpeg" />
-    </div>
+    </div> -->
     <div class="container arabic">
       <div class="row">
         <div class="col-md-12">
