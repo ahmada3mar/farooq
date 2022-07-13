@@ -9,7 +9,7 @@
     id="CoverContainer"
     :style="
       'background-image: url(' +
-      this.cover +
+      '/storage/' + settings.User_Defualt_Cover+
       ')'
     "
   >
@@ -338,8 +338,7 @@ export default {
     sections: Array,
   },
   mounted() {
-    console.log(this.settings);
-    cover = (mutable_user.cover ? '/storage/' + mutable_user.cover : (settings.User_Defualt_Cover ? '/storage/' + settings.User_Defualt_Cover : '/assets/images/banner.jpg'));
+    console.log(this.mutable_user.cover ? '/storage/' + this.mutable_user.cover : (this.settings.User_Defualt_Cover ? '/storage/' + this.settings.User_Defualt_Cover : '/assets/images/banner.jpg'));
     // console.log(this.section.name);
   },
   data() {

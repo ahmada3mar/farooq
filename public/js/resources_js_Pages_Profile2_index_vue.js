@@ -26,8 +26,7 @@ var cover = '';
     sections: Array
   },
   mounted: function mounted() {
-    console.log(this.settings);
-    cover = mutable_user.cover ? '/storage/' + mutable_user.cover : settings.User_Defualt_Cover ? '/storage/' + settings.User_Defualt_Cover : '/assets/images/banner.jpg'; // console.log(this.section.name);
+    console.log(this.mutable_user.cover ? '/storage/' + this.mutable_user.cover : this.settings.User_Defualt_Cover ? '/storage/' + this.settings.User_Defualt_Cover : '/assets/images/banner.jpg'); // console.log(this.section.name);
   },
   data: function data() {
     var _this$course, _this$course$units$, _this$user, _this$user2, _this$user3;
@@ -516,7 +515,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "single-page-header freelancer-header",
     id: "CoverContainer",
-    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)('background-image: url(' + this.cover + ')')
+    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)('background-image: url(' + '/storage/' + $props.settings.User_Defualt_Cover + ')')
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div @click=\"() => UploadImage('UploadCover')\" class=\"cover_edit\">\n    <i class=\"icon-material-outline-add-photo-alternate\"> تغير الغلاف </i>\n    <input type=\"file\" id=\"UploadCover\" name=\"profile\" class=\"UploadCover\" @change=\"() => ChangeCover(UploadCover)\" hidden accept=\".jpg, .jpeg\" />\n    </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_$data$mutable_user = $data.mutable_user) === null || _$data$mutable_user === void 0 ? void 0 : _$data$mutable_user.name) + " ", 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.mutable_user.title || $props.sections.filter(function (item) {
