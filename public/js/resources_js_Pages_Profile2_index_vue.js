@@ -517,24 +517,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "single-page-header freelancer-header",
     id: "CoverContainer",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)('background-image: url(' + this.cover + ')')
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    onClick: _cache[1] || (_cache[1] = function () {
-      return $options.UploadImage('UploadCover');
-    }),
-    "class": "cover_edit"
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <i class=\"icon-material-outline-add-photo-alternate\"> تغير الغلاف </i> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "file",
-    id: "UploadCover",
-    name: "profile",
-    "class": "UploadCover",
-    onChange: _cache[0] || (_cache[0] = function () {
-      return $options.ChangeCover(_ctx.UploadCover);
-    }),
-    hidden: "",
-    accept: ".jpg, .jpeg"
-  }, null, 32
-  /* HYDRATE_EVENTS */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_$data$mutable_user = $data.mutable_user) === null || _$data$mutable_user === void 0 ? void 0 : _$data$mutable_user.name) + " ", 1
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div @click=\"() => UploadImage('UploadCover')\" class=\"cover_edit\">\n    <i class=\"icon-material-outline-add-photo-alternate\"> تغير الغلاف </i>\n    <input type=\"file\" id=\"UploadCover\" name=\"profile\" class=\"UploadCover\" @change=\"() => ChangeCover(UploadCover)\" hidden accept=\".jpg, .jpeg\" />\n    </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_$data$mutable_user = $data.mutable_user) === null || _$data$mutable_user === void 0 ? void 0 : _$data$mutable_user.name) + " ", 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.mutable_user.title || $props.sections.filter(function (item) {
     var _$data$mutable_user2;
@@ -583,7 +566,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* KEYED_FRAGMENT */
   )), $data.mutable_user.courses.length == 0 && $data.mutable_user.registerd_courses.length == 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_35, _hoisted_37)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]), _hoisted_38])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a href=\"#small-dialog\" class=\"apply-now-button popup-with-zoom-anim\">تحديل <i class=\"icon-material-outline-arrow-right-alt\"></i></a> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar Widget "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [!$data.isEditing && ((_$props$auth = $props.auth) === null || _$props$auth === void 0 ? void 0 : _$props$auth.id) == $data.mutable_user.id ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
     key: 0,
-    onClick: _cache[2] || (_cache[2] = function () {
+    onClick: _cache[0] || (_cache[0] = function () {
       return $options.toggleEdit && $options.toggleEdit.apply($options, arguments);
     }),
     id: "pencile"
@@ -597,7 +580,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     name: "section",
     id: "section",
     required: "",
-    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
+    "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $data.form.section_id = $event;
     })
   }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.sections, function (section) {
@@ -624,7 +607,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 0,
     type: "text",
     name: "email",
-    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
+    "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $data.form.email = $event;
     })
   }, null, 512
@@ -635,7 +618,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 0,
     type: "text",
     name: "mobile",
-    "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
+    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $data.form.mobile = $event;
     })
   }, null, 512
@@ -647,7 +630,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     name: "section",
     id: "section",
     required: "",
-    "onUpdate:modelValue": _cache[6] || (_cache[6] = function ($event) {
+    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
       return $data.form.city = $event;
     })
   }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.cites, function (city) {
@@ -666,7 +649,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "المنطقة",
     type: "text",
     name: "area",
-    "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
+    "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
       return $data.form.area = $event;
     })
   }, null, 512
@@ -676,12 +659,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ))])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 4
   /* STYLE */
   ), $data.isSaving ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_72, _hoisted_74)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), $data.isEditing ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_75, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_76, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[8] || (_cache[8] = function () {
+    onClick: _cache[6] || (_cache[6] = function () {
       return $options.toggleEdit && $options.toggleEdit.apply($options, arguments);
     }),
     "class": "button gray list-apply-button ripple-effect col-12"
   }, " تجاهل ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_77, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[9] || (_cache[9] = function () {
+    onClick: _cache[7] || (_cache[7] = function () {
       return $options.save && $options.save.apply($options, arguments);
     }),
     "class": "button save list-apply-button ripple-effect col-12"
