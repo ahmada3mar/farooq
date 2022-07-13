@@ -81,6 +81,7 @@ Route::middleware('auth')->group(function () {
             $user->email = $request->email;
         }
 
+        $user->name = $request->name;
         $user->mobile = $request->mobile;
         $user->city = $request->city;
         $user->area = $request->area;
