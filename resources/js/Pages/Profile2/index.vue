@@ -6,13 +6,17 @@
   </Head>
   <div
     class="single-page-header freelancer-header"
+    id="CoverContainer"
     :style="
       'background-image: url(' +
-      (mutable_user.cover ? '/storage/' + mutable_user.cover : (settings.User_Defualt_Cover ? '/storage/' + settings.User_Defualt_Cover : '/assets/images/banner.jpg')) +
+      this.cover +
       ')'
     "
   >
-  <div class="cover_edit"> <i class="icon-material-outline-add-photo-alternate"> تغير الغلاف </i> </div>
+  <div @click="() => UploadImage('UploadCover')" class="cover_edit">
+    <!-- <i class="icon-material-outline-add-photo-alternate"> تغير الغلاف </i> -->
+    <input type="file" id="UploadCover" name="profile" class="UploadCover" @change="() => ChangeCover(UploadCover)" hidden accept=".jpg, .jpeg" />
+    </div>
     <div class="container arabic">
       <div class="row">
         <div class="col-md-12">
@@ -324,6 +328,7 @@
 <script>
 import axios from "axios";
 import { reactive } from "vue";
+let cover = '';
 export default {
   props: {
     course: Object,
@@ -334,6 +339,7 @@ export default {
   },
   mounted() {
     console.log(this.settings);
+    cover = (mutable_user.cover ? '/storage/' + mutable_user.cover : (settings.User_Defualt_Cover ? '/storage/' + settings.User_Defualt_Cover : '/assets/images/banner.jpg'));
     // console.log(this.section.name);
   },
   data() {
@@ -368,6 +374,12 @@ export default {
   methods: {
     changeVid(lectur) {
       this.lectur = lectur;
+    },
+    UploadImage(id) {
+      document.getElementById(id).click();
+    },
+    ChangeCover() {
+        this.cover = document.getElementById('UploadCover');
     },
     toggleEdit() {
       this.isEditing = !this.isEditing;
