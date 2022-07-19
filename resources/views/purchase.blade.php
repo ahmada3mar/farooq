@@ -1,23 +1,18 @@
 @extends('app')
 
 @section('purchase')
+<div>
+
     <div @if($course->cover)style="background-image: url(/storage/{{ $course->cover }}) ; " @endif class="container single-page-header">
         <div class="container arabic">
             <div class="row">
                 <div class="col-md-12">
                     <div class="single-page-header-inner">
-                        <div class="left-side">
-                            <div class="salary-box margin-left-0">
-                                <div class="salary-type">عدد الدروس</div>
-                                <div class="salary-amount">{{ $course->lectures_count }}</div>
-                            </div>
-                        </div>
-
                         <div class="header-details flexcolumn">
                             <h3>{{ $course->name }}</h3>
                             <h5>{{ $course->user->name }}</h5>
                         </div>
-                        <div class="right-side" style="justify-content:end; max-width:25%">
+                        <div class="right-side" style="justify-content:end;">
                             <div style="justify-content:end;box-shadow:none;" class="header-image margin-left-20">
                                 <a href="single-company-profile.html"><img src="/storage/{{ $course->image }}"
                                         alt="" /></a>
@@ -32,9 +27,9 @@
 
     <!-- Page Content
     ================================================== -->
-    <div class="container px-0  arabic ">
-        <div class="row">
-            <div class="col-4">
+    <div class="container  arabic ">
+        <div class="row ">
+            <div class="center">
                 <h3> التسجيل في المساق </h3>
                 <p> للتسجيل يرجى تعبة معلومات البطاقة </p>
                 <form id="purchase-form" method="post" action="/confirm/{{ $course->id }}">
@@ -54,17 +49,13 @@
                         <input value="{{ old('password') }}" type="password" class="input-text with-border"
                             name="password" placeholder="كلمة السر" required />
                     </div>
-                    <button class="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit"
+                    <button class="button full-width button-sliding-icon ripple-effect margin-top-10 " type="submit"
                         form="purchase-form">
                         <i class="icon-material-outline-arrow-back"></i>
                         شراء
                     </button>
                 </form>
 
-            </div>
-            <div class="col-8">
-                <h3> وصف المساق </h3>
-                {!! $course->description !!}
             </div>
         </div>
         {{-- <div class="offset-8  col-xl-4 col-lg-4">
@@ -98,4 +89,6 @@
 
     </div>
     </div>
+    </div>
+
 @endsection
