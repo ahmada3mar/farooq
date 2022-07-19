@@ -283,4 +283,10 @@ export default {
 .private button{
     float: none;
 }
+.single-page-header .box-shadow {
+    box-shadow: unset !important;
+}
+.box-shadow {
+    box-shadow: unset !important;
+}
 </style>

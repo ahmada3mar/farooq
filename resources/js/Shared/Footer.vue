@@ -33,6 +33,7 @@
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
                           target="_blank"
+                          class="arabicCenter"
 
                         >
                           <i class="icon-brand-facebook-f arabicCenter"> Facebook</i>
@@ -45,6 +46,7 @@
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
                           target="_blank"
+                          class="arabicCenter"
 
 
                         >
@@ -58,6 +60,7 @@
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
                           target="_blank"
+                          class="arabicCenter"
 
                         >
                           <i class="icon-brand-twitter arabicCenter"> Twitter</i>
@@ -70,6 +73,7 @@
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
                           target="_blank"
+                          class="arabicCenter"
 
                         >
                           <i class="icon-feather-instagram arabicCenter"> Instagram</i>
@@ -82,6 +86,7 @@
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
                           target="_blank"
+                          class="arabicCenter"
                         >
                           <i class="icon-brand-linkedin-in arabicCenter"> Linkedin</i>
                         </a>
@@ -94,6 +99,7 @@
                           data-tippy-placement="bottom"
                           data-tippy-theme="light"
                           target="_blank"
+                          class="arabicCenter"
 
                         >
                             <i class="fa-brands footer-icon arabicCenter">
@@ -212,5 +218,18 @@ export default {
 .TikTok-img {
     width: 18px;
     height: 18px;
+}
+@media (max-width: 992px) {
+    .flexCenterTop {
+        flex-direction: column-reverse !important;
+    }
+    .footer-links{
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .footer-links img {
+        max-width: 130px;
+    }
 }
 </style>
