@@ -3038,9 +3038,9 @@ body #backtotop a {
     height: 140px;
     flex: 0 0 140px;
     margin-right: 35px;
-    background: #fff;
+    /* background: #fff; */
     border-radius: 4px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    /* box-shadow: 0 3px 12px rgba(0,0,0,0.1); */
     display: flex;
     padding: 0 20px;
 }
@@ -3225,7 +3225,9 @@ body #backtotop a {
 @media (max-width: 992px) {
 	.single-page-header .single-page-header-inner {
 	    display: flex;
-	    flex-direction: column;
+	    flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
 	}
 	.single-page-header .left-side { padding-right: 0; }
     .single-page-header .header-details h3 {

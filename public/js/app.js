@@ -440,7 +440,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     title: "Facebook",
     "data-tippy-placement": "bottom",
     "data-tippy-theme": "light",
-    target: "_blank"
+    target: "_blank",
+    "class": "arabicCenter"
   }, _hoisted_12, 8
   /* PROPS */
   , _hoisted_10)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _ctx.web_youtube ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
@@ -448,7 +449,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     title: "youtube",
     "data-tippy-placement": "bottom",
     "data-tippy-theme": "light",
-    target: "_blank"
+    target: "_blank",
+    "class": "arabicCenter"
   }, _hoisted_16, 8
   /* PROPS */
   , _hoisted_14)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _ctx.web_twitter ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
@@ -456,7 +458,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     title: "Twitter",
     "data-tippy-placement": "bottom",
     "data-tippy-theme": "light",
-    target: "_blank"
+    target: "_blank",
+    "class": "arabicCenter"
   }, _hoisted_20, 8
   /* PROPS */
   , _hoisted_18)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _ctx.web_instagram ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
@@ -464,7 +467,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     title: "Instagram",
     "data-tippy-placement": "bottom",
     "data-tippy-theme": "light",
-    target: "_blank"
+    target: "_blank",
+    "class": "arabicCenter"
   }, _hoisted_24, 8
   /* PROPS */
   , _hoisted_22)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _ctx.web_linkedin ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
@@ -472,7 +476,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     title: "LinkedIn",
     "data-tippy-placement": "bottom",
     "data-tippy-theme": "light",
-    target: "_blank"
+    target: "_blank",
+    "class": "arabicCenter"
   }, _hoisted_28, 8
   /* PROPS */
   , _hoisted_26)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _ctx.web_TikTok ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
@@ -480,7 +485,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     title: "TikTok",
     "data-tippy-placement": "bottom",
     "data-tippy-theme": "light",
-    target: "_blank"
+    target: "_blank",
+    "class": "arabicCenter"
   }, _hoisted_32, 8
   /* PROPS */
   , _hoisted_30)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])], 2112
@@ -1363,7 +1369,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.footer-icon[data-v-a77bcb12] {\n    font-family: 'Brand-Icons' !important;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n    -webkit-font-smoothing: antialiased;\n    color: #c0c0c0 !important;\n}\n.TikTok-img[data-v-a77bcb12] {\n    width: 18px;\n    height: 18px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.footer-icon[data-v-a77bcb12] {\n    font-family: 'Brand-Icons' !important;\n    font-style: normal;\n    font-weight: normal;\n    font-variant: normal;\n    text-transform: none;\n    line-height: 1;\n    -webkit-font-smoothing: antialiased;\n    color: #c0c0c0 !important;\n}\n.TikTok-img[data-v-a77bcb12] {\n    width: 18px;\n    height: 18px;\n}\n@media (max-width: 992px) {\n.flexCenterTop[data-v-a77bcb12] {\n        flex-direction: column-reverse !important;\n}\n.footer-links[data-v-a77bcb12]{\n        display: flex;\n        justify-content: center !important;\n        align-items: center !important;\n}\n.footer-links img[data-v-a77bcb12] {\n        max-width: 130px;\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
