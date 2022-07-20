@@ -25,7 +25,7 @@ class UserCoursePolicy extends Policy
 	 */
 	public function delete(User $user, $model)
 	{
-		return false;
+		return $user->hasPermissionTo('delete ' . static::$key);
 	}
 
 	/**
@@ -38,7 +38,7 @@ class UserCoursePolicy extends Policy
 	 */
 	public function forceDelete(User $user, $model)
 	{
-		return \false;
+		return $user->hasPermissionTo('forceDelete ' . static::$key);
 	}
 
 	/**
