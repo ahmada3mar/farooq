@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
@@ -20,7 +21,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Vyuldashev\NovaPermission\RoleSelect;
-
+use Yassi\NestedForm\NestedForm;
 
 class User extends Resource
 {
@@ -156,6 +157,8 @@ class User extends Resource
             ->sortable(),
 
             Boolean::make('Active', 'active'),
+
+            HasMany::make(__('UserCourses'), 'UserCourses', UserCourse::class)->nullable(),
 
         ];
     }
