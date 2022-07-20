@@ -21,7 +21,6 @@ class DocumentsController extends Controller
      */
     public function index(Request $request)
     {
-        $docs = Document::orderBy('downloads' , 'DESC')->limit(5)->get();
         $sections = Section::with('documentCourses')->orderBy('Order')->get();
 
         $query = Document::query();
@@ -35,12 +34,13 @@ class DocumentsController extends Controller
         if($request->has('type')){
             $query->where('type' , $request->type);
         }
-        if($request->has('top')){
-            $query->orderBy('downloads' , 'DESC')->limit(5);
+
+        if( $request->has('course') || $request->has('section') || $request->has('type')){
+            $docs =  $query->with('documentCourse')->with('section')->get();
+        }else {
+            $docs = Document::orderBy('downloads' , 'DESC')->with('documentCourse')->with('section')->limit(5)->get();
         }
 
-
-       $docs =  $query->with('documentCourse')->with('section')->get();
 
        $types = [
         [ 'key' => 1, 'value' => 'اسئلة سنوات'],
